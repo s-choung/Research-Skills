@@ -54,70 +54,106 @@ Claude Code(또는 Codex)에 이렇게 말씀하세요.
 ### 자주 쓰는 것들
 
 - **`smart-compact`** -- `/clear` 직전에 세션 상태를 `.claude/session-state.md`에 저장. 다음 세션이 자동으로 읽어옵니다.
-  예: `/smart-compact` -> `saved: 12 tasks, 3 open questions, focus "manuscript revision"`
+  
+  ```
+  지금까지 얘기한 내용을 다음세션에 넘길래. /smart-compact
+  ```
 
-- **`docx-scientific-formatting`** -- 논문 `.docx` proof reading 자동화. 화학식 아래첨자(H2O -> H₂O, CO2 -> CO₂), italic(*in situ*, *operando*), superscript, 수식 서식을 검수|수정합니다.
-  예: `"manuscript.docx 화학식 정리해줘"` -> `14 fixes: H2O -> H₂O ×8, in situ -> *in situ* ×3, CO2 -> CO₂ ×3`
+- **`docx-scientific-formatting`** -- 논문 `.docx` proof reading 자동화. 화학식 아래첨자(H2O -> H₂O), italic(*in situ*, *operando*), superscript, 수식 서식을 검수|수정합니다.
+  
+  ```
+  manuscript.docx 논문 proof reading중인데 화학식하고 italic 안된거 수정해 
+  ```
 
 - **`html-minimal`** -- 외부 JS framework 없는 self-contained HTML 리포트|briefing 생성.
-  예: `"오늘 분석 결과 HTML 리포트로"` -> `output/2026-04-15_analysis.html (single file, 23 KB)`
+  
+  ```
+  오늘 분석 결과 HTML 리포트로 미니멀하게 만들어줘 
+  ```
 
 - **`youtube`** -- YouTube URL에서 transcript + metadata + key frame screenshot을 한 번에 markdown으로 추출. Smart frame capture는 heatmap peak -> chapter -> uniform interval 순으로 fallback.
-  예: `/youtube https://youtu.be/ID --frames 8` -> `transcript.md + frames/frame_000_0020.jpg ×8`
+  
+  ```
+  /youtube https://youtu.be/유튜브 링크 무슨내용인지 나랑 얘기좀하자. 
+  ```
 
 - **`paper-humanize`** -- Draft paragraph를 사용자 검토 직전에 저자 voice로 마지막 pass. 2-pass (global humanize -> `STYLE_PROFILE.md` enforcement).
-  예: `/paper-humanize <paragraph>` -> `pass 1: 6 AI-tells 제거 | pass 2: 3 voice fix + sentence length 재조정`
+  
+  ```
+  /paper-humanize <paragraph> 좀 사람같이써. em dash조심. 
+  ```
 
 ### 필요할 때 꺼내 쓰는 것들
 
 - **`paper`** -- umbrella. 자연어 의도를 파싱해서 sub-command로 dispatch.
-  예: `/paper introduction 논문 레퍼런스 찾아줘` -> `dispatched to /paper-ref (discovery mode)`
+  
+  ```
+  /paper introduction 논문 레퍼런스 찾아줘 > paper-ref 알아서 호출. 
+  ```
 
 - **`paper-ref`** -- Hunt mode (특정 citation -> Crossref verified DOI) + Discovery mode (주제 -> OpenAlex shortlist). Mode는 input 모양으로 자동 판단.
   
-  - Hunt: `/paper-ref Tanaka 2021 grain boundary zirconia JACS` -> `DOI verified, no field discrepancies`
-  - Discovery: `/paper-ref 최근 transition metal oxide 리뷰 논문` -> `top 5 candidates with title, authors, journal, year`
+  ```
+  /paper-ref Tanaka 2021 grain boundary zirconia JACS 논문 찾아봐.
+  /paper-ref 최근 transition metal oxide 리뷰 논문있었는데 찾아봐. 
+  ```
 
 - **`paper-plan`** -- Multi-step 작성|수정 계획 (reviewer response, 새 섹션 outline, rebuttal 구조).
-  예: `/paper-plan 논문 revision, reviewer comment 4개 대응` -> `8-step plan with subagent 배정 (triage -> ref hunt -> draft -> critic -> humanize)`
+  
+  ```
+  /paper-plan ~~내 데이터가 충분히 쌓였어 이거읽고 계획 outline 해
+  ```
 
 - **`paper-draft`** -- IMRAD 섹션을 저자 voice로 draft.
-  예: `/paper-draft Introduction -- computational screening motivation` -> `4-paragraph draft with numeric-superscript citations`
+  
+  ```
+  /paper-draft Introduction 부분에 계산이 왜 필요한지 논의가 약해. 
+  ```
 
 - **`paper-critic`** -- Paragraph|섹션 과학적 비평 (unsupported claim, overclaim, logical gap, missing control).
-  예: `/paper-critic <paragraph>` -> `3 issues: unsupported claim (L4), missing control (L7), overclaim (L9)`
+  
+  ```
+  /paper-critic 이부분 비난좀 해줘
+  <paragraph>
+  ```
 
 - **`paper-sections`, `paper-style`** -- 내부 reference. 직접 호출할 일 없음.
 
 - **`matplotlib-scientific`** -- 출판용 matplotlib figure (rcParams, colormap, subplot, legend/axis 포맷).
-  예: `"data.csv 그래프로 그려줘"` -> `figures/plot.png (300 DPI, publication rcParams)`
+  
+  ```
+  data.csv 그래프로 그려줘matplotlib-scientific 이 포맷을 준수해.
+  ```
 
-- **`blender-atom-render`** -- Structure 파일(XYZ, CIF, POSCAR) -> Blender sphere model + per-system legend.
-  예: `/blender-atom-render structure.xyz` -> `render/structure.png + legend.png (4K)`
+- **`blender-atom-render`** -- Claude가 blender rendering도함. Structure 파일(XYZ, CIF, POSCAR) -> Blender sphere model + per-system legend.
+  
+  ```
+  /blender-atom-render structure.xyz 이거 bird eye view로 렌더링해
+  ```
 
-- **`slide-audit`** -- HTML slide deck의 layout bug(overlap, clipping, overflow)을 Playwright + 시각 검수로 탐지.
-  예: `/slide-audit deck.html` -> `23 slides, 4 issues: slide 5 text clipped / slide 12 title-chart overlap / ...`
+- **`slide-audit`** -- HTML slide의 글자 겹침 등 잘잡아냄. layout bug(overlap, clipping, overflow)을 Playwright + 시각 검수로 탐지.
+  
+  ```
+  /slide-audit deck.html
+  ```
 
-- **`meetingnote-paperwork`** -- 한국 연구과제 회의록을 computational chemistry / materials design voice로 템플릿 draft.
-  예: `/meetingnote-paperwork <과제명> 2개` -> `note 2개, bullet 3-4개씩, template format 유지`
+- **`meetingnote-paperwork`** -- 연구 회의록 draft해줌. 
+  
+  ```
+  /meetingnote-paperwork 나노소재 뭐시기 과제이름 회의록 3개써
+  ```
 
 - **`youtube2mp4`** -- YouTube 영상 mp4 다운로드 (audio-only, 해상도 제한, 구간 trim).
-  예: `/youtube2mp4 <URL> --audio` -> `VIDEO_ID.m4a (audio-only, 4:32)`
+  
+  ```
+  /youtube2mp4 <URL> --audio
+  ```
 
 - **`transcript2html`** -- `/youtube` 결과 markdown을 한국어 dark-mode HTML로 렌더.
-  예: `/transcript2html output/ID/transcript.md` -> `transcript.html (dark mode, frames embedded)`
-
----
-
-## Paper team 준비
-
-`paper-style`과 `paper-style-enforcer`는 `~/.claude/paper-team/STYLE_PROFILE.md`를 읽습니다. 저자 voice profile은 개인적이라 **repo에 포함되지 않습니다**. 사용하시려면:
-
-1. `~/.claude/paper-team/STYLE_PROFILE.md` 생성
-2. 선호 voice, 금지 단어|패턴, sentence rhythm, citation format을 짧은 단락으로 작성
-3. Enforcer가 뭔가 놓칠 때마다 rule을 추가하며 iteratively 확장
-
-`paper-ref-hunter`는 Crossref와 OpenAlex를 `Bash` + `curl`로 호출합니다. API key 필요 없음.
+  
+  ```
+  /transcript2html output/ID/transcript.md
+  ```
 
 ---
 

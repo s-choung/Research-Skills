@@ -54,70 +54,106 @@ Natural-language phrases also trigger these (e.g. "clean up this docx table", "p
 ### Daily drivers
 
 - **`smart-compact`** -- save session state to `.claude/session-state.md` before `/clear`. Next session reads it back automatically.
-  Example: `/smart-compact` -> `saved: 12 tasks, 3 open questions, focus "manuscript revision"`
 
-- **`docx-scientific-formatting`** -- proof-reads `.docx` manuscripts for chemical subscripts (H2O -> H₂O, CO2 -> CO₂), italics (*in situ*, *operando*), superscripts, and equation formatting.
-  Example: `"clean up chemical formulas in manuscript.docx"` -> `14 fixes: H2O -> H₂O ×8, in situ -> *in situ* ×3, CO2 -> CO₂ ×3`
+  ```
+  pass everything we've discussed to the next session. /smart-compact
+  ```
+
+- **`docx-scientific-formatting`** -- proof-reads `.docx` manuscripts for chemical subscripts (H2O -> H₂O), italics (*in situ*, *operando*), superscripts, and equation formatting.
+
+  ```
+  proof-reading manuscript.docx, please fix chemical formulas and italics
+  ```
 
 - **`html-minimal`** -- standalone HTML reports and briefings with no external JS framework. Self-contained output.
-  Example: `"today's analysis as an HTML report"` -> `output/2026-04-15_analysis.html (single file, 23 KB)`
+
+  ```
+  turn today's analysis into a minimal HTML report
+  ```
 
 - **`youtube`** -- pulls transcript, metadata, and key-frame screenshots from a YouTube URL into a single markdown file. Smart frame capture: heatmap peaks -> chapter starts -> uniform interval.
-  Example: `/youtube https://youtu.be/ID --frames 8` -> `transcript.md + frames/frame_000_0020.jpg ×8`
+
+  ```
+  /youtube https://youtu.be/<video> let's talk about what this video is about
+  ```
 
 - **`paper-humanize`** -- final pass on a draft paragraph before user review. 2-pass pipeline (global humanize -> `STYLE_PROFILE.md` enforcement).
-  Example: `/paper-humanize <paragraph>` -> `pass 1: 6 AI-tells removed | pass 2: 3 voice fixes + sentence length rebalanced`
+
+  ```
+  /paper-humanize <paragraph> make it sound human, watch out for em-dashes
+  ```
 
 ### Reach for when needed
 
 - **`paper`** -- umbrella. Parses natural-language intent and dispatches to the right sub-command.
-  Example: `/paper find refs for the introduction` -> `dispatched to /paper-ref (discovery mode)`
+
+  ```
+  /paper find intro refs > auto-dispatches to /paper-ref
+  ```
 
 - **`paper-ref`** -- HUNT mode (specific citation -> Crossref verified DOI) + DISCOVERY mode (topic -> OpenAlex shortlist). Mode auto-detected from input shape.
 
-  - Hunt: `/paper-ref Tanaka 2021 grain boundary zirconia JACS` -> `DOI verified, no field discrepancies`
-  - Discovery: `/paper-ref recent transition metal oxide review papers` -> `top 5 candidates with title, authors, journal, year`
+  ```
+  /paper-ref Tanaka 2021 grain boundary zirconia JACS, look this up
+  /paper-ref there was a recent transition metal oxide review, find it
+  ```
 
 - **`paper-plan`** -- multi-step writing/revision plan (reviewer responses, section outlines, rebuttal structure).
-  Example: `/paper-plan manuscript revision, 4 reviewer comments to address` -> `8-step plan with subagent assignment (triage -> ref hunt -> draft -> critic -> humanize)`
+
+  ```
+  /paper-plan ~~ my data is ready, read this and outline a plan
+  ```
 
 - **`paper-draft`** -- draft an IMRAD section in the author's voice.
-  Example: `/paper-draft Introduction -- computational screening motivation` -> `4-paragraph draft with numeric-superscript citations`
+
+  ```
+  /paper-draft Introduction -- the motivation for computation is weak here
+  ```
 
 - **`paper-critic`** -- rigor critique (unsupported claims, overclaims, logical gaps, missing controls).
-  Example: `/paper-critic <paragraph>` -> `3 issues: unsupported claim (L4), missing control (L7), overclaim (L9)`
+
+  ```
+  /paper-critic tear this part apart
+  <paragraph>
+  ```
 
 - **`paper-sections`, `paper-style`** -- internal reference libraries. You don't call these directly.
 
 - **`matplotlib-scientific`** -- publication-quality matplotlib figures (rcParams, colormaps, subplot, legend/axis formatting).
-  Example: `"plot data.csv"` -> `figures/plot.png (300 DPI, publication rcParams)`
 
-- **`blender-atom-render`** -- structure file (XYZ, CIF, POSCAR) -> Blender sphere render + per-system legend.
-  Example: `/blender-atom-render structure.xyz` -> `render/structure.png + legend.png (4K)`
+  ```
+  plot data.csv, matplotlib-scientific follow this format
+  ```
 
-- **`slide-audit`** -- detect layout bugs in HTML slide decks (overlap, clipping, overflow) via Playwright + visual review.
-  Example: `/slide-audit deck.html` -> `23 slides, 4 issues: slide 5 text clipped / slide 12 title-chart overlap / ...`
+- **`blender-atom-render`** -- Claude can do Blender rendering too. Structure file (XYZ, CIF, POSCAR) -> Blender sphere model + per-system legend.
 
-- **`meetingnote-paperwork`** -- draft Korean research project meeting notes (회의록) in a fixed template, in a computational chemistry / materials design voice.
-  Example: `/meetingnote-paperwork <task name> 2` -> `2 notes, 3-4 bullets each, template format preserved`
+  ```
+  /blender-atom-render structure.xyz render as bird-eye view
+  ```
+
+- **`slide-audit`** -- catches slide text overlap well. Layout bugs (overlap, clipping, overflow) via Playwright + visual review.
+
+  ```
+  /slide-audit deck.html
+  ```
+
+- **`meetingnote-paperwork`** -- drafts Korean research project meeting notes (회의록).
+
+  ```
+  /meetingnote-paperwork nano materials XYZ project, 3 notes
+  ```
 
 - **`youtube2mp4`** -- YouTube video download (audio-only, resolution cap, time trim).
-  Example: `/youtube2mp4 <URL> --audio` -> `VIDEO_ID.m4a (audio-only, 4:32)`
+
+  ```
+  /youtube2mp4 <URL> --audio
+  ```
 
 - **`transcript2html`** -- renders `/youtube` markdown output as a Korean dark-mode HTML document.
-  Example: `/transcript2html output/ID/transcript.md` -> `transcript.html (dark mode, frames embedded)`
 
----
-
-## Paper team setup
-
-`paper-style` and `paper-style-enforcer` read `~/.claude/paper-team/STYLE_PROFILE.md`. This is **not shipped** -- the author's voice profile is personal. To use the paper team:
-
-1. Create `~/.claude/paper-team/STYLE_PROFILE.md`
-2. Start with a short paragraph describing your voice preferences, banned words/patterns, sentence rhythms, and citation format.
-3. Expand the file iteratively -- add a rule whenever the enforcer misses something.
-
-`paper-ref-hunter` calls Crossref and OpenAlex via `Bash` + `curl`. No API keys required.
+  ```
+  /transcript2html output/ID/transcript.md
+  ```
 
 ---
 
