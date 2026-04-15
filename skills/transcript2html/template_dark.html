@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg-soft: #111113;
+    --fg: #fafaf7;
+    --muted: #8b8b93;
+    --muted-soft: #5a5a62;
+    --line: #1f1f23;
+    --line-soft: #26262a;
+    --card: #131317;
+    --card-hover: #17171c;
+    --accent: #7c74ff;
+    --accent-soft: rgba(124, 116, 255, 0.12);
+    --accent-line: rgba(124, 116, 255, 0.3);
+    --ink: #f5f5f0;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Cascadia Code", monospace;
+    --sans: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    word-break: keep-all;
+    word-wrap: break-word;
+  }
+  main { max-width: 980px; margin: 0 auto; padding: 72px 32px 120px; }
+  section { margin-top: 96px; }
+  section:first-of-type { margin-top: 0; }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 6px 14px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    border-radius: 999px;
+  }
+  h1 {
+    font-size: clamp(34px, 5.2vw, 58px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin: 24px 0 18px;
+    color: var(--ink);
+  }
+  h1 .dim { color: var(--muted); font-weight: 500; }
+  .lede {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 760px;
+    line-height: 1.75;
+    margin: 0 0 36px;
+    font-weight: 400;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .stat-chip {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 12px 18px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg-soft);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .stat-chip b {
+    color: var(--fg);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--mono);
+    letter-spacing: -0.01em;
+  }
+
+  .sect-kicker {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+    font-family: var(--mono);
+  }
+  .sect-title {
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 32px 36px;
+    margin: 20px 0;
+    transition: border-color .2s ease;
+  }
+  .card:hover { border-color: var(--line-soft); }
+  .card p {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--fg);
+  }
+  .card p:last-child { margin-bottom: 0; }
+  .card em { color: var(--muted); font-style: italic; }
+  .card strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .card u {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    text-decoration-skip-ink: none;
+  }
+  .card .key {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(124, 116, 255, 0.5);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+  .card .hl {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.96em;
+    border: 1px solid var(--accent-line);
+  }
+  .card .mark-y {
+    background: linear-gradient(transparent 55%, rgba(255, 225, 77, 0.22) 55%);
+    font-weight: 700;
+    color: var(--ink);
+    padding: 0 2px;
+  }
+  .card .en {
+    font-family: var(--mono);
+    font-size: 0.92em;
+    color: var(--muted);
+    background: var(--bg-soft);
+    padding: 1px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--line);
+  }
+
+  /* 프레임 바로 아래에 붙는 "이 시점 대사" 블록 */
+  .frame-caption {
+    margin: -18px 0 32px;
+    padding: 18px 24px;
+    border-left: 3px solid var(--accent);
+    background: var(--bg-soft);
+    border-radius: 0 12px 12px 0;
+  }
+  .frame-caption .label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .frame-caption .ko {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.75;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .frame-caption .ko strong { color: var(--accent); font-weight: 700; }
+  .frame-caption .raw {
+    display: block;
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: var(--muted-soft);
+    font-style: italic;
+  }
+
+  figure {
+    margin: 28px 0;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--card);
+  }
+  figure img {
+    width: 100%;
+    display: block;
+  }
+  figcaption {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    padding: 14px 22px;
+    border-top: 1px solid var(--line);
+    letter-spacing: 0.06em;
+  }
+
+  .pullquote {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+    border: 1px solid var(--accent-line);
+    border-radius: 20px;
+    padding: 44px;
+    margin: 36px 0;
+    position: relative;
+  }
+  .pullquote::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 44px;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 0 0 3px 3px;
+  }
+  .pullquote .kicker {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+    font-family: var(--mono);
+  }
+  .pullquote p {
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .pullquote em {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .verdict {
+    background: var(--card);
+    border: 2px solid var(--accent);
+    border-radius: 22px;
+    padding: 44px;
+    margin: 40px 0 0;
+    box-shadow: 0 0 60px -20px rgba(124, 116, 255, 0.25);
+  }
+  .verdict .kicker {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+    font-family: var(--mono);
+  }
+  .verdict p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    color: var(--ink);
+  }
+  .verdict strong { color: var(--accent); font-weight: 700; }
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    padding-top: 28px;
+    margin-top: 96px;
+    font-size: 13px;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+  .foot a { color: var(--accent); text-decoration: none; }
+  .foot a:hover { text-decoration: underline; }
+
+  @media (max-width: 760px) {
+    main { padding: 40px 20px 80px; }
+    .card, .pullquote, .verdict { padding: 28px 22px; }
+    h1 { font-size: 32px; }
+  }
+
+  ::selection { background: var(--accent); color: var(--bg); }
+</style>
+</head>
+<body>
+<main>
+
+  <section>
+    <span class="eyebrow">{{EYEBROW}}</span>
+    <h1>{{TITLE_HTML}}</h1>
+    <p class="lede">{{LEDE}}</p>
+    <div class="hero-stats">
+{{HERO_STATS}}
+    </div>
+  </section>
+
+{{SECTIONS}}
+
+  <div class="foot">
+    <span><a href="{{URL}}">{{URL_LABEL}}</a></span>
+    <span>{{DATE}}</span>
+  </div>
+
+</main>
+</body>
+</html>

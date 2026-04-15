@@ -1,0 +1,13 @@
+{
+  "name": "slide-audit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Render HTML slide decks to per-slide PNGs for visual audit by subagents.",
+  "bin": {
+    "slide-audit-screenshot": "./screenshot.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
