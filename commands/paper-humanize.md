@@ -1,13 +1,8 @@
 ---
-description: Humanize a paragraph or section to the author's voice. Two-pass (global humanizer + STYLE_PROFILE enforcement). Last pass before user review.
+description: Light AI-ism cleanup on a paragraph or section. Strips a small scientific-safe blocklist only. Last pass before user review.
 argument-hint: <target: paragraph text | para:N | section>
-allowed-tools: Read, Edit, Grep, Task
+allowed-tools: Read, Edit, Grep
 ---
-
-## Context
-
-- Global STYLE_PROFILE exists: !`test -f ~/.claude/paper-team/STYLE_PROFILE.md && echo yes || echo no`
-- Project override exists: !`test -f .claude/paper-team/STYLE_PROFILE.override.md && echo yes || echo no`
 
 ## Task
 
@@ -15,12 +10,9 @@ User invoked: `/paper-humanize $ARGUMENTS`
 
 1. Parse `$ARGUMENTS`:
    - literal text: use as-is
-   - `para:N`: locate the referenced paragraph
-   - `<section>`: locate the section
-2. Dispatch the `paper-style-enforcer` subagent via Task with:
-   - text = the target paragraph
-   - mode = fix
-3. The enforcer runs paper-humanize skill internally (pass 1: global humanizer, pass 2: style profile).
-4. Return cleaned text + change log + residual risks + suggested next command (usually user review, or /paper-critic if content changed significantly).
+   - `para:N`: locate the referenced paragraph in the current draft
+   - `<section>`: locate the section in the current draft
+2. Run `paper-style` skill Mode 2 (light humanize) directly on the target text. No subagent dispatch, no global humanizer, no full STYLE_PROFILE checklist.
+3. Return the cleaned text and the change log in the Mode 2 output format.
 
-Thin dispatcher only.
+Thin dispatcher only. Do not rewrite or add voice.
