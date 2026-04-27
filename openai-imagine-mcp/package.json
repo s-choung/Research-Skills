@@ -1,0 +1,28 @@
+{
+  "name": "openai-imagine-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for generating and editing images using OpenAI gpt-image-1 API",
+  "main": "dist/server.js",
+  "type": "module",
+  "bin": {
+    "openai-imagine-mcp": "dist/server.js"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "openai": "^4.86.0",
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "commander": "^14.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  }
+}
