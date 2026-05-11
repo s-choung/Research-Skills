@@ -40,6 +40,7 @@ Claude Code(또는 Codex)에 이렇게 말씀하세요.
 /youtube2mp4 <URL> [--audio]        영상 다운로드
 /transcript2html <path>             dark-mode HTML 렌더링
 
+/design2html <spec|name>            디자인 스펙 MD -> showcase HTML
 /blender-atom-render <xyz|cif>      atom sphere render + legend
 /slide-audit <html>                 slide layout bug 자동 탐지
 /meetingnote-paperwork <과제명>     한국 연구과제 회의록 draft
@@ -81,6 +82,13 @@ Claude Code(또는 Codex)에 이렇게 말씀하세요.
   
   ```
   /paper-humanize <paragraph> 좀 사람같이써. em dash조심. 
+  ```
+
+- **`design2html`** -- 디자인 스펙 MD 파일을 읽어 해당 디자인 시스템의 토큰/컴포넌트/레이아웃을 충실히 반영한 single-file HTML showcase 페이지를 생성. 7개 built-in 스펙 포함 (ease-health, look-inc, parker-studio, panxo, attio, ui, openai). `--quick`으로 빠르게, `--full`로 impeccable 품질 파이프라인까지.
+  
+  ```
+  /design2html ease-health
+  /design2html panxo --content "AI analytics platform" --lang en
   ```
 
 ### 필요할 때 꺼내 쓰는 것들
@@ -159,6 +167,7 @@ Claude Code(또는 Codex)에 이렇게 말씀하세요.
 
 ## Dependencies
 
+- `design2html` -- 7개 built-in 디자인 스펙이 `skills/design2html/specs/`에 포함됨. 추가 스펙은 [getdesign.md](https://getdesign.md/)에서 생성 가능. `--full` 모드(audit/critique/polish)를 쓰려면 [impeccable](https://github.com/pbakaus/impeccable) 플러그인 필요 (`/install-plugin pbakaus/impeccable`). `--quick` 모드는 impeccable 없이 동작.
 - `slide-audit` -- Playwright. `cd skills/slide-audit && npm install && npx playwright install chromium`
 - `youtube`, `youtube2mp4` -- `brew install yt-dlp ffmpeg`
 - `blender-atom-render` -- `brew install --cask blender`
