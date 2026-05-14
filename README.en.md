@@ -40,82 +40,49 @@ That's it.
 
 ## Skills
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>humanize-writing</h3>
-      Remove mechanical signals from AI-generated text and make it read like a specific person wrote it. Korean and English.<br><br>
-      <code>Humanize this text</code><br><br>
-      <a href="skills/humanize-writing">README</a> · <a href="skills/humanize-writing/benchmark/benchmark_report.html">Benchmark</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>paper (team)</h3>
-      Full paper writing pipeline with subagent team. Reference hunting, section drafting, critique, and humanization.<br><br>
-      <code>/paper find references for introduction</code><br><br>
-      <a href="commands/paper.md">paper</a> · <a href="commands/paper-ref.md">ref</a> · <a href="commands/paper-draft.md">draft</a> · <a href="commands/paper-critic.md">critic</a> · <a href="commands/paper-humanize.md">humanize</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>youtube / youtube2mp4</h3>
-      Extract transcript + metadata + key frames from a YouTube URL as markdown. Video download supported.<br><br>
-      <code>/youtube https://youtu.be/... what is this about?</code>
-    </td>
-    <td width="50%" valign="top">
-      <h3>design2html</h3>
-      Read a design spec MD and generate a single-file HTML showcase page. 7 built-in specs included.<br><br>
-      <code>/design2html ease-health</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>docx-scientific-formatting</h3>
-      Automated proof reading for scientific .docx files. Chemical formula subscripts, italic, superscript formatting.<br><br>
-      <code>Fix chemical formulas and italics in manuscript.docx</code>
-    </td>
-    <td width="50%" valign="top">
-      <h3>matplotlib-scientific</h3>
-      Publication-quality matplotlib figures. rcParams, colormap, subplot, legend/axis formatting.<br><br>
-      <code>Plot data.csv as a scientific figure</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>blender-atom-render</h3>
-      Render structure files (XYZ, CIF, POSCAR) as Blender sphere models with per-system legends.<br><br>
-      <code>/blender-atom-render structure.xyz</code>
-    </td>
-    <td width="50%" valign="top">
-      <h3>slide-audit</h3>
-      Detect text overlap, clipping, and overflow in HTML slide decks via Playwright + visual review.<br><br>
-      <code>/slide-audit deck.html</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>html-minimal</h3>
-      Self-contained HTML reports and briefings with no external JS frameworks.<br><br>
-      <code>Make an HTML report of the analysis</code>
-    </td>
-    <td width="50%" valign="top">
-      <h3>smart-compact</h3>
-      Save session state before /clear. The next session picks up automatically.<br><br>
-      <code>/smart-compact</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>transcript2html</h3>
-      Render YouTube transcript markdown as a Korean dark-mode HTML reading view.<br><br>
-      <code>/transcript2html transcript.md</code>
-    </td>
-    <td width="50%" valign="top">
-      <h3>meetingnote-paperwork</h3>
-      Draft Korean research project meeting notes in a fixed paperwork template.<br><br>
-      <code>/meetingnote-paperwork project-name</code>
-    </td>
-  </tr>
-</table>
+### Humanizer
+
+- **[humanizer_kor](skills/humanizer_kor)** -- Remove mechanical AI signals from Korean text and make it read like a human wrote it.
+- **[humanizer_eng](skills/humanizer_eng)** -- Remove mechanical AI signals from English text and make it read like a human wrote it.
+
+### Paper Team
+
+- **[paper](commands/paper.md)** -- Umbrella command that routes to the full paper writing subagent team.
+- **[paper-ref](commands/paper-ref.md)** -- Hunt candidate references for a given claim or topic.
+- **[paper-draft](commands/paper-draft.md)** -- Draft IMRAD sections in the author's voice.
+- **[paper-critic](commands/paper-critic.md)** -- Scientifically critique a paragraph or section for rigor.
+- **[paper-humanize](commands/paper-humanize.md)** -- Strip AI-isms from manuscript text.
+
+### Media
+
+- **[youtube](skills/youtube)** -- Extract transcript + metadata from a YouTube URL as markdown.
+- **[youtube2mp4](skills/youtube2mp4)** -- Download YouTube videos as mp4.
+- **[transcript2html](skills/transcript2html)** -- Render YouTube transcript markdown as a Korean dark-mode HTML reading view.
+
+### Document
+
+- **[docx-scientific-formatting](skills/docx-scientific-formatting)** -- Auto-fix chemical formula subscripts, italics, and superscripts in scientific .docx files.
+- **[html-minimal](skills/html-minimal)** -- Generate self-contained HTML reports with no external JS frameworks.
+- **[design2html](skills/design2html)** -- Read a design spec MD and generate a single-file HTML showcase page.
+- **[meetingnote-paperwork](skills/meetingnote-paperwork)** -- Draft Korean research project meeting notes in a fixed paperwork template.
+
+### Visualization
+
+- **[matplotlib-scientific](skills/matplotlib-scientific)** -- Create publication-quality matplotlib figures with rcParams, colormap, and legend/axis formatting.
+- **[blender-atom-render](skills/blender-atom-render)** -- Render structure files (XYZ, CIF, POSCAR) as Blender sphere models with per-system legends.
+- **[slide-audit](skills/slide-audit)** -- Detect text overlap, clipping, and overflow in HTML slide decks via Playwright + visual review.
+
+### Scientific Computing
+
+- **[ase](skills/ase)** -- ASE (Atomic Simulation Environment) code generation skill. Includes 9-LLM benchmark.
+
+### Document (cont.)
+
+- **[pptx-too-heavy](skills/pptx-too-heavy)** -- Find heavy images in PPTX files and generate a visual HTML size report.
+
+### Utility
+
+- **[smart-compact](skills/smart-compact)** -- Save session state before /clear. The next session picks up automatically.
 
 ---
 
@@ -130,13 +97,23 @@ Benchmark on 100 AI-generated Korean paragraphs across 20 genres.
 </p>
 
 | Metric | Original (AI) | Humanized |
-|---|---|---|
+| :---: | :---: | :---: |
 | AI-Tell Score (lower = better) | 54.9 | **1.0** (-98.1%) |
 | Naturalness (1-10) | 2.9 | **9.2** |
 | Fidelity (1-10) | 10.0 | 8.8 |
 | Change Rate | 0% | 27.9% |
 
-> Interactive dashboard: [`skills/humanize-writing/benchmark/benchmark_report.html`](skills/humanize-writing/benchmark/benchmark_report.html)
+> Interactive dashboard: [`skills/humanizer_kor/benchmark/benchmark_report.html`](https://s-choung.github.io/Research-Skills/skills/humanizer_kor/benchmark/benchmark_report.html)
+
+### ASE Skill
+
+50-task code generation benchmark with ASE skill injected into 9 LLMs. Pass rate only.
+
+<p align="center">
+  <img src="assets/ase_bench_overview.png" width="90%" alt="ASE Benchmark Overview"/>
+</p>
+
+> Interactive dashboard: [`skills/ase/benchmark/benchmark_report_v6.html`](https://s-choung.github.io/Research-Skills/skills/ase/benchmark/benchmark_report_v6.html)
 
 ### transcript2html
 
@@ -148,52 +125,10 @@ YouTube transcript rendered as a dark-mode Korean reading view.
 
 ---
 
-## Tree
-
-```
-skills/
-  humanize-writing/       AI text humanizer (KR/EN)
-  paper-sections/          IMRAD section drafting
-  paper-style/             Author style profile
-  docx-scientific-formatting/  .docx scientific proofing
-  matplotlib-scientific/   Publication figures
-  blender-atom-render/     Atom structure rendering
-  slide-audit/             Slide layout verification
-  html-minimal/            Minimal HTML reports
-  design2html/             Design spec -> HTML
-  smart-compact/           Session state save
-  youtube/                 YouTube transcript extraction
-  youtube2mp4/             YouTube video download
-  transcript2html/         Transcript HTML renderer
-  meetingnote-paperwork/   Research meeting notes
-
-agents/
-  paper-ref-hunter         Reference search
-  paper-section-drafter    Section drafting
-  paper-scientific-critic  Scientific critique
-  paper-style-enforcer     Style enforcement
-
-commands/
-  /paper                   Paper team umbrella
-  /paper-ref               Reference hunting
-  /paper-draft             Section draft
-  /paper-critic            Critique
-  /paper-humanize          AI-ism removal
-  /paper-plan              Writing plan
-```
-
----
-
-## Subagent Token Warning
-
-Subagents dispatched by the paper team each open their own context window, so **token usage scales fast**. Use only when needed.
-
----
-
 ## Dependencies
 
 | Skill | Requirement |
-|---|---|
+| :---: | :---: |
 | `slide-audit` | `cd skills/slide-audit && npm install && npx playwright install chromium` |
 | `youtube`, `youtube2mp4` | `brew install yt-dlp ffmpeg` |
 | `blender-atom-render` | `brew install --cask blender` |
