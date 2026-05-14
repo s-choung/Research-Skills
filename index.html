@@ -141,10 +141,17 @@ nav {
   font-size: 14px; color: var(--color-graphite);
   line-height: 1.6; flex: 1;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: text;
+  user-select: text;
+  cursor: text;
 }
 .card-footer {
   display: flex; align-items: center;
   gap: 8px; flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 .card-badge {
   display: inline-flex;
@@ -244,54 +251,7 @@ footer a:hover { text-decoration: underline; }
   <div class="section-label" data-en="Skills" data-ko="Skills">Skills</div>
   <div class="cards" id="cardGrid">
 
-    <div class="card" data-cat="writing">
-      <div class="card-cat">Writing</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/humanizer_kor">/humanizer_kor</a></div>
-      <div class="card-desc" data-en="Detects and rewrites AI-generated Korean text through a 5-stage pipeline. 40+ sub-patterns across 10 categories." data-ko="5단계 파이프라인으로 AI 생성 한국어 텍스트를 탐지하고 윤문. 10개 카테고리 40+ 세부 패턴.">Detects and rewrites AI-generated Korean text through a 5-stage pipeline. 40+ sub-patterns across 10 categories.</div>
-      <div class="card-footer">
-        <span class="card-badge" data-en="AI-Tell 98% reduction" data-ko="AI-Tell 98% 감소">AI-Tell 98% reduction</span>
-        <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="card-report">Report</a>
-      </div>
-    </div>
-
-    <div class="card" data-cat="writing">
-      <div class="card-cat">Writing</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/humanizer_eng">/humanizer_eng</a></div>
-      <div class="card-desc" data-en="English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm." data-ko="금지 어휘, 기계적 전환어, 과장 표현, 균일 리듬 등 영어 AI 흔적을 제거.">English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm.</div>
-      <div class="card-footer">
-        <span class="card-badge" data-en="AI-Tell 96% reduction" data-ko="AI-Tell 96% 감소">AI-Tell 96% reduction</span>
-        <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="card-report">Report</a>
-      </div>
-    </div>
-
-    <div class="card" data-cat="writing">
-      <div class="card-cat">Writing</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/paper-style">/paper-style</a></div>
-      <div class="card-desc" data-en="Loads the author's scientific writing style profile and performs light AI-ism cleanup on manuscript paragraphs." data-ko="저자의 논문 문체 프로파일을 로드하고 원고 문단의 AI 흔적을 경량 제거.">Loads the author's scientific writing style profile and performs light AI-ism cleanup on manuscript paragraphs.</div>
-      <div class="card-footer">
-        <span class="card-badge" data-en="Style profile" data-ko="문체 프로파일">Style profile</span>
-      </div>
-    </div>
-
-    <div class="card" data-cat="writing">
-      <div class="card-cat">Writing</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/paper-sections">/paper-sections</a></div>
-      <div class="card-desc" data-en="Drafts IMRAD paper sections in the author's voice with numeric-superscript citation formatting." data-ko="저자 문체로 IMRAD 논문 섹션 초안을 작성하고 위첨자 인용 포맷을 적용.">Drafts IMRAD paper sections in the author's voice with numeric-superscript citation formatting.</div>
-      <div class="card-footer">
-        <span class="card-badge" data-en="IMRAD drafting" data-ko="IMRAD 초안">IMRAD drafting</span>
-      </div>
-    </div>
-
-    <div class="card" data-cat="writing">
-      <div class="card-cat">Writing</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/docx-scientific-formatting">/docx-scientific-formatting</a></div>
-      <div class="card-desc" data-en="Formats Word documents with chemical formula subscripts, superscripts, and scientific italic rules via python-docx." data-ko="python-docx로 Word 문서의 화학식 아래첨자/위첨자/이탤릭 규칙을 자동 포맷팅.">Formats Word documents with chemical formula subscripts, superscripts, and scientific italic rules via python-docx.</div>
-      <div class="card-footer">
-        <span class="card-badge" data-en="DOCX formatting" data-ko="DOCX 포맷팅">DOCX formatting</span>
-      </div>
-    </div>
-
-    <div class="card" data-cat="research">
+    <div class="card" data-cat="research" data-id="ase" data-order-en="1" data-order-ko="1">
       <div class="card-cat">Research</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/ase">/ase</a></div>
       <div class="card-desc" data-en="LLM knowledge augmentation for error-free ASE (Atomic Simulation Environment) Python scripts. Benchmarked with 9 LLMs." data-ko="ASE(Atomic Simulation Environment) 라이브러리 코드 생성을 위한 LLM 지식 보강. 9개 LLM 벤치마크.">LLM knowledge augmentation for error-free ASE (Atomic Simulation Environment) Python scripts. Benchmarked with 9 LLMs.</div>
@@ -301,7 +261,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="research">
+    <div class="card" data-cat="research" data-id="matplotlib" data-order-en="2" data-order-ko="2">
       <div class="card-cat">Research</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/matplotlib-scientific">/matplotlib-scientific</a></div>
       <div class="card-desc" data-en="Creates publication-quality scientific figures with strict formatting rules: Arial font, SVG output, no grid, clean axes." data-ko="엄격한 포맷 규칙(Arial, SVG, 그리드 없음)을 따르는 논문용 matplotlib 그래프 생성.">Creates publication-quality scientific figures with strict formatting rules: Arial font, SVG output, no grid, clean axes.</div>
@@ -311,16 +271,27 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="design">
-      <div class="card-cat">Design</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/blender-atom-render">/blender-atom-render</a></div>
-      <div class="card-desc" data-en="Renders individual atom spheres from structure files using Blender and creates per-system legends." data-ko="Blender로 구조 파일에서 원자 구를 렌더링하고 시스템별 레전드를 생성.">Renders individual atom spheres from structure files using Blender and creates per-system legends.</div>
+    <div class="card" data-cat="writing" data-id="hum_eng" data-order-en="3" data-order-ko="8">
+      <div class="card-cat">Writing</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/humanizer_eng">/humanizer_eng</a></div>
+      <div class="card-desc" data-en="English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm." data-ko="금지 어휘, 기계적 전환어, 과장 표현, 균일 리듬 등 영어 AI 흔적을 제거.">English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm.</div>
       <div class="card-footer">
-        <span class="card-badge" data-en="Blender rendering" data-ko="Blender 렌더링">Blender rendering</span>
+        <span class="card-badge" data-en="AI-Tell 96% reduction" data-ko="AI-Tell 96% 감소">AI-Tell 96% reduction</span>
+        <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="card-report">Report</a>
       </div>
     </div>
 
-    <div class="card" data-cat="design">
+    <div class="card" data-cat="writing" data-id="hum_kor" data-order-en="8" data-order-ko="3">
+      <div class="card-cat">Writing</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/humanizer_kor">/humanizer_kor</a></div>
+      <div class="card-desc" data-en="Detects and rewrites AI-generated Korean text through a 5-stage pipeline. 40+ sub-patterns across 10 categories." data-ko="5단계 파이프라인으로 AI 생성 한국어 텍스트를 탐지하고 윤문. 10개 카테고리 40+ 세부 패턴.">Detects and rewrites AI-generated Korean text through a 5-stage pipeline. 40+ sub-patterns across 10 categories.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="AI-Tell 98% reduction" data-ko="AI-Tell 98% 감소">AI-Tell 98% reduction</span>
+        <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="card-report">Report</a>
+      </div>
+    </div>
+
+    <div class="card" data-cat="design" data-id="design2html" data-order-en="4" data-order-ko="4">
       <div class="card-cat">Design</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/design2html">/design2html</a></div>
       <div class="card-desc" data-en="Converts design spec Markdown files into single-file HTML showcase pages with full token/component fidelity." data-ko="디자인 스펙 MD 파일을 토큰/컴포넌트를 충실히 반영한 HTML 쇼케이스 페이지로 변환.">Converts design spec Markdown files into single-file HTML showcase pages with full token/component fidelity.</div>
@@ -329,25 +300,16 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="design">
-      <div class="card-cat">Design</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/html-minimal">/html-minimal</a></div>
-      <div class="card-desc" data-en="Creates warm-neutral minimal HTML documents with strict typography and whitespace-driven structure." data-ko="따뜻한 뉴트럴 톤, 엄격한 타이포그래피의 미니멀 HTML 문서 스타일.">Creates warm-neutral minimal HTML documents with strict typography and whitespace-driven structure.</div>
+    <div class="card" data-cat="utility" data-id="smart-compact" data-order-en="5" data-order-ko="5">
+      <div class="card-cat">Utility</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/smart-compact">/smart-compact</a></div>
+      <div class="card-desc" data-en="Saves Claude Code session state to a file for recovery after /clear context reset." data-ko="Claude Code 세션 상태를 파일로 저장하여 /clear 후 복구 가능하게 하는 스킬.">Saves Claude Code session state to a file for recovery after /clear context reset.</div>
       <div class="card-footer">
-        <span class="card-badge" data-en="Minimal reports" data-ko="미니멀 리포트">Minimal reports</span>
+        <span class="card-badge" data-en="Session recovery" data-ko="세션 복구">Session recovery</span>
       </div>
     </div>
 
-    <div class="card" data-cat="design">
-      <div class="card-cat">Design</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/slide-audit">/slide-audit</a></div>
-      <div class="card-desc" data-en="Verifies HTML slide deck layouts via Playwright bounding-rect diagnostics and visual subagent review." data-ko="Playwright 바운딩 박스 진단 + 시각 서브에이전트로 HTML 슬라이드 레이아웃 버그 검증.">Verifies HTML slide deck layouts via Playwright bounding-rect diagnostics and visual subagent review.</div>
-      <div class="card-footer">
-        <span class="card-badge" data-en="Layout verification" data-ko="레이아웃 검증">Layout verification</span>
-      </div>
-    </div>
-
-    <div class="card" data-cat="media">
+    <div class="card" data-cat="media" data-id="youtube" data-order-en="6" data-order-ko="6">
       <div class="card-cat">Media</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/youtube">/youtube</a></div>
       <div class="card-desc" data-en="Extracts YouTube transcripts, metadata, and key frame screenshots as structured Markdown." data-ko="YouTube URL에서 자막, 메타데이터, 주요 장면 스크린샷을 마크다운으로 추출.">Extracts YouTube transcripts, metadata, and key frame screenshots as structured Markdown.</div>
@@ -356,16 +318,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="media">
-      <div class="card-cat">Media</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/youtube2mp4">/youtube2mp4</a></div>
-      <div class="card-desc" data-en="Downloads YouTube videos as MP4 with optional resolution cap, time trimming, and audio-only mode." data-ko="YouTube 영상을 MP4로 다운로드. 해상도 제한, 구간 자르기, 오디오 전용 모드 지원.">Downloads YouTube videos as MP4 with optional resolution cap, time trimming, and audio-only mode.</div>
-      <div class="card-footer">
-        <span class="card-badge" data-en="Video download" data-ko="영상 다운로드">Video download</span>
-      </div>
-    </div>
-
-    <div class="card" data-cat="media">
+    <div class="card" data-cat="media" data-id="transcript2html" data-order-en="7" data-order-ko="7">
       <div class="card-cat">Media</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/transcript2html">/transcript2html</a></div>
       <div class="card-desc" data-en="Converts YouTube transcript Markdown into readable Korean dark-mode HTML with embedded key frames." data-ko="YouTube 트랜스크립트 MD를 키 프레임 포함 한국어 다크모드 읽기용 HTML로 변환.">Converts YouTube transcript Markdown into readable Korean dark-mode HTML with embedded key frames.</div>
@@ -374,7 +327,70 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="utility">
+    <div class="card" data-cat="writing" data-id="paper-style" data-order-en="9" data-order-ko="9">
+      <div class="card-cat">Writing</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/paper-style">/paper-style</a></div>
+      <div class="card-desc" data-en="Loads the author's scientific writing style profile and performs light AI-ism cleanup on manuscript paragraphs." data-ko="저자의 논문 문체 프로파일을 로드하고 원고 문단의 AI 흔적을 경량 제거.">Loads the author's scientific writing style profile and performs light AI-ism cleanup on manuscript paragraphs.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Style profile" data-ko="문체 프로파일">Style profile</span>
+      </div>
+    </div>
+
+    <div class="card" data-cat="writing" data-id="paper-sections" data-order-en="10" data-order-ko="10">
+      <div class="card-cat">Writing</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/paper-sections">/paper-sections</a></div>
+      <div class="card-desc" data-en="Drafts IMRAD paper sections in the author's voice with numeric-superscript citation formatting." data-ko="저자 문체로 IMRAD 논문 섹션 초안을 작성하고 위첨자 인용 포맷을 적용.">Drafts IMRAD paper sections in the author's voice with numeric-superscript citation formatting.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="IMRAD drafting" data-ko="IMRAD 초안">IMRAD drafting</span>
+      </div>
+    </div>
+
+    <div class="card" data-cat="design" data-id="blender" data-order-en="11" data-order-ko="11">
+      <div class="card-cat">Design</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/blender-atom-render">/blender-atom-render</a></div>
+      <div class="card-desc" data-en="Renders individual atom spheres from structure files using Blender and creates per-system legends." data-ko="Blender로 구조 파일에서 원자 구를 렌더링하고 시스템별 레전드를 생성.">Renders individual atom spheres from structure files using Blender and creates per-system legends.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Blender rendering" data-ko="Blender 렌더링">Blender rendering</span>
+      </div>
+    </div>
+
+    <div class="card" data-cat="writing" data-id="docx" data-order-en="12" data-order-ko="12">
+      <div class="card-cat">Writing</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/docx-scientific-formatting">/docx-scientific-formatting</a></div>
+      <div class="card-desc" data-en="Formats Word documents with chemical formula subscripts, superscripts, and scientific italic rules via python-docx." data-ko="python-docx로 Word 문서의 화학식 아래첨자/위첨자/이탤릭 규칙을 자동 포맷팅.">Formats Word documents with chemical formula subscripts, superscripts, and scientific italic rules via python-docx.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="DOCX formatting" data-ko="DOCX 포맷팅">DOCX formatting</span>
+      </div>
+    </div>
+
+    <div class="card" data-cat="design" data-id="html-minimal" data-order-en="13" data-order-ko="13">
+      <div class="card-cat">Design</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/html-minimal">/html-minimal</a></div>
+      <div class="card-desc" data-en="Creates warm-neutral minimal HTML documents with strict typography and whitespace-driven structure." data-ko="따뜻한 뉴트럴 톤, 엄격한 타이포그래피의 미니멀 HTML 문서 스타일.">Creates warm-neutral minimal HTML documents with strict typography and whitespace-driven structure.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Minimal reports" data-ko="미니멀 리포트">Minimal reports</span>
+      </div>
+    </div>
+
+    <div class="card" data-cat="design" data-id="slide-audit" data-order-en="14" data-order-ko="14">
+      <div class="card-cat">Design</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/slide-audit">/slide-audit</a></div>
+      <div class="card-desc" data-en="Verifies HTML slide deck layouts via Playwright bounding-rect diagnostics and visual subagent review." data-ko="Playwright 바운딩 박스 진단 + 시각 서브에이전트로 HTML 슬라이드 레이아웃 버그 검증.">Verifies HTML slide deck layouts via Playwright bounding-rect diagnostics and visual subagent review.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Layout verification" data-ko="레이아웃 검증">Layout verification</span>
+      </div>
+    </div>
+
+    <div class="card" data-cat="media" data-id="youtube2mp4" data-order-en="15" data-order-ko="15">
+      <div class="card-cat">Media</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/youtube2mp4">/youtube2mp4</a></div>
+      <div class="card-desc" data-en="Downloads YouTube videos as MP4 with optional resolution cap, time trimming, and audio-only mode." data-ko="YouTube 영상을 MP4로 다운로드. 해상도 제한, 구간 자르기, 오디오 전용 모드 지원.">Downloads YouTube videos as MP4 with optional resolution cap, time trimming, and audio-only mode.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Video download" data-ko="영상 다운로드">Video download</span>
+      </div>
+    </div>
+
+    <div class="card" data-cat="utility" data-id="pptx" data-order-en="16" data-order-ko="16">
       <div class="card-cat">Utility</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/pptx-too-heavy">/pptx-too-heavy</a></div>
       <div class="card-desc" data-en="Analyzes PPTX files for oversized media, maps images per slide, and generates a size-sorted grid report." data-ko="PPTX 내 대용량 미디어를 찾아 슬라이드별 이미지 매핑 + 용량순 그리드 리포트 생성.">Analyzes PPTX files for oversized media, maps images per slide, and generates a size-sorted grid report.</div>
@@ -383,21 +399,12 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="utility">
+    <div class="card" data-cat="utility" data-id="meetingnote" data-order-en="17" data-order-ko="17">
       <div class="card-cat">Utility</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/meetingnote-paperwork">/meetingnote-paperwork</a></div>
       <div class="card-desc" data-en="Generates Korean research project meeting notes in a fixed paperwork template for computational chemistry." data-ko="계산화학/재료설계 주제의 고정 양식 한국어 연구과제 회의록 자동 생성.">Generates Korean research project meeting notes in a fixed paperwork template for computational chemistry.</div>
       <div class="card-footer">
         <span class="card-badge" data-en="Meeting notes" data-ko="회의록 생성">Meeting notes</span>
-      </div>
-    </div>
-
-    <div class="card" data-cat="utility">
-      <div class="card-cat">Utility</div>
-      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/smart-compact">/smart-compact</a></div>
-      <div class="card-desc" data-en="Saves Claude Code session state to a file for recovery after /clear context reset." data-ko="Claude Code 세션 상태를 파일로 저장하여 /clear 후 복구 가능하게 하는 스킬.">Saves Claude Code session state to a file for recovery after /clear context reset.</div>
-      <div class="card-footer">
-        <span class="card-badge" data-en="Session recovery" data-ko="세션 복구">Session recovery</span>
       </div>
     </div>
 
@@ -443,6 +450,14 @@ function toggleLang() {
     el.textContent = el.getAttribute('data-' + lang);
   });
   updateReportLinks();
+  reorderCards();
+}
+
+function reorderCards() {
+  const key = 'data-order-' + lang;
+  document.querySelectorAll('.card').forEach(c => {
+    c.style.order = c.getAttribute(key) || '99';
+  });
 }
 
 function updateReportLinks() {
@@ -467,6 +482,7 @@ function filterCat(cat) {
 
 filterCat('all');
 updateReportLinks();
+reorderCards();
 </script>
 </body>
 </html>
