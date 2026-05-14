@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seokhyun Choung — OpenAI Style</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-void: #000000;
+  --color-fog-border: #e5e7eb;
+  --color-chalk: #f1f1f1;
+  --color-graphite: #666666;
+  --color-canvas: #ffffff;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-void);
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; height: 64px;
+  background: var(--color-canvas);
+  border-bottom: 1px solid var(--color-fog-border);
+}
+nav .logo {
+  font-size: 16px; font-weight: 600;
+  color: var(--color-void);
+}
+nav .nav-links { display: flex; gap: 24px; align-items: center; }
+nav a {
+  font-size: 14px; font-weight: 500;
+  color: var(--color-void);
+  text-decoration: none;
+}
+nav a:hover { text-decoration: underline; }
+nav .cta {
+  background: var(--color-void); color: var(--color-canvas);
+  padding: 10px 16px; border-radius: 9999px;
+  font-size: 14px; font-weight: 500;
+  text-decoration: none;
+}
+nav .cta:hover { text-decoration: none; }
+nav .ghost {
+  background: transparent; color: var(--color-void);
+  padding: 10px 12px; border-radius: 9999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  font-size: 14px; font-weight: 500;
+  text-decoration: none;
+}
+.hero {
+  max-width: 800px; margin: 0 auto;
+  padding: 112px 32px 80px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 48px; font-weight: 600;
+  line-height: 1.16; letter-spacing: -1.44px;
+  color: var(--color-void);
+  margin-bottom: 20px;
+}
+.hero .title {
+  font-size: 16px; font-weight: 400;
+  color: var(--color-graphite);
+  margin-bottom: 24px;
+}
+.hero p {
+  font-size: 16px; font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-graphite);
+  max-width: 560px; margin: 0 auto 32px;
+}
+.hero .buttons { display: flex; gap: 12px; justify-content: center; }
+.hero .btn-primary {
+  background: var(--color-void); color: var(--color-canvas);
+  padding: 10px 16px; border-radius: 9999px;
+  font-size: 14px; font-weight: 500;
+  text-decoration: none;
+}
+.hero .btn-ghost {
+  background: transparent; color: var(--color-void);
+  padding: 10px 12px; border-radius: 9999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  font-size: 14px; font-weight: 500;
+  text-decoration: none;
+}
+.hero .btn-ghost:hover { background: var(--color-chalk); }
+.cards-section {
+  max-width: 1000px; margin: 0 auto;
+  padding: 0 32px 80px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.card {
+  padding: 32px 0;
+}
+.card .category {
+  font-size: 13px; font-weight: 500;
+  color: var(--color-graphite);
+  letter-spacing: 0.143px;
+  margin-bottom: 8px;
+}
+.card h3 {
+  font-size: 22px; font-weight: 600;
+  line-height: 1.26;
+  color: var(--color-void);
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 16px; font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-graphite);
+}
+footer {
+  max-width: 1000px; margin: 0 auto;
+  padding: 40px 32px;
+  border-top: 1px solid var(--color-fog-border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer .links { display: flex; gap: 24px; }
+footer a {
+  font-size: 13px; font-weight: 400;
+  color: var(--color-graphite);
+  text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+footer .copy {
+  font-size: 13px; font-weight: 400;
+  color: var(--color-graphite);
+}
+@media (max-width: 768px) {
+  .hero { padding: 64px 20px 48px; }
+  .hero h1 { font-size: 32px; letter-spacing: -0.5px; }
+  .cards-section { grid-template-columns: 1fr; padding: 0 20px 48px; }
+  footer { flex-direction: column; gap: 12px; padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">Seokhyun Choung</span>
+  <div class="nav-links">
+    <a href="#">Research</a>
+    <a href="#">Publications</a>
+    <a class="ghost" href="https://github.com/s-choung">GitHub</a>
+    <a class="cta" href="https://schoung.com">Visit Site</a>
+  </div>
+</nav>
+<section class="hero">
+  <h1>Seokhyun Choung</h1>
+  <div class="title">Computational Materials Scientist</div>
+  <p>Research at the intersection of density functional theory, machine learning, and heterogeneous catalysis. Building tools that make computational chemistry workflows faster and more reliable.</p>
+  <div class="buttons">
+    <a class="btn-primary" href="https://schoung.com">View Research</a>
+    <a class="btn-ghost" href="https://github.com/s-choung">GitHub</a>
+  </div>
+</section>
+<section class="cards-section">
+  <div class="card">
+    <div class="category">Focus Area</div>
+    <h3>ML-Accelerated Catalyst Screening</h3>
+    <p>Leveraging machine learning models to rapidly screen candidate catalysts, reducing the computational cost of traditional DFT-based approaches by orders of magnitude.</p>
+  </div>
+  <div class="card">
+    <div class="category">Focus Area</div>
+    <h3>Automated DFT Workflows</h3>
+    <p>Designing and building automated pipelines for density functional theory calculations, from structure generation to post-processing and analysis.</p>
+  </div>
+  <div class="card">
+    <div class="category">Focus Area</div>
+    <h3>Agent Skills for Research</h3>
+    <p>Creating intelligent agent-based tools that assist researchers with literature review, data analysis, and manuscript preparation workflows.</p>
+  </div>
+</section>
+<footer>
+  <div class="links">
+    <a href="https://schoung.com">schoung.com</a>
+    <a href="https://github.com/s-choung">github.com/s-choung</a>
+    <a href="#">POSTECH</a>
+  </div>
+  <span class="copy">OpenAI design style</span>
+</footer>
+</body>
+</html>

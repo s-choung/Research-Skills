@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seokhyun Choung — Ease Health Style</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:wght@300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-forest-green: #0f3e17;
+  --color-cream-canvas: #fffefc;
+  --color-mint-glaze: #b1dbb8;
+  --color-slate-mist: #b6ced5;
+  --color-keylime-wash: #e1f4df;
+  --color-mint-kiss: #cfe7d3;
+  --color-border-grey: #e5e7eb;
+  --color-ink-text: #222222;
+  --color-dark-charcoal: #333333;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-cream-canvas);
+  color: var(--color-ink-text);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 42px;
+  background: var(--color-cream-canvas);
+  border-bottom: 1px solid var(--color-border-grey);
+}
+nav .logo { font-size: 18px; font-weight: 400; color: var(--color-forest-green); }
+nav a {
+  font-size: 14px; color: var(--color-dark-charcoal);
+  text-decoration: none; border-bottom: 1px solid transparent;
+}
+nav a:hover { border-bottom-color: var(--color-forest-green); }
+.hero {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 42px;
+  max-width: 1100px; margin: 0 auto;
+  padding: 99px 42px 70px;
+  align-items: center;
+}
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300; font-size: 56px;
+  line-height: 1; letter-spacing: -1.68px;
+  color: var(--color-forest-green);
+  margin-bottom: 21px;
+}
+.hero-text .title {
+  font-size: 23px; line-height: 1.3; letter-spacing: -0.69px;
+  color: var(--color-forest-green);
+  margin-bottom: 21px;
+}
+.hero-text p {
+  font-size: 18px; line-height: 1.5; letter-spacing: -0.54px;
+  color: var(--color-dark-charcoal);
+  font-weight: 300;
+}
+.hero-visual {
+  background: var(--color-keylime-wash);
+  border-radius: 14px; padding: 42px;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 280px;
+}
+.hero-visual .initials {
+  font-family: 'Playfair Display', serif;
+  font-weight: 300; font-size: 74px;
+  color: var(--color-forest-green);
+  letter-spacing: -0.74px; line-height: 1.05;
+}
+.cards-section {
+  max-width: 1100px; margin: 0 auto;
+  padding: 0 42px 70px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 21px;
+}
+.card {
+  border-radius: 14px; padding: 42px;
+}
+.card:nth-child(1) { background: var(--color-mint-glaze); }
+.card:nth-child(2) { background: var(--color-slate-mist); }
+.card:nth-child(3) { background: var(--color-mint-kiss); }
+.card h3 {
+  font-size: 23px; line-height: 1.3; letter-spacing: -0.69px;
+  color: var(--color-forest-green);
+  margin-bottom: 14px;
+}
+.card p {
+  font-size: 14px; line-height: 1.5; letter-spacing: -0.42px;
+  color: var(--color-dark-charcoal);
+  font-weight: 300;
+}
+footer {
+  max-width: 1100px; margin: 0 auto;
+  padding: 42px;
+  border-top: 1px solid var(--color-border-grey);
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer .links { display: flex; gap: 21px; }
+footer a {
+  font-size: 14px; color: var(--color-dark-charcoal);
+  text-decoration: none;
+}
+footer a:hover { color: var(--color-forest-green); }
+footer .copy { font-size: 12px; color: var(--color-dark-charcoal); font-weight: 300; }
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; padding: 56px 21px 42px; }
+  .cards-section { grid-template-columns: 1fr; padding: 0 21px 42px; }
+  nav { padding: 14px 21px; }
+  footer { flex-direction: column; gap: 14px; padding: 28px 21px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">Seokhyun Choung</span>
+  <a href="https://schoung.com">schoung.com</a>
+</nav>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Seokhyun Choung</h1>
+    <div class="title">Computational Materials Scientist</div>
+    <p>Research at the intersection of density functional theory, machine learning, and heterogeneous catalysis. Building tools that make computational chemistry workflows faster and more reliable.</p>
+  </div>
+  <div class="hero-visual">
+    <span class="initials">SC</span>
+  </div>
+</section>
+<section class="cards-section">
+  <div class="card">
+    <h3>ML-Accelerated Catalyst Screening</h3>
+    <p>Leveraging machine learning models to rapidly screen candidate catalysts, reducing the computational cost of traditional DFT-based approaches by orders of magnitude.</p>
+  </div>
+  <div class="card">
+    <h3>Automated DFT Workflows</h3>
+    <p>Designing and building automated pipelines for density functional theory calculations, from structure generation to post-processing and analysis.</p>
+  </div>
+  <div class="card">
+    <h3>Agent Skills for Research</h3>
+    <p>Creating intelligent agent-based tools that assist researchers with literature review, data analysis, and manuscript preparation workflows.</p>
+  </div>
+</section>
+<footer>
+  <div class="links">
+    <a href="https://schoung.com">schoung.com</a>
+    <a href="https://github.com/s-choung">github.com/s-choung</a>
+    <a href="#">POSTECH</a>
+  </div>
+  <span class="copy">Ease Health design style</span>
+</footer>
+</body>
+</html>

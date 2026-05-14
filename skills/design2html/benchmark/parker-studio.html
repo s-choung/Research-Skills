@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seokhyun Choung — Parker Studio Style</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-canvas-white: #ffffff;
+  --color-midnight-ink: #000000;
+  --color-sage-green: #b7e3b6;
+  --color-subtle-gray: #a5a5a5;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, 'ChaletBook', ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-canvas-white);
+  color: var(--color-midnight-ink);
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 19px 24px;
+  background: var(--color-canvas-white);
+}
+nav .logo {
+  font-family: 'Times New Roman', 'PSTimes', serif;
+  font-size: 24px; font-weight: 400;
+  color: var(--color-midnight-ink);
+}
+nav a {
+  font-size: 16px; font-weight: 400;
+  color: var(--color-midnight-ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  letter-spacing: -0.02em;
+}
+nav a:hover { border-bottom-color: var(--color-midnight-ink); }
+.hero {
+  max-width: 1000px; margin: 0 auto;
+  padding: 120px 24px 56px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+  align-items: center;
+}
+.hero-text h1 {
+  font-family: 'Times New Roman', 'PSTimes', serif;
+  font-weight: 400; font-size: 62px;
+  line-height: 0.96; letter-spacing: -1.24px;
+  color: var(--color-midnight-ink);
+  margin-bottom: 24px;
+}
+.hero-text .title {
+  font-size: 19px; line-height: 1.15; letter-spacing: -0.38px;
+  color: var(--color-midnight-ink);
+  margin-bottom: 24px;
+}
+.hero-text p {
+  font-size: 16px; line-height: 1.4;
+  color: var(--color-midnight-ink);
+}
+.hero-visual {
+  background: var(--color-sage-green);
+  padding: 56px;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 320px;
+}
+.hero-visual .initials {
+  font-family: 'Times New Roman', 'PSTimes', serif;
+  font-weight: 400; font-size: 62px;
+  color: var(--color-midnight-ink);
+  line-height: 0.96;
+}
+.cards-section {
+  max-width: 1000px; margin: 0 auto;
+  padding: 0 24px 56px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 21px;
+}
+.card {
+  border-bottom: 1px solid var(--color-midnight-ink);
+  padding: 19px 0;
+}
+.card h3 {
+  font-size: 19px; line-height: 1.15; letter-spacing: -0.38px;
+  color: var(--color-midnight-ink);
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 16px; line-height: 1.4;
+  color: var(--color-midnight-ink);
+}
+.card .meta {
+  font-size: 16px; color: var(--color-subtle-gray);
+  margin-top: 12px;
+}
+footer {
+  background: var(--color-sage-green);
+  padding: 56px 24px;
+}
+footer .inner {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer .links { display: flex; gap: 21px; }
+footer a {
+  font-size: 16px; color: var(--color-midnight-ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+footer a:hover { border-bottom-color: var(--color-midnight-ink); }
+footer .copy { font-size: 16px; color: var(--color-midnight-ink); }
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; padding: 56px 12px 40px; }
+  .cards-section { grid-template-columns: 1fr; padding: 0 12px 40px; }
+  footer .inner { flex-direction: column; gap: 12px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">Seokhyun Choung</span>
+  <a href="https://schoung.com">Work</a>
+</nav>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Seokhyun Choung</h1>
+    <div class="title">Computational Materials Scientist</div>
+    <p>Research at the intersection of density functional theory, machine learning, and heterogeneous catalysis. Building tools that make computational chemistry workflows faster and more reliable.</p>
+  </div>
+  <div class="hero-visual">
+    <span class="initials">SC</span>
+  </div>
+</section>
+<section class="cards-section">
+  <div class="card">
+    <h3>ML-Accelerated Catalyst Screening</h3>
+    <p>Leveraging machine learning models to rapidly screen candidate catalysts, reducing the computational cost of traditional DFT-based approaches.</p>
+    <div class="meta">Focus Area</div>
+  </div>
+  <div class="card">
+    <h3>Automated DFT Workflows</h3>
+    <p>Designing and building automated pipelines for density functional theory calculations, from structure generation to analysis.</p>
+    <div class="meta">Focus Area</div>
+  </div>
+  <div class="card">
+    <h3>Agent Skills for Research</h3>
+    <p>Creating intelligent agent-based tools that assist researchers with literature review, data analysis, and manuscript preparation.</p>
+    <div class="meta">Focus Area</div>
+  </div>
+</section>
+<footer>
+  <div class="inner">
+    <div class="links">
+      <a href="https://schoung.com">schoung.com</a>
+      <a href="https://github.com/s-choung">github.com/s-choung</a>
+      <a href="#">POSTECH</a>
+    </div>
+    <span class="copy">Parker Studio design style</span>
+  </div>
+</footer>
+</body>
+</html>

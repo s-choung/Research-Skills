@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>/transcript2html</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f7f7f8;
+    --fg: #171717;
+    --fg-secondary: #525252;
+    --fg-tertiary: #a3a3a3;
+    --border: #e5e5e5;
+    --border-soft: #f0f0f0;
+    --accent: #0ea5e9;
+    --accent-soft: rgba(14, 165, 233, 0.08);
+    --accent-line: rgba(14, 165, 233, 0.25);
+    --card-bg: #fafafa;
+    --code-bg: #f5f5f5;
+    --green: #22c55e;
+    --green-soft: rgba(34, 197, 94, 0.08);
+    --red: #ef4444;
+    --red-soft: rgba(239, 68, 68, 0.06);
+    --purple: #8b5cf6;
+    --purple-soft: rgba(139, 92, 246, 0.08);
+    --mono: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, 'Cascadia Code', monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --dark-bg: #0a0a0b;
+    --dark-bg-soft: #111113;
+    --dark-fg: #fafaf7;
+    --dark-muted: #8b8b93;
+    --dark-line: #1f1f23;
+    --dark-card: #131317;
+    --dark-accent: #7c74ff;
+    --dark-accent-soft: rgba(124, 116, 255, 0.12);
+    --dark-accent-line: rgba(124, 116, 255, 0.3);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* -- Nav -- */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 56px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(12px) saturate(1.6);
+    -webkit-backdrop-filter: blur(12px) saturate(1.6);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .nav-logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--fg-tertiary); font-weight: 400; }
+  .lang-toggle {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .lang-toggle button {
+    background: none;
+    border: none;
+    padding: 6px 14px;
+    cursor: pointer;
+    color: var(--fg-tertiary);
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.15s;
+  }
+  .lang-toggle button.active {
+    background: var(--fg);
+    color: var(--bg);
+  }
+
+  /* --Main --*/
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 112px 32px 120px;
+  }
+
+  /* --Hero --*/
+  .hero { margin-bottom: 80px; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: var(--fg);
+    margin-bottom: 20px;
+  }
+  .hero h1 code {
+    font-family: var(--mono);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--fg-secondary);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  /* --Section headers --*/
+  .section { margin-top: 72px; }
+  .section-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    color: var(--fg);
+  }
+  .section-desc {
+    font-size: 16px;
+    color: var(--fg-secondary);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 640px;
+  }
+
+  /* --Flow diagram --*/
+  .flow {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 40px;
+  }
+  .flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .flow-step:last-child { margin-bottom: 0; }
+  .flow-step::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 40px;
+    bottom: -28px;
+    width: 1px;
+    background: var(--border);
+  }
+  .flow-step:last-child::before { display: none; }
+  .flow-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .flow-icon.cmd { background: var(--fg); color: var(--bg); }
+  .flow-icon.out { background: var(--green-soft); color: var(--green); border: 1px solid rgba(34,197,94,0.2); }
+  .flow-content { flex: 1; padding-top: 5px; }
+  .flow-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 4px;
+  }
+  .flow-code {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--fg-secondary);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: inline-block;
+    line-height: 1.5;
+    word-break: break-all;
+  }
+  .flow-code .cmd-name { color: var(--accent); font-weight: 600; }
+  .flow-code .url-part { color: var(--fg-tertiary); }
+  .flow-files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .flow-file {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--fg-secondary);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 10px;
+  }
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 48px;
+    margin-bottom: 28px;
+    color: var(--fg-tertiary);
+  }
+  .flow-arrow svg { width: 20px; height: 20px; }
+
+  /* --Before / After --*/
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 8px;
+  }
+  @media (max-width: 760px) {
+    .comparison { grid-template-columns: 1fr; }
+  }
+  .comp-panel {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .comp-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+  }
+  .comp-header.before {
+    background: var(--red-soft);
+    color: var(--red);
+    border-color: rgba(239, 68, 68, 0.12);
+  }
+  .comp-header.after {
+    background: var(--green-soft);
+    color: var(--green);
+    border-color: rgba(34, 197, 94, 0.12);
+  }
+  .comp-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .comp-header.before .comp-dot { background: var(--red); }
+  .comp-header.after .comp-dot { background: var(--green); }
+
+  /* Before panel */
+  .before-body {
+    background: var(--bg-soft);
+    padding: 24px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--fg-secondary);
+    min-height: 420px;
+  }
+  .before-body .chunk {
+    display: block;
+    color: var(--fg-tertiary);
+  }
+  .before-body .chunk + .chunk { margin-top: 0; }
+
+  /* After panel (dark mode) */
+  .after-body {
+    background: var(--dark-bg);
+    padding: 0;
+    min-height: 420px;
+    font-family: 'Pretendard', var(--sans);
+  }
+
+  /* Mini dark-mode components inside after panel */
+  .mini-section-header {
+    padding: 24px 24px 0;
+  }
+  .mini-kicker {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dark-accent);
+    margin-bottom: 8px;
+  }
+  .mini-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-fg);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .mini-frame {
+    margin: 0 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--dark-line);
+  }
+  .mini-frame-img {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-muted);
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .mini-frame-cap {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--dark-muted);
+    padding: 8px 14px;
+    border-top: 1px solid var(--dark-line);
+    background: var(--dark-card);
+  }
+
+  .mini-caption-block {
+    margin: 0 16px 12px;
+    padding: 12px 16px;
+    border-left: 2px solid var(--dark-accent);
+    background: var(--dark-bg-soft);
+    border-radius: 0 8px 8px 0;
+  }
+  .mini-caption-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dark-accent);
+    margin-bottom: 4px;
+  }
+  .mini-caption-ko {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--dark-fg);
+    font-weight: 500;
+  }
+  .mini-caption-ko strong { color: var(--dark-accent); font-weight: 700; }
+  .mini-caption-raw {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: #5a5a62;
+    font-style: italic;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .mini-card {
+    margin: 12px 16px 20px;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-line);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .mini-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--dark-fg);
+    margin: 0;
+  }
+  .mini-card p + p { margin-top: 10px; }
+  .mini-card u {
+    text-decoration: underline;
+    text-decoration-color: var(--dark-accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: none;
+  }
+  .mini-card strong {
+    color: #f5f5f0;
+    font-weight: 700;
+  }
+  .mini-card .key {
+    color: var(--dark-accent);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(124, 116, 255, 0.5);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  .mini-card .hl {
+    background: var(--dark-accent-soft);
+    color: var(--dark-accent);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.94em;
+    border: 1px solid var(--dark-accent-line);
+  }
+
+  /* --Feature cards --*/
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+  }
+  @media (max-width: 760px) {
+    .features { grid-template-columns: 1fr; }
+  }
+  .feature-card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .feature-card:hover {
+    border-color: var(--accent-line);
+    box-shadow: 0 4px 24px -8px rgba(14, 165, 233, 0.08);
+  }
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .feature-icon.seg { background: var(--accent-soft); color: var(--accent); }
+  .feature-icon.trans { background: var(--purple-soft); color: var(--purple); }
+  .feature-icon.frame { background: var(--green-soft); color: var(--green); }
+  .feature-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--fg);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .feature-desc {
+    font-size: 14px;
+    color: var(--fg-secondary);
+    line-height: 1.65;
+  }
+
+  /* --Bilingual --*/
+  [data-ko] { display: none; }
+  body.ko [data-ko] { display: initial; }
+  body.ko [data-en] { display: none; }
+  /* For block elements */
+  div[data-ko], p[data-ko], span[data-ko], h1[data-ko], h2[data-ko] { display: none; }
+  body.ko div[data-ko], body.ko p[data-ko], body.ko span[data-ko], body.ko h1[data-ko], body.ko h2[data-ko] { display: block; }
+  body.ko div[data-en], body.ko p[data-en], body.ko span[data-en], body.ko h1[data-en], body.ko h2[data-en] { display: none; }
+  /* Inline overrides */
+  body.ko span[data-ko] { display: inline; }
+  body.ko span[data-en] { display: none; }
+  span[data-en] { display: inline; }
+  span[data-ko] { display: none; }
+
+  /* --Footer --*/
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    margin-top: 96px;
+    font-size: 13px;
+    color: var(--fg-tertiary);
+    font-family: var(--mono);
+  }
+
+  /* --Responsive --*/
+  @media (max-width: 760px) {
+    main { padding: 88px 20px 80px; }
+    nav { padding: 0 16px; }
+    .flow { padding: 24px 20px; }
+  }
+
+  ::selection { background: var(--accent); color: var(--bg); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Research-Skills <span>/ transcript2html</span></div>
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">ENG</button>
+    <button id="btn-ko" onclick="setLang('ko')">KOR</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- --Hero ---->
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <span data-en>Skill Showcase</span><span data-ko>Skill Showcase</span>
+    </div>
+    <h1><code>/transcript2html</code></h1>
+    <p class="hero-sub" data-en>Converts raw YouTube transcript Markdown into a readable Korean dark-mode HTML document with embedded key frame screenshots.</p>
+    <p class="hero-sub" data-ko>YouTube transcript Markdown를 한국어 dark-mode HTML 문서로 변환하는 skill. 프레임 스크린샷 내장, Stripe 스타일 디자인.</p>
+  </div>
+
+  <!-- --Section 1: How to Use ---->
+  <div class="section">
+    <p class="section-num">01</p>
+    <h2 class="section-title" data-en>How to Use</h2>
+    <h2 class="section-title" data-ko>사용법</h2>
+    <p class="section-desc" data-en>Two commands, two steps. Extract the transcript first, then convert it to a styled HTML document.</p>
+    <p class="section-desc" data-ko>명령어 두 개면 끝. 트랜스크립트를 먼저 추출하고, 스타일이 입혀진 HTML 문서로 변환.</p>
+
+    <div class="flow">
+      <!-- Step 1: /youtube -->
+      <div class="flow-step">
+        <div class="flow-icon cmd">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        </div>
+        <div class="flow-content">
+          <div class="flow-label" data-en>Step 1: Extract transcript</div>
+          <div class="flow-label" data-ko>Step 1: 트랜스크립트 추출</div>
+          <div class="flow-code"><span class="cmd-name">/youtube</span> <span class="url-part">https://youtube.com/watch?v=...</span></div>
+        </div>
+      </div>
+
+      <!-- Output 1 -->
+      <div class="flow-step">
+        <div class="flow-icon out">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="flow-content">
+          <div class="flow-label" data-en>Output</div>
+          <div class="flow-label" data-ko>Output</div>
+          <div class="flow-files">
+            <span class="flow-file">output/video_title/transcript.md</span>
+            <span class="flow-file">output/video_title/frames/*.jpg</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: /transcript2html -->
+      <div class="flow-step">
+        <div class="flow-icon cmd">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        </div>
+        <div class="flow-content">
+          <div class="flow-label" data-en>Step 2: Convert to HTML</div>
+          <div class="flow-label" data-ko>Step 2: HTML 변환</div>
+          <div class="flow-code"><span class="cmd-name">/transcript2html</span> <span class="url-part">output/video_title/</span></div>
+        </div>
+      </div>
+
+      <!-- Output 2 -->
+      <div class="flow-step">
+        <div class="flow-icon out">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="flow-content">
+          <div class="flow-label" data-en>Output</div>
+          <div class="flow-label" data-ko>Output</div>
+          <div class="flow-files">
+            <span class="flow-file">transcript_formatted.md</span>
+            <span class="flow-file">transcript.html</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --Section 2: Before / After ---->
+  <div class="section">
+    <p class="section-num">02</p>
+    <h2 class="section-title" data-en>Before / After</h2>
+    <h2 class="section-title" data-ko>Before / After</h2>
+    <p class="section-desc" data-en>Raw auto-generated subtitles on the left. Styled, translated, readable output on the right.</p>
+    <p class="section-desc" data-ko>왼쪽은 자동 생성된 자막 원본. 오른쪽은 번역되고 스타일이 입혀진 최종 결과물.</p>
+
+    <div class="comparison">
+      <!-- Before -->
+      <div class="comp-panel">
+        <div class="comp-header before">
+          <div class="comp-dot"></div>
+          <span data-en>Before &mdash; Raw transcript.md</span>
+          <span data-ko>Before &mdash; transcript.md 원본</span>
+        </div>
+        <div class="before-body">
+<span class="chunk">so the thing about</span>
+<span class="chunk">building products is</span>
+<span class="chunk">you have to</span>
+<span class="chunk">think about the user</span>
+<span class="chunk">experience from the</span>
+<span class="chunk">very beginning and</span>
+<span class="chunk">not just at the</span>
+<span class="chunk">end when you're</span>
+<span class="chunk">shipping the product</span>
+<span class="chunk">you know a lot of</span>
+<span class="chunk">people make the mistake</span>
+<span class="chunk">of treating design as</span>
+<span class="chunk">this afterthought like</span>
+<span class="chunk">oh we'll just put some</span>
+<span class="chunk">paint on it at the end</span>
+<span class="chunk">and ship it but that</span>
+<span class="chunk">never works right it</span>
+<span class="chunk">always feels off and</span>
+<span class="chunk">users can tell they can</span>
+<span class="chunk">absolutely tell when</span>
+<span class="chunk">something was designed</span>
+<span class="chunk">from day one versus</span>
+<span class="chunk">bolted on at the last</span>
+<span class="chunk">minute</span>
+        </div>
+      </div>
+
+      <!-- After -->
+      <div class="comp-panel">
+        <div class="comp-header after">
+          <div class="comp-dot"></div>
+          <span data-en>After &mdash; transcript.html</span>
+          <span data-ko>After &mdash; transcript.html 결과</span>
+        </div>
+        <div class="after-body">
+          <div class="mini-section-header">
+            <div class="mini-kicker">Act 01</div>
+            <div class="mini-title" data-en>Design from Day One</div>
+            <div class="mini-title" data-ko>처음부터 디자인하기</div>
+          </div>
+
+          <div class="mini-frame">
+            <div class="mini-frame-img">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.4"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="22" y2="7"/><line x1="2" y1="17" x2="22" y2="17"/></svg>
+            </div>
+            <div class="mini-frame-cap">02:14</div>
+          </div>
+          <div class="mini-caption-block">
+            <div class="mini-caption-label" data-en>Dialogue at this moment &middot; 02:14</div>
+            <div class="mini-caption-label" data-ko>이 시점 대사 &middot; 02:14</div>
+            <p class="mini-caption-ko" data-en>Users can <strong>always tell</strong> when something was designed from day one versus bolted on at the last minute.</p>
+            <p class="mini-caption-ko" data-ko><strong>사용자는 항상 알아채요.</strong> 처음부터 설계한 건지, 마지막에 급하게 붙인 건지.</p>
+            <span class="mini-caption-raw">users can absolutely tell when something was designed from day one versus bolted on at the last minute</span>
+          </div>
+
+          <div class="mini-card">
+            <p data-en>Products need to consider <u>user experience</u> from the very first day, not as an afterthought. Design isn't just <span class="hl">paint</span> you apply at the end.</p>
+            <p data-ko><span class="key">사용자 경험</span>은 제품을 만드는 첫날부터 고려해야 해요. 나중에 페인트칠하듯 <u>디자인을 덧붙이면</u> 사용자는 바로 알아챈다는 거죠. 처음부터 설계한 것과 <strong>마지막에 급조한 것</strong>의 차이는 생각보다 확연해요.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --Section 3: Key Features ---->
+  <div class="section">
+    <p class="section-num">03</p>
+    <h2 class="section-title" data-en>Key Features</h2>
+    <h2 class="section-title" data-ko>핵심 기능</h2>
+    <p class="section-desc" data-en>Three capabilities that turn messy auto-captions into a polished reading experience.</p>
+    <p class="section-desc" data-ko>어수선한 자동 자막을 제대로 읽을 수 있는 문서로 바꿔주는 세 가지 기능.</p>
+
+    <div class="features">
+      <!-- Card 1 -->
+      <div class="feature-card">
+        <div class="feature-icon seg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </div>
+        <div class="feature-title" data-en>Auto-Segmentation</div>
+        <div class="feature-title" data-ko>자동 문단 분할</div>
+        <p class="feature-desc" data-en>Merges 2-3 word chunks into natural paragraphs. Identifies topic boundaries and generates section headers automatically.</p>
+        <p class="feature-desc" data-ko>2-3 어절씩 끊긴 자막 조각을 자연스러운 문단으로 합쳐요. 주제가 바뀌는 지점을 찾아서 섹션 제목까지 자동으로 붙여줘요.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-card">
+        <div class="feature-icon trans">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg>
+        </div>
+        <div class="feature-title" data-en>Korean Translation</div>
+        <div class="feature-title" data-ko>한국어 번역</div>
+        <p class="feature-desc" data-en>Natural Korean in polite conversational tone. No translation-ese, no AI slop, no inflated expressions. Technical terms stay in English.</p>
+        <p class="feature-desc" data-ko>자연스러운 요체 한국어. 번역투 없이, AI 특유의 과장 없이 깔끔하게. 기술 용어는 영어 그대로 유지해요.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-card">
+        <div class="feature-icon frame">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <div class="feature-title" data-en>Frame Cards</div>
+        <div class="feature-title" data-ko>프레임 카드</div>
+        <p class="feature-desc" data-en>Key moments from the video embedded with timestamps. Each frame includes a Korean-translated caption of what was being said at that moment.</p>
+        <p class="feature-desc" data-ko>영상의 핵심 장면을 타임스탬프와 함께 삽입해요. 각 프레임 아래에 그 시점의 대사가 한국어로 번역돼서 붙어요.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- --Footer ---->
+  <div class="foot">
+    <span>Research-Skills / transcript2html</span>
+    <span>2026.05.14</span>
+  </div>
+
+</main>
+
+<script>
+function setLang(lang) {
+  document.body.classList.toggle('ko', lang === 'ko');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+  try { history.replaceState(null, '', '?lang=' + lang); } catch(e) {}
+}
+
+// Init from URL param
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var lang = params.get('lang');
+  if (lang === 'ko') setLang('ko');
+})();
+</script>
+
+</body>
+</html>

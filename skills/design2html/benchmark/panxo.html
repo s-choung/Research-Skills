@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seokhyun Choung — Panxo Style</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-coal-ink: #1c1a17;
+  --color-ledger-white: #fafafa;
+  --color-parchment: #f7f3eb;
+  --color-ash: #f1f1f1;
+  --color-slate-mid: #7e7d7b;
+  --color-graphite: #5a5957;
+  --color-smolder: #ff6020;
+  --color-signal-violet: #777eff;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-ledger-white);
+  color: var(--color-coal-ink);
+  font-feature-settings: "cv03", "cv04", "cv09", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 32px; height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--color-ash);
+}
+nav .logo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--color-coal-ink);
+  letter-spacing: -0.01em;
+}
+nav .nav-links { display: flex; gap: 24px; align-items: center; }
+nav a {
+  font-size: 14px; font-weight: 500;
+  color: var(--color-graphite);
+  text-decoration: none;
+}
+nav a:hover { color: var(--color-coal-ink); }
+nav .cta {
+  background: var(--color-coal-ink); color: #fff;
+  padding: 7px 12px; border-radius: 48px;
+  font-size: 14px; font-weight: 500;
+  text-decoration: none;
+}
+.hero {
+  background: var(--color-parchment);
+  padding: 96px 32px 80px;
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  align-items: center;
+}
+.hero-left .eyebrow {
+  font-size: 12px; font-weight: 500;
+  color: var(--color-graphite);
+  letter-spacing: 0.05em; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.hero-left h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700; font-size: 56px;
+  line-height: 1; letter-spacing: -2.24px;
+  color: var(--color-coal-ink);
+  margin-bottom: 24px;
+}
+.hero-left .buttons { display: flex; gap: 12px; margin-top: 32px; }
+.hero-left .btn-primary {
+  background: var(--color-coal-ink); color: #fff;
+  padding: 8px 16px; border-radius: 48px;
+  font-size: 14px; font-weight: 500;
+  text-decoration: none; border: none; cursor: pointer;
+}
+.hero-left .btn-ghost {
+  background: transparent; color: var(--color-coal-ink);
+  padding: 8px 16px; border-radius: 20px;
+  font-size: 14px; font-weight: 500;
+  text-decoration: none; border: 1px solid rgba(0,0,0,0.12);
+  cursor: pointer; opacity: 0.72;
+}
+.hero-right p {
+  font-size: 16px; line-height: 1.5;
+  color: var(--color-slate-mid);
+}
+.stats {
+  max-width: 1200px; margin: 0 auto;
+  padding: 80px 32px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.stat-card {
+  background: var(--color-ledger-white);
+  border-radius: 10px; padding: 24px;
+}
+.stat-card .label {
+  font-size: 14px; font-weight: 400;
+  color: var(--color-slate-mid);
+  margin-bottom: 8px;
+}
+.stat-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px; font-weight: 700;
+  letter-spacing: -0.24px; line-height: 1.2;
+  color: var(--color-coal-ink);
+  margin-bottom: 12px;
+}
+.stat-card p {
+  font-size: 14px; line-height: 1.5;
+  color: var(--color-graphite);
+}
+.stat-card .tag {
+  display: inline-block; margin-top: 12px;
+  background: var(--color-ledger-white);
+  color: var(--color-signal-violet);
+  font-size: 12px; font-weight: 500;
+  padding: 4px 10px; border-radius: 6px;
+}
+footer {
+  max-width: 1200px; margin: 0 auto;
+  padding: 48px 32px;
+  border-top: 1px solid var(--color-ash);
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer .links { display: flex; gap: 20px; }
+footer a {
+  font-size: 14px; font-weight: 400;
+  color: var(--color-graphite);
+  text-decoration: none;
+}
+footer a:hover { color: var(--color-smolder); }
+footer .copy { font-size: 12px; color: var(--color-slate-mid); }
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-left h1 { font-size: 40px; letter-spacing: -1.44px; }
+  .stats { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 16px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">choung</span>
+  <div class="nav-links">
+    <a href="#">Research</a>
+    <a href="#">Publications</a>
+    <a class="cta" href="https://schoung.com">Get Started</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="eyebrow">Computational Materials Science</div>
+      <h1>Seokhyun Choung</h1>
+      <div class="buttons">
+        <a class="btn-primary" href="https://schoung.com">View Research</a>
+        <a class="btn-ghost" href="https://github.com/s-choung">Explore GitHub</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <p>Research at the intersection of density functional theory, machine learning, and heterogeneous catalysis. Building tools that make computational chemistry workflows faster and more reliable.</p>
+    </div>
+  </div>
+</section>
+<section class="stats">
+  <div class="stat-card">
+    <div class="label">Focus Area</div>
+    <h3>ML-Accelerated Catalyst Screening</h3>
+    <p>Leveraging machine learning models to rapidly screen candidate catalysts, reducing the computational cost of traditional DFT-based approaches.</p>
+    <span class="tag">Machine Learning</span>
+  </div>
+  <div class="stat-card">
+    <div class="label">Focus Area</div>
+    <h3>Automated DFT Workflows</h3>
+    <p>Designing and building automated pipelines for density functional theory calculations, from structure generation to analysis.</p>
+    <span class="tag">Automation</span>
+  </div>
+  <div class="stat-card">
+    <div class="label">Focus Area</div>
+    <h3>Agent Skills for Research</h3>
+    <p>Creating intelligent agent-based tools that assist researchers with literature review, data analysis, and manuscript preparation.</p>
+    <span class="tag">AI Agents</span>
+  </div>
+</section>
+<footer>
+  <div class="links">
+    <a href="https://schoung.com">schoung.com</a>
+    <a href="https://github.com/s-choung">github.com/s-choung</a>
+    <a href="#">POSTECH</a>
+  </div>
+  <span class="copy">Panxo design style</span>
+</footer>
+</body>
+</html>
