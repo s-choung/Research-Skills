@@ -1,180 +1,207 @@
-# Research-Skills
+<p align="center">
+  <b>한국어</b> | <a href="README.en.md">English</a>
+</p>
 
-과학 연구용 Claude Code 스킬, subagent, slash command 모음입니다. 논문 작성, scientific figure, 문서 자동화, 한국 연구과제 행정 문서까지 다룹니다.
+<h1 align="center">Research-Skills</h1>
 
-**저자: Seokhyun Choung (정석현)** | https://schoung.com
+<p align="center">
+  <b>Claude Code에 한 줄이면 논문 작성, 피규어, 문서 자동화, AI 윤문까지</b>
+</p>
 
-[English README](README.en.md)
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude_Code-Skills-8A2BE2?style=flat" alt="Claude Code">
+  <img src="https://img.shields.io/badge/Skills-16-blue?style=flat" alt="Skills">
+  <img src="https://img.shields.io/badge/Agents-4-green?style=flat" alt="Agents">
+  <img src="https://img.shields.io/badge/Commands-6-orange?style=flat" alt="Commands">
+  <a href="https://schoung.com"><img src="https://img.shields.io/badge/Author-Seokhyun_Choung-black?style=flat" alt="Author"></a>
+</p>
+
+<p align="center">
+  <a href="#-quick-start">Quick Start</a> &middot;
+  <a href="#-skills">Skills</a> &middot;
+  <a href="#-benchmark">Benchmark</a> &middot;
+  <a href="#-dependencies">Dependencies</a> &middot;
+  <a href="#-license">License</a>
+</p>
 
 ---
 
-## 주의: subagent 토큰
+## Quick Start
 
-Paper team이 dispatch하는 subagent (`paper-ref-hunter`, `paper-section-drafter`, `paper-scientific-critic`, `paper-style-enforcer`)는 각자 context window를 띄우기 때문에 **토큰 사용량이 빠르게 커집니다**. 습관적으로 돌리지 마시고 필요한 순간에만 쓰세요.
+Claude Code에서 이렇게 말하세요:
 
----
-
-## 설치
-
-Claude Code(또는 Codex)에 이렇게 말씀하세요.
-
-> https://github.com/s-choung/Research-Skills.git 이거 클론하고 "`~/Research-Skills`에 있는 skill들 설치해줘"
-
-끝입니다.
-
----
-
-## Tree view
-
-```text
-/smart-compact                      세션 상태 저장 후 /clear 대비
-
-/paper                              논문관련 스킬 묶음
-├── /paper-ref <citation|topic>     citation 확정 or 주제 발견
-├── /paper-plan <goal>              multi-step 작성|수정 plan
-├── /paper-draft <section>          IMRAD 섹션 draft
-├── /paper-critic <paragraph>       rigor 비평
-└── /paper-humanize <paragraph>     저자 voice 최종 pass
-
-/youtube <URL> [--frames N]         transcript + metadata + key frame -> md
-/youtube2mp4 <URL> [--audio]        영상 다운로드
-/transcript2html <path>             dark-mode HTML 렌더링
-
-/design2html <spec|name>            디자인 스펙 MD -> showcase HTML
-/blender-atom-render <xyz|cif>      atom sphere render + legend
-/slide-audit <html>                 slide layout bug 자동 탐지
-/meetingnote-paperwork <과제명>     한국 연구과제 회의록 draft
+```
+https://github.com/s-choung/Research-Skills.git 클론하고 스킬 설치해줘
 ```
 
-자연어로도 호출됩니다. 예: "이 docx 표 정리해줘", "data.csv 그래프 그려줘", "분석 리포트 HTML 하나".
+끝.
 
 ---
 
 ## Skills
 
-### 자주 쓰는 것들
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>humanize-writing</h3>
+      AI가 쓴 글의 기계적 신호를 제거하고 사람이 쓴 것처럼 다듬는다. 한국어/영어 모두 지원.<br><br>
+      <code>이 글 humanize 해줘</code><br><br>
+      <a href="skills/humanize-writing">README</a> · <a href="skills/humanize-writing/benchmark/benchmark_report.html">Benchmark</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>paper (team)</h3>
+      논문 작성 전 과정을 subagent 팀으로 처리. ref 검색, 섹션 초안, 비평, humanize까지.<br><br>
+      <code>/paper introduction 레퍼런스 찾아줘</code><br><br>
+      <a href="commands/paper.md">paper</a> · <a href="commands/paper-ref.md">ref</a> · <a href="commands/paper-draft.md">draft</a> · <a href="commands/paper-critic.md">critic</a> · <a href="commands/paper-humanize.md">humanize</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>youtube / youtube2mp4</h3>
+      YouTube URL에서 transcript + metadata + key frame을 markdown으로 추출. 영상 다운로드도 가능.<br><br>
+      <code>/youtube https://youtu.be/... 무슨 내용이야?</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>design2html</h3>
+      디자인 스펙 MD를 읽어 single-file HTML showcase 페이지 생성. 7개 built-in 스펙 포함.<br><br>
+      <code>/design2html ease-health</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>docx-scientific-formatting</h3>
+      논문 .docx proof reading 자동화. 화학식 아래첨자, italic, superscript 검수/수정.<br><br>
+      <code>manuscript.docx 화학식이랑 italic 수정해</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>matplotlib-scientific</h3>
+      출판용 matplotlib figure. rcParams, colormap, subplot, legend/axis 포맷.<br><br>
+      <code>data.csv 그래프로 그려줘</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>blender-atom-render</h3>
+      Structure 파일(XYZ, CIF, POSCAR)을 Blender sphere model + per-system legend으로 렌더링.<br><br>
+      <code>/blender-atom-render structure.xyz</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>slide-audit</h3>
+      HTML slide의 글자 겹침/overflow 등 layout bug를 Playwright + 시각 검수로 탐지.<br><br>
+      <code>/slide-audit deck.html</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>html-minimal</h3>
+      외부 JS framework 없는 self-contained HTML 리포트/briefing 생성.<br><br>
+      <code>분석 결과 HTML 리포트로 만들어줘</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>smart-compact</h3>
+      /clear 직전에 세션 상태를 저장. 다음 세션이 자동으로 이어받는다.<br><br>
+      <code>/smart-compact</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>transcript2html</h3>
+      YouTube transcript markdown을 한국어 dark-mode HTML로 렌더.<br><br>
+      <code>/transcript2html transcript.md</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>meetingnote-paperwork</h3>
+      한국 연구과제 회의록 draft. 계산화학/소재 설계 voice로 작성.<br><br>
+      <code>/meetingnote-paperwork 나노소재 과제 회의록 써줘</code>
+    </td>
+  </tr>
+</table>
 
-- **`smart-compact`** -- `/clear` 직전에 세션 상태를 `.claude/session-state.md`에 저장. 다음 세션이 자동으로 읽어옵니다.
-  
-  ```
-  지금까지 얘기한 내용을 다음세션에 넘길래. /smart-compact
-  ```
+---
 
-- **`docx-scientific-formatting`** -- 논문 `.docx` proof reading 자동화. 화학식 아래첨자(H2O -> H₂O), italic(*in situ*, *operando*), superscript, 수식 서식을 검수|수정합니다.
-  
-  ```
-  manuscript.docx 논문 proof reading중인데 화학식하고 italic 안된거 수정해 
-  ```
+## Benchmark
 
-- **`html-minimal`** -- 외부 JS framework 없는 self-contained HTML 리포트|briefing 생성.
-  
-  ```
-  오늘 분석 결과 HTML 리포트로 미니멀하게 만들어줘 
-  ```
+### humanize-writing
 
-- **`youtube`** -- YouTube URL에서 transcript + metadata + key frame screenshot을 한 번에 markdown으로 추출. Smart frame capture는 heatmap peak -> chapter -> uniform interval 순으로 fallback.
-  
-  ```
-  /youtube https://youtu.be/유튜브 링크 무슨내용인지 나랑 얘기좀하자. 
-  ```
+100개 AI 생성 한국어 단락(20개 장르)에 대한 윤문 벤치마크.
 
-- **`paper-humanize`** -- Draft paragraph를 사용자 검토 직전에 저자 voice로 마지막 pass. 2-pass (global humanize -> `STYLE_PROFILE.md` enforcement).
-  
-  ```
-  /paper-humanize <paragraph> 좀 사람같이써. em dash조심. 
-  ```
+<p align="center">
+  <img src="assets/humanize_bench_overview.png" width="90%" alt="Humanize Benchmark Overview"/>
+</p>
 
-- **`design2html`** -- 디자인 스펙 MD 파일을 읽어 해당 디자인 시스템의 토큰/컴포넌트/레이아웃을 충실히 반영한 single-file HTML showcase 페이지를 생성. 7개 built-in 스펙 포함 (ease-health, look-inc, parker-studio, panxo, attio, ui, openai). `--quick`으로 빠르게, `--full`로 impeccable 품질 파이프라인까지.
-  
-  ```
-  /design2html ease-health
-  /design2html panxo --content "AI analytics platform" --lang en
-  ```
+| Metric | Original (AI) | Humanized |
+|---|---|---|
+| AI-Tell Score (lower = better) | 54.9 | **1.0** (-98.1%) |
+| Naturalness (1-10) | 2.9 | **9.2** |
+| Fidelity (1-10) | 10.0 | 8.8 |
+| Change Rate | 0% | 27.9% |
 
-### 필요할 때 꺼내 쓰는 것들
+> 인터랙티브 대시보드: [`skills/humanize-writing/benchmark/benchmark_report.html`](skills/humanize-writing/benchmark/benchmark_report.html)
 
-- **`paper`** -- umbrella. 자연어 의도를 파싱해서 sub-command로 dispatch.
-  
-  ```
-  /paper introduction 논문 레퍼런스 찾아줘 > paper-ref 알아서 호출. 
-  ```
+### transcript2html
 
-- **`paper-ref`** -- Hunt mode (특정 citation -> Crossref verified DOI) + Discovery mode (주제 -> OpenAlex shortlist). Mode는 input 모양으로 자동 판단.
-  
-  ```
-  /paper-ref Tanaka 2021 grain boundary zirconia JACS 논문 찾아봐.
-  /paper-ref 최근 transition metal oxide 리뷰 논문있었는데 찾아봐. 
-  ```
+YouTube transcript를 dark-mode 한국어 읽기 뷰로 렌더링한 예시.
 
-- **`paper-plan`** -- Multi-step 작성|수정 계획 (reviewer response, 새 섹션 outline, rebuttal 구조).
-  
-  ```
-  /paper-plan ~~내 데이터가 충분히 쌓였어 이거읽고 계획 outline 해
-  ```
+<p align="center">
+  <img src="assets/transcript2html_example.png" width="90%" alt="transcript2html example"/>
+</p>
 
-- **`paper-draft`** -- IMRAD 섹션을 저자 voice로 draft.
-  
-  ```
-  /paper-draft Introduction 부분에 계산이 왜 필요한지 논의가 약해. 
-  ```
+---
 
-- **`paper-critic`** -- Paragraph|섹션 과학적 비평 (unsupported claim, overclaim, logical gap, missing control).
-  
-  ```
-  /paper-critic 이부분 비난좀 해줘
-  <paragraph>
-  ```
+## Tree
 
-- **`paper-sections`, `paper-style`** -- 내부 reference. 직접 호출할 일 없음.
+```
+skills/
+  humanize-writing/       AI 글 humanize (한/영)
+  paper-sections/          IMRAD 섹션 드래프팅
+  paper-style/             저자 문체 프로파일
+  docx-scientific-formatting/  .docx 논문 교정
+  matplotlib-scientific/   출판용 figure
+  blender-atom-render/     원자 구조 렌더링
+  slide-audit/             슬라이드 레이아웃 검수
+  html-minimal/            미니멀 HTML 리포트
+  design2html/             디자인 스펙 -> HTML
+  smart-compact/           세션 상태 저장
+  youtube/                 YouTube transcript 추출
+  youtube2mp4/             YouTube 영상 다운로드
+  transcript2html/         transcript HTML 렌더
+  meetingnote-paperwork/   연구과제 회의록
 
-- **`matplotlib-scientific`** -- 출판용 matplotlib figure (rcParams, colormap, subplot, legend/axis 포맷).
-  
-  ```
-  data.csv 그래프로 그려줘matplotlib-scientific 이 포맷을 준수해.
-  ```
+agents/
+  paper-ref-hunter         논문 레퍼런스 검색
+  paper-section-drafter    섹션 초안 작성
+  paper-scientific-critic  과학적 비평
+  paper-style-enforcer     문체 강제
 
-- **`blender-atom-render`** -- Claude가 blender rendering도함. Structure 파일(XYZ, CIF, POSCAR) -> Blender sphere model + per-system legend.
-  
-  ```
-  /blender-atom-render structure.xyz 이거 bird eye view로 렌더링해
-  ```
+commands/
+  /paper                   논문팀 umbrella
+  /paper-ref               레퍼런스 헌팅
+  /paper-draft             섹션 드래프트
+  /paper-critic            비평
+  /paper-humanize          AI 흔적 제거
+  /paper-plan              작성 계획
+```
 
-- **`slide-audit`** -- HTML slide의 글자 겹침 등 잘잡아냄. layout bug(overlap, clipping, overflow)을 Playwright + 시각 검수로 탐지.
-  
-  ```
-  /slide-audit deck.html
-  ```
+---
 
-- **`meetingnote-paperwork`** -- 연구 회의록 draft해줌. 
-  
-  ```
-  /meetingnote-paperwork 나노소재 뭐시기 과제이름 회의록 3개써
-  ```
+## Subagent 토큰 주의
 
-- **`youtube2mp4`** -- YouTube 영상 mp4 다운로드 (audio-only, 해상도 제한, 구간 trim).
-  
-  ```
-  /youtube2mp4 <URL> --audio
-  ```
-
-- **`transcript2html`** -- `/youtube` 결과 markdown을 한국어 dark-mode HTML로 렌더.
-  
-  ```
-  /transcript2html output/ID/transcript.md
-  ```
+Paper team이 dispatch하는 subagent는 각자 context window를 띄우므로 **토큰 사용량이 빠르게 커집니다**. 필요한 순간에만 쓰세요.
 
 ---
 
 ## Dependencies
 
-- `design2html` -- 7개 built-in 디자인 스펙이 `skills/design2html/specs/`에 포함됨. 추가 스펙은 [getdesign.md](https://getdesign.md/)에서 생성 가능. `--full` 모드(audit/critique/polish)를 쓰려면 [impeccable](https://github.com/pbakaus/impeccable) 플러그인 필요 (`/install-plugin pbakaus/impeccable`). `--quick` 모드는 impeccable 없이 동작.
-- `slide-audit` -- Playwright. `cd skills/slide-audit && npm install && npx playwright install chromium`
-- `youtube`, `youtube2mp4` -- `brew install yt-dlp ffmpeg`
-- `blender-atom-render` -- `brew install --cask blender`
-- `docx-scientific-formatting` -- `pip install python-docx lxml`
+| Skill | Requirement |
+|---|---|
+| `slide-audit` | `cd skills/slide-audit && npm install && npx playwright install chromium` |
+| `youtube`, `youtube2mp4` | `brew install yt-dlp ffmpeg` |
+| `blender-atom-render` | `brew install --cask blender` |
+| `docx-scientific-formatting` | `pip install python-docx lxml` |
+| `design2html` | Built-in specs 포함. `--full` 모드는 [impeccable](https://github.com/pbakaus/impeccable) 필요 |
 
 ---
 
 ## License
 
-Seokhyun Choung 씀. 자유롭게 바꾸시고, contribution해주세요. 유용하셨다면 **더랩 커피 아이스** 한 잔 부탁드립니다.
+Seokhyun Choung. 자유롭게 쓰시고, contribution 환영합니다.

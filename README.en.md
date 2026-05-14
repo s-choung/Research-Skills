@@ -1,171 +1,207 @@
-# Research-Skills
+<p align="center">
+  <a href="README.md">한국어</a> | <b>English</b>
+</p>
 
-Claude Code skills, subagents, and slash commands for scientific research. Paper writing, scientific figures, document automation, and Korean research project paperwork.
+<h1 align="center">Research-Skills</h1>
 
-**Authored by Seokhyun Choung** | https://schoung.com
+<p align="center">
+  <b>One line in Claude Code for paper writing, figures, document automation, and AI text humanization</b>
+</p>
 
-[한국어 README](README.md) (default)
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude_Code-Skills-8A2BE2?style=flat" alt="Claude Code">
+  <img src="https://img.shields.io/badge/Skills-16-blue?style=flat" alt="Skills">
+  <img src="https://img.shields.io/badge/Agents-4-green?style=flat" alt="Agents">
+  <img src="https://img.shields.io/badge/Commands-6-orange?style=flat" alt="Commands">
+  <a href="https://schoung.com"><img src="https://img.shields.io/badge/Author-Seokhyun_Choung-black?style=flat" alt="Author"></a>
+</p>
+
+<p align="center">
+  <a href="#-quick-start">Quick Start</a> &middot;
+  <a href="#-skills">Skills</a> &middot;
+  <a href="#-benchmark">Benchmark</a> &middot;
+  <a href="#-dependencies">Dependencies</a> &middot;
+  <a href="#-license">License</a>
+</p>
 
 ---
 
-## Heads-up: subagent token usage
+## Quick Start
 
-The paper team dispatches subagents (`paper-ref-hunter`, `paper-section-drafter`, `paper-scientific-critic`, `paper-style-enforcer`). Each subagent spawns its own context window, so **token consumption grows fast**. Fire them deliberately, not habitually.
+In Claude Code, just say:
 
----
-
-## Install
-
-Tell Claude Code (or Codex):
-
-> clone https://github.com/s-choung/Research-Skills.git then "install the skills from `~/Research-Skills` for me."
+```
+Clone https://github.com/s-choung/Research-Skills.git and install the skills
+```
 
 That's it.
 
 ---
 
-## Tree view
+## Skills
 
-```text
-/smart-compact                      save session state before /clear
-
-/paper                              paper-team umbrella
-├── /paper-ref <citation|topic>     hunt a citation or discover topic papers
-├── /paper-plan <goal>              multi-step writing/revision plan
-├── /paper-draft <section>          draft an IMRAD section in author voice
-├── /paper-critic <paragraph>       rigor critique
-└── /paper-humanize <paragraph>     final voice pass
-
-/youtube <URL> [--frames N]         transcript + metadata + key frames -> md
-/youtube2mp4 <URL> [--audio]        video download
-/transcript2html <path>             dark-mode HTML render
-
-/blender-atom-render <xyz|cif>      atom sphere render + legend
-/slide-audit <html>                 detect slide layout bugs
-/meetingnote-paperwork <task name>  Korean research meeting notes
-```
-
-Natural-language phrases also trigger these (e.g. "clean up this docx table", "plot data.csv", "single-file HTML report").
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>humanize-writing</h3>
+      Remove mechanical signals from AI-generated text and make it read like a specific person wrote it. Korean and English.<br><br>
+      <code>Humanize this text</code><br><br>
+      <a href="skills/humanize-writing">README</a> · <a href="skills/humanize-writing/benchmark/benchmark_report.html">Benchmark</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>paper (team)</h3>
+      Full paper writing pipeline with subagent team. Reference hunting, section drafting, critique, and humanization.<br><br>
+      <code>/paper find references for introduction</code><br><br>
+      <a href="commands/paper.md">paper</a> · <a href="commands/paper-ref.md">ref</a> · <a href="commands/paper-draft.md">draft</a> · <a href="commands/paper-critic.md">critic</a> · <a href="commands/paper-humanize.md">humanize</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>youtube / youtube2mp4</h3>
+      Extract transcript + metadata + key frames from a YouTube URL as markdown. Video download supported.<br><br>
+      <code>/youtube https://youtu.be/... what is this about?</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>design2html</h3>
+      Read a design spec MD and generate a single-file HTML showcase page. 7 built-in specs included.<br><br>
+      <code>/design2html ease-health</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>docx-scientific-formatting</h3>
+      Automated proof reading for scientific .docx files. Chemical formula subscripts, italic, superscript formatting.<br><br>
+      <code>Fix chemical formulas and italics in manuscript.docx</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>matplotlib-scientific</h3>
+      Publication-quality matplotlib figures. rcParams, colormap, subplot, legend/axis formatting.<br><br>
+      <code>Plot data.csv as a scientific figure</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>blender-atom-render</h3>
+      Render structure files (XYZ, CIF, POSCAR) as Blender sphere models with per-system legends.<br><br>
+      <code>/blender-atom-render structure.xyz</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>slide-audit</h3>
+      Detect text overlap, clipping, and overflow in HTML slide decks via Playwright + visual review.<br><br>
+      <code>/slide-audit deck.html</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>html-minimal</h3>
+      Self-contained HTML reports and briefings with no external JS frameworks.<br><br>
+      <code>Make an HTML report of the analysis</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>smart-compact</h3>
+      Save session state before /clear. The next session picks up automatically.<br><br>
+      <code>/smart-compact</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>transcript2html</h3>
+      Render YouTube transcript markdown as a Korean dark-mode HTML reading view.<br><br>
+      <code>/transcript2html transcript.md</code>
+    </td>
+    <td width="50%" valign="top">
+      <h3>meetingnote-paperwork</h3>
+      Draft Korean research project meeting notes in a fixed paperwork template.<br><br>
+      <code>/meetingnote-paperwork project-name</code>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Skills
+## Benchmark
 
-### Daily drivers
+### humanize-writing
 
-- **`smart-compact`** -- save session state to `.claude/session-state.md` before `/clear`. Next session reads it back automatically.
+Benchmark on 100 AI-generated Korean paragraphs across 20 genres.
 
-  ```
-  pass everything we've discussed to the next session. /smart-compact
-  ```
+<p align="center">
+  <img src="assets/humanize_bench_overview.png" width="90%" alt="Humanize Benchmark Overview"/>
+</p>
 
-- **`docx-scientific-formatting`** -- proof-reads `.docx` manuscripts for chemical subscripts (H2O -> H₂O), italics (*in situ*, *operando*), superscripts, and equation formatting.
+| Metric | Original (AI) | Humanized |
+|---|---|---|
+| AI-Tell Score (lower = better) | 54.9 | **1.0** (-98.1%) |
+| Naturalness (1-10) | 2.9 | **9.2** |
+| Fidelity (1-10) | 10.0 | 8.8 |
+| Change Rate | 0% | 27.9% |
 
-  ```
-  proof-reading manuscript.docx, please fix chemical formulas and italics
-  ```
+> Interactive dashboard: [`skills/humanize-writing/benchmark/benchmark_report.html`](skills/humanize-writing/benchmark/benchmark_report.html)
 
-- **`html-minimal`** -- standalone HTML reports and briefings with no external JS framework. Self-contained output.
+### transcript2html
 
-  ```
-  turn today's analysis into a minimal HTML report
-  ```
+YouTube transcript rendered as a dark-mode Korean reading view.
 
-- **`youtube`** -- pulls transcript, metadata, and key-frame screenshots from a YouTube URL into a single markdown file. Smart frame capture: heatmap peaks -> chapter starts -> uniform interval.
+<p align="center">
+  <img src="assets/transcript2html_example.png" width="90%" alt="transcript2html example"/>
+</p>
 
-  ```
-  /youtube https://youtu.be/<video> let's talk about what this video is about
-  ```
+---
 
-- **`paper-humanize`** -- final pass on a draft paragraph before user review. 2-pass pipeline (global humanize -> `STYLE_PROFILE.md` enforcement).
+## Tree
 
-  ```
-  /paper-humanize <paragraph> make it sound human, watch out for em-dashes
-  ```
+```
+skills/
+  humanize-writing/       AI text humanizer (KR/EN)
+  paper-sections/          IMRAD section drafting
+  paper-style/             Author style profile
+  docx-scientific-formatting/  .docx scientific proofing
+  matplotlib-scientific/   Publication figures
+  blender-atom-render/     Atom structure rendering
+  slide-audit/             Slide layout verification
+  html-minimal/            Minimal HTML reports
+  design2html/             Design spec -> HTML
+  smart-compact/           Session state save
+  youtube/                 YouTube transcript extraction
+  youtube2mp4/             YouTube video download
+  transcript2html/         Transcript HTML renderer
+  meetingnote-paperwork/   Research meeting notes
 
-### Reach for when needed
+agents/
+  paper-ref-hunter         Reference search
+  paper-section-drafter    Section drafting
+  paper-scientific-critic  Scientific critique
+  paper-style-enforcer     Style enforcement
 
-- **`paper`** -- umbrella. Parses natural-language intent and dispatches to the right sub-command.
+commands/
+  /paper                   Paper team umbrella
+  /paper-ref               Reference hunting
+  /paper-draft             Section draft
+  /paper-critic            Critique
+  /paper-humanize          AI-ism removal
+  /paper-plan              Writing plan
+```
 
-  ```
-  /paper find intro refs > auto-dispatches to /paper-ref
-  ```
+---
 
-- **`paper-ref`** -- HUNT mode (specific citation -> Crossref verified DOI) + DISCOVERY mode (topic -> OpenAlex shortlist). Mode auto-detected from input shape.
+## Subagent Token Warning
 
-  ```
-  /paper-ref Tanaka 2021 grain boundary zirconia JACS, look this up
-  /paper-ref there was a recent transition metal oxide review, find it
-  ```
-
-- **`paper-plan`** -- multi-step writing/revision plan (reviewer responses, section outlines, rebuttal structure).
-
-  ```
-  /paper-plan ~~ my data is ready, read this and outline a plan
-  ```
-
-- **`paper-draft`** -- draft an IMRAD section in the author's voice.
-
-  ```
-  /paper-draft Introduction -- the motivation for computation is weak here
-  ```
-
-- **`paper-critic`** -- rigor critique (unsupported claims, overclaims, logical gaps, missing controls).
-
-  ```
-  /paper-critic tear this part apart
-  <paragraph>
-  ```
-
-- **`paper-sections`, `paper-style`** -- internal reference libraries. You don't call these directly.
-
-- **`matplotlib-scientific`** -- publication-quality matplotlib figures (rcParams, colormaps, subplot, legend/axis formatting).
-
-  ```
-  plot data.csv, matplotlib-scientific follow this format
-  ```
-
-- **`blender-atom-render`** -- Claude can do Blender rendering too. Structure file (XYZ, CIF, POSCAR) -> Blender sphere model + per-system legend.
-
-  ```
-  /blender-atom-render structure.xyz render as bird-eye view
-  ```
-
-- **`slide-audit`** -- catches slide text overlap well. Layout bugs (overlap, clipping, overflow) via Playwright + visual review.
-
-  ```
-  /slide-audit deck.html
-  ```
-
-- **`meetingnote-paperwork`** -- drafts Korean research project meeting notes (회의록).
-
-  ```
-  /meetingnote-paperwork nano materials XYZ project, 3 notes
-  ```
-
-- **`youtube2mp4`** -- YouTube video download (audio-only, resolution cap, time trim).
-
-  ```
-  /youtube2mp4 <URL> --audio
-  ```
-
-- **`transcript2html`** -- renders `/youtube` markdown output as a Korean dark-mode HTML document.
-
-  ```
-  /transcript2html output/ID/transcript.md
-  ```
+Subagents dispatched by the paper team each open their own context window, so **token usage scales fast**. Use only when needed.
 
 ---
 
 ## Dependencies
 
-- `slide-audit` -- Playwright. `cd skills/slide-audit && npm install && npx playwright install chromium`
-- `youtube`, `youtube2mp4` -- `brew install yt-dlp ffmpeg`
-- `blender-atom-render` -- `brew install --cask blender`
-- `docx-scientific-formatting` -- `pip install python-docx lxml`
+| Skill | Requirement |
+|---|---|
+| `slide-audit` | `cd skills/slide-audit && npm install && npx playwright install chromium` |
+| `youtube`, `youtube2mp4` | `brew install yt-dlp ffmpeg` |
+| `blender-atom-render` | `brew install --cask blender` |
+| `docx-scientific-formatting` | `pip install python-docx lxml` |
+| `design2html` | Built-in specs included. `--full` mode needs [impeccable](https://github.com/pbakaus/impeccable) |
 
 ---
 
 ## License
 
-By Seokhyun Choung. Feel free to fork, modify, and contribute back. If this helped, an iced coffee from **더랩** would be much appreciated.
+Seokhyun Choung. Free to use and modify. Contributions welcome.
