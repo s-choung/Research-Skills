@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Research-Skills LinkedIn Carousel</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f0f0f0; font-family: 'Inter', sans-serif; }
+
+.slide {
+  width: 1080px; height: 1080px;
+  background: #ffffff;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+}
+
+@media print {
+  body { background: white; }
+  .slide { margin: 0; box-shadow: none; }
+  @page { size: 1080px 1080px; margin: 0; }
+}
+
+.slide-pad { padding: 80px; height: 100%; display: flex; flex-direction: column; }
+
+/* Shared */
+.s-brand {
+  font-size: 14px; font-weight: 600; color: #8f8f8f;
+  letter-spacing: 0.5px; text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.s-footer {
+  position: absolute; bottom: 48px; left: 80px; right: 80px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; color: #8f8f8f;
+}
+.s-footer .dot { width: 8px; height: 8px; border-radius: 50%; background: #d4d4cd; display: inline-block; margin: 0 3px; }
+.s-footer .dot.active { background: #000; }
+.s-cat {
+  font-size: 12px; font-weight: 600; color: #8f8f8f;
+  letter-spacing: 0.5px; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.s-cmd {
+  font-size: 44px; font-weight: 700; letter-spacing: -1.5px;
+  font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+  margin-bottom: 24px;
+}
+.s-desc {
+  font-size: 22px; font-weight: 400; color: #444;
+  line-height: 1.55; max-width: 800px;
+}
+.s-badge {
+  display: inline-block;
+  font-size: 14px; font-weight: 600;
+  color: #92722a; background: #fef6e0;
+  border-radius: 100px; padding: 6px 16px;
+  margin-top: 24px;
+}
+.s-stat {
+  margin-top: auto; padding-top: 40px;
+}
+.s-stat-row {
+  display: flex; gap: 48px; margin-bottom: 12px;
+}
+.s-stat-label { font-size: 13px; color: #8f8f8f; text-transform: uppercase; letter-spacing: 0.5px; }
+.s-stat-val { font-size: 36px; font-weight: 700; letter-spacing: -1px; margin-top: 4px; }
+.s-stat-val.green { color: #2d6a2e; }
+
+/* Cover */
+.cover-title {
+  font-size: 72px; font-weight: 700;
+  letter-spacing: -3px; line-height: 1.05;
+  margin-bottom: 32px; margin-top: auto;
+}
+.cover-sub {
+  font-size: 24px; color: #666; line-height: 1.5;
+  max-width: 700px; margin-bottom: 32px;
+}
+.cover-tags {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: auto;
+}
+.cover-tag {
+  font-size: 14px; font-weight: 500; color: #000;
+  background: rgba(0,0,0,0.04);
+  border-radius: 100px; padding: 8px 20px;
+}
+.cover-notice {
+  font-size: 14px; color: #8f8f8f;
+  margin-top: 24px;
+}
+
+/* Grid slide */
+.grid-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 14px; flex: 1;
+}
+.grid-card {
+  border: 1px solid #e5e7eb; border-radius: 6.08px;
+  padding: 20px; display: flex; flex-direction: column;
+}
+.grid-card.faded { opacity: 0.25; }
+.gc-cat {
+  font-size: 10px; font-weight: 600; color: #8f8f8f;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.gc-name {
+  font-size: 15px; font-weight: 600;
+  font-family: 'SF Mono', 'JetBrains Mono', monospace;
+  letter-spacing: -0.3px; margin-bottom: 6px;
+}
+.gc-desc {
+  font-size: 11px; color: #666; line-height: 1.5; flex: 1;
+}
+
+/* CTA */
+.cta-title {
+  font-size: 56px; font-weight: 700;
+  letter-spacing: -2px; line-height: 1.1;
+  margin-top: auto; margin-bottom: 32px;
+}
+.cta-url {
+  font-size: 28px; font-weight: 500;
+  font-family: 'SF Mono', monospace;
+  color: #000; margin-bottom: 12px;
+}
+.cta-sub { font-size: 18px; color: #666; margin-bottom: auto; }
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Cover -->
+<div class="slide">
+  <div class="slide-pad">
+    <div class="s-brand">Open Source</div>
+    <div class="cover-title">Research-<br>Skills</div>
+    <div class="cover-sub">17 agent skills for research workflows.<br>Claude Code + Codex compatible.</div>
+    <div class="cover-tags">
+      <span class="cover-tag">Writing</span>
+      <span class="cover-tag">Research</span>
+      <span class="cover-tag">Design</span>
+      <span class="cover-tag">Media</span>
+      <span class="cover-tag">Utility</span>
+    </div>
+    <div class="cover-notice">Living skills. Benchmarked with real data.</div>
+  </div>
+  <div class="s-footer">
+    <span>github.com/s-choung/Research-Skills</span>
+    <span><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- Slide 2: /ase -->
+<div class="slide">
+  <div class="slide-pad">
+    <div class="s-brand">Research-Skills</div>
+    <div class="s-cat">Research</div>
+    <div class="s-cmd">/ase</div>
+    <div class="s-desc">Type /ase before writing ASE scripts. Injects 250 lines of API knowledge so the LLM stops hallucinating ase.build, Atoms, and calculator calls.</div>
+    <span class="s-badge">Frequently Used</span>
+    <div class="s-stat">
+      <div class="s-stat-row">
+        <div><div class="s-stat-label">Models tested</div><div class="s-stat-val">9</div></div>
+        <div><div class="s-stat-label">Tasks</div><div class="s-stat-val">50</div></div>
+        <div><div class="s-stat-label">Pass rate lift</div><div class="s-stat-val green">+34%</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="s-footer">
+    <span>github.com/s-choung/Research-Skills</span>
+    <span><span class="dot"></span><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- Slide 3: /matplotlib-scientific -->
+<div class="slide">
+  <div class="slide-pad">
+    <div class="s-brand">Research-Skills</div>
+    <div class="s-cat">Research</div>
+    <div class="s-cmd">/matplotlib-scientific</div>
+    <div class="s-desc">Describe your plot, get a journal-ready figure. Arial font, no grid, muted palette, proper axis layout. SVG at 300 DPI.</div>
+    <span class="s-badge">Frequently Used</span>
+    <div class="s-stat">
+      <div class="s-stat-row">
+        <div><div class="s-stat-label">Output</div><div class="s-stat-val">SVG</div></div>
+        <div><div class="s-stat-label">DPI</div><div class="s-stat-val">300</div></div>
+        <div><div class="s-stat-label">Before/After</div><div class="s-stat-val green">3 plots</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="s-footer">
+    <span>github.com/s-choung/Research-Skills</span>
+    <span><span class="dot"></span><span class="dot"></span><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- Slide 4: /humanize -->
+<div class="slide">
+  <div class="slide-pad">
+    <div class="s-brand">Research-Skills</div>
+    <div class="s-cat">Writing</div>
+    <div class="s-cmd">/humanize</div>
+    <div class="s-desc">Paste AI-written text, run /humanize. 5-stage pipeline detects 40+ AI patterns and rewrites only flagged spans. Works in Korean and English.</div>
+    <span class="s-badge">Frequently Used</span>
+    <div class="s-stat">
+      <div class="s-stat-row">
+        <div><div class="s-stat-label">KOR AI-Tell</div><div class="s-stat-val green">-98%</div></div>
+        <div><div class="s-stat-label">ENG AI-Tell</div><div class="s-stat-val green">-96%</div></div>
+        <div><div class="s-stat-label">Samples</div><div class="s-stat-val">200</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="s-footer">
+    <span>github.com/s-choung/Research-Skills</span>
+    <span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- Slide 5: /design2html -->
+<div class="slide">
+  <div class="slide-pad">
+    <div class="s-brand">Research-Skills</div>
+    <div class="s-cat">Design</div>
+    <div class="s-cmd">/design2html</div>
+    <div class="s-desc">Pick from 7 built-in design systems. Same content, completely different output. Single-file HTML with full token and component fidelity.</div>
+    <span class="s-badge">Frequently Used</span>
+    <div class="s-stat">
+      <div class="s-stat-row">
+        <div><div class="s-stat-label">Built-in styles</div><div class="s-stat-val">7</div></div>
+        <div><div class="s-stat-label">Showcase</div><div class="s-stat-val green">6 pages</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="s-footer">
+    <span>github.com/s-choung/Research-Skills</span>
+    <span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot active"></span><span class="dot"></span><span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- Slide 6: All 17 Skills Grid -->
+<div class="slide">
+  <div class="slide-pad">
+    <div class="s-brand">Research-Skills</div>
+    <div style="font-size: 28px; font-weight: 700; letter-spacing: -0.8px; margin-bottom: 24px;">All 17 Skills</div>
+    <div class="grid-cards">
+      <div class="grid-card"><div class="gc-cat">Research</div><div class="gc-name">/ase</div><div class="gc-desc">ASE script knowledge injection</div></div>
+      <div class="grid-card"><div class="gc-cat">Research</div><div class="gc-name">/matplotlib-scientific</div><div class="gc-desc">Journal-ready figures</div></div>
+      <div class="grid-card"><div class="gc-cat">Writing</div><div class="gc-name">/humanizer_kor</div><div class="gc-desc">Korean AI-tell removal</div></div>
+      <div class="grid-card"><div class="gc-cat">Writing</div><div class="gc-name">/humanizer_eng</div><div class="gc-desc">English AI-tell removal</div></div>
+      <div class="grid-card"><div class="gc-cat">Design</div><div class="gc-name">/design2html</div><div class="gc-desc">7 design system styles</div></div>
+      <div class="grid-card"><div class="gc-cat">Utility</div><div class="gc-name">/smart-compact</div><div class="gc-desc">Session state recovery</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Media</div><div class="gc-name">/youtube</div><div class="gc-desc">Transcript + frames</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Media</div><div class="gc-name">/transcript2html</div><div class="gc-desc">Dark-mode reader</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Writing</div><div class="gc-name">/paper-style</div><div class="gc-desc">Author voice profile</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Writing</div><div class="gc-name">/paper-sections</div><div class="gc-desc">IMRAD section drafting</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Design</div><div class="gc-name">/blender-atom-render</div><div class="gc-desc">Atom sphere rendering</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Writing</div><div class="gc-name">/docx-scientific</div><div class="gc-desc">Formula subscripts</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Design</div><div class="gc-name">/html-minimal</div><div class="gc-desc">Clean reports</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Design</div><div class="gc-name">/slide-audit</div><div class="gc-desc">Layout bug detection</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Media</div><div class="gc-name">/youtube2mp4</div><div class="gc-desc">Video download</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Utility</div><div class="gc-name">/pptx-too-heavy</div><div class="gc-desc">Image weight analysis</div></div>
+      <div class="grid-card faded"><div class="gc-cat">Utility</div><div class="gc-name">/meetingnote</div><div class="gc-desc">Meeting notes template</div></div>
+    </div>
+  </div>
+  <div class="s-footer">
+    <span>github.com/s-choung/Research-Skills</span>
+    <span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot active"></span><span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- Slide 7: CTA -->
+<div class="slide">
+  <div class="slide-pad">
+    <div class="s-brand">Open Source</div>
+    <div class="cta-title">Clone it.<br>Use it.<br>Build on it.</div>
+    <div class="cta-url">github.com/s-choung/Research-Skills</div>
+    <div class="cta-sub">Living skills. Claude Code + Codex compatible.<br>Benchmarked with real data. MIT License.</div>
+  </div>
+  <div class="s-footer">
+    <span>Seokhyun Choung</span>
+    <span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot active"></span></span>
+  </div>
+</div>
+
+</body>
+</html>
