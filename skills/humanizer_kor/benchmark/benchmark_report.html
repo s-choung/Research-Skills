@@ -190,4 +190,8 @@ function setLang(lang) {
     el.innerHTML = el.getAttribute('data-'+lang);
   });
 }
+(function(){
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('lang') === 'en') setLang('en');
+})();
 </script></body></html>

@@ -186,14 +186,23 @@ strong { font-weight: 600; }
 /* Centered text */
 .center-text { text-align: center; }
 
+.lang-toggle{position:absolute;top:2rem;right:2rem;display:flex;gap:0}
+.lang-btn{padding:4px 12px;font-size:.72rem;font-weight:600;border:1px solid var(--rule);cursor:pointer;background:#f5f5f0;color:var(--muted);font-family:'IBM Plex Sans KR',sans-serif}
+.lang-btn.active{background:var(--ink);color:var(--paper)}
+.lang-btn:first-child{border-radius:3px 0 0 3px}.lang-btn:last-child{border-radius:0 3px 3px 0}
+
 </style>
 </head>
-<body>
+<body style="position:relative">
+<div class="lang-toggle">
+  <div class="lang-btn" onclick="setLang('ko')">KOR</div>
+  <div class="lang-btn active" onclick="setLang('en')">ENG</div>
+</div>
 
 <h1>ASE Skill Benchmark v6</h1>
 <p class="date">2026.05.14 &middot; Seokhyun Choung &middot; Pass Rate Dashboard</p>
 
-<p>50-task benchmark injecting a 250-line ASE (Atomic Simulation Environment) skill into 9 LLMs across 3 providers (Gemini, OpenAI, Claude). Tasks span 3 difficulty levels: L1 (basic structure building), L2 (intermediate calculations and analysis), and L3 (advanced multi-step workflows). Each task is tested under two conditions: Vanilla (no skill) and +Skill (with the ASE skill injected). Performance is measured by <strong>Pass Rate</strong> (successful executions / total tasks).</p>
+<p data-en="50-task benchmark injecting a 250-line ASE (Atomic Simulation Environment) skill into 9 LLMs across 3 providers (Gemini, OpenAI, Claude). Tasks span 3 difficulty levels: L1 (basic structure building), L2 (intermediate calculations and analysis), and L3 (advanced multi-step workflows). Each task is tested under two conditions: Vanilla (no skill) and +Skill (with the ASE skill injected). Performance is measured by <strong>Pass Rate</strong> (successful executions / total tasks)." data-ko="250줄 ASE(Atomic Simulation Environment) 스킬을 3개 제공사(Gemini, OpenAI, Claude)의 9개 LLM에 주입하는 50개 태스크 벤치마크. 난이도 3단계: L1(기본 구조 생성), L2(중급 계산/분석), L3(고급 다단계 워크플로우). Vanilla(스킬 없음)과 +Skill(스킬 주입) 두 조건에서 테스트. <strong>Pass Rate</strong>(성공 실행 / 전체 태스크)로 성능 측정.">50-task benchmark injecting a 250-line ASE (Atomic Simulation Environment) skill into 9 LLMs across 3 providers (Gemini, OpenAI, Claude). Tasks span 3 difficulty levels: L1 (basic structure building), L2 (intermediate calculations and analysis), and L3 (advanced multi-step workflows). Each task is tested under two conditions: Vanilla (no skill) and +Skill (with the ASE skill injected). Performance is measured by <strong>Pass Rate</strong> (successful executions / total tasks).</p>
 
 <!-- TAB BAR -->
 <div class="tab-bar">
@@ -205,7 +214,7 @@ strong { font-weight: 600; }
 <!-- ===== TAB 1: OVERVIEW ===== -->
 <div id="tab-overview" class="tab-content active">
 
-<h2>Overall Results — Pass Rate</h2>
+<h2 data-en="Overall Results — Pass Rate" data-ko="전체 결과 — Pass Rate">Overall Results — Pass Rate</h2>
 <p class="center-text" style="font-size:.82rem">Pass Rate = fraction of successful executions (returncode==0). 50 tasks x 9 models x 2 conditions (Vanilla / Skill v3).</p>
 
 <p align="center">
@@ -222,7 +231,7 @@ strong { font-weight: 600; }
 <!-- ===== TAB 2: HEATMAP ===== -->
 <div id="tab-heatmap" class="tab-content">
 
-<h2>Pass/Fail Heatmap (50 Tasks x 18 Conditions)</h2>
+<h2 data-en="Pass/Fail Heatmap (50 Tasks x 18 Conditions)" data-ko="Pass/Fail 히트맵 (50개 태스크 x 18개 조건)">Pass/Fail Heatmap (50 Tasks x 18 Conditions)</h2>
 <div class="legend">
   <span><span class="legend-box" style="background:#bde0bd"></span> Pass</span>
   <span><span class="legend-box" style="background:#e8b0b0"></span> Fail</span>
@@ -240,7 +249,7 @@ strong { font-weight: 600; }
 <!-- ===== TAB 3: TASK EXPLORER ===== -->
 <div id="tab-explorer" class="tab-content">
 
-<h2>Task Explorer — 50 Tasks</h2>
+<h2 data-en="Task Explorer — 50 Tasks" data-ko="태스크 탐색기 — 50개 태스크">Task Explorer — 50 Tasks</h2>
 
 <div class="filters">
   <label>Difficulty:</label>
@@ -476,6 +485,18 @@ function escHtml(s) {
 })();
 
 renderTaskList();
+
+function setLang(lang) {
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.lang-btn[onclick*="'+lang+'"]').classList.add('active');
+  document.querySelectorAll('[data-ko][data-en]').forEach(el => {
+    el.innerHTML = el.getAttribute('data-'+lang);
+  });
+}
+(function(){
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('lang') === 'ko') setLang('ko');
+})();
 </script>
 
 </body>

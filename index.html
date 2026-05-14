@@ -436,6 +436,15 @@ function toggleLang() {
   document.querySelectorAll('[data-en][data-ko]').forEach(el => {
     el.textContent = el.getAttribute('data-' + lang);
   });
+  updateReportLinks();
+}
+
+function updateReportLinks() {
+  const suffix = lang === 'en' ? '?lang=en' : '?lang=ko';
+  document.querySelectorAll('.card-report, .bench-link').forEach(a => {
+    const base = a.href.split('?')[0];
+    a.href = base + suffix;
+  });
 }
 
 function filterCat(cat) {
@@ -451,6 +460,7 @@ function filterCat(cat) {
 }
 
 filterCat('all');
+updateReportLinks();
 </script>
 </body>
 </html>
