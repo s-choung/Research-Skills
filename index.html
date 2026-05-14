@@ -196,7 +196,8 @@ nav {
   pointer-events: none;
   z-index: 2;
 }
-.card.faded { opacity: 0.35; pointer-events: none; }
+.card.faded { opacity: 0.3; pointer-events: none; }
+.card.hidden { display: none !important; }
 .load-more-wrap { text-align: center; margin-top: 20px; }
 .load-more {
   font-size: 14px; font-weight: 500;
@@ -496,10 +497,11 @@ function updateFade() {
   const cards = Array.from(grid.querySelectorAll('.card'));
   cards.forEach(c => {
     const order = parseInt(c.style.order || c.getAttribute('data-order-' + lang) || '99');
-    if (order > 6) {
+    c.classList.remove('faded', 'hidden');
+    if (order >= 6 && order <= 8) {
       c.classList.add('faded');
-    } else {
-      c.classList.remove('faded');
+    } else if (order > 8) {
+      c.classList.add('hidden');
     }
   });
 }
@@ -512,7 +514,7 @@ function toggleLoadMore() {
     updateFade();
     btn.textContent = btn.getAttribute('data-' + lang + '-show');
   } else {
-    grid.querySelectorAll('.card.faded').forEach(c => c.classList.remove('faded'));
+    grid.querySelectorAll('.card.faded, .card.hidden').forEach(c => c.classList.remove('faded', 'hidden'));
     btn.textContent = btn.getAttribute('data-' + lang + '-hide');
   }
 }
