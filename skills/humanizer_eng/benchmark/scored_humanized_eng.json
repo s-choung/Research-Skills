@@ -1,0 +1,2002 @@
+[
+  {
+    "id": 1,
+    "type": "humanized",
+    "genre": "column",
+    "text": "Today's political landscape pulls in more directions than most voters can track. Social media has done something specific here: it gave reach to voices that legacy outlets routinely ignored, but it also let algorithms quietly sort us into ideological silos. The result is a kind of democracy that runs on engagement metrics rather than informed debate. We barely talk about how content-ranking systems shape which candidates seem viable and which get buried. If we want elections to mean anything, media literacy can't stay an elective — it has to be as basic as reading a ballot.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.75,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 2,
+    "type": "humanized",
+    "genre": "column",
+    "text": "Universal basic income keeps hovering at the edge of serious policy debate without quite breaking through. Automation is already displacing warehouse workers, call center staff, and data-entry clerks — the safety net hasn't caught up. Pilot programs in Finland and Ontario produced mixed data: recipients reported less stress and more willingness to retrain, but employment rates didn't jump the way advocates predicted. That ambiguity isn't a reason to abandon UBI. It's a reason to design better trials with longer timelines and clearer metrics for what counts as success beyond just \"did people get jobs.\"",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.72,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 3,
+    "type": "humanized",
+    "genre": "column",
+    "text": "Climate policy keeps stalling because governments treat it as a single problem when it's really dozens of overlapping ones. Renewable energy is dropping in cost — solar is now cheaper than coal in most markets — but grid storage and transmission infrastructure lag behind. International cooperation sounds good in summit communiques, yet actual emissions commitments remain non-binding and chronically under-delivered. The uncomfortable truth is that GDP growth and emissions reduction have only been decoupled in a handful of wealthy nations, and even there the accounting sometimes ignores imported goods. Policy that pretends otherwise is just theater.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 8,
+    "change_rate": 0.78,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 4,
+    "type": "humanized",
+    "genre": "column",
+    "text": "Trust in the press didn't collapse overnight. It eroded through decades of media consolidation — six companies now control roughly 90% of U.S. media — and accelerated when social platforms made it trivially easy to share unverified claims. Fact-checkers do important work, but they're outnumbered and outpaced by the volume of misinformation that circulates before any correction appears. Meanwhile, many newsrooms have cut investigative teams to stay solvent, which means fewer original stories and more rewrites of press releases. Rebuilding credibility requires more than transparency pledges; it requires ownership structures that don't subordinate journalism to quarterly earnings.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 8,
+    "change_rate": 0.76,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 5,
+    "type": "humanized",
+    "genre": "column",
+    "text": "Education reform proposals tend to promise everything — better test scores, happier kids, a more competitive workforce — without specifying tradeoffs. Curriculum redesign matters, but it falls apart when teachers get a 400-page standards document and no time to implement it. Technology in the classroom has genuine potential: adaptive math software, for instance, helped low-income students in Dallas close achievement gaps by 15% over two years. But laptops without trained teachers just become expensive distractions. Any serious reform plan needs to start with what teachers actually need — smaller classes, planning time, and pay that doesn't force them into second jobs.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 8,
+    "change_rate": 0.77,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 6,
+    "type": "humanized",
+    "genre": "business",
+    "text": "Q3 revenue rose 18% year-over-year, driven largely by expansion into Japan, South Korea, and Singapore. The Asian market push added 340 new enterprise accounts in a single quarter, which exceeded internal projections by roughly a third. On the cost side, migrating core services to cloud infrastructure cut operating expenses by 12%, mostly through reduced on-premises server maintenance. The product portfolio now spans five verticals — the breadth helps with cross-selling but also stretches support resources thin. Next quarter's priority is tightening the go-to-market playbook for APAC before extending into Southeast Asian markets where sales cycles run longer.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.73,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 7,
+    "type": "humanized",
+    "genre": "business",
+    "text": "Retail has changed more in the past four years than in the previous twenty. Post-pandemic, customers expect to browse on their phone, try in-store, and return by mail — sometimes for the same purchase. Companies that invested early in omnichannel logistics, like Target's same-day fulfillment network, are pulling ahead in customer retention. Personalization is the other differentiator: shoppers tolerate more data collection when it actually improves recommendations rather than just generating ads. The retailers still treating online and physical as separate P&Ls are the ones watching margins shrink, because the customer already stopped making that distinction.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.76,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 8,
+    "type": "humanized",
+    "genre": "business",
+    "text": "The semiconductor shortage taught manufacturers what happens when a single Taiwanese fab going offline can halt car production in Michigan. Since then, companies have been diversifying their supplier base — some shifting orders to facilities in Vietnam and India, others investing in nearshoring to Mexico. Digital twin simulations are now used by firms like Siemens to stress-test supply chains against scenarios ranging from port closures to raw material spikes. The shift isn't cheap: building redundancy into logistics networks raises unit costs by an estimated 6-9%. But for companies that lost hundreds of millions during 2021-2022 disruptions, that premium looks like insurance, not overhead.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.74,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 9,
+    "type": "humanized",
+    "genre": "business",
+    "text": "Fintech regulation is moving faster than most startups expected. The EU's MiCA framework for crypto assets took effect in 2024, and U.S. agencies are signaling similar moves toward stablecoin oversight. For financial institutions, this means compliance costs are rising — Chainalysis estimates that mid-size crypto firms now spend 15-20% of revenue on regulatory infrastructure. Blockchain still has genuine potential for cross-border payments and settlement speed, but the \"move fast and break things\" era is over. The companies that survive the next wave will be the ones that built compliance into their architecture from the start, not bolted it on after an enforcement action.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.75,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 10,
+    "type": "humanized",
+    "genre": "business",
+    "text": "The skills gap isn't theoretical anymore — LinkedIn's 2024 workforce report found that 44% of workers' core competencies will need updating within five years. Companies that rely on annual training seminars are already behind. AI-powered platforms like Coursera for Business and internal tools at firms like AT&T have shown measurable improvements: AT&T's $1 billion reskilling initiative moved 50,000 employees into new technical roles over six years. Mentorship matters too, but mainly when it's structured with clear milestones rather than left as an informal \"coffee chat\" arrangement. The link between retention and development spending is well-documented — Gallup puts the replacement cost of a departing employee at one-half to two times their annual salary.",
+    "total_score": 6,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.74,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 11,
+    "type": "humanized",
+    "genre": "tech_blog",
+    "text": "Large language models went from research curiosity to production tool in about three years. GPT-4 can generate working code, summarize legal documents, and draft marketing copy — but it also hallucinates citations and sometimes produces subtly wrong SQL queries that pass a glance review. The bias problem is real and unsolved: models trained on internet text inherit the internet's prejudices. Open-source projects like LLaMA and Mistral are closing the gap with proprietary models, which matters because it lets researchers outside well-funded labs actually study how these systems behave. The bottleneck now isn't capability — it's knowing when to trust the output and when to verify it by hand.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.76,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 12,
+    "type": "humanized",
+    "genre": "tech_blog",
+    "text": "Kubernetes solved the \"how do I run 200 containers reliably\" problem better than anything before it, but it introduced its own complexity tax. YAML configuration files can sprawl into thousands of lines, and a single misconfigured resource limit can take down a production cluster. Microservices adoption pushed teams toward Kubernetes because monoliths don't scale the same way — but plenty of startups adopted it prematurely, spending more time on infrastructure than on their actual product. The real payoff shows up in organizations running at scale: automated rollbacks, self-healing pods, and horizontal scaling that responds to traffic in seconds. Infrastructure-as-code tools like Terraform and Pulumi have made the setup more reproducible, though the learning curve remains steep for teams without dedicated platform engineers.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.75,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 13,
+    "type": "humanized",
+    "genre": "tech_blog",
+    "text": "Edge computing matters most where milliseconds matter — autonomous vehicles, industrial robotics, and live video processing can't wait for a round trip to a data center 500 miles away. The architecture pushes computation closer to the source, typically to local servers or even on-device chips. Security is the obvious concern: distributing data across hundreds of edge nodes multiplies the attack surface compared to a centralized cloud. Partnerships between AWS (with Outposts and Wavelength) and telecom carriers are building out the physical infrastructure, but standardization is still patchy. For IoT developers, the practical question isn't whether edge computing helps — it does — but whether the tooling is mature enough to justify the migration cost today.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.76,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 14,
+    "type": "humanized",
+    "genre": "tech_blog",
+    "text": "Rust eliminates entire bug categories at compile time — null pointer dereferences, data races, use-after-free — which is why Mozilla built Servo's rendering engine in it and why AWS chose it for Firecracker, the microVM behind Lambda. The tradeoff is a steep learning curve. The ownership and borrowing system makes perfect sense once you internalize it, but the first few weeks feel like arguing with the compiler about code you're sure is correct. The crate ecosystem has matured quickly: serde for serialization, tokio for async runtime, and actix-web for HTTP servers are all production-grade. Microsoft, Amazon, and Google are now hiring Rust engineers specifically for infrastructure work, which is the clearest signal that adoption has moved past the hobbyist phase.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.74,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 2
+    }
+  },
+  {
+    "id": 15,
+    "type": "humanized",
+    "genre": "tech_blog",
+    "text": "WebAssembly lets you run C++, Rust, or Go code in the browser at near-native speed, which opens doors that JavaScript alone couldn't. Figma's entire design tool runs on Wasm — that's a professional-grade application with real-time collaboration, operating in a browser tab. Game engines like Unity now compile to Wasm targets, and Google Earth uses it for the computational geometry that would choke a pure JS implementation. The tooling is still catching up: debugging Wasm is harder than debugging JavaScript, and source maps are inconsistent across browsers. But for compute-heavy workloads — image processing, CAD rendering, scientific simulation — Wasm already outperforms any alternative available in the browser.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.75,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 16,
+    "type": "humanized",
+    "genre": "academic",
+    "text": "Income inequality research tends to cluster around Gini coefficients and top-decile income shares, but these aggregate measures obscure the mechanisms that actually reproduce poverty across generations. Educational access is one well-documented channel: children in the bottom income quintile are six times less likely to earn a bachelor's degree than those in the top quintile, according to Chetty et al.'s 2020 analysis of U.S. tax records. Racial and geographic sorting compound the effect — public school funding tied to property taxes ensures that low-income districts remain under-resourced. Interdisciplinary work combining economics, sociology, and public health has started mapping these overlapping systems, but most policy proposals still treat education, housing, and healthcare as separate line items rather than interconnected parts of the same structural problem.",
+    "total_score": 6,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.74,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 2
+    }
+  },
+  {
+    "id": 17,
+    "type": "humanized",
+    "genre": "academic",
+    "text": "The link between social media use and adolescent mental health is real but poorly specified. A 2023 meta-analysis by Orben and Przybylski found that screen time alone explains less than 0.4% of variance in well-being — about the same effect size as wearing glasses. What seems to matter more is the type of engagement: passive scrolling through curated highlight reels correlates with lower self-esteem, while active messaging with friends does not. Cyberbullying is a clearer risk factor, with longitudinal data from Norway showing a 2.5x increase in depressive symptoms among targeted teens. Digital literacy programs in Australian schools have shown promising results for building resilience, though sample sizes remain small and follow-up periods rarely exceed 18 months.",
+    "total_score": 6,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.73,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 18,
+    "type": "humanized",
+    "genre": "academic",
+    "text": "Algorithmic risk assessment tools like COMPAS are already used in sentencing decisions across 46 U.S. states, but their accuracy and fairness remain contested. ProPublica's 2016 investigation found that COMPAS mislabeled Black defendants as high-risk at nearly twice the rate of white defendants with similar criminal histories. Proponents counter that the tool still outperforms unaided judicial prediction in overall accuracy, which raises an uncomfortable question: should we accept a biased tool if the alternative (human judgment alone) is also biased and less consistent? Transparency is part of the answer — defendants and their attorneys should be able to examine the factors driving a risk score. But the deeper issue is whether reducing a person's future behavior to a numerical prediction is compatible with due process at all.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.75,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 19,
+    "type": "humanized",
+    "genre": "academic",
+    "text": "Between 2000 and 2030, the UN projects that the urban population in sub-Saharan Africa will nearly triple, from 200 million to 590 million. Most of that growth is concentrated in secondary cities that lack the sewage, transit, and healthcare infrastructure to absorb it. COVID-19 exposed how urban density amplifies disease transmission — Dharavi, Mumbai's informal settlement with over 60,000 residents per square kilometer, became an early hotspot before community health workers contained spread through aggressive contact tracing. Smart city technology (sensor networks, real-time transit data, predictive maintenance for water systems) offers genuine planning advantages, but pilot projects in Nairobi and Lagos have struggled with funding continuity and data governance. Sustainable urbanization in the developing world won't come from importing templates designed for Seoul or Singapore.",
+    "total_score": 6,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.73,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 20,
+    "type": "humanized",
+    "genre": "academic",
+    "text": "About 2.6 billion people worldwide still have no internet access, according to the ITU's 2023 report, and the gap tracks closely with income, geography, and age. In rural Appalachia, 28% of households lack broadband — not because they choose to go offline, but because no provider has built the infrastructure. Public libraries have quietly become digital lifelines: the American Library Association reports that 90% of U.S. public libraries offer free computer access and digital skills training. Public-private partnerships like Microsoft's Airband Initiative have connected over 50 million people in underserved areas since 2017, primarily through TV white-space spectrum. But a national broadband strategy means more than laying fiber — it means device affordability, multilingual training materials, and sustained funding that doesn't evaporate when political administrations change.",
+    "total_score": 7,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.72,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 2
+    }
+  },
+  {
+    "id": 21,
+    "type": "humanized",
+    "genre": "healthcare",
+    "text": "Preventive medicine remains one of the most cost-effective strategies in patient care, yet it is still underused in many health systems. Chronic diseases like diabetes and heart failure account for roughly 86% of U.S. healthcare spending, which makes early screening programs more than just a nice-to-have. Better diagnostic tools -- particularly in imaging and blood-based biomarkers -- have made it possible to catch conditions years before symptoms appear. When doctors can match treatments to individual risk profiles, patients tend to stick with their care plans longer and report better quality of life.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.82,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 22,
+    "type": "humanized",
+    "genre": "healthcare",
+    "text": "Mental health has moved from the margins of public conversation to something employers, schools, and insurers now take seriously. Catching anxiety or depression early -- before it disrupts someone's work or relationships -- cuts treatment costs by about 40%, according to WHO estimates. Cognitive behavioral therapy and other evidence-based treatments work best when patients can access them within weeks, not months. But policy still lags behind demand: most U.S. counties have fewer than one psychiatrist per 30,000 residents, leaving community health workers and telehealth platforms to fill the gap.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 23,
+    "type": "humanized",
+    "genre": "healthcare",
+    "text": "Telemedicine went from a niche convenience to a daily reality during the COVID-19 pandemic, and much of the shift has stuck. Rural patients who once drove two hours for a specialist appointment can now consult via video in under 15 minutes. The technology isn't perfect -- connectivity issues, limited physical exams, and inconsistent insurance coverage remain real barriers. Regulators are still catching up, with state-by-state licensing rules creating a patchwork that frustrates providers who want to treat patients across borders.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 24,
+    "type": "humanized",
+    "genre": "healthcare",
+    "text": "Vaccines have eliminated smallpox and nearly wiped out polio, making them arguably the single greatest public health tool we have. Herd immunity thresholds vary by disease -- measles requires about 95% coverage, while flu sits closer to 70% -- and falling below those numbers leaves entire communities exposed. Vaccine hesitancy, fueled partly by social media misinformation, has pushed measles cases back up in several U.S. states since 2019. Health departments that pair local outreach with transparent data-sharing tend to rebuild trust faster than top-down messaging campaigns.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.83,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 25,
+    "type": "humanized",
+    "genre": "healthcare",
+    "text": "The opioid crisis killed over 80,000 Americans in 2023 alone, and the numbers keep climbing. For decades, pain management defaulted to prescriptions -- OxyContin, Vicodin, fentanyl patches -- partly because insurers covered pills more willingly than physical therapy or acupuncture. Medication-assisted treatment with buprenorphine or methadone has strong evidence behind it, but only about 20% of people with opioid use disorder actually receive it. Community-based programs that combine clinical care with housing support and peer counseling show the most promising long-term recovery rates, though funding remains inconsistent.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 26,
+    "type": "humanized",
+    "genre": "finance",
+    "text": "Central banks spent most of 2022-2023 raising interest rates to tame inflation that peaked near 9% in the U.S. and even higher in parts of Europe. The tricky part is that rate hikes work on a lag -- it takes roughly 12 to 18 months for tighter policy to fully hit consumer spending and business investment. Meanwhile, governments face pressure to keep spending on infrastructure and social programs, which can push in the opposite direction. The result is a balancing act where a quarter-point miscalculation can tip an economy from soft landing into recession.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 27,
+    "type": "humanized",
+    "genre": "finance",
+    "text": "Bitcoin went from under $1 in 2010 to nearly $70,000 at its 2021 peak, then crashed back below $20,000 before recovering again. Blockchain technology does solve real problems -- cross-border payments, transparent supply chains, fractional ownership of assets -- but the space is also full of speculation and outright scams. Regulators are moving at different speeds: the EU passed MiCA in 2023 while the U.S. still relies on enforcement actions rather than clear legislation. For retail investors, the practical advice hasn't changed much: don't invest more than you can afford to lose, and read the whitepaper before the hype thread.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 28,
+    "type": "humanized",
+    "genre": "finance",
+    "text": "ESG investing has grown from a $22 trillion market in 2016 to over $35 trillion by 2024, though critics question whether the labels mean much. Climate risk is real -- insurers have pulled out of wildfire-prone areas in California, and flood insurance premiums along the Gulf Coast have tripled in a decade. The challenge for investors is that ESG rating agencies often disagree with each other; a company rated \"A\" by one firm might get a \"C\" from another. Diversifying across asset classes still matters more than any single sustainability label when it comes to long-term portfolio health.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 29,
+    "type": "humanized",
+    "genre": "finance",
+    "text": "Housing affordability has hit a breaking point in many Western economies. In the U.S., the median home price reached 5.5 times median household income by mid-2024, up from about 3.5 times in 2000. Rising mortgage rates -- which jumped from 3% to over 7% in less than two years -- priced out millions of first-time buyers practically overnight. The supply side is just as broken: zoning restrictions, labor shortages in construction, and NIMBYism have kept new housing starts well below what population growth demands. Data-driven approaches to land-use planning exist, but local politics tends to override them.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 30,
+    "type": "humanized",
+    "genre": "finance",
+    "text": "About 57% of American adults are considered financially literate by OECD standards, which puts the U.S. roughly in the middle of developed nations. The gap shows up in concrete ways: people who can't calculate compound interest end up paying thousands more on credit card debt over their lifetimes. Some states now require personal finance courses in high school -- Utah, Virginia, and Missouri among the first -- and early data suggests graduates carry less debt into their twenties. The harder problem is reaching adults who already have bad financial habits, since free online courses have abysmally low completion rates.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 31,
+    "type": "humanized",
+    "genre": "education",
+    "text": "School funding in the U.S. is tied to local property taxes, which means a child's zip code still predicts their educational quality more than almost anything else. Districts in wealthy suburbs can spend over $25,000 per student while neighboring rural districts scrape by on $8,000. Attempts at equalization -- like weighted student funding formulas in California and Texas -- have helped, but implementation is uneven. Curriculum reform gets even messier: what counts as \"rigorous\" varies dramatically between states, and political fights over content standards have intensified since 2020.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 32,
+    "type": "humanized",
+    "genre": "education",
+    "text": "Standardized testing has been the backbone of American educational accountability since No Child Left Behind in 2001, but the cracks are showing. SAT scores dropped to their lowest point in decades during the pandemic recovery, and a growing number of colleges have gone test-optional permanently. The tests do measure something -- they predict first-year college GPA with moderate accuracy -- but they also correlate strongly with family income, which raises fairness questions. Some districts are experimenting with portfolio-based assessments and competency demonstrations as alternatives, though scaling those approaches to millions of students is a logistical headache.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 33,
+    "type": "humanized",
+    "genre": "education",
+    "text": "Chromebooks now outnumber textbooks in most American middle schools, but whether all that screen time actually improves learning is still an open question. Studies from OECD's PISA program found that students who used computers moderately at school performed better than those who used them heavily or not at all. The real gap isn't access to devices anymore -- it's whether teachers have been trained to use them well. Digital literacy curricula that teach students to evaluate sources, spot misinformation, and protect their privacy exist, but fewer than 40% of U.S. school districts have adopted them as of 2024.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 34,
+    "type": "humanized",
+    "genre": "education",
+    "text": "About 44% of new teachers leave the profession within their first five years, and the rate is even higher in low-income schools. The reasons are predictable: low pay relative to other fields requiring a degree, limited planning time, and the emotional weight of managing classrooms with 30-plus students. Mentorship programs where veteran teachers coach newcomers have shown a 25% reduction in attrition in studies from the New Teacher Center. But professional development as a whole remains a sore spot -- most teachers report that mandatory PD days feel disconnected from their actual classroom challenges.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 35,
+    "type": "humanized",
+    "genre": "education",
+    "text": "Total U.S. student loan debt crossed $1.7 trillion in 2024, a number so large it now rivals the auto loan market. Tuition at public four-year universities has roughly tripled in inflation-adjusted terms since 1990, while median wages for graduates have grown by about 20% over the same period. Income-driven repayment plans cap monthly payments at 10-20% of discretionary income, but the paperwork is confusing enough that many borrowers never enroll. Meanwhile, community colleges and trade programs are seeing renewed interest from students who watched older siblings struggle with six-figure debt for a bachelor's degree.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 36,
+    "type": "humanized",
+    "genre": "product",
+    "text": "This project management tool started because the founders got tired of switching between Slack, Trello, and Google Docs fifty times a day. It puts task boards, team chat, and file sharing in one interface, which cuts down on the \"where did I see that?\" problem. The AI features are practical rather than flashy: auto-sorting tasks by deadline, flagging blockers before standup, and generating weekly progress summaries. Pricing starts at $12 per user per month, with a free tier for teams under five people.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.88,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 2
+    }
+  },
+  {
+    "id": 37,
+    "type": "humanized",
+    "genre": "product",
+    "text": "Ransomware attacks cost businesses an estimated $20 billion globally in 2023, and most victims were companies with fewer than 500 employees. This security platform monitors network traffic in real time, flags suspicious login attempts within seconds, and patches known vulnerabilities automatically overnight. It won't make you unhackable -- nothing will -- but it closes the most common attack vectors that account for roughly 80% of breaches. Setup takes about two hours for a mid-size office, and the dashboard is designed so IT generalists can use it without a dedicated security team.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 38,
+    "type": "humanized",
+    "genre": "product",
+    "text": "Most fitness apps give you a step count and call it a day. This one tracks heart rate variability, sleep quality, and workout intensity to build training plans that actually adjust when you're overtired or recovering from illness. The algorithm pulls from peer-reviewed exercise science -- things like progressive overload principles and deload week timing -- rather than generic \"get 10,000 steps\" advice. It syncs with Apple Watch, Garmin, and Whoop, and the free version covers basic tracking while the $9/month plan unlocks coaching recommendations.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 6,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 2
+    }
+  },
+  {
+    "id": 39,
+    "type": "humanized",
+    "genre": "product",
+    "text": "Setting up a smart home used to mean buying into one ecosystem and hoping nothing breaks when a firmware update rolls out. This hub works with Zigbee, Z-Wave, Thread, and Matter devices, so you're not locked into one brand. Voice control through Alexa or Google Home is built in, and the motion sensors learn your household patterns -- lights come on when you walk into the kitchen at 6 a.m., and the thermostat drops two degrees when nobody's been home for an hour. It runs locally rather than cloud-only, which means your automations still work if your internet goes down.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 40,
+    "type": "humanized",
+    "genre": "product",
+    "text": "Bookkeeping shouldn't require an accounting degree, but most small business owners spend 5-10 hours a month wrestling with spreadsheets or outdated desktop software. This cloud platform connects directly to your bank accounts and categorizes transactions as they come in, getting it right about 92% of the time based on internal testing. Tax season becomes less painful because the system tracks deductible expenses all year and generates Schedule C reports automatically. It integrates with Gusto for payroll, Shopify for e-commerce, and QuickBooks for businesses that want to migrate gradually rather than switch cold turkey.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 41,
+    "type": "humanized",
+    "genre": "travel",
+    "text": "Southeast Asian cuisine is overwhelming in the best way -- every region has its own logic, its own base flavors, its own non-negotiable ingredients. In Bangkok's night markets, the smoke from a dozen woks hits you before the noise does, and there's no menu: you point, you sit on a plastic stool, you eat something you can't name but won't forget. The street food isn't a side attraction. It's the actual culture, compressed into a bowl of boat noodles or a bag of mango sticky rice that a grandmother has been making the same way for forty years.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 42,
+    "type": "humanized",
+    "genre": "travel",
+    "text": "Solo travel teaches you things about yourself that you'd rather not know -- like how bad you are at reading maps, or how quickly loneliness sharpens into something productive. After a few days alone in a foreign city, the discomfort fades and something else takes over: you start making decisions faster, talking to strangers without rehearsing what you'll say. It's not glamorous self-discovery. It's more like recalibrating under pressure, in places where nobody knows your usual excuses.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.88,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 43,
+    "type": "humanized",
+    "genre": "travel",
+    "text": "Digital nomadism sounds cooler than it usually is. Most days you're hunting for stable Wi-Fi in Lisbon cafes or rebooting a VPN from a co-working space in Canggu that smells like incense and kombucha. Still, the model works for a lot of people -- especially developers and writers who can do their jobs from any timezone. The draw isn't some abstract idea of freedom. It's concrete: you pay Bali rent on a San Francisco salary, and you eat lunch outside in January.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 44,
+    "type": "humanized",
+    "genre": "travel",
+    "text": "Sustainable tourism is one of those phrases that gets thrown around a lot without much behind it. But where it actually works -- Costa Rica's community-run lodges, for example, or Iceland's strict highland trail limits -- the difference is visible. Local guides get paid properly, trails don't erode into mud chutes, and tourists leave knowing something about the place beyond what the resort brochure said. The hard part is that genuine sustainability often means fewer visitors, which is the opposite of what most tourism boards want.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 45,
+    "type": "humanized",
+    "genre": "travel",
+    "text": "Wellness retreats range from genuinely useful (a week of structured silence and sleep hygiene coaching in rural Japan) to borderline absurd (crystal-infused water ceremonies priced like a semester of college). The industry has grown fast, partly because burnout is real and partly because Instagram made meditating in Tulum look aspirational. What separates a good retreat from a waste of money is usually boring: qualified instructors, evidence-based programming, and follow-up support after you leave. The glow fades fast without structure at home.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 46,
+    "type": "humanized",
+    "genre": "legal",
+    "text": "GDPR changed the game for data privacy, but not in the way most people expected. Companies hired compliance officers, rewrote privacy policies, and added cookie banners to every website -- then mostly kept collecting data the same way. The real impact came from enforcement: when French regulators fined Google 50 million euros in 2019, it proved the regulation had teeth. The challenge now is consistency. Different EU member states enforce GDPR at wildly different speeds, and smaller companies often can't afford the legal help to keep up.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 47,
+    "type": "humanized",
+    "genre": "legal",
+    "text": "Patent law was designed for a world where inventions were physical things -- machines, chemical compounds, manufacturing processes. It fits awkwardly on software, where the line between an idea and an implementation is blurry at best. International enforcement makes it worse: a patent granted in the US means nothing in China without a separate filing, and the costs of multi-jurisdiction protection can exceed what a small company earns in a year. Some firms have started experimenting with blockchain-based prior art registries, though it's too early to tell whether those will hold up in court.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 48,
+    "type": "humanized",
+    "genre": "legal",
+    "text": "Antitrust enforcement against Big Tech is back on the agenda, but the existing legal tools don't map cleanly onto platform economics. Standard metrics like consumer price harm don't apply when the product is free. The FTC's case against Meta and the DOJ's against Google are testing whether courts will accept broader definitions of harm -- reduced innovation, degraded privacy, suppressed competition. These cases will take years to resolve, and the outcomes will set precedent for how digital monopolies are treated globally.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.88,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 49,
+    "type": "humanized",
+    "genre": "legal",
+    "text": "The gig economy exposed a gap in employment law that legislators are still trying to close. Uber and Lyft drivers, DoorDash couriers, and TaskRabbit handypeople all occupy a gray zone: they set their own hours but can't set their own prices, they use company-branded apps but receive no benefits. California's AB5 tried to reclassify most gig workers as employees, then Proposition 22 partially rolled it back. The UK took a different approach, with its Supreme Court ruling that Uber drivers are \"workers\" -- a middle category that doesn't exist in US law.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 50,
+    "type": "humanized",
+    "genre": "legal",
+    "text": "Copyright law has no good answer for AI-generated content yet. If a person types a prompt and Midjourney produces an image, who owns it? The US Copyright Office said in 2023 that purely AI-generated works can't be copyrighted, but works with sufficient human authorship can -- without defining what \"sufficient\" means. Meanwhile, artists are suing companies like Stability AI for training on their work without permission. The legal frameworks we have were built for human creators, and stretching them to cover machine output is producing contradictions that courts will be sorting through for a decade.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 8,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 2,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 51,
+    "type": "humanized",
+    "genre": "startup",
+    "text": "Starting a company is mostly logistics disguised as ambition. Before you get to the exciting parts -- the product, the pitch, the first customer -- there are months of entity formation, bank account rejections, and tax ID applications. Hiring is where most first-time founders stumble. You need people who can tolerate ambiguity and work without the structure a big company provides, which rules out most qualified candidates. The funding environment matters, but less than founders think: plenty of great companies were built during downturns by people who couldn't raise a dime.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 52,
+    "type": "humanized",
+    "genre": "startup",
+    "text": "Fundraising is awkward by design. You're asking strangers to bet money on your ability to build something that doesn't exist yet, based on a slide deck and 30 minutes of conversation. The best pitches aren't the ones with the fanciest financial models. They're the ones where the founder clearly understands the problem because they've lived it -- a doctor building health tech, an ex-teacher building ed-tech. Investors pattern-match constantly, so the narrative has to feel inevitable: this person, this problem, this timing. Getting the wrong investors is worse than getting no investors at all.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.88,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 53,
+    "type": "humanized",
+    "genre": "startup",
+    "text": "Product-market fit is one of those concepts that's easy to define and miserable to achieve. You know you have it when customers start pulling the product out of your hands -- when support tickets are about missing features, not confusion about what the product does. Most startups think they've found it too early, usually because a small group of enthusiastic early adopters isn't the same as a market. The honest test is churn: if people keep leaving after the first month, the fit isn't there yet, no matter what the sign-up numbers say.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 54,
+    "type": "humanized",
+    "genre": "startup",
+    "text": "Scaling is where most startups break. The things that worked at 10 employees -- informal communication, the founder making every decision, shared tribal knowledge -- collapse somewhere around 40. Suddenly you need an org chart, a hiring process that doesn't depend on personal referrals, and documentation for things everyone used to just know. The operational shift feels like betraying the startup spirit, but the alternative is chaos. Companies that scale well usually have at least one founder who finds process design genuinely interesting, which is rarer than it sounds.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 55,
+    "type": "humanized",
+    "genre": "startup",
+    "text": "Accelerator programs like Y Combinator and Techstars have become the default on-ramp for first-time founders, but the value varies wildly. The best ones give you a warm introduction to investors you couldn't reach otherwise and a cohort of peers going through the same problems in real time. The worst ones take equity for a curriculum you could find on YouTube. The selection process itself is useful feedback: if three top accelerators reject you, the problem might not be the application. Before applying, talk to alumni from the last two batches -- not the ones on the website, the ones who dropped out.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 56,
+    "type": "humanized",
+    "genre": "environment",
+    "text": "The climate problem is simple to describe and brutal to solve. We know CO2 traps heat, we know where most emissions come from (power generation, transport, industry, agriculture), and we know roughly what 2 degrees of warming will do. The difficulty is political, not scientific. Cutting emissions fast enough requires changes that cost money now and pay off in decades -- a timeline that doesn't match election cycles anywhere. Renewable energy has gotten cheap enough to compete with fossil fuels in most markets, but cheap isn't the same as fast, and the grid infrastructure to support it is decades behind where it needs to be.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 57,
+    "type": "humanized",
+    "genre": "environment",
+    "text": "Ocean acidification doesn't get the attention it deserves, probably because it's hard to photograph. Since the industrial revolution, the ocean's pH has dropped by about 0.1 units -- which sounds tiny until you learn that the scale is logarithmic, meaning this represents a 26% increase in acidity. Coral reefs, shellfish, and plankton that build calcium carbonate structures are already struggling. The research is technically demanding because ocean chemistry varies enormously by depth, temperature, and location, so global averages can hide regional disasters. Policy responses have been slow, partly because the damage is underwater and out of sight.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 8,
+    "change_rate": 0.83,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 58,
+    "type": "humanized",
+    "genre": "environment",
+    "text": "Tropical deforestation is driven by a short list of industries: cattle ranching, soy farming, palm oil, and logging. In Brazil, satellite monitoring made it possible to track clearing in near-real time, and deforestation in the Amazon dropped sharply between 2004 and 2012 as a result. Then political priorities shifted, enforcement weakened, and the rates climbed again. The economics are straightforward: standing forest is worth less than cleared land to the people making the decision, unless payments for ecosystem services or carbon credits change the math. So far, those mechanisms haven't scaled fast enough.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 59,
+    "type": "humanized",
+    "genre": "environment",
+    "text": "By 2025, roughly two billion people live in countries facing high water stress, and the number is growing. The fixes are well understood but expensive: desalination plants, wastewater recycling, drip irrigation, aquifer recharge. Singapore runs a system called NEWater that recycles wastewater into drinking water and now meets 40% of the country's demand. Israel reuses about 85% of its wastewater for agriculture. These are small, wealthy countries, though. Scaling similar solutions in Pakistan or sub-Saharan Africa -- where the need is greatest and the capital is thinnest -- is a different problem entirely.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 8,
+    "change_rate": 0.82,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 60,
+    "type": "humanized",
+    "genre": "environment",
+    "text": "Cities that invested in green space early are now seeing returns that go beyond aesthetics. Seoul tore out a highway in 2005 to restore the Cheonggyecheon stream, and the surrounding area saw property values rise while summer temperatures dropped measurably compared to nearby districts. Barcelona's superblocks program -- which closes streets to through traffic and fills them with trees and benches -- cut NO2 levels by 25% in pilot areas. The pattern is consistent: urban green infrastructure pays for itself through reduced healthcare costs, lower cooling bills, and higher property tax revenue. The challenge is that the benefits are diffuse and the construction costs are immediate, which makes budget approval slow.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 61,
+    "type": "humanized",
+    "genre": "culture",
+    "text": "The exhibition maps the tangled connections between identity and geography through about forty works of painting, video, and sculptural installation. Several pieces deal directly with cultural displacement, using saturated color fields against raw, unfinished surfaces to create visual tension that lingers after you leave the room. The curation groups works by emotional register rather than chronology, which keeps visitors off-balance in a productive way. A standout is a three-channel video piece that projects home movies from three different refugee families side by side. For a mid-size gallery running on limited funding, this is an unusually ambitious show.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.82,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 62,
+    "type": "humanized",
+    "genre": "culture",
+    "text": "The novel shuffles its timeline deliberately, jumping between a grandmother's wartime letters and her granddaughter's present-day search through family archives in a small Romanian town. This structure works because each chapter reframes the last, making grief feel cumulative rather than episodic. The prose stays restrained even during the most devastating scenes, trusting readers to fill in the emotional gaps. Dialogue carries more weight than description here, and the characters feel like people you might actually know. It is the strongest debut fiction I have read this year, and I suspect it will age well.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 63,
+    "type": "humanized",
+    "genre": "culture",
+    "text": "This year's festival programmed forty-two films from twenty-eight countries, with a noticeable tilt toward independent productions shot on micro-budgets. Several documentaries tackled environmental justice head-on, including a particularly striking entry about lithium mining in the Bolivian salt flats and its effect on local water tables. The fiction slate was uneven, but the strongest entries came from filmmakers working in languages rarely heard at major festivals, including Wolof and Quechua. Programming rewarded patience more than spectacle, and walk-outs during the slower entries were conspicuous. Still, the best films here would hold their own anywhere.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.88,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 64,
+    "type": "humanized",
+    "genre": "culture",
+    "text": "The album opens with a banjo loop fed through a granular synthesizer, and that collision of old and new sets the tone for the remaining eleven tracks. Songs about grief sit next to songs about small domestic joys like cooking for someone you love, and the sequencing feels intentional rather than random. The production is sparse where it counts, leaving room for the vocalist's cracked, unpolished delivery to carry the emotional weight. Two instrumental interludes break up the pacing nicely. It is a record that rewards headphone listening late at night, ideally with the lights off.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 65,
+    "type": "humanized",
+    "genre": "culture",
+    "text": "The production strips the stage down to a bare floor, three chairs, and a single overhead light, forcing the language to carry everything. The four-person cast plays directly to the audience during monologues, breaking the fourth wall without making it feel gimmicky or overly rehearsed. The director's choice to keep scene transitions silent, with no music or blackouts, creates a strange, sustained tension that accumulates over the two-hour runtime. One actor in particular delivers a seven-minute monologue near the end that left half the audience visibly shaken. It is the kind of theater that stays with you on the train ride home.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 66,
+    "type": "humanized",
+    "genre": "self-help",
+    "text": "Growing as a person usually means sitting with discomfort longer than you want to. Knowing your own strengths helps, but knowing your blind spots matters more, and most people avoid that second part for years. There is no version of real change that covers mind, body, and spirit equally at all times; some weeks you are just trying to sleep enough and eat something that is not takeout. The people who actually change tend to pick one concrete thing and stick with it until it stops requiring willpower. Start with one small thing you keep avoiding and do it before Thursday.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 67,
+    "type": "humanized",
+    "genre": "self-help",
+    "text": "The most reliable way to build a habit is to attach it to something you already do every day without thinking. Put your running shoes next to the coffee maker. Move the guitar from the closet to the couch. The psychology behind habit stacking is well documented, but the real trick is making the new behavior so small it feels almost pointless at first. A two-minute stretch counts. One paragraph of writing counts. Motivation follows action, not the other way around, and waiting until you feel ready is a reliable way to never start at all.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 7,
+    "change_rate": 0.83,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 68,
+    "type": "humanized",
+    "genre": "self-help",
+    "text": "Most relationship advice boils down to two things: say what you actually mean, and listen without planning your reply while the other person is still talking. Figuring out your own attachment style can explain a lot of the patterns you keep repeating, especially the ones that frustrate you most. Boundaries are not about control; they are about telling people what you need in plain language instead of hoping they guess correctly. The tricky part is that early experiences shape relational habits long before you are aware of them. None of this is easy, but it gets less awkward with practice.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.82,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 69,
+    "type": "humanized",
+    "genre": "self-help",
+    "text": "Most people avoid looking at their finances because the numbers feel judgmental, like a report card for your life choices. But a budget is just a record of what you spent, not a moral scorecard. Start by tracking three months of expenses in a spreadsheet before signing up for any investing app or subscribing to a financial newsletter. Automated transfers to a separate savings account on payday can do more for your long-term security than any motivational book about money ever written. Understanding why you overspend matters more than any particular savings strategy.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.83,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 70,
+    "type": "humanized",
+    "genre": "self-help",
+    "text": "Mindfulness does not require a meditation cushion or a weekend retreat in the mountains. It can look like noticing your jaw is clenched during a meeting, or catching yourself scrolling your phone without actually reading anything on the screen. The point is not to stop thinking; it is to notice that you are thinking. Even five minutes of paying attention to your breathing between tasks can lower your cortisol levels by a measurable amount, according to studies out of the University of Massachusetts. The practice is boring on purpose, and that is exactly what makes it work.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 71,
+    "type": "humanized",
+    "genre": "newsletter",
+    "text": "This month we are looking at how mid-size companies are handling the shift to hybrid work two years in. The short version: most are still figuring it out, and the ones doing best tend to have clear written policies rather than vague guidelines about flexibility. We also signed a partnership with DataSync to expand our analytics offering, which should roll out in the next six weeks. On the content side, we published a case study on onboarding remote employees that got more downloads than anything else this quarter. If any of this raises questions, reply to this email directly.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 72,
+    "type": "humanized",
+    "genre": "newsletter",
+    "text": "Heading into Q3, here are three updates worth knowing about. First, the backend team rebuilt our notification pipeline from scratch, so delivery times should drop from about twelve seconds to under three. Second, we added personalization features that use your past activity to surface relevant content without being creepy about it. Third, the billing dashboard got a visual overhaul and now shows usage trends over the past ninety days. We also squashed a bug that was causing duplicate invoices for annual subscribers. Hit reply if anything looks off after the rollout next Tuesday.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.88,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 73,
+    "type": "humanized",
+    "genre": "newsletter",
+    "text": "Here is what we are seeing in the market this month. Consumer spending on subscription services dropped 8% quarter over quarter, while spending on one-time purchases held steady at roughly the same level as Q1. Our analysts think this reflects subscription fatigue more than a broader pullback in discretionary spending. Enterprise SaaS renewals, by contrast, actually ticked up slightly, which suggests the B2B side is running on different logic. The full breakdown is in the attached PDF with charts. Let us know if you want a custom cut of the data for your vertical.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 74,
+    "type": "humanized",
+    "genre": "newsletter",
+    "text": "Two things happened this week that are worth flagging. We shipped a real-time collaboration feature that lets multiple editors work on the same document without version conflicts, which was the number one request in last quarter's survey. And we hired a new VP of Engineering, Maria Chen, who previously led infrastructure at Stripe for four years. The collaboration feature is live now; Maria starts on the 15th. We are also testing a lightweight project management view that might ship in beta next month. Reply to this email if you want early access to the beta workspace tools.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 75,
+    "type": "humanized",
+    "genre": "newsletter",
+    "text": "Happy Friday. We spent most of this sprint working through the feature requests from the last user survey, and three of the top five are now in staging being tested. The biggest one is batch export, which should ship by end of month if nothing breaks during QA. We also reworked how permissions cascade across shared workspaces based on complaints from larger teams who were running into access conflicts daily. There is a minor UI change to the settings page that you will notice on Monday. More details and screenshots in the changelog link below.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 76,
+    "type": "humanized",
+    "genre": "research",
+    "text": "We exposed adult mice to enriched environments for twelve weeks and measured synaptic density in the hippocampal CA1 region using two-photon microscopy. Mice in enriched cages showed a 23% increase in dendritic spine density compared to standard-housed controls, with the largest gains observed in thin spines associated with new learning. The imaging resolution was sufficient to track individual spines across weekly sessions, which allowed us to distinguish new spine formation from stabilization of existing ones. These results suggest that environmental stimulation can drive measurable structural remodeling even in the adult brain, which may inform rehabilitation strategies for patients with early-stage neurodegeneration.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.78,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 77,
+    "type": "humanized",
+    "genre": "research",
+    "text": "We profiled gut microbiota from 142 patients with chronic inflammatory bowel conditions and 98 healthy controls using shotgun metagenomic sequencing at a depth of 10 million reads per sample. Patients showed a consistent depletion of Faecalibacterium prausnitzii and an expansion of Enterobacteriaceae relative to controls across all clinical sites. A mixed-effects regression model identified three bacterial taxa whose combined abundance predicted disease severity scores with an AUC of 0.84. These compositional shifts point to specific microbial targets for therapeutic intervention, though validation in a prospective cohort is needed before clinical translation.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.75,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 78,
+    "type": "humanized",
+    "genre": "research",
+    "text": "We fabricated methylammonium lead iodide perovskite films using a two-step spin-coating method modified with an antisolvent drip at 4000 rpm. Devices with an optimized SnO2 electron transport layer reached a stabilized power conversion efficiency of 21.3%, compared to 18.7% for the TiO2 baseline under AM 1.5G illumination. Interface passivation with phenethylammonium iodide reduced trap-assisted recombination at grain boundaries, as confirmed by time-resolved photoluminescence measurements showing a carrier lifetime increase from 48 to 127 nanoseconds. Scaling this approach to blade-coating on flexible substrates remains the main engineering challenge before commercial viability.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.76,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 79,
+    "type": "humanized",
+    "genre": "research",
+    "text": "We sequenced 312 carbapenem-resistant Klebsiella pneumoniae isolates collected from five teaching hospitals over eighteen months. Plasmid-borne blaKPC-3 was the dominant resistance determinant, present in 74% of isolates, and conjugation assays confirmed horizontal transfer to E. coli recipients at frequencies of 10^-4 per donor cell under standard mating conditions. A parallel screen of lytic phages from wastewater identified two candidates that reduced biofilm biomass by over 60% in microtiter plate assays. Whether phage therapy can complement existing antimicrobial stewardship programs requires controlled clinical testing, but the in vitro results are encouraging enough to justify a Phase I trial.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.77,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 80,
+    "type": "humanized",
+    "genre": "research",
+    "text": "We coupled a biogeochemical ocean model with satellite-derived chlorophyll-a and sea surface temperature fields to estimate net carbon export below 200 meters under four IPCC emission scenarios. Southern Ocean upwelling intensity was the single strongest predictor of surface-to-deep carbon transfer, explaining 41% of the inter-model variance in our ensemble. Under SSP5-8.5, projected weakening of the biological pump reduced annual carbon export by 1.2 Pg C relative to the pre-industrial baseline by 2100. These projections carry direct implications for carbon budget accounting in national climate pledges, particularly for countries that rely on ocean sink estimates in their NDC calculations.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 8,
+    "change_rate": 0.77,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 81,
+    "type": "humanized",
+    "genre": "cover_letter",
+    "text": "I'm applying for the Software Engineer position because it matches what I've spent the last four years doing: building backend systems in Python and Go for mid-size fintech companies. At my current job, I redesigned our payment processing pipeline, which cut transaction failures by 30%. I work best in small, cross-functional teams where engineers talk directly to product managers instead of passing specs through layers of documentation. I'd welcome the chance to discuss how my experience fits what you're building.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 6,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 82,
+    "type": "humanized",
+    "genre": "cover_letter",
+    "text": "I'd like to apply for the Data Analyst role. Over the past three years at a retail analytics firm, I've built dashboards in Tableau and written SQL pipelines that helped our merchandising team identify which product categories were underperforming by region. One project I'm proud of: I found that our Midwest stores were consistently overstocking winter accessories, which led to a reallocation that saved about $200K annually. I try to focus on what the numbers actually mean for the business, not just what they say on a spreadsheet.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 83,
+    "type": "humanized",
+    "genre": "cover_letter",
+    "text": "I'm writing about the Project Manager opening. For the past five years, I've managed software delivery teams of 8-12 people, mostly in healthcare IT. The part of the job I care about most is keeping scope honest — I've seen too many projects fail because nobody wanted to say no to a stakeholder request. At my last company, I introduced weekly scope reviews that helped us ship three consecutive releases on schedule, which hadn't happened in two years. I think your team's focus on iterative delivery fits how I like to work.",
+    "total_score": 2,
+    "naturalness": 10,
+    "fidelity": 6,
+    "change_rate": 0.86,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 84,
+    "type": "humanized",
+    "genre": "cover_letter",
+    "text": "I saw your Marketing Coordinator posting and wanted to reach out. I've spent three years running social media and email campaigns for a mid-size DTC skincare brand, where I learned that the best-performing content usually comes from listening to what customers actually say in reviews rather than guessing at messaging in a conference room. My last email campaign series had a 4.2% click-through rate, which was double our previous average. I'm looking for a role where I can keep testing ideas quickly and learning from the data.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 6,
+    "change_rate": 0.85,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 85,
+    "type": "humanized",
+    "genre": "cover_letter",
+    "text": "I'm interested in the Financial Analyst position. I've worked in corporate finance for six years, mostly building quarterly forecasts and variance analyses for a $400M manufacturing company. What I've gotten good at is explaining financial results to operations managers who don't think in spreadsheets — translating a margin squeeze into something they can act on at the plant level. I also built our first rolling 12-month cash flow model, which the CFO now uses in every board meeting. I'd like to bring that kind of practical finance work to your team.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 6,
+    "change_rate": 0.84,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 86,
+    "type": "humanized",
+    "genre": "policy_proposal",
+    "text": "Cities that invest in green infrastructure tend to get more than just environmental benefits. Portland's green street program, for example, reduced stormwater runoff by 80% in treated areas while also raising nearby property values. The tricky part is funding: most municipalities can't afford large upfront costs, which is why phased approaches that start with low-cost interventions like permeable pavement and bioswales make more sense than waiting for a comprehensive overhaul. Federal matching grants could help cities begin these projects without blowing their capital budgets.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 6,
+    "change_rate": 0.82,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 87,
+    "type": "humanized",
+    "genre": "policy_proposal",
+    "text": "Expanding preventive care access makes financial sense, not just moral sense. The CDC estimated that every dollar spent on community-based diabetes prevention returns $5.60 in reduced treatment costs over five years. Telemedicine has helped reach rural populations, but adoption is uneven — states that kept pandemic-era reimbursement parity for virtual visits saw 3x higher continued usage than states that reverted. A federal baseline requiring insurers to cover telehealth at the same rate as in-person visits would close much of this gap without new spending.",
+    "total_score": 3,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.8,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 88,
+    "type": "humanized",
+    "genre": "policy_proposal",
+    "text": "The skills gap in American education isn't just about adding more coding classes. Employers consistently report that new graduates lack problem-solving ability and written communication skills more than they lack technical knowledge. Schools that have adopted project-based learning models — like High Tech High in San Diego — show stronger outcomes on both measures. The harder problem is teacher preparation: most education programs still train teachers to deliver content through lectures rather than to facilitate open-ended projects. Reforming teacher certification requirements would do more than adding another standardized test.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.81,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 89,
+    "type": "humanized",
+    "genre": "policy_proposal",
+    "text": "Housing affordability is getting worse in most U.S. metros, and the main reason is straightforward: we aren't building enough units. Zoning restrictions in cities like San Francisco and Boston effectively ban multifamily construction on 70-80% of residential land. Minneapolis eliminated single-family-only zoning in 2018, and within four years permitted 12% more housing units annually without the neighborhood disruption critics had predicted. A federal incentive program that rewards cities for zoning reform — similar to how Race to the Top rewarded education reform — could accelerate this pattern nationally.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.82,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 90,
+    "type": "humanized",
+    "genre": "policy_proposal",
+    "text": "Government agencies are starting to use AI for things like fraud detection in benefits programs and predictive maintenance of infrastructure, and some early results are promising. The Social Security Administration's pilot program caught 22% more overpayment cases using machine learning models than its previous rule-based system. But these tools need oversight: when an algorithm in Michigan's unemployment system wrongly flagged 40,000 claims as fraudulent in 2015, it took years to sort out the damage. Any AI deployment in government should require an independent audit within 12 months and a clear appeals process for people affected by automated decisions.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.8,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 91,
+    "type": "humanized",
+    "genre": "ai_tech_outlook",
+    "text": "Large language models got much better between 2023 and 2025, but the gains weren't evenly distributed. Tasks like summarization and translation improved steadily, while reliable reasoning and factual accuracy remain weak points. The biggest practical shift has been in coding assistance — GitHub reported that Copilot users accepted about 30% of its suggestions in production code by late 2024. The ethics conversation around AI has moved past abstract principles toward concrete regulatory proposals, with the EU AI Act now in force and similar bills advancing in several U.S. states.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.8,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 92,
+    "type": "humanized",
+    "genre": "ai_tech_outlook",
+    "text": "Self-driving cars are further from widespread adoption than most 2020-era predictions suggested. Waymo operates in a few U.S. cities with carefully mapped routes, and Cruise had to pause operations entirely after a pedestrian incident in San Francisco in 2023. The technology works reasonably well in controlled conditions — sunny weather, well-marked roads, predictable traffic — but edge cases remain genuinely hard. Meanwhile, less glamorous applications of autonomous tech, like warehouse robots and automated trucking on fixed highway corridors, are already generating real economic value with much less regulatory friction.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.82,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 93,
+    "type": "humanized",
+    "genre": "ai_tech_outlook",
+    "text": "Generative AI tools have gotten cheap and easy enough that almost anyone can produce images, music, or written content with them. The quality ceiling keeps rising too — it's hard to distinguish AI-generated product photography from studio shots in many cases. But this raises real questions about how creative professionals get paid. Stock photography revenue dropped roughly 30% between 2022 and 2024, and illustrators report losing freelance work to clients who use Midjourney instead. The intellectual property debates will take years to resolve in court, and until then, the creative economy is operating in a gray area.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.81,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 94,
+    "type": "humanized",
+    "genre": "ai_tech_outlook",
+    "text": "Quantum computing is still mostly a research topic, despite the hype. Google's Willow chip demonstrated error-corrected qubits in late 2024, which was a genuine milestone, but practical applications remain years away. The hardware is fragile — most quantum processors need temperatures near absolute zero — and the software ecosystem is immature. Where quantum computing will likely matter first is in materials simulation and cryptography, not in replacing classical computers for everyday tasks. Companies investing in quantum today are mostly making long-term bets, and many of them may not pay off.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.82,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 95,
+    "type": "humanized",
+    "genre": "ai_tech_outlook",
+    "text": "Edge computing has gotten more attention as companies realize that sending all their data to centralized cloud servers creates latency and bandwidth problems. A factory running quality-control cameras on a production line can't afford a 200ms round trip to AWS — the defective part is already past the rejection point. Chip makers like Nvidia and Qualcomm are building processors specifically for on-device inference, and the cost has dropped enough that even mid-size manufacturers can deploy them. The pattern is similar to what happened with cloud adoption a decade ago: the real growth comes when the technology gets boring and cheap, not when it's exciting and expensive.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 7,
+    "change_rate": 0.83,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 96,
+    "type": "humanized",
+    "genre": "extreme",
+    "text": "Technology changes things, but not everything at once, and not always in the ways people predict. The internet was supposed to eliminate middlemen, but Amazon became the biggest middleman of all. Social media was going to democratize information, and in some ways it did, but it also made misinformation cheaper to produce and harder to counter. The lesson is pretty consistent: new tools get adopted for the benefits they offer, and the downsides show up later. Planning for those downsides works better than pretending they won't exist.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 5,
+    "change_rate": 0.9,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 97,
+    "type": "humanized",
+    "genre": "extreme",
+    "text": "Companies keep talking about AI, blockchain, and quantum computing as if they form a natural trio, but in practice these technologies solve different problems and are at very different stages of maturity. AI is already embedded in most large software products. Blockchain found its niche in cryptocurrency and some supply-chain tracking but hasn't replaced traditional databases the way its advocates promised. Quantum computing is still in the lab. Lumping them together in strategy documents usually signals that someone is more interested in sounding forward-thinking than in solving a specific problem.",
+    "total_score": 4,
+    "naturalness": 9,
+    "fidelity": 6,
+    "change_rate": 0.88,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  },
+  {
+    "id": 98,
+    "type": "humanized",
+    "genre": "extreme",
+    "text": "Education technology companies raised billions of dollars during the pandemic on the promise that AI would personalize learning for every student. Some of those tools help — adaptive math programs like Khan Academy's Khanmigo give students immediate feedback that a teacher with 30 kids in a room can't provide. But most edtech products are glorified worksheets with a chatbot attached. The students who benefit most from technology in school are the ones who already have support at home. For kids who don't, a well-trained teacher still matters more than any software.",
+    "total_score": 3,
+    "naturalness": 10,
+    "fidelity": 5,
+    "change_rate": 0.89,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 0,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 99,
+    "type": "humanized",
+    "genre": "extreme",
+    "text": "The corporate sustainability movement has a gap between what companies report and what they actually do. A 2024 analysis by InfluenceMap found that 58% of S&P 500 companies' climate pledges were inconsistent with their lobbying activity. Renewable energy adoption is growing — solar installations hit record levels in 2024 — but most of that growth is driven by economics, not ESG commitments. Solar is just cheaper than coal in most markets now. The circular economy concept sounds appealing, but in practice, recycling rates for plastics have barely budged in 20 years. Progress is real but slower and messier than the annual sustainability reports suggest.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 5,
+    "change_rate": 0.88,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 0
+    }
+  },
+  {
+    "id": 100,
+    "type": "humanized",
+    "genre": "extreme",
+    "text": "Governments are experimenting with data analytics and AI, but the results so far are mixed. Estonia's digital government is often cited as a model, though it serves a population smaller than Houston's, which makes the comparison tricky. Larger countries face legacy IT systems, procurement rules that predate the smartphone, and bureaucratic cultures that resist change for understandable reasons — a failed software rollout at a government agency affects millions of people. The most successful government tech projects tend to be narrow in scope: digitizing a specific form, automating a specific approval process. Grand visions of AI-powered governance mostly stay on slide decks.",
+    "total_score": 5,
+    "naturalness": 9,
+    "fidelity": 6,
+    "change_rate": 0.87,
+    "category_counts": {
+      "banned_vocab": 0,
+      "inflated_phrase": 0,
+      "mechanical_transition": 0,
+      "empty_emphasis": 0,
+      "ai_closer": 0,
+      "passive_voice": 1,
+      "uniform_rhythm": 0,
+      "rule_of_three": 1
+    }
+  }
+]
