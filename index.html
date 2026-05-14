@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research-Skills — Claude Code Agent Skills</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-void: #000000;
+  --color-fog-border: #e5e7eb;
+  --color-chalk: #f1f1f1;
+  --color-graphite: #666666;
+  --color-ash: #8f8f8f;
+  --color-canvas: #ffffff;
+  --font-openai-sans: 'Inter', 'DM Sans', 'OpenAI Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --text-caption: 13px;
+  --leading-caption: 1.64;
+  --text-heading: 22px;
+  --leading-heading: 1.26;
+  --text-heading-lg: 28px;
+  --leading-heading-lg: 1.21;
+  --text-display: 48px;
+  --leading-display: 1.16;
+  --tracking-display: -1.44px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-52: 52px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-112: 112px;
+  --radius-cards: 6.08px;
+  --radius-buttons: 9999px;
+  --radius-softbutton: 40px;
+  --shadow-sm: rgba(0, 0, 0, 0.02) 0px 4px 6px 0px, rgba(0, 0, 0, 0.05) 0px 0px 2px 0px;
+  --page-max-width: 1200px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--color-canvas);
+  color: var(--color-void);
+  font-family: var(--font-openai-sans);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  line-height: 1.55;
+  font-feature-settings: "calt", "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+nav {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-32);
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  border-bottom: 1px solid var(--color-fog-border);
+}
+.nav-brand {
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  color: var(--color-void);
+  text-decoration: none;
+}
+.nav-links { display: flex; align-items: center; gap: var(--spacing-24); }
+.nav-links a {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-void);
+  text-decoration: none;
+}
+.nav-links a:hover { text-decoration: underline; }
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-void);
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: var(--radius-buttons);
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.btn-ghost:hover { background: var(--color-chalk); }
+.btn-filled {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-canvas);
+  background: var(--color-void);
+  border: none;
+  border-radius: var(--radius-buttons);
+  padding: 10px 20px;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: opacity 0.15s;
+}
+.btn-filled:hover { opacity: 0.85; }
+
+.hero {
+  text-align: center;
+  padding: var(--spacing-112) var(--spacing-32) var(--spacing-80);
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: var(--text-display);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  margin-bottom: var(--spacing-20);
+}
+.hero p {
+  font-size: 18px;
+  color: var(--color-graphite);
+  max-width: 640px;
+  margin: 0 auto var(--spacing-40);
+  line-height: 1.6;
+}
+.hero-chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-12);
+}
+.chip {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-void);
+  background: rgba(0,0,0,0.04);
+  border-radius: var(--radius-softbutton);
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.chip:hover { background: rgba(0,0,0,0.08); }
+
+.skills {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-32) var(--spacing-112);
+}
+.skills-header {
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.143px;
+  color: var(--color-graphite);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-32);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-24);
+}
+.skill-card {
+  border: 1px solid var(--color-fog-border);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-32);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+.skill-card:hover { background: rgba(0,0,0,0.015); }
+.skill-card-label {
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-graphite);
+  letter-spacing: 0.143px;
+  margin-bottom: var(--spacing-12);
+}
+.skill-card-title {
+  font-size: var(--text-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  margin-bottom: var(--spacing-12);
+}
+.skill-card-desc {
+  font-size: 15px;
+  color: var(--color-graphite);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-20);
+}
+.skill-card-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-void);
+  background: rgba(0,0,0,0.04);
+  border-radius: var(--radius-buttons);
+  padding: 4px 12px;
+}
+
+.benchmarks {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-32) var(--spacing-112);
+}
+.benchmarks-header {
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.143px;
+  color: var(--color-graphite);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-32);
+}
+.bench-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: var(--spacing-20) 0;
+  border-bottom: 1px solid var(--color-fog-border);
+}
+.bench-row:first-of-type { border-top: 1px solid var(--color-fog-border); }
+.bench-name {
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+}
+.bench-result {
+  font-size: 14px;
+  color: var(--color-graphite);
+}
+.bench-link {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-void);
+  text-decoration: none;
+}
+.bench-link:hover { text-decoration: underline; }
+
+footer {
+  border-top: 1px solid var(--color-fog-border);
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-40) var(--spacing-32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer span {
+  font-size: var(--text-caption);
+  color: var(--color-graphite);
+}
+footer a {
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-void);
+  text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 32px; letter-spacing: -0.8px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  nav { padding: 0 var(--spacing-16); }
+  .hero { padding: var(--spacing-64) var(--spacing-16) var(--spacing-52); }
+  .skills { padding: 0 var(--spacing-16) var(--spacing-64); }
+  .benchmarks { padding: 0 var(--spacing-16) var(--spacing-64); }
+  footer { padding: var(--spacing-32) var(--spacing-16); flex-direction: column; gap: var(--spacing-12); }
+  .nav-links { gap: var(--spacing-16); }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="./" class="nav-brand">Research-Skills</a>
+  <div class="nav-links">
+    <a href="https://github.com/s-choung/Research-Skills">GitHub</a>
+    <a href="https://github.com/s-choung/Research-Skills#installation" class="btn-ghost">Install</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Agent skills for<br>research workflows</h1>
+  <p>Production-tested Claude Code skills that handle writing quality, manuscript prep, and presentation optimization. Each skill is benchmarked against real-world data.</p>
+  <div class="hero-chips">
+    <a href="#skills" class="chip">Writing Quality</a>
+    <a href="#skills" class="chip">Manuscript Prep</a>
+    <a href="#benchmarks" class="chip">Benchmarked</a>
+    <a href="#skills" class="chip">Presentation</a>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="skills-header">Skills</div>
+  <div class="skills-grid">
+
+    <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="skill-card">
+      <div class="skill-card-label">Writing Quality</div>
+      <div class="skill-card-title">Humanizer KOR</div>
+      <div class="skill-card-desc">Detects and rewrites AI-generated Korean text through a 5-stage pipeline. Taxonomy-driven detection identifies 40+ sub-patterns across 10 categories, then surgically rewrites only flagged spans.</div>
+      <span class="skill-card-stat">AI-Tell 98% reduction</span>
+    </a>
+
+    <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="skill-card">
+      <div class="skill-card-label">Writing Quality</div>
+      <div class="skill-card-title">Humanizer ENG</div>
+      <div class="skill-card-desc">English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm. 8-category detection with consistent scoring across 100 benchmark samples.</div>
+      <span class="skill-card-stat">AI-Tell 96% reduction</span>
+    </a>
+
+    <a href="skills/ase/benchmark/benchmark_report_v6.html" class="skill-card">
+      <div class="skill-card-label">Manuscript Prep</div>
+      <div class="skill-card-title">ASE Checker</div>
+      <div class="skill-card-desc">Academic Scientific English quality checker. Evaluates manuscripts against publication standards using 9 LLM models. Version 6 benchmarks grammar, clarity, and style compliance.</div>
+      <span class="skill-card-stat">9 LLM benchmark</span>
+    </a>
+
+    <a href="skills/pptx-too-heavy/" class="skill-card">
+      <div class="skill-card-label">Presentation</div>
+      <div class="skill-card-title">PPTX Too Heavy</div>
+      <div class="skill-card-desc">Analyzes PPTX files for oversized media. Maps images per slide, identifies EMF/TIF candidates for conversion, and generates a 3-column grid report sorted by file size.</div>
+      <span class="skill-card-stat">Image weight analysis</span>
+    </a>
+
+  </div>
+</section>
+
+<section class="benchmarks" id="benchmarks">
+  <div class="benchmarks-header">Benchmark Results</div>
+  <div class="bench-row">
+    <span class="bench-name">Humanizer KOR</span>
+    <span class="bench-result">AI-Tell 54.9 → 1.0 · Naturalness 2.9 → 9.2</span>
+    <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="bench-link">View report →</a>
+  </div>
+  <div class="bench-row">
+    <span class="bench-name">Humanizer ENG</span>
+    <span class="bench-result">AI-Tell 89.8 → 3.6 · Naturalness 1.2 → 9.4</span>
+    <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="bench-link">View report →</a>
+  </div>
+  <div class="bench-row">
+    <span class="bench-name">ASE v6</span>
+    <span class="bench-result">9 LLMs · 100 samples per model</span>
+    <a href="skills/ase/benchmark/benchmark_report_v6.html" class="bench-link">View report →</a>
+  </div>
+</section>
+
+<footer>
+  <span>Research-Skills · Seokhyun Choung · 2026</span>
+  <a href="https://github.com/s-choung/Research-Skills">github.com/s-choung/Research-Skills</a>
+</footer>
+
+</body>
+</html>
