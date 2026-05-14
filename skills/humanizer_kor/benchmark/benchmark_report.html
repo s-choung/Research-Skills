@@ -106,7 +106,7 @@ strong{font-weight:600}
 </table>
 <h2 data-ko="장르별 분석" data-en="Genre Breakdown">Genre Breakdown</h2>
 <table class="tbl">
-<tr><th>Genre</th><th class="r">N</th><th class="r">Orig Score</th><th class="r">Hum Score</th><th class="r">Orig Nat</th><th class="r">Hum Nat</th></tr>
+<tr><th>Genre</th><th class="r">Count</th><th class="r">Original AI-Tell</th><th class="r">Humanized AI-Tell</th><th class="r">Original Naturalness</th><th class="r">Humanized Naturalness</th></tr>
 <tbody id="genre-body"></tbody>
 </table>
 </div>
@@ -172,9 +172,9 @@ function render(){
         <span class="dots"><span class="${qc(t.orig.score)}"></span> <span class="${qc(t.hum.score)}"></span></span>
       </div>
       <div class="task-body">
-        <div class="orig-box"><div class="box-label o">Original &mdash; AI-Tell: ${t.orig.score} &middot; Nat: ${t.orig.nat}</div>${esc(t.orig.text)}</div>
+        <div class="orig-box"><div class="box-label o">Original &mdash; AI-Tell Score: ${t.orig.score} &middot; Naturalness: ${t.orig.nat}</div>${esc(t.orig.text)}</div>
         <div class="hum-box">
-          <div class="box-label h">Humanized &mdash; AI-Tell: ${t.hum.score} &middot; Nat: ${t.hum.nat} &middot; CR: ${t.hum.cr}%</div>
+          <div class="box-label h">Humanized &mdash; AI-Tell Score: ${t.hum.score} &middot; Naturalness: ${t.hum.nat} &middot; Change Rate: ${t.hum.cr}%</div>
           ${esc(t.hum.text)}
         </div>
       </div>`;
