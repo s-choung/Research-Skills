@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research-Skills — Claude Code Agent Skills</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Research-Skills</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --color-void: #000000;
@@ -13,46 +13,21 @@
   --color-graphite: #666666;
   --color-ash: #8f8f8f;
   --color-canvas: #ffffff;
-  --font-openai-sans: 'Inter', 'DM Sans', 'OpenAI Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --text-caption: 13px;
-  --leading-caption: 1.64;
-  --text-heading: 22px;
-  --leading-heading: 1.26;
-  --text-heading-lg: 28px;
-  --leading-heading-lg: 1.21;
-  --text-display: 48px;
-  --leading-display: 1.16;
-  --tracking-display: -1.44px;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --spacing-4: 4px;
-  --spacing-8: 8px;
-  --spacing-12: 12px;
-  --spacing-16: 16px;
-  --spacing-20: 20px;
-  --spacing-24: 24px;
-  --spacing-32: 32px;
-  --spacing-40: 40px;
-  --spacing-52: 52px;
-  --spacing-64: 64px;
-  --spacing-80: 80px;
-  --spacing-112: 112px;
+  --font: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --radius-cards: 6.08px;
-  --radius-buttons: 9999px;
-  --radius-softbutton: 40px;
-  --shadow-sm: rgba(0, 0, 0, 0.02) 0px 4px 6px 0px, rgba(0, 0, 0, 0.05) 0px 0px 2px 0px;
-  --page-max-width: 1200px;
+  --radius-pill: 9999px;
+  --radius-soft: 40px;
+  --shadow-sm: rgba(0,0,0,0.02) 0px 4px 6px 0px, rgba(0,0,0,0.05) 0px 0px 2px 0px;
+  --max-w: 1200px;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   background: var(--color-canvas);
   color: var(--color-void);
-  font-family: var(--font-openai-sans);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--font);
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.55;
-  font-feature-settings: "calt", "liga";
   -webkit-font-smoothing: antialiased;
 }
 
@@ -61,221 +36,174 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--spacing-32);
-  max-width: var(--page-max-width);
+  padding: 0 32px;
+  max-width: var(--max-w);
   margin: 0 auto;
   border-bottom: 1px solid var(--color-fog-border);
 }
 .nav-brand {
   font-size: 16px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--color-void);
   text-decoration: none;
 }
-.nav-links { display: flex; align-items: center; gap: var(--spacing-24); }
-.nav-links a {
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-right a {
   font-size: 14px;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   color: var(--color-void);
   text-decoration: none;
 }
-.nav-links a:hover { text-decoration: underline; }
+.nav-right a:hover { text-decoration: underline; }
 .btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-8);
-  font-size: 14px;
-  font-weight: var(--font-weight-medium);
-  color: var(--color-void);
-  background: transparent;
+  display: inline-flex; align-items: center;
+  font-size: 14px; font-weight: 500;
+  color: var(--color-void); background: transparent;
   border: 1px solid rgba(0,0,0,0.12);
-  border-radius: var(--radius-buttons);
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background 0.15s;
+  border-radius: var(--radius-pill);
+  padding: 6px 14px; text-decoration: none;
+  cursor: pointer; transition: background 0.15s;
 }
 .btn-ghost:hover { background: var(--color-chalk); }
-.btn-filled {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-8);
-  font-size: 14px;
-  font-weight: var(--font-weight-medium);
-  color: var(--color-canvas);
-  background: var(--color-void);
-  border: none;
-  border-radius: var(--radius-buttons);
-  padding: 10px 20px;
-  text-decoration: none;
-  box-shadow: var(--shadow-sm);
-  transition: opacity 0.15s;
+.lang-toggle {
+  font-size: 13px; font-weight: 500;
+  color: var(--color-graphite); background: transparent;
+  border: 1px solid var(--color-fog-border);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px; cursor: pointer;
+  transition: all 0.15s;
 }
-.btn-filled:hover { opacity: 0.85; }
+.lang-toggle:hover { background: var(--color-chalk); color: var(--color-void); }
 
 .hero {
   text-align: center;
-  padding: var(--spacing-112) var(--spacing-32) var(--spacing-80);
-  max-width: var(--page-max-width);
+  padding: 100px 32px 72px;
+  max-width: var(--max-w);
   margin: 0 auto;
 }
 .hero h1 {
-  font-size: var(--text-display);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--leading-display);
-  letter-spacing: var(--tracking-display);
-  margin-bottom: var(--spacing-20);
+  font-size: 48px; font-weight: 600;
+  line-height: 1.16; letter-spacing: -1.44px;
+  margin-bottom: 20px;
 }
 .hero p {
-  font-size: 18px;
-  color: var(--color-graphite);
-  max-width: 640px;
-  margin: 0 auto var(--spacing-40);
+  font-size: 18px; color: var(--color-graphite);
+  max-width: 640px; margin: 0 auto 40px;
   line-height: 1.6;
 }
 .hero-chips {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-12);
+  display: flex; justify-content: center;
+  flex-wrap: wrap; gap: 10px;
 }
 .chip {
-  font-size: 14px;
-  font-weight: var(--font-weight-medium);
+  font-size: 14px; font-weight: 500;
   color: var(--color-void);
   background: rgba(0,0,0,0.04);
-  border-radius: var(--radius-softbutton);
-  padding: 8px 20px;
-  text-decoration: none;
-  transition: background 0.15s;
+  border-radius: var(--radius-soft);
+  padding: 7px 18px; text-decoration: none;
+  transition: background 0.15s; cursor: pointer;
 }
 .chip:hover { background: rgba(0,0,0,0.08); }
 
-.skills {
-  max-width: var(--page-max-width);
+.section {
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 var(--spacing-32) var(--spacing-112);
+  padding: 0 32px 80px;
 }
-.skills-header {
-  font-size: var(--text-caption);
-  font-weight: var(--font-weight-semibold);
+.section-label {
+  font-size: 13px; font-weight: 600;
   letter-spacing: 0.143px;
   color: var(--color-graphite);
   text-transform: uppercase;
-  margin-bottom: var(--spacing-32);
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-fog-border);
 }
-.skills-grid {
+.cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-24);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
-.skill-card {
+.card {
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-cards);
-  padding: var(--spacing-32);
-  text-decoration: none;
-  color: inherit;
+  padding: 28px;
+  text-decoration: none; color: inherit;
   transition: background 0.15s;
+  display: flex; flex-direction: column;
 }
-.skill-card:hover { background: rgba(0,0,0,0.015); }
-.skill-card-label {
-  font-size: var(--text-caption);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-graphite);
+.card:hover { background: rgba(0,0,0,0.015); }
+.card-cat {
+  font-size: 12px; font-weight: 500;
+  color: var(--color-ash);
   letter-spacing: 0.143px;
-  margin-bottom: var(--spacing-12);
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
-.skill-card-title {
-  font-size: var(--text-heading);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--leading-heading);
-  margin-bottom: var(--spacing-12);
+.card-title {
+  font-size: 18px; font-weight: 600;
+  line-height: 1.3; margin-bottom: 10px;
 }
-.skill-card-desc {
-  font-size: 15px;
-  color: var(--color-graphite);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-20);
+.card-desc {
+  font-size: 14px; color: var(--color-graphite);
+  line-height: 1.6; flex: 1;
+  margin-bottom: 16px;
 }
-.skill-card-stat {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-8);
-  font-size: var(--text-caption);
-  font-weight: var(--font-weight-medium);
+.card-badge {
+  display: inline-flex; align-self: flex-start;
+  font-size: 12px; font-weight: 500;
   color: var(--color-void);
   background: rgba(0,0,0,0.04);
-  border-radius: var(--radius-buttons);
-  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
 }
 
-.benchmarks {
-  max-width: var(--page-max-width);
+.bench-section {
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 var(--spacing-32) var(--spacing-112);
-}
-.benchmarks-header {
-  font-size: var(--text-caption);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.143px;
-  color: var(--color-graphite);
-  text-transform: uppercase;
-  margin-bottom: var(--spacing-32);
+  padding: 0 32px 80px;
 }
 .bench-row {
-  display: flex;
-  align-items: baseline;
+  display: flex; align-items: baseline;
   justify-content: space-between;
-  padding: var(--spacing-20) 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--color-fog-border);
 }
 .bench-row:first-of-type { border-top: 1px solid var(--color-fog-border); }
-.bench-name {
-  font-size: 16px;
-  font-weight: var(--font-weight-medium);
-}
-.bench-result {
-  font-size: 14px;
-  color: var(--color-graphite);
-}
+.bench-name { font-size: 15px; font-weight: 500; }
+.bench-result { font-size: 14px; color: var(--color-graphite); }
 .bench-link {
-  font-size: 14px;
-  font-weight: var(--font-weight-medium);
-  color: var(--color-void);
-  text-decoration: none;
+  font-size: 14px; font-weight: 500;
+  color: var(--color-void); text-decoration: none;
 }
 .bench-link:hover { text-decoration: underline; }
 
 footer {
   border-top: 1px solid var(--color-fog-border);
-  max-width: var(--page-max-width);
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: var(--spacing-40) var(--spacing-32);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 36px 32px;
+  display: flex; justify-content: space-between; align-items: center;
 }
-footer span {
-  font-size: var(--text-caption);
-  color: var(--color-graphite);
-}
+footer span { font-size: 13px; color: var(--color-graphite); }
 footer a {
-  font-size: var(--text-caption);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-void);
-  text-decoration: none;
+  font-size: 13px; font-weight: 500;
+  color: var(--color-void); text-decoration: none;
 }
 footer a:hover { text-decoration: underline; }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
   .hero h1 { font-size: 32px; letter-spacing: -0.8px; }
-  .skills-grid { grid-template-columns: 1fr; }
-  nav { padding: 0 var(--spacing-16); }
-  .hero { padding: var(--spacing-64) var(--spacing-16) var(--spacing-52); }
-  .skills { padding: 0 var(--spacing-16) var(--spacing-64); }
-  .benchmarks { padding: 0 var(--spacing-16) var(--spacing-64); }
-  footer { padding: var(--spacing-32) var(--spacing-16); flex-direction: column; gap: var(--spacing-12); }
-  .nav-links { gap: var(--spacing-16); }
+  .hero { padding: 64px 16px 48px; }
+  .cards { grid-template-columns: 1fr; }
+  .section, .bench-section { padding: 0 16px 48px; }
+  nav { padding: 0 16px; }
+  footer { padding: 28px 16px; flex-direction: column; gap: 10px; }
+  .bench-row { flex-direction: column; gap: 6px; }
 }
 </style>
 </head>
@@ -283,60 +211,154 @@ footer a:hover { text-decoration: underline; }
 
 <nav>
   <a href="./" class="nav-brand">Research-Skills</a>
-  <div class="nav-links">
+  <div class="nav-right">
     <a href="https://github.com/s-choung/Research-Skills">GitHub</a>
     <a href="https://github.com/s-choung/Research-Skills#installation" class="btn-ghost">Install</a>
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">KOR</button>
   </div>
 </nav>
 
 <section class="hero">
-  <h1>Agent skills for<br>research workflows</h1>
-  <p>Production-tested Claude Code skills that handle writing quality, manuscript prep, and presentation optimization. Each skill is benchmarked against real-world data.</p>
+  <h1 data-en="Research-Skills" data-ko="Research-Skills">Research-Skills</h1>
+  <p data-en="Production-tested Claude Code agent skills for research workflows. Writing quality, manuscript prep, scientific visualization, media processing — each benchmarked against real data." data-ko="연구 워크플로우를 위한 Claude Code 에이전트 스킬 모음. 글쓰기 품질, 논문 준비, 과학 시각화, 미디어 처리 — 실제 데이터 기반 벤치마크 검증 완료.">Production-tested Claude Code agent skills for research workflows. Writing quality, manuscript prep, scientific visualization, media processing — each benchmarked against real data.</p>
   <div class="hero-chips">
-    <a href="#skills" class="chip">Writing Quality</a>
-    <a href="#skills" class="chip">Manuscript Prep</a>
-    <a href="#benchmarks" class="chip">Benchmarked</a>
-    <a href="#skills" class="chip">Presentation</a>
+    <span class="chip" onclick="filterCat('all')" data-en="All 17 Skills" data-ko="전체 17개">All 17 Skills</span>
+    <span class="chip" onclick="filterCat('writing')" data-en="Writing" data-ko="글쓰기">Writing</span>
+    <span class="chip" onclick="filterCat('research')" data-en="Research" data-ko="연구">Research</span>
+    <span class="chip" onclick="filterCat('design')" data-en="Design" data-ko="디자인">Design</span>
+    <span class="chip" onclick="filterCat('media')" data-en="Media" data-ko="미디어">Media</span>
+    <span class="chip" onclick="filterCat('utility')" data-en="Utility" data-ko="유틸리티">Utility</span>
   </div>
 </section>
 
-<section class="skills" id="skills">
-  <div class="skills-header">Skills</div>
-  <div class="skills-grid">
+<section class="section" id="skills">
+  <div class="section-label" data-en="Skills" data-ko="Skills">Skills</div>
+  <div class="cards" id="cardGrid">
 
-    <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="skill-card">
-      <div class="skill-card-label">Writing Quality</div>
-      <div class="skill-card-title">Humanizer KOR</div>
-      <div class="skill-card-desc">Detects and rewrites AI-generated Korean text through a 5-stage pipeline. Taxonomy-driven detection identifies 40+ sub-patterns across 10 categories, then surgically rewrites only flagged spans.</div>
-      <span class="skill-card-stat">AI-Tell 98% reduction</span>
+    <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="card" data-cat="writing">
+      <div class="card-cat">Writing</div>
+      <div class="card-title">Humanizer KOR</div>
+      <div class="card-desc" data-en="Detects and rewrites AI-generated Korean text through a 5-stage pipeline. 40+ sub-patterns across 10 categories." data-ko="5단계 파이프라인으로 AI 생성 한국어 텍스트를 탐지하고 윤문. 10개 카테고리 40+ 세부 패턴.">Detects and rewrites AI-generated Korean text through a 5-stage pipeline. 40+ sub-patterns across 10 categories.</div>
+      <span class="card-badge" data-en="AI-Tell 98% reduction" data-ko="AI-Tell 98% 감소">AI-Tell 98% reduction</span>
     </a>
 
-    <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="skill-card">
-      <div class="skill-card-label">Writing Quality</div>
-      <div class="skill-card-title">Humanizer ENG</div>
-      <div class="skill-card-desc">English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm. 8-category detection with consistent scoring across 100 benchmark samples.</div>
-      <span class="skill-card-stat">AI-Tell 96% reduction</span>
+    <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="card" data-cat="writing">
+      <div class="card-cat">Writing</div>
+      <div class="card-title">Humanizer ENG</div>
+      <div class="card-desc" data-en="English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm." data-ko="금지 어휘, 기계적 전환어, 과장 표현, 균일 리듬 등 영어 AI 흔적을 제거.">English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm.</div>
+      <span class="card-badge" data-en="AI-Tell 96% reduction" data-ko="AI-Tell 96% 감소">AI-Tell 96% reduction</span>
     </a>
 
-    <a href="skills/ase/benchmark/benchmark_report_v6.html" class="skill-card">
-      <div class="skill-card-label">Manuscript Prep</div>
-      <div class="skill-card-title">ASE Checker</div>
-      <div class="skill-card-desc">Academic Scientific English quality checker. Evaluates manuscripts against publication standards using 9 LLM models. Version 6 benchmarks grammar, clarity, and style compliance.</div>
-      <span class="skill-card-stat">9 LLM benchmark</span>
+    <a href="skills/paper-style/" class="card" data-cat="writing">
+      <div class="card-cat">Writing</div>
+      <div class="card-title">Paper Style</div>
+      <div class="card-desc" data-en="Loads the author's scientific writing style profile and performs light AI-ism cleanup on manuscript paragraphs." data-ko="저자의 논문 문체 프로파일을 로드하고 원고 문단의 AI 흔적을 경량 제거.">Loads the author's scientific writing style profile and performs light AI-ism cleanup on manuscript paragraphs.</div>
+      <span class="card-badge" data-en="Style profile" data-ko="문체 프로파일">Style profile</span>
     </a>
 
-    <a href="skills/pptx-too-heavy/" class="skill-card">
-      <div class="skill-card-label">Presentation</div>
-      <div class="skill-card-title">PPTX Too Heavy</div>
-      <div class="skill-card-desc">Analyzes PPTX files for oversized media. Maps images per slide, identifies EMF/TIF candidates for conversion, and generates a 3-column grid report sorted by file size.</div>
-      <span class="skill-card-stat">Image weight analysis</span>
+    <a href="skills/paper-sections/" class="card" data-cat="writing">
+      <div class="card-cat">Writing</div>
+      <div class="card-title">Paper Sections</div>
+      <div class="card-desc" data-en="Drafts IMRAD paper sections in the author's voice with numeric-superscript citation formatting." data-ko="저자 문체로 IMRAD 논문 섹션 초안을 작성하고 위첨자 인용 포맷을 적용.">Drafts IMRAD paper sections in the author's voice with numeric-superscript citation formatting.</div>
+      <span class="card-badge" data-en="IMRAD drafting" data-ko="IMRAD 초안">IMRAD drafting</span>
+    </a>
+
+    <a href="skills/docx-scientific-formatting/" class="card" data-cat="writing">
+      <div class="card-cat">Writing</div>
+      <div class="card-title">DOCX Scientific Formatting</div>
+      <div class="card-desc" data-en="Formats Word documents with chemical formula subscripts, superscripts, and scientific italic rules via python-docx." data-ko="python-docx로 Word 문서의 화학식 아래첨자/위첨자/이탤릭 규칙을 자동 포맷팅.">Formats Word documents with chemical formula subscripts, superscripts, and scientific italic rules via python-docx.</div>
+      <span class="card-badge" data-en="DOCX formatting" data-ko="DOCX 포맷팅">DOCX formatting</span>
+    </a>
+
+    <a href="skills/ase/benchmark/benchmark_report_v6.html" class="card" data-cat="research">
+      <div class="card-cat">Research</div>
+      <div class="card-title">ASE Checker</div>
+      <div class="card-desc" data-en="LLM knowledge augmentation for error-free ASE (Atomic Simulation Environment) Python scripts. Benchmarked with 9 LLMs." data-ko="ASE(Atomic Simulation Environment) 라이브러리 코드 생성을 위한 LLM 지식 보강. 9개 LLM 벤치마크.">LLM knowledge augmentation for error-free ASE (Atomic Simulation Environment) Python scripts. Benchmarked with 9 LLMs.</div>
+      <span class="card-badge" data-en="9 LLM benchmark" data-ko="9개 LLM 벤치마크">9 LLM benchmark</span>
+    </a>
+
+    <a href="skills/matplotlib-scientific/" class="card" data-cat="research">
+      <div class="card-cat">Research</div>
+      <div class="card-title">Matplotlib Scientific</div>
+      <div class="card-desc" data-en="Creates publication-quality scientific figures with strict formatting rules — Arial font, SVG output, no grid, clean axes." data-ko="엄격한 포맷 규칙(Arial, SVG, 그리드 없음)을 따르는 논문용 matplotlib 그래프 생성.">Creates publication-quality scientific figures with strict formatting rules — Arial font, SVG output, no grid, clean axes.</div>
+      <span class="card-badge" data-en="Publication figures" data-ko="논문용 그래프">Publication figures</span>
+    </a>
+
+    <a href="skills/blender-atom-render/" class="card" data-cat="design">
+      <div class="card-cat">Design</div>
+      <div class="card-title">Blender Atom Render</div>
+      <div class="card-desc" data-en="Renders individual atom spheres from structure files using Blender and creates per-system legends." data-ko="Blender로 구조 파일에서 원자 구를 렌더링하고 시스템별 레전드를 생성.">Renders individual atom spheres from structure files using Blender and creates per-system legends.</div>
+      <span class="card-badge" data-en="Blender rendering" data-ko="Blender 렌더링">Blender rendering</span>
+    </a>
+
+    <a href="skills/design2html/" class="card" data-cat="design">
+      <div class="card-cat">Design</div>
+      <div class="card-title">Design2HTML</div>
+      <div class="card-desc" data-en="Converts design spec Markdown files into single-file HTML showcase pages with full token/component fidelity." data-ko="디자인 스펙 MD 파일을 토큰/컴포넌트를 충실히 반영한 HTML 쇼케이스 페이지로 변환.">Converts design spec Markdown files into single-file HTML showcase pages with full token/component fidelity.</div>
+      <span class="card-badge" data-en="7 built-in styles" data-ko="7개 내장 스타일">7 built-in styles</span>
+    </a>
+
+    <a href="skills/html-minimal/" class="card" data-cat="design">
+      <div class="card-cat">Design</div>
+      <div class="card-title">HTML Minimal</div>
+      <div class="card-desc" data-en="Creates warm-neutral minimal HTML documents with strict typography and whitespace-driven structure." data-ko="따뜻한 뉴트럴 톤, 엄격한 타이포그래피의 미니멀 HTML 문서 스타일.">Creates warm-neutral minimal HTML documents with strict typography and whitespace-driven structure.</div>
+      <span class="card-badge" data-en="Minimal reports" data-ko="미니멀 리포트">Minimal reports</span>
+    </a>
+
+    <a href="skills/slide-audit/" class="card" data-cat="design">
+      <div class="card-cat">Design</div>
+      <div class="card-title">Slide Audit</div>
+      <div class="card-desc" data-en="Verifies HTML slide deck layouts via Playwright bounding-rect diagnostics and visual subagent review." data-ko="Playwright 바운딩 박스 진단 + 시각 서브에이전트로 HTML 슬라이드 레이아웃 버그 검증.">Verifies HTML slide deck layouts via Playwright bounding-rect diagnostics and visual subagent review.</div>
+      <span class="card-badge" data-en="Layout verification" data-ko="레이아웃 검증">Layout verification</span>
+    </a>
+
+    <a href="skills/youtube/" class="card" data-cat="media">
+      <div class="card-cat">Media</div>
+      <div class="card-title">YouTube Transcript</div>
+      <div class="card-desc" data-en="Extracts YouTube transcripts, metadata, and key frame screenshots as structured Markdown." data-ko="YouTube URL에서 자막, 메타데이터, 주요 장면 스크린샷을 마크다운으로 추출.">Extracts YouTube transcripts, metadata, and key frame screenshots as structured Markdown.</div>
+      <span class="card-badge" data-en="Transcript extraction" data-ko="자막 추출">Transcript extraction</span>
+    </a>
+
+    <a href="skills/youtube2mp4/" class="card" data-cat="media">
+      <div class="card-cat">Media</div>
+      <div class="card-title">YouTube2MP4</div>
+      <div class="card-desc" data-en="Downloads YouTube videos as MP4 with optional resolution cap, time trimming, and audio-only mode." data-ko="YouTube 영상을 MP4로 다운로드. 해상도 제한, 구간 자르기, 오디오 전용 모드 지원.">Downloads YouTube videos as MP4 with optional resolution cap, time trimming, and audio-only mode.</div>
+      <span class="card-badge" data-en="Video download" data-ko="영상 다운로드">Video download</span>
+    </a>
+
+    <a href="skills/transcript2html/" class="card" data-cat="media">
+      <div class="card-cat">Media</div>
+      <div class="card-title">Transcript2HTML</div>
+      <div class="card-desc" data-en="Converts YouTube transcript Markdown into readable Korean dark-mode HTML with embedded key frames." data-ko="YouTube 트랜스크립트 MD를 키 프레임 포함 한국어 다크모드 읽기용 HTML로 변환.">Converts YouTube transcript Markdown into readable Korean dark-mode HTML with embedded key frames.</div>
+      <span class="card-badge" data-en="Dark-mode reader" data-ko="다크모드 리더">Dark-mode reader</span>
+    </a>
+
+    <a href="skills/pptx-too-heavy/" class="card" data-cat="utility">
+      <div class="card-cat">Utility</div>
+      <div class="card-title">PPTX Too Heavy</div>
+      <div class="card-desc" data-en="Analyzes PPTX files for oversized media, maps images per slide, and generates a size-sorted grid report." data-ko="PPTX 내 대용량 미디어를 찾아 슬라이드별 이미지 매핑 + 용량순 그리드 리포트 생성.">Analyzes PPTX files for oversized media, maps images per slide, and generates a size-sorted grid report.</div>
+      <span class="card-badge" data-en="Image weight analysis" data-ko="이미지 용량 분석">Image weight analysis</span>
+    </a>
+
+    <a href="skills/meetingnote-paperwork/" class="card" data-cat="utility">
+      <div class="card-cat">Utility</div>
+      <div class="card-title">Meeting Note Paperwork</div>
+      <div class="card-desc" data-en="Generates Korean research project meeting notes in a fixed paperwork template for computational chemistry." data-ko="계산화학/재료설계 주제의 고정 양식 한국어 연구과제 회의록 자동 생성.">Generates Korean research project meeting notes in a fixed paperwork template for computational chemistry.</div>
+      <span class="card-badge" data-en="Meeting notes" data-ko="회의록 생성">Meeting notes</span>
+    </a>
+
+    <a href="skills/smart-compact/" class="card" data-cat="utility">
+      <div class="card-cat">Utility</div>
+      <div class="card-title">Smart Compact</div>
+      <div class="card-desc" data-en="Saves Claude Code session state to a file for recovery after /clear context reset." data-ko="Claude Code 세션 상태를 파일로 저장하여 /clear 후 복구 가능하게 하는 스킬.">Saves Claude Code session state to a file for recovery after /clear context reset.</div>
+      <span class="card-badge" data-en="Session recovery" data-ko="세션 복구">Session recovery</span>
     </a>
 
   </div>
 </section>
 
-<section class="benchmarks" id="benchmarks">
-  <div class="benchmarks-header">Benchmark Results</div>
+<section class="bench-section" id="benchmarks">
+  <div class="section-label" data-en="Benchmark Results" data-ko="벤치마크 결과">Benchmark Results</div>
   <div class="bench-row">
     <span class="bench-name">Humanizer KOR</span>
     <span class="bench-result">AI-Tell 54.9 → 1.0 · Naturalness 2.9 → 9.2</span>
@@ -349,7 +371,7 @@ footer a:hover { text-decoration: underline; }
   </div>
   <div class="bench-row">
     <span class="bench-name">ASE v6</span>
-    <span class="bench-result">9 LLMs · 100 samples per model</span>
+    <span class="bench-result" data-en="9 LLMs · 100 samples per model" data-ko="9개 LLM · 모델당 100개 샘플">9 LLMs · 100 samples per model</span>
     <a href="skills/ase/benchmark/benchmark_report_v6.html" class="bench-link">View report →</a>
   </div>
 </section>
@@ -359,5 +381,30 @@ footer a:hover { text-decoration: underline; }
   <a href="https://github.com/s-choung/Research-Skills">github.com/s-choung/Research-Skills</a>
 </footer>
 
+<script>
+let lang = 'en';
+
+function toggleLang() {
+  lang = lang === 'en' ? 'ko' : 'en';
+  document.getElementById('langBtn').textContent = lang === 'en' ? 'KOR' : 'ENG';
+  document.querySelectorAll('[data-en][data-ko]').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+}
+
+function filterCat(cat) {
+  document.querySelectorAll('.card').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+  });
+  document.querySelectorAll('.chip').forEach(ch => {
+    const isAll = ch.getAttribute('data-en') === 'All 17 Skills';
+    const isCat = ch.getAttribute('data-en').toLowerCase() === cat;
+    ch.style.background = (cat === 'all' && isAll) || isCat
+      ? 'rgba(0,0,0,0.12)' : 'rgba(0,0,0,0.04)';
+  });
+}
+
+filterCat('all');
+</script>
 </body>
 </html>
