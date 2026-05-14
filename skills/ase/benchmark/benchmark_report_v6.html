@@ -118,12 +118,13 @@ strong { font-weight: 600; }
 
 /* Model results grid */
 .model-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 6px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 8px;
 }
 .model-result {
-  border: 1px solid var(--rule); padding: 6px 8px; font-size: .75rem;
+  border: 1px solid var(--rule); padding: 10px 12px; font-size: .75rem;
   word-wrap: break-word; overflow-wrap: break-word; white-space: normal;
+  min-height: 60px;
 }
 .model-result.pass-border { border-left: 3px solid var(--green); }
 .model-result.fail-border { border-left: 3px solid var(--red); }
