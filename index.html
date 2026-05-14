@@ -17,7 +17,6 @@
   --radius-cards: 6.08px;
   --radius-pill: 9999px;
   --radius-soft: 40px;
-  --shadow-sm: rgba(0,0,0,0.02) 0px 4px 6px 0px, rgba(0,0,0,0.05) 0px 0px 2px 0px;
   --max-w: 1200px;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,39 +32,22 @@ body {
 
 nav {
   height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between;
   padding: 0 32px;
-  max-width: var(--max-w);
-  margin: 0 auto;
+  max-width: var(--max-w); margin: 0 auto;
   border-bottom: 1px solid var(--color-fog-border);
 }
 .nav-brand {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 16px; font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--color-void);
-  text-decoration: none;
+  color: var(--color-void); text-decoration: none;
 }
 .nav-right { display: flex; align-items: center; gap: 16px; }
 .nav-right a {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--color-void);
-  text-decoration: none;
+  font-size: 14px; font-weight: 500;
+  color: var(--color-void); text-decoration: none;
 }
 .nav-right a:hover { text-decoration: underline; }
-.btn-ghost {
-  display: inline-flex; align-items: center;
-  font-size: 14px; font-weight: 500;
-  color: var(--color-void); background: transparent;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: var(--radius-pill);
-  padding: 6px 14px; text-decoration: none;
-  cursor: pointer; transition: background 0.15s;
-}
-.btn-ghost:hover { background: var(--color-chalk); }
 .lang-toggle {
   font-size: 13px; font-weight: 500;
   color: var(--color-graphite); background: transparent;
@@ -79,8 +61,7 @@ nav {
 .hero {
   text-align: center;
   padding: 100px 32px 72px;
-  max-width: var(--max-w);
-  margin: 0 auto;
+  max-width: var(--max-w); margin: 0 auto;
 }
 .hero h1 {
   font-size: 48px; font-weight: 600;
@@ -107,8 +88,7 @@ nav {
 .chip:hover { background: rgba(0,0,0,0.08); }
 
 .section {
-  max-width: var(--max-w);
-  margin: 0 auto;
+  max-width: var(--max-w); margin: 0 auto;
   padding: 0 32px 80px;
 }
 .section-label {
@@ -116,8 +96,7 @@ nav {
   letter-spacing: 0.143px;
   color: var(--color-graphite);
   text-transform: uppercase;
-  margin-bottom: 28px;
-  padding-bottom: 12px;
+  margin-bottom: 28px; padding-bottom: 12px;
   border-bottom: 1px solid var(--color-fog-border);
 }
 .cards {
@@ -129,9 +108,10 @@ nav {
   border: 1px solid var(--color-fog-border);
   border-radius: var(--radius-cards);
   padding: 28px;
-  text-decoration: none; color: inherit;
-  transition: background 0.15s;
   display: flex; flex-direction: column;
+  transition: background 0.15s;
+  position: relative;
+  cursor: pointer;
 }
 .card:hover { background: rgba(0,0,0,0.015); }
 .card-cat {
@@ -142,26 +122,54 @@ nav {
   margin-bottom: 8px;
 }
 .card-title {
-  font-size: 18px; font-weight: 600;
+  font-size: 17px; font-weight: 600;
   line-height: 1.3; margin-bottom: 10px;
+  font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: -0.3px;
 }
+.card-title a {
+  color: inherit; text-decoration: none;
+}
+.card-title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-cards);
+}
+.card-title a:hover { text-decoration: underline; }
 .card-desc {
   font-size: 14px; color: var(--color-graphite);
   line-height: 1.6; flex: 1;
   margin-bottom: 16px;
 }
+.card-footer {
+  display: flex; align-items: center;
+  gap: 8px; flex-wrap: wrap;
+}
 .card-badge {
-  display: inline-flex; align-self: flex-start;
+  display: inline-flex;
   font-size: 12px; font-weight: 500;
   color: var(--color-void);
   background: rgba(0,0,0,0.04);
   border-radius: var(--radius-pill);
   padding: 3px 10px;
 }
+.card-report {
+  display: inline-flex; align-items: center;
+  font-size: 12px; font-weight: 500;
+  color: var(--color-canvas);
+  background: var(--color-void);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  position: relative;
+  z-index: 1;
+}
+.card-report:hover { opacity: 0.75; }
 
 .bench-section {
-  max-width: var(--max-w);
-  margin: 0 auto;
+  max-width: var(--max-w); margin: 0 auto;
   padding: 0 32px 80px;
 }
 .bench-row {
@@ -171,7 +179,10 @@ nav {
   border-bottom: 1px solid var(--color-fog-border);
 }
 .bench-row:first-of-type { border-top: 1px solid var(--color-fog-border); }
-.bench-name { font-size: 15px; font-weight: 500; }
+.bench-name {
+  font-size: 15px; font-weight: 500;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+}
 .bench-result { font-size: 14px; color: var(--color-graphite); }
 .bench-link {
   font-size: 14px; font-weight: 500;
@@ -181,8 +192,7 @@ nav {
 
 footer {
   border-top: 1px solid var(--color-fog-border);
-  max-width: var(--max-w);
-  margin: 0 auto;
+  max-width: var(--max-w); margin: 0 auto;
   padding: 36px 32px;
   display: flex; justify-content: space-between; align-items: center;
 }
@@ -213,14 +223,13 @@ footer a:hover { text-decoration: underline; }
   <a href="./" class="nav-brand">Research-Skills</a>
   <div class="nav-right">
     <a href="https://github.com/s-choung/Research-Skills">GitHub</a>
-    <a href="https://github.com/s-choung/Research-Skills#installation" class="btn-ghost">Install</a>
     <button class="lang-toggle" onclick="toggleLang()" id="langBtn">KOR</button>
   </div>
 </nav>
 
 <section class="hero">
-  <h1 data-en="Research-Skills" data-ko="Research-Skills">Research-Skills</h1>
-  <p data-en="Production-tested Claude Code agent skills for research workflows. Writing quality, manuscript prep, scientific visualization, media processing — each benchmarked against real data." data-ko="연구 워크플로우를 위한 Claude Code 에이전트 스킬 모음. 글쓰기 품질, 논문 준비, 과학 시각화, 미디어 처리 — 실제 데이터 기반 벤치마크 검증 완료.">Production-tested Claude Code agent skills for research workflows. Writing quality, manuscript prep, scientific visualization, media processing — each benchmarked against real data.</p>
+  <h1>Research-Skills</h1>
+  <p data-en="Production-tested Claude Code agent skills for research workflows. Writing quality, manuscript prep, scientific visualization, media processing." data-ko="연구 워크플로우를 위한 Claude Code 에이전트 스킬 모음. 글쓰기 품질, 논문 준비, 과학 시각화, 미디어 처리.">Production-tested Claude Code agent skills for research workflows. Writing quality, manuscript prep, scientific visualization, media processing.</p>
   <div class="hero-chips">
     <span class="chip" onclick="filterCat('all')" data-en="All 17 Skills" data-ko="전체 17개">All 17 Skills</span>
     <span class="chip" onclick="filterCat('writing')" data-en="Writing" data-ko="글쓰기">Writing</span>
@@ -235,124 +244,161 @@ footer a:hover { text-decoration: underline; }
   <div class="section-label" data-en="Skills" data-ko="Skills">Skills</div>
   <div class="cards" id="cardGrid">
 
-    <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="card" data-cat="writing">
+    <div class="card" data-cat="writing">
       <div class="card-cat">Writing</div>
-      <div class="card-title">Humanizer KOR</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/humanizer_kor">/humanizer_kor</a></div>
       <div class="card-desc" data-en="Detects and rewrites AI-generated Korean text through a 5-stage pipeline. 40+ sub-patterns across 10 categories." data-ko="5단계 파이프라인으로 AI 생성 한국어 텍스트를 탐지하고 윤문. 10개 카테고리 40+ 세부 패턴.">Detects and rewrites AI-generated Korean text through a 5-stage pipeline. 40+ sub-patterns across 10 categories.</div>
-      <span class="card-badge" data-en="AI-Tell 98% reduction" data-ko="AI-Tell 98% 감소">AI-Tell 98% reduction</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="AI-Tell 98% reduction" data-ko="AI-Tell 98% 감소">AI-Tell 98% reduction</span>
+        <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="card-report">Report</a>
+      </div>
+    </div>
 
-    <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="card" data-cat="writing">
+    <div class="card" data-cat="writing">
       <div class="card-cat">Writing</div>
-      <div class="card-title">Humanizer ENG</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/humanizer_eng">/humanizer_eng</a></div>
       <div class="card-desc" data-en="English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm." data-ko="금지 어휘, 기계적 전환어, 과장 표현, 균일 리듬 등 영어 AI 흔적을 제거.">English counterpart targeting banned vocabulary, mechanical transitions, inflated phrasing, and uniform rhythm.</div>
-      <span class="card-badge" data-en="AI-Tell 96% reduction" data-ko="AI-Tell 96% 감소">AI-Tell 96% reduction</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="AI-Tell 96% reduction" data-ko="AI-Tell 96% 감소">AI-Tell 96% reduction</span>
+        <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="card-report">Report</a>
+      </div>
+    </div>
 
-    <a href="skills/paper-style/" class="card" data-cat="writing">
+    <div class="card" data-cat="writing">
       <div class="card-cat">Writing</div>
-      <div class="card-title">Paper Style</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/paper-style">/paper-style</a></div>
       <div class="card-desc" data-en="Loads the author's scientific writing style profile and performs light AI-ism cleanup on manuscript paragraphs." data-ko="저자의 논문 문체 프로파일을 로드하고 원고 문단의 AI 흔적을 경량 제거.">Loads the author's scientific writing style profile and performs light AI-ism cleanup on manuscript paragraphs.</div>
-      <span class="card-badge" data-en="Style profile" data-ko="문체 프로파일">Style profile</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Style profile" data-ko="문체 프로파일">Style profile</span>
+      </div>
+    </div>
 
-    <a href="skills/paper-sections/" class="card" data-cat="writing">
+    <div class="card" data-cat="writing">
       <div class="card-cat">Writing</div>
-      <div class="card-title">Paper Sections</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/paper-sections">/paper-sections</a></div>
       <div class="card-desc" data-en="Drafts IMRAD paper sections in the author's voice with numeric-superscript citation formatting." data-ko="저자 문체로 IMRAD 논문 섹션 초안을 작성하고 위첨자 인용 포맷을 적용.">Drafts IMRAD paper sections in the author's voice with numeric-superscript citation formatting.</div>
-      <span class="card-badge" data-en="IMRAD drafting" data-ko="IMRAD 초안">IMRAD drafting</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="IMRAD drafting" data-ko="IMRAD 초안">IMRAD drafting</span>
+      </div>
+    </div>
 
-    <a href="skills/docx-scientific-formatting/" class="card" data-cat="writing">
+    <div class="card" data-cat="writing">
       <div class="card-cat">Writing</div>
-      <div class="card-title">DOCX Scientific Formatting</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/docx-scientific-formatting">/docx-scientific-formatting</a></div>
       <div class="card-desc" data-en="Formats Word documents with chemical formula subscripts, superscripts, and scientific italic rules via python-docx." data-ko="python-docx로 Word 문서의 화학식 아래첨자/위첨자/이탤릭 규칙을 자동 포맷팅.">Formats Word documents with chemical formula subscripts, superscripts, and scientific italic rules via python-docx.</div>
-      <span class="card-badge" data-en="DOCX formatting" data-ko="DOCX 포맷팅">DOCX formatting</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="DOCX formatting" data-ko="DOCX 포맷팅">DOCX formatting</span>
+      </div>
+    </div>
 
-    <a href="skills/ase/benchmark/benchmark_report_v6.html" class="card" data-cat="research">
+    <div class="card" data-cat="research">
       <div class="card-cat">Research</div>
-      <div class="card-title">ASE Checker</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/ase">/ase</a></div>
       <div class="card-desc" data-en="LLM knowledge augmentation for error-free ASE (Atomic Simulation Environment) Python scripts. Benchmarked with 9 LLMs." data-ko="ASE(Atomic Simulation Environment) 라이브러리 코드 생성을 위한 LLM 지식 보강. 9개 LLM 벤치마크.">LLM knowledge augmentation for error-free ASE (Atomic Simulation Environment) Python scripts. Benchmarked with 9 LLMs.</div>
-      <span class="card-badge" data-en="9 LLM benchmark" data-ko="9개 LLM 벤치마크">9 LLM benchmark</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="9 LLM benchmark" data-ko="9개 LLM 벤치마크">9 LLM benchmark</span>
+        <a href="skills/ase/benchmark/benchmark_report_v6.html" class="card-report">Report</a>
+      </div>
+    </div>
 
-    <a href="skills/matplotlib-scientific/" class="card" data-cat="research">
+    <div class="card" data-cat="research">
       <div class="card-cat">Research</div>
-      <div class="card-title">Matplotlib Scientific</div>
-      <div class="card-desc" data-en="Creates publication-quality scientific figures with strict formatting rules — Arial font, SVG output, no grid, clean axes." data-ko="엄격한 포맷 규칙(Arial, SVG, 그리드 없음)을 따르는 논문용 matplotlib 그래프 생성.">Creates publication-quality scientific figures with strict formatting rules — Arial font, SVG output, no grid, clean axes.</div>
-      <span class="card-badge" data-en="Publication figures" data-ko="논문용 그래프">Publication figures</span>
-    </a>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/matplotlib-scientific">/matplotlib-scientific</a></div>
+      <div class="card-desc" data-en="Creates publication-quality scientific figures with strict formatting rules: Arial font, SVG output, no grid, clean axes." data-ko="엄격한 포맷 규칙(Arial, SVG, 그리드 없음)을 따르는 논문용 matplotlib 그래프 생성.">Creates publication-quality scientific figures with strict formatting rules: Arial font, SVG output, no grid, clean axes.</div>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Publication figures" data-ko="논문용 그래프">Publication figures</span>
+      </div>
+    </div>
 
-    <a href="skills/blender-atom-render/" class="card" data-cat="design">
+    <div class="card" data-cat="design">
       <div class="card-cat">Design</div>
-      <div class="card-title">Blender Atom Render</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/blender-atom-render">/blender-atom-render</a></div>
       <div class="card-desc" data-en="Renders individual atom spheres from structure files using Blender and creates per-system legends." data-ko="Blender로 구조 파일에서 원자 구를 렌더링하고 시스템별 레전드를 생성.">Renders individual atom spheres from structure files using Blender and creates per-system legends.</div>
-      <span class="card-badge" data-en="Blender rendering" data-ko="Blender 렌더링">Blender rendering</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Blender rendering" data-ko="Blender 렌더링">Blender rendering</span>
+      </div>
+    </div>
 
-    <a href="skills/design2html/" class="card" data-cat="design">
+    <div class="card" data-cat="design">
       <div class="card-cat">Design</div>
-      <div class="card-title">Design2HTML</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/design2html">/design2html</a></div>
       <div class="card-desc" data-en="Converts design spec Markdown files into single-file HTML showcase pages with full token/component fidelity." data-ko="디자인 스펙 MD 파일을 토큰/컴포넌트를 충실히 반영한 HTML 쇼케이스 페이지로 변환.">Converts design spec Markdown files into single-file HTML showcase pages with full token/component fidelity.</div>
-      <span class="card-badge" data-en="7 built-in styles" data-ko="7개 내장 스타일">7 built-in styles</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="7 built-in styles" data-ko="7개 내장 스타일">7 built-in styles</span>
+      </div>
+    </div>
 
-    <a href="skills/html-minimal/" class="card" data-cat="design">
+    <div class="card" data-cat="design">
       <div class="card-cat">Design</div>
-      <div class="card-title">HTML Minimal</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/html-minimal">/html-minimal</a></div>
       <div class="card-desc" data-en="Creates warm-neutral minimal HTML documents with strict typography and whitespace-driven structure." data-ko="따뜻한 뉴트럴 톤, 엄격한 타이포그래피의 미니멀 HTML 문서 스타일.">Creates warm-neutral minimal HTML documents with strict typography and whitespace-driven structure.</div>
-      <span class="card-badge" data-en="Minimal reports" data-ko="미니멀 리포트">Minimal reports</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Minimal reports" data-ko="미니멀 리포트">Minimal reports</span>
+      </div>
+    </div>
 
-    <a href="skills/slide-audit/" class="card" data-cat="design">
+    <div class="card" data-cat="design">
       <div class="card-cat">Design</div>
-      <div class="card-title">Slide Audit</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/slide-audit">/slide-audit</a></div>
       <div class="card-desc" data-en="Verifies HTML slide deck layouts via Playwright bounding-rect diagnostics and visual subagent review." data-ko="Playwright 바운딩 박스 진단 + 시각 서브에이전트로 HTML 슬라이드 레이아웃 버그 검증.">Verifies HTML slide deck layouts via Playwright bounding-rect diagnostics and visual subagent review.</div>
-      <span class="card-badge" data-en="Layout verification" data-ko="레이아웃 검증">Layout verification</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Layout verification" data-ko="레이아웃 검증">Layout verification</span>
+      </div>
+    </div>
 
-    <a href="skills/youtube/" class="card" data-cat="media">
+    <div class="card" data-cat="media">
       <div class="card-cat">Media</div>
-      <div class="card-title">YouTube Transcript</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/youtube">/youtube</a></div>
       <div class="card-desc" data-en="Extracts YouTube transcripts, metadata, and key frame screenshots as structured Markdown." data-ko="YouTube URL에서 자막, 메타데이터, 주요 장면 스크린샷을 마크다운으로 추출.">Extracts YouTube transcripts, metadata, and key frame screenshots as structured Markdown.</div>
-      <span class="card-badge" data-en="Transcript extraction" data-ko="자막 추출">Transcript extraction</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Transcript extraction" data-ko="자막 추출">Transcript extraction</span>
+      </div>
+    </div>
 
-    <a href="skills/youtube2mp4/" class="card" data-cat="media">
+    <div class="card" data-cat="media">
       <div class="card-cat">Media</div>
-      <div class="card-title">YouTube2MP4</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/youtube2mp4">/youtube2mp4</a></div>
       <div class="card-desc" data-en="Downloads YouTube videos as MP4 with optional resolution cap, time trimming, and audio-only mode." data-ko="YouTube 영상을 MP4로 다운로드. 해상도 제한, 구간 자르기, 오디오 전용 모드 지원.">Downloads YouTube videos as MP4 with optional resolution cap, time trimming, and audio-only mode.</div>
-      <span class="card-badge" data-en="Video download" data-ko="영상 다운로드">Video download</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Video download" data-ko="영상 다운로드">Video download</span>
+      </div>
+    </div>
 
-    <a href="skills/transcript2html/" class="card" data-cat="media">
+    <div class="card" data-cat="media">
       <div class="card-cat">Media</div>
-      <div class="card-title">Transcript2HTML</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/transcript2html">/transcript2html</a></div>
       <div class="card-desc" data-en="Converts YouTube transcript Markdown into readable Korean dark-mode HTML with embedded key frames." data-ko="YouTube 트랜스크립트 MD를 키 프레임 포함 한국어 다크모드 읽기용 HTML로 변환.">Converts YouTube transcript Markdown into readable Korean dark-mode HTML with embedded key frames.</div>
-      <span class="card-badge" data-en="Dark-mode reader" data-ko="다크모드 리더">Dark-mode reader</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Dark-mode reader" data-ko="다크모드 리더">Dark-mode reader</span>
+      </div>
+    </div>
 
-    <a href="skills/pptx-too-heavy/" class="card" data-cat="utility">
+    <div class="card" data-cat="utility">
       <div class="card-cat">Utility</div>
-      <div class="card-title">PPTX Too Heavy</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/pptx-too-heavy">/pptx-too-heavy</a></div>
       <div class="card-desc" data-en="Analyzes PPTX files for oversized media, maps images per slide, and generates a size-sorted grid report." data-ko="PPTX 내 대용량 미디어를 찾아 슬라이드별 이미지 매핑 + 용량순 그리드 리포트 생성.">Analyzes PPTX files for oversized media, maps images per slide, and generates a size-sorted grid report.</div>
-      <span class="card-badge" data-en="Image weight analysis" data-ko="이미지 용량 분석">Image weight analysis</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Image weight analysis" data-ko="이미지 용량 분석">Image weight analysis</span>
+      </div>
+    </div>
 
-    <a href="skills/meetingnote-paperwork/" class="card" data-cat="utility">
+    <div class="card" data-cat="utility">
       <div class="card-cat">Utility</div>
-      <div class="card-title">Meeting Note Paperwork</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/meetingnote-paperwork">/meetingnote-paperwork</a></div>
       <div class="card-desc" data-en="Generates Korean research project meeting notes in a fixed paperwork template for computational chemistry." data-ko="계산화학/재료설계 주제의 고정 양식 한국어 연구과제 회의록 자동 생성.">Generates Korean research project meeting notes in a fixed paperwork template for computational chemistry.</div>
-      <span class="card-badge" data-en="Meeting notes" data-ko="회의록 생성">Meeting notes</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Meeting notes" data-ko="회의록 생성">Meeting notes</span>
+      </div>
+    </div>
 
-    <a href="skills/smart-compact/" class="card" data-cat="utility">
+    <div class="card" data-cat="utility">
       <div class="card-cat">Utility</div>
-      <div class="card-title">Smart Compact</div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/smart-compact">/smart-compact</a></div>
       <div class="card-desc" data-en="Saves Claude Code session state to a file for recovery after /clear context reset." data-ko="Claude Code 세션 상태를 파일로 저장하여 /clear 후 복구 가능하게 하는 스킬.">Saves Claude Code session state to a file for recovery after /clear context reset.</div>
-      <span class="card-badge" data-en="Session recovery" data-ko="세션 복구">Session recovery</span>
-    </a>
+      <div class="card-footer">
+        <span class="card-badge" data-en="Session recovery" data-ko="세션 복구">Session recovery</span>
+      </div>
+    </div>
 
   </div>
 </section>
@@ -360,17 +406,17 @@ footer a:hover { text-decoration: underline; }
 <section class="bench-section" id="benchmarks">
   <div class="section-label" data-en="Benchmark Results" data-ko="벤치마크 결과">Benchmark Results</div>
   <div class="bench-row">
-    <span class="bench-name">Humanizer KOR</span>
+    <span class="bench-name">/humanizer_kor</span>
     <span class="bench-result">AI-Tell 54.9 → 1.0 · Naturalness 2.9 → 9.2</span>
     <a href="skills/humanizer_kor/benchmark/benchmark_report.html" class="bench-link">View report →</a>
   </div>
   <div class="bench-row">
-    <span class="bench-name">Humanizer ENG</span>
+    <span class="bench-name">/humanizer_eng</span>
     <span class="bench-result">AI-Tell 89.8 → 3.6 · Naturalness 1.2 → 9.4</span>
     <a href="skills/humanizer_eng/benchmark/benchmark_report.html" class="bench-link">View report →</a>
   </div>
   <div class="bench-row">
-    <span class="bench-name">ASE v6</span>
+    <span class="bench-name">/ase</span>
     <span class="bench-result" data-en="9 LLMs · 100 samples per model" data-ko="9개 LLM · 모델당 100개 샘플">9 LLMs · 100 samples per model</span>
     <a href="skills/ase/benchmark/benchmark_report_v6.html" class="bench-link">View report →</a>
   </div>
