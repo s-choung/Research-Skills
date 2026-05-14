@@ -24,6 +24,7 @@ strong{font-weight:600}
 .dp{color:var(--green)} .dn{color:var(--red)}
 
 .bar{display:inline-block;height:12px;border-radius:2px;vertical-align:middle;margin-right:4px}
+.tbl td:has(.bar){text-align:left}
 .insight{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:1rem 0;margin:2rem 0}
 
 .tab-bar{display:flex;gap:0;border-bottom:1px solid var(--ink);margin-bottom:1rem}
@@ -57,12 +58,20 @@ strong{font-weight:600}
 .box-label.o{color:var(--red)}.box-label.h{color:var(--green)}
 .metrics{display:flex;gap:12px;font-size:.68rem;color:var(--muted);margin-bottom:6px;font-family:'JetBrains Mono',monospace;justify-content:center}
 .foot{display:grid;grid-template-columns:1fr auto;border-top:1px solid var(--rule);padding-top:.75rem;margin-top:3rem;font-size:.7rem;color:var(--muted)}
+.lang-toggle{position:absolute;top:2rem;right:2rem;display:flex;gap:0}
+.lang-btn{padding:4px 12px;font-size:.72rem;font-weight:600;border:1px solid var(--rule);cursor:pointer;background:#f5f5f0;color:var(--muted);font-family:'IBM Plex Sans KR',sans-serif}
+.lang-btn.active{background:var(--ink);color:var(--paper)}
+.lang-btn:first-child{border-radius:3px 0 0 3px}.lang-btn:last-child{border-radius:0 3px 3px 0}
 </style>
 </head>
-<body>
+<body style="position:relative">
+<div class="lang-toggle">
+  <div class="lang-btn active" onclick="setLang('ko')">KOR</div>
+  <div class="lang-btn" onclick="setLang('en')">ENG</div>
+</div>
 <h1>Humanizer Benchmark</h1>
 <p class="date">2026.05.14 &middot; Seokhyun Choung &middot; Original vs Humanized</p>
-<p>100개 AI 생성 한국어 단락(20개 장르)의 <strong>원문(Original)</strong>과 <strong>Humanized</strong> 전후 비교. AI-Tell Score <mark>54.85</mark> &rarr; <mark>1.04</mark> (98.1% 감소).</p>
+<p data-ko="100개 AI 생성 한국어 단락(20개 장르)의 <strong>원문(Original)</strong>과 <strong>Humanized</strong> 전후 비교. AI-Tell Score <mark>54.85</mark> &rarr; <mark>1.04</mark> (98.1% 감소)." data-en="Before/after comparison of 100 AI-generated Korean paragraphs (20 genres). AI-Tell Score <mark>54.85</mark> &rarr; <mark>1.04</mark> (98.1% reduction).">100개 AI 생성 한국어 단락(20개 장르)의 <strong>원문(Original)</strong>과 <strong>Humanized</strong> 전후 비교. AI-Tell Score <mark>54.85</mark> &rarr; <mark>1.04</mark> (98.1% 감소).</p>
 
 <div class="tab-bar">
   <div class="tab-btn active" onclick="switchTab('overview')">Overview</div>
@@ -71,7 +80,7 @@ strong{font-weight:600}
 </div>
 
 <div id="tab-overview" class="tab-content active">
-<h2>Summary</h2>
+<h2 data-ko="요약" data-en="Summary">Summary</h2>
 <table class="tbl">
 <tr><th></th><th class="r">AI-Tell Score</th><th class="r">Naturalness</th><th class="r">Fidelity</th><th class="r">Change %</th></tr>
 <tr><td class="lbl">Original</td><td class="r dn">54.85 <small>&sigma;=13.14</small></td><td class="r">2.91</td><td class="r">10.0</td><td class="r">0%</td></tr>
@@ -79,10 +88,10 @@ strong{font-weight:600}
 </table>
 
 <div class="insight">
-<p style="font-size:1.02rem;margin:0"><strong>AI-Tell Score 98.1% 감소</strong>, 자연스러움 2.91 &rarr; 9.21, 변경률 평균 27.92%.</p>
+<p style="font-size:1.02rem;margin:0" data-ko="<strong>AI-Tell Score 98.1% 감소</strong>, 자연스러움 2.91 &rarr; 9.21, 변경률 평균 27.92%." data-en="<strong>AI-Tell Score reduced 98.1%</strong>, Naturalness 2.91 &rarr; 9.21, avg change rate 27.92%."><strong>AI-Tell Score 98.1% 감소</strong>, 자연스러움 2.91 &rarr; 9.21, 변경률 평균 27.92%.</p>
 </div>
 
-<h2>Category Breakdown</h2>
+<h2 data-ko="카테고리 분석" data-en="Category Breakdown">Category Breakdown</h2>
 <table class="tbl">
 <tr><th>Cat</th><th>Name</th><th class="r">Original</th><th></th><th class="r">Humanized</th><th></th></tr>
 <tr><td style="font-weight:600">A</td><td class="lbl">Translation-ese</td><td class="r">2.2</td><td><span class="bar" style="width:96px;background:var(--red)"></span></td><td class="r dp">0</td><td><span class="bar" style="width:0px;background:var(--green)"></span></td></tr>
@@ -96,7 +105,7 @@ strong{font-weight:600}
 <tr><td style="font-weight:600">I</td><td class="lbl">Formal nouns</td><td class="r">1.37</td><td><span class="bar" style="width:60px;background:var(--red)"></span></td><td class="r dp">0</td><td><span class="bar" style="width:0px;background:var(--green)"></span></td></tr>
 <tr><td style="font-weight:600">J</td><td class="lbl">Visual decoration</td><td class="r">1.56</td><td><span class="bar" style="width:68px;background:var(--red)"></span></td><td class="r dp">0</td><td><span class="bar" style="width:0px;background:var(--green)"></span></td></tr>
 </table>
-<h2>Genre Breakdown</h2>
+<h2 data-ko="장르별 분석" data-en="Genre Breakdown">Genre Breakdown</h2>
 <table class="tbl">
 <tr><th>Genre</th><th class="r">N</th><th class="r">Orig Score</th><th class="r">Hum Score</th><th class="r">Orig Nat</th><th class="r">Hum Nat</th></tr>
 <tbody id="genre-body"></tbody>
@@ -104,7 +113,7 @@ strong{font-weight:600}
 </div>
 
 <div id="tab-heatmap" class="tab-content">
-<h2>AI-Tell Heatmap (100 Samples)</h2>
+<h2 data-ko="AI-Tell 히트맵 (100개 샘플)" data-en="AI-Tell Heatmap (100 Samples)">AI-Tell Heatmap (100 Samples)</h2>
 <div class="legend">
   <span><span class="legend-box" style="background:#bde0bd"></span>&le;5 Clean</span>
   <span><span class="legend-box" style="background:#fde8a0"></span>6-20 Moderate</span>
@@ -114,7 +123,7 @@ strong{font-weight:600}
 </div>
 
 <div id="tab-explorer" class="tab-content">
-<h2>Sample Explorer</h2>
+<h2 data-ko="샘플 탐색기" data-en="Sample Explorer">Sample Explorer</h2>
 <div class="filters">
   <label>Genre:</label><select id="fg" onchange="render()"><option value="">All</option></select>
   <label>Search:</label><input id="fs" type="text" placeholder="keyword..." oninput="render()" style="width:180px">
@@ -200,4 +209,12 @@ function render(){
   });
 }
 render();
+
+function setLang(lang) {
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.lang-btn[onclick*="'+lang+'"]').classList.add('active');
+  document.querySelectorAll('[data-ko][data-en]').forEach(el => {
+    el.innerHTML = el.getAttribute('data-'+lang);
+  });
+}
 </script></body></html>
