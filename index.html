@@ -498,9 +498,9 @@ function updateFade() {
   cards.forEach(c => {
     const order = parseInt(c.style.order || c.getAttribute('data-order-' + lang) || '99');
     c.classList.remove('faded', 'hidden');
-    if (order >= 6 && order <= 8) {
+    if (order >= 7 && order <= 9) {
       c.classList.add('faded');
-    } else if (order > 8) {
+    } else if (order > 9) {
       c.classList.add('hidden');
     }
   });
