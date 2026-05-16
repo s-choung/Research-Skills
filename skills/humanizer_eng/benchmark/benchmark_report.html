@@ -4,73 +4,124 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Humanizer ENG Benchmark</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1a1a17;--paper:#fafaf7;--muted:#6b6b63;--rule:#d4d4cd;--mark:#ffe14d;--green:#2d6a2e;--red:#8b2020;--blue:#1a5fa0}
+:root{--color-void:#000000;--color-fog-border:#e5e7eb;--color-chalk:#f1f1f1;--color-graphite:#666666;--color-ash:#8f8f8f;--color-canvas:#ffffff;--font:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif;--green:#2d6a2e;--red:#8b2020;--blue:#1a5fa0;--mark:#ffe14d}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;font-weight:300;font-size:15px;line-height:1.75;padding:2rem;max-width:1200px;margin:0 auto}
-mark{background:var(--mark);padding:0 2px;font-weight:400}
-h1{font-family:'DM Serif Display',serif;font-size:2.4rem;font-weight:400;line-height:1.15;letter-spacing:-1px;margin-bottom:.25rem}
-.date{font-size:.8rem;color:var(--muted);margin-bottom:2rem}
-h2{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--muted);margin:2.5rem 0 1rem;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+body{background:var(--color-canvas);color:var(--color-void);font-family:var(--font);font-weight:400;font-size:16.5px;line-height:1.75;padding:2rem;max-width:1200px;margin:0 auto;-webkit-font-smoothing:antialiased}
+mark{background:var(--mark);padding:0 2px;font-weight:500}
+h1{font-family:var(--font);font-size:2.4rem;font-weight:600;line-height:1.15;letter-spacing:-1px;margin-bottom:.25rem}
+.date{font-size:.8rem;color:var(--color-graphite);margin-bottom:2rem}
+h2{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--color-ash);margin:2.5rem 0 1rem;padding-bottom:6px;border-bottom:1px solid var(--color-fog-border)}
 p{margin-bottom:1rem}
 strong{font-weight:600}
 
 .tbl{width:100%;border-collapse:collapse;margin:1rem 0}
-.tbl th{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--muted);text-align:left;padding:.5rem .4rem;border-bottom:1px solid var(--ink)}
-.tbl td{padding:.45rem .4rem;border-bottom:1px solid var(--rule);font-family:'JetBrains Mono',monospace;font-size:.82rem}
-.tbl td.lbl{font-family:'IBM Plex Sans',sans-serif;font-weight:400}
+.tbl th{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--color-ash);text-align:left;padding:.5rem .4rem;border-bottom:1px solid var(--color-void)}
+.tbl td{padding:.45rem .4rem;border-bottom:1px solid var(--color-fog-border);font-family:'JetBrains Mono',monospace;font-size:.82rem}
+.tbl td.lbl{font-family:var(--font);font-weight:400}
 .tbl .r{text-align:right}
 .dp{color:var(--green)} .dn{color:var(--red)}
 
 .bar{display:inline-block;height:12px;border-radius:2px;vertical-align:middle;margin-right:4px}
-.insight{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:1rem 0;margin:2rem 0}
+.insight{border-top:2px solid var(--color-void);border-bottom:2px solid var(--color-void);padding:1rem 0;margin:2rem 0}
 
-.tab-bar{display:flex;gap:0;border-bottom:1px solid var(--ink);margin-bottom:1rem}
-.tab-btn{padding:8px 16px;font-size:.78rem;font-weight:400;cursor:pointer;border:1px solid var(--rule);border-bottom:none;background:#f5f5f0;color:var(--muted);margin-right:-1px}
-.tab-btn.active{background:var(--paper);color:var(--ink);font-weight:600;border-bottom:1px solid var(--paper);position:relative;top:1px}
+.tab-bar{display:flex;gap:0;border-bottom:1px solid var(--color-void);margin-bottom:1rem}
+.tab-btn{padding:8px 16px;font-size:.78rem;font-weight:400;cursor:pointer;border:1px solid var(--color-fog-border);border-bottom:none;background:var(--color-chalk);color:var(--color-graphite);margin-right:-1px;transition:all .15s}
+.tab-btn.active{background:var(--color-canvas);color:var(--color-void);font-weight:600;border-bottom:1px solid var(--color-canvas);position:relative;top:1px}
 .tab-content{display:none}.tab-content.active{display:block}
 
 .hm-wrap{overflow-x:auto;margin:1rem 0}
 .hm-wrap table{border-collapse:collapse;min-width:400px}
-.hm-wrap th{font-size:.6rem;font-weight:600;padding:4px 2px;writing-mode:vertical-lr;text-orientation:mixed;white-space:nowrap;border-bottom:1px solid var(--ink);color:var(--muted)}
-.hm-wrap td{width:28px;height:22px;padding:0;text-align:center;font-size:.55rem;font-family:'JetBrains Mono',monospace;border:1px solid var(--paper);cursor:pointer}
+.hm-wrap th{font-size:.6rem;font-weight:600;padding:4px 2px;writing-mode:vertical-lr;text-orientation:mixed;white-space:nowrap;border-bottom:1px solid var(--color-void);color:var(--color-ash)}
+.hm-wrap td{width:28px;height:22px;padding:0;text-align:center;font-size:.55rem;font-family:'JetBrains Mono',monospace;border:1px solid var(--color-canvas);cursor:pointer}
 .hm-wrap td.q2{background:#bde0bd;color:var(--green)}.hm-wrap td.q1{background:#fde8a0;color:#c4920a}.hm-wrap td.q0{background:#e8b0b0;color:var(--red)}
-.hm-wrap td.row-label{width:auto;text-align:right;padding-right:8px;font-family:'IBM Plex Sans',sans-serif;font-size:.72rem;font-weight:400;background:none;border:none;white-space:nowrap;cursor:pointer;text-decoration:underline;text-decoration-color:var(--rule)}
-.legend{display:flex;gap:16px;font-size:.72rem;color:var(--muted);margin:.5rem 0 1rem;flex-wrap:wrap}
+.hm-wrap td.row-label{width:auto;text-align:right;padding-right:8px;font-family:var(--font);font-size:.72rem;font-weight:400;background:none;border:none;white-space:nowrap;cursor:pointer;text-decoration:underline;text-decoration-color:var(--color-fog-border)}
+.legend{display:flex;gap:16px;font-size:.72rem;color:var(--color-graphite);margin:.5rem 0 1rem;flex-wrap:wrap}
 .legend-box{display:inline-block;width:14px;height:14px;margin-right:4px;vertical-align:middle;border-radius:2px}
 
 .filters{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px;font-size:.78rem}
-.filters select,.filters input{font-family:'IBM Plex Sans',sans-serif;font-size:.78rem;padding:4px 8px;border:1px solid var(--rule);background:#fff}
-.task-card{border:1px solid var(--rule);margin-bottom:4px;background:#fff}
+.filters select,.filters input{font-family:var(--font);font-size:.78rem;padding:4px 8px;border:1px solid var(--color-fog-border);background:var(--color-canvas);border-radius:4px}
+.task-card{border:1px solid var(--color-fog-border);margin-bottom:4px;background:var(--color-canvas);border-radius:6px}
 .task-header{display:grid;grid-template-columns:60px 100px 1fr auto;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;font-size:.82rem}
-.task-header:hover{background:#f5f5f0}
+.task-header:hover{background:var(--color-chalk)}
 .task-id{font-family:'JetBrains Mono',monospace;font-weight:500}
-.task-genre{font-size:.65rem;font-weight:600;padding:1px 6px;border-radius:3px;background:#f0f0eb;color:var(--muted)}
+.task-genre{font-size:.65rem;font-weight:600;padding:1px 6px;border-radius:9999px;background:var(--color-chalk);color:var(--color-graphite)}
 .task-preview{font-size:.78rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dots span{width:10px;height:10px;border-radius:50%;display:inline-block}
 .dots span.q2{background:var(--green)}.dots span.q1{background:#c4920a}.dots span.q0{background:var(--red)}
 .task-body{display:none;padding:0 12px 12px}.task-body.open{display:block}
-.orig-box{background:#f8f0f0;padding:12px 14px;font-size:.85rem;border-left:3px solid var(--red);margin-bottom:8px;line-height:1.7}
-.hum-box{background:#f0f8f0;padding:12px 14px;font-size:.85rem;border-left:3px solid var(--green);line-height:1.7}
+.orig-box{background:#fef2f2;padding:12px 14px;font-size:.85rem;border-left:3px solid var(--red);margin-bottom:8px;line-height:1.7;border-radius:4px}
+.hum-box{background:#f0fdf4;padding:12px 14px;font-size:.85rem;border-left:3px solid var(--green);line-height:1.7;border-radius:4px}
 .box-label{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
 .box-label.o{color:var(--red)}.box-label.h{color:var(--green)}
-.metrics{display:flex;gap:12px;font-size:.68rem;color:var(--muted);margin-bottom:6px;font-family:'JetBrains Mono',monospace}
-.foot{display:grid;grid-template-columns:1fr auto;border-top:1px solid var(--rule);padding-top:.75rem;margin-top:3rem;font-size:.7rem;color:var(--muted)}
-.lang-toggle{position:absolute;top:2rem;right:2rem;display:flex;gap:0}
-.lang-btn{padding:4px 12px;font-size:.72rem;font-weight:600;border:1px solid var(--rule);cursor:pointer;background:#f5f5f0;color:var(--muted);font-family:'IBM Plex Sans',sans-serif}
-.lang-btn.active{background:var(--ink);color:var(--paper)}
-.lang-btn:first-child{border-radius:3px 0 0 3px}.lang-btn:last-child{border-radius:0 3px 3px 0}
+.metrics{display:flex;gap:12px;font-size:.68rem;color:var(--color-graphite);margin-bottom:6px;font-family:'JetBrains Mono',monospace}
+.foot{display:grid;grid-template-columns:1fr auto;border-top:1px solid var(--color-fog-border);padding-top:.75rem;margin-top:3rem;font-size:.7rem;color:var(--color-ash)}
+.lang-toggle{position:fixed;top:16px;right:24px;z-index:100;display:flex;gap:0;border:1px solid rgba(0,0,0,0.12);border-radius:9999px;overflow:hidden;background:#ffffff}
+.lang-toggle button{font-family:'Inter',sans-serif;font-size:13px;font-weight:500;padding:6px 14px;border:none;cursor:pointer;background:transparent;color:#000000;transition:background 0.15s}
+.lang-toggle button.active{background:#000000;color:#ffffff}
 </style>
 </head>
 <body style="position:relative">
 <div class="lang-toggle">
-  <div class="lang-btn" onclick="setLang('ko')">KOR</div>
-  <div class="lang-btn active" onclick="setLang('en')">ENG</div>
+  <button class="active" onclick="setLang('en')">ENG</button>
+  <button onclick="setLang('ko')">KOR</button>
 </div>
 <h1>Humanizer ENG Benchmark</h1>
 <p class="date">2026.05.14 &middot; Seokhyun Choung &middot; Original vs Humanized</p>
 <p data-en="100 AI-generated English paragraphs (20 genres) compared <strong>before (Original)</strong> and <strong>after (Humanized)</strong>. AI-Tell Score <mark>89.78</mark> &rarr; <mark>3.58</mark> (96.0% reduction)." data-ko="100개 AI 생성 영어 단락(20개 장르)의 <strong>원문(Original)</strong>과 <strong>Humanized</strong> 전후 비교. AI-Tell Score <mark>89.78</mark> &rarr; <mark>3.58</mark> (96.0% 감소).">100 AI-generated English paragraphs (20 genres) compared <strong>before (Original)</strong> and <strong>after (Humanized)</strong>. AI-Tell Score <mark>89.78</mark> &rarr; <mark>3.58</mark> (96.0% reduction).</p>
+
+<div style="max-width:680px;margin:2rem auto">
+  <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:#8f8f8f;margin-bottom:8px">01</div>
+  <h2 style="font-size:18px;font-weight:600;margin-bottom:6px;border:none;text-transform:none;letter-spacing:0;color:#000">How to Use</h2>
+  <p style="font-size:14px;color:#666;margin-bottom:20px">Paste AI-written text, run one command.</p>
+
+  <div style="display:flex;flex-direction:column;gap:0">
+    <div style="display:flex;gap:16px;align-items:flex-start;padding-bottom:24px">
+      <div style="width:36px;height:36px;border-radius:50%;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      </div>
+      <div style="flex:1;padding-top:6px">
+        <div style="font-size:13px;font-weight:600;color:#000;margin-bottom:4px">Step 1: Paste AI-generated text</div>
+        <div style="font-size:12px;color:#666">Copy any AI-written paragraph into the conversation</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start;padding-bottom:24px">
+      <div style="width:36px;height:36px;border-radius:50%;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      </div>
+      <div style="flex:1;padding-top:6px">
+        <div style="font-size:13px;font-weight:600;color:#000;margin-bottom:4px">Step 2: Type /humanize</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;background:#f1f1f1;padding:8px 14px;border-radius:6px;color:#000"><span style="font-weight:600">/humanize</span></div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start;padding-bottom:24px">
+      <div style="width:36px;height:36px;border-radius:50%;background:#f1f1f1;color:#666;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #e5e7eb">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div style="flex:1;padding-top:6px">
+        <div style="font-size:13px;font-weight:600;color:#000;margin-bottom:4px">Pipeline detects AI patterns</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span style="font-size:11px;background:#f1f1f1;padding:3px 10px;border-radius:4px;color:#666">banned vocabulary</span>
+          <span style="font-size:11px;background:#f1f1f1;padding:3px 10px;border-radius:4px;color:#666">inflated phrasing</span>
+          <span style="font-size:11px;background:#f1f1f1;padding:3px 10px;border-radius:4px;color:#666">mechanical transitions</span>
+          <span style="font-size:11px;background:#f1f1f1;padding:3px 10px;border-radius:4px;color:#666">uniform rhythm</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <div style="width:36px;height:36px;border-radius:50%;background:#f1f1f1;color:#2d6a2e;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #e5e7eb">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div style="flex:1;padding-top:6px">
+        <div style="font-size:13px;font-weight:600;color:#2d6a2e;margin-bottom:4px">Only flagged spans rewritten. Meaning preserved.</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="tab-bar">
   <div class="tab-btn active" onclick="switchTab('overview')">Overview</div>
@@ -79,6 +130,31 @@ strong{font-weight:600}
 </div>
 
 <div id="tab-overview" class="tab-content active">
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:1.5rem 0 2rem">
+  <div style="padding:20px 24px;border-radius:6px;background:#fef2f2;border-left:4px solid var(--red)">
+    <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--red);margin-bottom:10px" data-en="Original (AI-generated)" data-ko="원문 (AI 생성)" class="i18n">Original (AI-generated)</div>
+    <div style="font-size:14.5px;line-height:1.7;color:#333">It is worth noting that the current political landscape has become increasingly multifaceted, requiring citizens to navigate a complex web of competing ideologies. Furthermore, the pivotal role of social media in shaping public opinion cannot be understated, as platforms have the ability to amplify voices that were previously marginalized. The transformative impact of digital discourse has fundamentally altered how democracies function.</div>
+  </div>
+  <div style="padding:20px 24px;border-radius:6px;background:#f0fdf4;border-left:4px solid var(--green)">
+    <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--green);margin-bottom:10px" data-en="Humanized" data-ko="Humanized" class="i18n">Humanized</div>
+    <div style="font-size:14.5px;line-height:1.7;color:#333">Today's political landscape pulls in more directions than most voters can track. Social media has done something specific here: it gave reach to voices that legacy outlets routinely ignored, but it also let algorithms quietly sort us into ideological silos. The result is a kind of democracy that runs on engagement metrics rather than informed debate.</div>
+  </div>
+</div>
+
+<div style="display:flex;justify-content:center;gap:40px;margin-bottom:2rem;flex-wrap:wrap">
+  <div style="text-align:center;padding:16px 24px;border:1px solid var(--color-fog-border);border-radius:6px;min-width:160px">
+    <div style="font-size:12px;color:var(--color-graphite);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">AI-Tell Score</div>
+    <div><span style="font-size:22px;color:var(--red);font-weight:600">89.8</span> <span style="font-size:18px;color:var(--color-graphite)">&rarr;</span> <span style="font-size:22px;color:var(--green);font-weight:600">3.6</span></div>
+    <div style="font-size:13px;color:var(--green);font-weight:500">-96%</div>
+  </div>
+  <div style="text-align:center;padding:16px 24px;border:1px solid var(--color-fog-border);border-radius:6px;min-width:160px">
+    <div style="font-size:12px;color:var(--color-graphite);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Naturalness</div>
+    <div><span style="font-size:22px;color:var(--red);font-weight:600">1.2</span> <span style="font-size:18px;color:var(--color-graphite)">&rarr;</span> <span style="font-size:22px;color:var(--green);font-weight:600">9.4</span></div>
+    <div style="font-size:13px;color:var(--green);font-weight:500">+683%</div>
+  </div>
+</div>
+
 <h2 data-en="Summary" data-ko="요약">Summary</h2>
 <table class="tbl">
 <tr><th></th><th class="r">AI-Tell Score</th><th class="r">Naturalness</th><th class="r">Fidelity</th><th class="r">Change %</th></tr>
@@ -104,17 +180,22 @@ strong{font-weight:600}
 </table>
 <h2 data-en="Genre Breakdown" data-ko="장르별 분석">Genre Breakdown</h2>
 <table class="tbl">
-<tr><th>Genre</th><th class="r">N</th><th class="r">Orig Score</th><th class="r">Hum Score</th><th class="r">Orig Nat</th><th class="r">Hum Nat</th></tr>
+<tr><th>Genre</th><th class="r">N</th><th class="r">Original AI-Tell</th><th class="r">Humanized AI-Tell</th><th class="r">Original Naturalness</th><th class="r">Humanized Naturalness</th></tr>
 <tbody id="genre-body"></tbody>
 </table>
 </div>
 
 <div id="tab-heatmap" class="tab-content">
-<h2 data-en="AI-Tell Heatmap (100 Samples)" data-ko="AI-Tell 히트맵 (100개 샘플)">AI-Tell Heatmap (100 Samples)</h2>
+<h2 data-en="AI-Tell &amp; Naturalness Heatmap (100 Samples)" data-ko="AI-Tell &amp; 자연스러움 히트맵 (100개 샘플)">AI-Tell &amp; Naturalness Heatmap (100 Samples)</h2>
 <div class="legend">
+  <strong style="font-size:.65rem;margin-right:4px">AI-Tell:</strong>
   <span><span class="legend-box" style="background:#bde0bd"></span>&le;5 Clean</span>
   <span><span class="legend-box" style="background:#fde8a0"></span>6-20 Moderate</span>
   <span><span class="legend-box" style="background:#e8b0b0"></span>&gt;20 Heavy</span>
+  <span style="margin-left:12px"><strong style="font-size:.65rem;margin-right:4px">Naturalness:</strong></span>
+  <span><span class="legend-box" style="background:#e8b0b0"></span>&le;3 Poor</span>
+  <span><span class="legend-box" style="background:#fde8a0"></span>4-7 Fair</span>
+  <span><span class="legend-box" style="background:#bde0bd"></span>&ge;8 Natural</span>
 </div>
 <div class="hm-wrap"><table><thead><tr id="hm-head"></tr></thead><tbody id="hm-body"></tbody></table></div>
 </div>
@@ -127,6 +208,7 @@ strong{font-weight:600}
 </div>
 <div id="list"></div>
 </div>
+
 
 <div class="foot"><span data-en="Humanizer ENG Benchmark / Original vs Humanized" data-ko="Humanizer ENG 벤치마크 / 원문 vs Humanized">Humanizer ENG Benchmark / Original vs Humanized</span><span>2026.05</span></div>
 <script>
@@ -154,9 +236,10 @@ function qc(s){return s<=5?"q2":s<=20?"q1":"q0"}
 })();
 
 // Heatmap
+function natClass(n){return n>=8?"q2":n>=4?"q1":"q0"}
 (function(){
   const hd=document.getElementById('hm-head');
-  ['','Original','Humanized'].forEach(l=>{const th=document.createElement('th');th.textContent=l;hd.appendChild(th)});
+  ['','Orig AI-Tell','Hum AI-Tell','Orig Nat','Hum Nat'].forEach(l=>{const th=document.createElement('th');th.textContent=l;hd.appendChild(th)});
   const tb=document.getElementById('hm-body');
   Object.keys(D).sort((a,b)=>D[a].num-D[b].num).forEach(tid=>{
     const t=D[tid];
@@ -164,8 +247,13 @@ function qc(s){return s<=5?"q2":s<=20?"q1":"q0"}
     const lb=document.createElement('td');lb.className='row-label';lb.textContent=`${tid} (${t.genre})`;
     lb.onclick=()=>{switchTab('explorer');const c=document.getElementById('card-'+tid);if(c){c.querySelector('.task-body').classList.add('open');c.scrollIntoView({behavior:'smooth'})}};
     tr.appendChild(lb);
+    // AI-Tell columns (low=good=green)
     [t.orig.score,t.hum.score].forEach(s=>{
       const td=document.createElement('td');td.className=qc(s);td.textContent=s.toFixed(0);td.title=s;tr.appendChild(td);
+    });
+    // Naturalness columns (high=good=green)
+    [t.orig.nat,t.hum.nat].forEach(n=>{
+      const td=document.createElement('td');td.className=natClass(n);td.textContent=n;td.title=n;tr.appendChild(td);
     });
     tb.appendChild(tr);
   });
@@ -208,8 +296,8 @@ function render(){
 render();
 
 function setLang(lang) {
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector('.lang-btn[onclick*="'+lang+'"]').classList.add('active');
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+  document.querySelector('.lang-toggle button[onclick*="'+lang+'"]').classList.add('active');
   document.querySelectorAll('[data-ko][data-en]').forEach(el => {
     el.innerHTML = el.getAttribute('data-'+lang);
   });

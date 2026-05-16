@@ -10,3 +10,12 @@ venv/
 *.swp
 .idea/
 .vscode/
+
+# LinkedIn slides (private)
+linkedin-slides/
+linkedin-slides.html
+build_slides.py
+extract_slides.py
+
+# Lock files
+**/package-lock.json

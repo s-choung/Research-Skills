@@ -1,0 +1,566 @@
+[
+  {
+    "researcher": "Zachary Ulissi",
+    "query": "Ulissi machine learning catalysis surface reactions",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Predicting Catalyst Surface Stability Under Reaction Conditions Using Deep Reinforcement Learning and Machine Learning Potentials",
+        "authors": "Zachary Ulissi",
+        "year": 2022,
+        "doi": "10.2172/2324766",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Practical Application of Machine Learning in Catalysis",
+        "authors": "Zachary W. Ulissi, Kevin Tran, Junwoong Yoon, et al.",
+        "year": 2024,
+        "doi": "10.1039/9781839163296-00224",
+        "journal": "Computational Catalysis"
+      },
+      {
+        "rank": 3,
+        "title": "To address surface reaction network complexity using scaling relations machine learning and DFT calculations",
+        "authors": "Zachary W. Ulissi, Andrew J. Medford, Thomas Bligaard, et al.",
+        "year": null,
+        "doi": "10.1038/ncomms14621",
+        "journal": "Nature Communications"
+      },
+      {
+        "rank": 4,
+        "title": "Toward a Design of Active Oxygen Evolution Catalysts: Insights from Automated Density Functional Theory Calculations and Machine Learning",
+        "authors": "Seoin Back, Kevin Tran, Zachary W. Ulissi",
+        "year": 2019,
+        "doi": "10.1021/acscatal.9b02416",
+        "journal": "ACS Catalysis"
+      },
+      {
+        "rank": 5,
+        "title": "Machine Learning-Accelerated Kinetic Simulations of Surface Reactions with Complex Coverage Effects",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.jpclett.5c04089.s001",
+        "journal": "N/A"
+      }
+    ],
+    "target_found_at_rank": 3
+  },
+  {
+    "researcher": "Zachary Ulissi",
+    "query": "Ulissi graph neural network catalysis OC20",
+    "results": [
+      {
+        "rank": 1,
+        "title": "The Open Catalyst 2020 (OC20) Dataset and Community Challenges",
+        "authors": "Zachary Ulissi",
+        "year": null,
+        "doi": "10.29363/nanoge.ecocat.2020.018",
+        "journal": "Proceedings of the International Conference on Electrocatalysis for Energy Applications and Sustainable Chemicals"
+      },
+      {
+        "rank": 2,
+        "title": "Accelerating Catalyst Discovery Using General Datasets and Graph Neural Networks",
+        "authors": "Zachary Ulissi",
+        "year": null,
+        "doi": "10.29363/nanoge.nsm.2022.145",
+        "journal": "Proceedings of the nanoGe Spring Meeting 2022"
+      },
+      {
+        "rank": 3,
+        "title": "Accessing Numerical Energy Hessians with Graph Neural Network Potentials and Their Application in Heterogeneous Catalysis",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.jpcc.4c07477.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "CatTSunami: Accelerating Transition State Energy Calculations with Pretrained Graph Neural Networks",
+        "authors": "Brook Wander, Muhammed Shuaibi, John R. Kitchin, et al.",
+        "year": 2025,
+        "doi": "10.1021/acscatal.4c04272",
+        "journal": "ACS Catalysis"
+      },
+      {
+        "rank": 5,
+        "title": "Chemical Properties from Graph Neural Network-Predicted Electron Densities",
+        "authors": "Ethan M. Sunshine, Muhammed Shuaibi, Zachary W. Ulissi, et al.",
+        "year": 2023,
+        "doi": "10.1021/acs.jpcc.3c06157",
+        "journal": "The Journal of Physical Chemistry C"
+      }
+    ],
+    "target_found_at_rank": 1
+  },
+  {
+    "researcher": "Zachary Ulissi",
+    "query": "Ulissi active learning DFT catalyst screening",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Predicting Catalyst Surface Stability Under Reaction Conditions Using Deep Reinforcement Learning and Machine Learning Potentials",
+        "authors": "Zachary Ulissi",
+        "year": 2022,
+        "doi": "10.2172/2324766",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "An Efficient Discovery of Active, Selective and Stable Catalysts for Electrochemical H2O2 Synthesis Through Active Motif Screening",
+        "authors": "Seoin Back, Jonggeol Na, Zachary Ulissi",
+        "year": null,
+        "doi": "10.26434/chemrxiv.13078913.v1",
+        "journal": "N/A"
+      },
+      {
+        "rank": 3,
+        "title": "Practical Deep-Learning Representation for Fast Heterogeneous Catalyst Screening",
+        "authors": "Geun Ho Gu, Juhwan Noh, Sungwon Kim, et al.",
+        "year": 2020,
+        "doi": "10.1021/acs.jpclett.0c00634",
+        "journal": "The Journal of Physical Chemistry Letters"
+      },
+      {
+        "rank": 4,
+        "title": "To address surface reaction network complexity using scaling relations machine learning and DFT calculations",
+        "authors": "Zachary W. Ulissi, Andrew J. Medford, Thomas Bligaard, et al.",
+        "year": null,
+        "doi": "10.1038/ncomms14621",
+        "journal": "Nature Communications"
+      },
+      {
+        "rank": 5,
+        "title": "Towards a Design of Active Oxygen Evolution Catalysts: Insights from Automated Density Functional Theory Calculations and Machine Learning",
+        "authors": "Seoin Back, Kevin Tran, Zachary Ulissi",
+        "year": null,
+        "doi": "10.26434/chemrxiv.7926869.v1",
+        "journal": "N/A"
+      }
+    ],
+    "target_found_at_rank": 1
+  },
+  {
+    "researcher": "Zachary Ulissi",
+    "query": "Ulissi open catalyst project 2020",
+    "results": [
+      {
+        "rank": 1,
+        "title": "The Open Catalyst 2020 (OC20) Dataset and Community Challenges",
+        "authors": "Zachary Ulissi",
+        "year": null,
+        "doi": "10.29363/nanoge.ecocat.2020.018",
+        "journal": "Proceedings of the International Conference on Electrocatalysis for Energy Applications and Sustainable Chemicals"
+      },
+      {
+        "rank": 2,
+        "title": "Predicting Catalyst Surface Stability Under Reaction Conditions Using Deep Reinforcement Learning and Machine Learning Potentials",
+        "authors": "Zachary Ulissi",
+        "year": 2022,
+        "doi": "10.2172/2324766",
+        "journal": "N/A"
+      },
+      {
+        "rank": 3,
+        "title": "Accelerating Catalyst Discovery Using General Datasets and Graph Neural Networks",
+        "authors": "Zachary Ulissi",
+        "year": null,
+        "doi": "10.29363/nanoge.nsm.2022.145",
+        "journal": "Proceedings of the nanoGe Spring Meeting 2022"
+      },
+      {
+        "rank": 4,
+        "title": "Open Catalyst 2020 (OC20) Dataset and Community Challenges",
+        "authors": "Lowik Chanussot, Abhishek Das, Siddharth Goyal, et al.",
+        "year": 2021,
+        "doi": "10.1021/acscatal.0c04525",
+        "journal": "ACS Catalysis"
+      },
+      {
+        "rank": 5,
+        "title": "Practical Deep-Learning Representation for Fast Heterogeneous Catalyst Screening",
+        "authors": "Geun Ho Gu, Juhwan Noh, Sungwon Kim, et al.",
+        "year": 2020,
+        "doi": "10.1021/acs.jpclett.0c00634",
+        "journal": "The Journal of Physical Chemistry Letters"
+      }
+    ],
+    "target_found_at_rank": 1
+  },
+  {
+    "researcher": "Aron Walsh",
+    "query": "Walsh perovskite solar cell defects DFT",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Fast Diffusion of Native Defects and Impurities in Perovskite Solar Cell Material CH3NH3PbI3",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.chemmater.6b01348.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Charge Carrier Trapping at Surface Defects of Perovskite Solar Cell Absorbers: A First-Principles Study",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.jpclett.7b00055.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 3,
+        "title": "Intrinsic Defects of Vacancy-Ordered Perovskite Cs2TiIBr5 for Solar Cells",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.jpcc.4c01864.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "Hysteresis and Its Correlation to Ionic Defects in Perovskite Solar Cells",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.jpclett.3c03146.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 5,
+        "title": "First‐Principles\n            <scp>DFT</scp>\n            Calculations for Perovskite Solar Cells",
+        "authors": "Jing Shi, Sining Yun",
+        "year": 2018,
+        "doi": "10.1002/9783527813636.ch19",
+        "journal": "Counter Electrodes for Dye‐sensitized and Perovskite Solar Cells"
+      }
+    ],
+    "target_found_at_rank": null
+  },
+  {
+    "researcher": "Aron Walsh",
+    "query": "Walsh antimony selenide photovoltaic",
+    "results": [
+      {
+        "rank": 1,
+        "title": "N/A",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.3030/101152917",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Photovoltaic Efficiency Enhancement through Highly Crystalline Antimony Selenide Interface Engineering",
+        "authors": "Udari Wijesinghe, Giulia Longo, Oliver Hutter",
+        "year": null,
+        "doi": "10.29363/nanoge.matsusspring.2025.286",
+        "journal": "Proceedings of the MATSUS Spring 2025 Conference"
+      },
+      {
+        "rank": 3,
+        "title": "Photoreflectance and Photoluminescence Study of Antimony Selenide Crystals",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acsaem.2c02131.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "Antimony selenide nanoparticles as panchromatic sensitizer: Fast synthesis and study of their photovoltaic behavior",
+        "authors": "M.V. Dharsana, S. Sindhu",
+        "year": 2016,
+        "doi": "10.1016/j.matlet.2016.07.025",
+        "journal": "Materials Letters"
+      },
+      {
+        "rank": 5,
+        "title": "Chemically Deposited Photovoltaic Structure Using Antimony Sulfide and Silver Antimony Selenide Absorber Films",
+        "authors": "K. Bindu, M. T. S. Nair, T. K. Das Roy, et al.",
+        "year": 2006,
+        "doi": "10.1149/1.2186428",
+        "journal": "Electrochemical and Solid-State Letters"
+      }
+    ],
+    "target_found_at_rank": null
+  },
+  {
+    "researcher": "Aron Walsh",
+    "query": "Walsh hybrid halide perovskite band structure",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Visualizing the Low-Energy Electronic Structure of Prototypical Hybrid Halide Perovskite through Clear Band Measurements",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acsnano.3c12587.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Aziridinium Lead Iodide: A Stable, Low-Band-Gap Hybrid Halide Perovskite for Photovoltaics",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.jpclett.7b03114.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 3,
+        "title": "Ag-Doped Halide Perovskite Nanocrystals for Tunable Band Structure and Efficient Charge Transport",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acsenergylett.8b02478.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "Molecular Motion and Dynamic Crystal Structures of Hybrid Halide Perovskites",
+        "authors": "Jarvist M. Frost, Aron Walsh",
+        "year": 2016,
+        "doi": "10.1007/978-3-319-35114-8_1",
+        "journal": "Organic-Inorganic Halide Perovskite Photovoltaics"
+      },
+      {
+        "rank": 5,
+        "title": "Exploring the Electronic Band Structure of Organometal Halide Perovskite via Photoluminescence Anisotropy of Individual Nanocrystals",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.nanolett.6b02012.s001",
+        "journal": "N/A"
+      }
+    ],
+    "target_found_at_rank": 4
+  },
+  {
+    "researcher": "Aron Walsh",
+    "query": "Walsh lone pair stereochemistry",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Lone-Pair Stereochemistry Induces Ferroelectric Distortion and the Rashba Effect in Inorganic Halide Perovskites",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.chemmater.3c02201.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Lone-Pair Stereochemistry Induces Ferroelectric Distortion and the Rashba Effect in Inorganic Halide Perovskites",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.chemmater.3c02201.s004",
+        "journal": "N/A"
+      },
+      {
+        "rank": 3,
+        "title": "Lone-Pair Stereochemistry Induces Ferroelectric Distortion and the Rashba Effect in Inorganic Halide Perovskites",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.chemmater.3c02201.s005",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "Lone-Pair Stereochemistry Induces Ferroelectric Distortion and the Rashba Effect in Inorganic Halide Perovskites",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.chemmater.3c02201.s002",
+        "journal": "N/A"
+      },
+      {
+        "rank": 5,
+        "title": "Lone-Pair Stereochemistry Induces Ferroelectric Distortion and the Rashba Effect in Inorganic Halide Perovskites",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.chemmater.3c02201.s003",
+        "journal": "N/A"
+      }
+    ],
+    "target_found_at_rank": null
+  },
+  {
+    "researcher": "Rafael Gomez-Bombarelli",
+    "query": "Gomez-Bombarelli variational autoencoder molecules",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Univariate Conditional Variational Autoencoder for Morphogenic Pattern Design in Frontal Polymerization-Based Manufacturing",
+        "authors": "Qibang Liu, Pengfei Cai, Diab Abueidda, et al.",
+        "year": null,
+        "doi": "10.2139/ssrn.5010208",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Univariate conditional variational autoencoder for morphogenic pattern design in frontal polymerization-based manufacturing",
+        "authors": "Qibang Liu, Pengfei Cai, Diab Abueidda, et al.",
+        "year": 2025,
+        "doi": "10.1016/j.cma.2025.117848",
+        "journal": "Computer Methods in Applied Mechanics and Engineering"
+      },
+      {
+        "rank": 3,
+        "title": "De Novo Design of Molecules with Multiaction Potential from Differential Gene Expression using Variational Autoencoder",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.jcim.3c00355.s001",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "MODAPro: Explainable Heterogeneous Networks with Variational Graph Autoencoder for Mining Disease-Specific Functional Molecules and Pathways from Omics Data",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.analchem.5c03611.s002",
+        "journal": "N/A"
+      },
+      {
+        "rank": 5,
+        "title": "MODAPro: Explainable Heterogeneous Networks with Variational Graph Autoencoder for Mining Disease-Specific Functional Molecules and Pathways from Omics Data",
+        "authors": "N/A",
+        "year": null,
+        "doi": "10.1021/acs.analchem.5c03611.s001",
+        "journal": "N/A"
+      }
+    ],
+    "target_found_at_rank": 1
+  },
+  {
+    "researcher": "Rafael Gomez-Bombarelli",
+    "query": "Gomez-Bombarelli automatic chemical design",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Charting the chemical space of modular heterocyclic nucleophiles for CO₂ capture",
+        "authors": "Avni Singhal, Glen Junor, Rafael Gomez-Bombarelli",
+        "year": null,
+        "doi": "10.26434/chemrxiv-2024-4w36v",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Generative Models for Automatic Chemical Design",
+        "authors": "Daniel Schwalbe-Koda, Rafael Gómez-Bombarelli",
+        "year": 2020,
+        "doi": "10.1007/978-3-030-40245-7_21",
+        "journal": "Lecture Notes in Physics"
+      },
+      {
+        "rank": 3,
+        "title": "Neural Scaling of Deep Chemical Models",
+        "authors": "Nathan Frey, Ryan Soklaski, Simon Axelrod, et al.",
+        "year": null,
+        "doi": "10.26434/chemrxiv-2022-3s512",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "Global optimization of multicomponent oxide catalysts for OER/ORR",
+        "authors": "Rafael Gomez-Bombarelli",
+        "year": 2024,
+        "doi": "10.2172/2352284",
+        "journal": "N/A"
+      },
+      {
+        "rank": 5,
+        "title": "Machine Learning Guides Peptide Nucleic Acid Flow Synthesis and Sequence Design",
+        "authors": "Chengxi Li, Genwei Zhang, Somesh Mohapatra, et al.",
+        "year": null,
+        "doi": "10.26434/chemrxiv-2021-dr3mf",
+        "journal": "N/A"
+      }
+    ],
+    "target_found_at_rank": null
+  },
+  {
+    "researcher": "Rafael Gomez-Bombarelli",
+    "query": "Gomez-Bombarelli generative model materials",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Author response for \"Automated patent extraction powers generative modeling in focused chemical spaces\"",
+        "authors": "Subramanian, Akshay, P. Greenman, Kevin, Gervaix, Alexis, et al.",
+        "year": 2023,
+        "doi": "10.1039/d3dd00041a/v2/response1",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Closing the Execution Gap in Generative AI for Chemicals and Materials: Freeways or Safeguards",
+        "authors": "Akshay Subramanian, Wenhao Gao, Regina Barzilay, et al.",
+        "year": null,
+        "doi": "10.21428/e4baedd9.92e511e3",
+        "journal": "An MIT Exploration of Generative AI"
+      },
+      {
+        "rank": 3,
+        "title": "Global optimization of multicomponent oxide catalysts for OER/ORR",
+        "authors": "Rafael Gomez-Bombarelli",
+        "year": 2024,
+        "doi": "10.2172/2352284",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "DiffSyn: a generative diffusion approach to materials synthesis planning",
+        "authors": "Elton Pan, Soonhyoung Kwon, Sulin Liu, et al.",
+        "year": null,
+        "doi": "10.1038/s43588-025-00949-9",
+        "journal": "Nature Computational Science"
+      },
+      {
+        "rank": 5,
+        "title": "Accuracy and Reproducibility of Host-Guest Interactions in Zeolites",
+        "authors": "Daniel Schwalbe-Koda, Rafael Gomez-Bombarelli",
+        "year": null,
+        "doi": "10.26434/chemrxiv.13270184.v1",
+        "journal": "N/A"
+      }
+    ],
+    "target_found_at_rank": 1
+  },
+  {
+    "researcher": "Rafael Gomez-Bombarelli",
+    "query": "Gomez-Bombarelli SMILES molecular generation",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Active Learning Accelerates Ab Initio Molecular Dynamics on Pericyclic Reactive Energy Surfaces",
+        "authors": "Shi Jun Ang, Wujie Wang, Daniel Schwalbe-Koda, et al.",
+        "year": null,
+        "doi": "10.26434/chemrxiv.11910948.v1",
+        "journal": "N/A"
+      },
+      {
+        "rank": 2,
+        "title": "Active Learning and Neural Network Potentials Accelerate Molecular Screening of Ether-based Solvate Ionic Liquids",
+        "authors": "Wujie Wang, Tzuhsiung Yang, William Harris, et al.",
+        "year": null,
+        "doi": "10.26434/chemrxiv.12317465.v1",
+        "journal": "N/A"
+      },
+      {
+        "rank": 3,
+        "title": "Active Learning Accelerates Ab Initio Molecular Dynamics on Pericyclic Reactive Energy Surfaces",
+        "authors": "Shi Jun Ang, Wujie Wang, Daniel Schwalbe-Koda, et al.",
+        "year": null,
+        "doi": "10.26434/chemrxiv.11910948.v2",
+        "journal": "N/A"
+      },
+      {
+        "rank": 4,
+        "title": "Global optimization of multicomponent oxide catalysts for OER/ORR",
+        "authors": "Rafael Gomez-Bombarelli",
+        "year": 2024,
+        "doi": "10.2172/2352284",
+        "journal": "N/A"
+      },
+      {
+        "rank": 5,
+        "title": "GEOM, energy-annotated molecular conformations for property prediction and molecular generation",
+        "authors": "Simon Axelrod, Rafael Gómez-Bombarelli",
+        "year": null,
+        "doi": "10.1038/s41597-022-01288-4",
+        "journal": "Scientific Data"
+      }
+    ],
+    "target_found_at_rank": 1
+  }
+]

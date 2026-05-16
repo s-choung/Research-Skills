@@ -53,7 +53,7 @@ def plot_series_with_style(ax, x_data, y_data, color, label, series_index=0):
     ax.plot(x_data, y_data, color=color, label=label, linewidth=1.5, zorder=zorder)
     ax.scatter(x_data, y_data, color=color, s=100, marker='o', linewidth=1.5, zorder=zorder)
 
-def create_subplot_layout(nrows=1, ncols=1, figsize=(4, 4)):
+def create_subplot_layout(nrows=1, ncols=1, figsize=(5, 5)):
     return plt.subplots(nrows, ncols, figsize=figsize)
 
 def save_plot(filename, dpi=300):

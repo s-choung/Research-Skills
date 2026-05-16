@@ -1,0 +1,664 @@
+{
+  "model": "gpt-4.1-mini",
+  "date": "2026-05-17",
+  "total_references": 40,
+  "valid_dois": 21,
+  "title_matches": 7,
+  "overall_hallucination_rate": 0.475,
+  "overall_title_match_rate": 0.175,
+  "results": [
+    {
+      "prompt": "List 5 key papers by Jens Norskov on oxygen reduction reaction",
+      "references": [
+        {
+          "title": "Origin of the overpotential for oxygen reduction at a fuel-cell cathode",
+          "authors": [
+            "Jens K. Nørskov",
+            "T. Bligaard",
+            "J. Rossmeisl",
+            "C. H. Christensen"
+          ],
+          "journal": "The Journal of Physical Chemistry B",
+          "year": 2004,
+          "doi": "10.1021/jp047349j",
+          "doi_valid": true,
+          "crossref_title": "Origin of the Overpotential for Oxygen Reduction at a Fuel-Cell Cathode",
+          "title_match": true
+        },
+        {
+          "title": "Trends in the Exchange Current for Hydrogen Evolution",
+          "authors": [
+            "Jens K. Nørskov",
+            "T. Bligaard",
+            "J. Rossmeisl",
+            "C. H. Christensen"
+          ],
+          "journal": "The Journal of Electrochemical Society",
+          "year": 2005,
+          "doi": "10.1149/1.1856988",
+          "doi_valid": true,
+          "crossref_title": "Trends in the Exchange Current for Hydrogen Evolution",
+          "title_match": true
+        },
+        {
+          "title": "Density functional theory in surface chemistry and catalysis",
+          "authors": [
+            "Jens K. Nørskov",
+            "F. Abild-Pedersen",
+            "F. Studt",
+            "T. Bligaard"
+          ],
+          "journal": "Proceedings of the National Academy of Sciences",
+          "year": 2011,
+          "doi": "10.1073/pnas.1006652108",
+          "doi_valid": true,
+          "crossref_title": "Density functional theory in surface chemistry and catalysis",
+          "title_match": true
+        },
+        {
+          "title": "Theoretical surface science and catalysis—calculations and concepts",
+          "authors": [
+            "Jens K. Nørskov",
+            "F. Abild-Pedersen",
+            "F. Studt",
+            "T. Bligaard"
+          ],
+          "journal": "Chemical Reviews",
+          "year": 2011,
+          "doi": "10.1021/cr200111r",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Electrochemical Oxygen Reduction: Mechanistic Insights from First Principles",
+          "authors": [
+            "Jens K. Nørskov",
+            "T. Bligaard",
+            "J. Rossmeisl",
+            "C. H. Christensen"
+          ],
+          "journal": "Chemical Reviews",
+          "year": 2008,
+          "doi": "10.1021/cr068076m",
+          "doi_valid": true,
+          "crossref_title": "Advanced Carbon Electrode Materials for Molecular Electrochemistry",
+          "title_match": false
+        }
+      ],
+      "valid_dois": 4,
+      "title_matches": 3,
+      "total": 5,
+      "hallucination_rate": 0.2
+    },
+    {
+      "prompt": "List 5 papers by John Kitchin on machine learning for catalysis",
+      "references": [
+        {
+          "title": "Machine learning in catalysis: data-driven discovery and design",
+          "authors": "John R. Kitchin",
+          "journal": "Nature Catalysis",
+          "year": 2018,
+          "doi": "10.1038/s41929-018-0160-5",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Active learning for computational catalysis",
+          "authors": "John R. Kitchin",
+          "journal": "ACS Catalysis",
+          "year": 2017,
+          "doi": "10.1021/acscatal.7b01246",
+          "doi_valid": true,
+          "crossref_title": "Ceria Catalysts at Nanoscale: How Do Crystal Shapes Shape Catalysis?",
+          "title_match": false
+        },
+        {
+          "title": "Machine learning models for predicting catalytic activity of metal alloys",
+          "authors": "John R. Kitchin, et al.",
+          "journal": "Journal of Catalysis",
+          "year": 2019,
+          "doi": "10.1016/j.jcat.2019.05.012",
+          "doi_valid": true,
+          "crossref_title": "Establishing high-performance Au/cobalt oxide interfaces for low-temperature benzene combustion",
+          "title_match": false
+        },
+        {
+          "title": "Data-driven strategies for accelerated catalyst design",
+          "authors": "John R. Kitchin",
+          "journal": "Accounts of Chemical Research",
+          "year": 2020,
+          "doi": "10.1021/acs.accounts.0c00123",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Machine learning for heterogeneous catalyst design and discovery",
+          "authors": "John R. Kitchin",
+          "journal": "Chemical Reviews",
+          "year": 2021,
+          "doi": "10.1021/acs.chemrev.0c00912",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        }
+      ],
+      "valid_dois": 2,
+      "title_matches": 0,
+      "total": 5,
+      "hallucination_rate": 0.6
+    },
+    {
+      "prompt": "List 5 papers by Manos Mavrikakis on surface catalysis DFT",
+      "references": [
+        {
+          "title": "Density functional theory studies of the adsorption and reaction of oxygenates on transition metal surfaces",
+          "authors": [
+            "Manos Mavrikakis",
+            "B. Hammer",
+            "J.K. Nørskov"
+          ],
+          "journal": "Surface Science",
+          "year": 1998,
+          "doi": "10.1016/S0039-6028(98)00517-3",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Effect of strain on the reactivity of metal surfaces",
+          "authors": [
+            "Manos Mavrikakis",
+            "B. Hammer",
+            "J.K. Nørskov"
+          ],
+          "journal": "Physical Review Letters",
+          "year": 1998,
+          "doi": "10.1103/PhysRevLett.81.2819",
+          "doi_valid": true,
+          "crossref_title": "Effect of Strain on the Reactivity of Metal Surfaces",
+          "title_match": true
+        },
+        {
+          "title": "Theoretical study of the catalytic oxidation of CO on Pt(111)",
+          "authors": [
+            "Manos Mavrikakis",
+            "B. Hammer",
+            "J.K. Nørskov"
+          ],
+          "journal": "Journal of Catalysis",
+          "year": 1998,
+          "doi": "10.1006/jcat.1998.2040",
+          "doi_valid": true,
+          "crossref_title": "Platinum Supported on [60]Fullerene-Grafted Silica as a New Potential Catalyst for Hydrogenation",
+          "title_match": false
+        },
+        {
+          "title": "Adsorption and dissociation of O2 on transition metal surfaces: Density functional theory study",
+          "authors": [
+            "Manos Mavrikakis",
+            "B. Hammer",
+            "J.K. Nørskov"
+          ],
+          "journal": "Physical Review B",
+          "year": 1998,
+          "doi": "10.1103/PhysRevB.57.16194",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Trends in the reactivity of metal surfaces: The effect of electronic structure",
+          "authors": [
+            "Manos Mavrikakis",
+            "B. Hammer",
+            "J.K. Nørskov"
+          ],
+          "journal": "Catalysis Letters",
+          "year": 2000,
+          "doi": "10.1023/A:1019080423800",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        }
+      ],
+      "valid_dois": 2,
+      "title_matches": 1,
+      "total": 5,
+      "hallucination_rate": 0.6
+    },
+    {
+      "prompt": "List 5 papers by Zachary Ulissi on neural network potentials for catalysis",
+      "references": [
+        {
+          "title": "Machine-learning methods enable exhaustive searches for active bimetallic facets and reveal active site motifs for CO2 reduction",
+          "authors": [
+            "Zachary W. Ulissi",
+            "K. Chan",
+            "J. K. Nørskov"
+          ],
+          "journal": "ACS Catalysis",
+          "year": 2017,
+          "doi": "10.1021/acscatal.7b01246",
+          "doi_valid": true,
+          "crossref_title": "Ceria Catalysts at Nanoscale: How Do Crystal Shapes Shape Catalysis?",
+          "title_match": false
+        },
+        {
+          "title": "A neural network potential for the oxygen reduction reaction on Pt surfaces",
+          "authors": [
+            "Zachary W. Ulissi",
+            "J. K. Nørskov",
+            "K. Chan"
+          ],
+          "journal": "The Journal of Physical Chemistry Letters",
+          "year": 2019,
+          "doi": "10.1021/acs.jpclett.9b00700",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Machine learning for heterogeneous catalyst design and discovery",
+          "authors": [
+            "Zachary W. Ulissi",
+            "K. Chan",
+            "J. K. Nørskov"
+          ],
+          "journal": "Chemical Reviews",
+          "year": 2020,
+          "doi": "10.1021/acs.chemrev.9b00744",
+          "doi_valid": true,
+          "crossref_title": "Role of External Field in Polymerization: Mechanism and Kinetics",
+          "title_match": false
+        },
+        {
+          "title": "Neural network potentials for accelerated discovery of CO2 reduction catalysts",
+          "authors": [
+            "Zachary W. Ulissi",
+            "K. Chan",
+            "J. K. Nørskov"
+          ],
+          "journal": "Nature Communications",
+          "year": 2019,
+          "doi": "10.1038/s41467-019-12345-6",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Active learning of atomic potentials for catalysis",
+          "authors": [
+            "Zachary W. Ulissi",
+            "J. K. Nørskov",
+            "K. Chan"
+          ],
+          "journal": "Accounts of Chemical Research",
+          "year": 2021,
+          "doi": "10.1021/acs.accounts.1c00012",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        }
+      ],
+      "valid_dois": 2,
+      "title_matches": 0,
+      "total": 5,
+      "hallucination_rate": 0.6
+    },
+    {
+      "prompt": "List 5 papers by Aron Walsh on perovskite solar cells computational",
+      "references": [
+        {
+          "title": "Computational design of perovskite solar cells",
+          "authors": [
+            "Aron Walsh",
+            "Su-Huai Wei",
+            "Alex Zunger"
+          ],
+          "journal": "Nature Materials",
+          "year": 2015,
+          "doi": "10.1038/nmat4429",
+          "doi_valid": true,
+          "crossref_title": "Reversible dilatancy in entangled single-wire materials",
+          "title_match": false
+        },
+        {
+          "title": "Relativistic electronic structure and band alignment of hybrid halide perovskites",
+          "authors": [
+            "Aron Walsh",
+            "Jarvist M. Frost",
+            "Felix Brivio"
+          ],
+          "journal": "Physical Review B",
+          "year": 2014,
+          "doi": "10.1103/PhysRevB.89.155204",
+          "doi_valid": true,
+          "crossref_title": "Relativistic quasiparticle self-consistent electronic structure of hybrid halide perovskite photovoltaic absorbers",
+          "title_match": false
+        },
+        {
+          "title": "The role of organic cations in hybrid halide perovskite CH3NH3PbI3",
+          "authors": [
+            "Aron Walsh",
+            "Jarvist M. Frost",
+            "Felix Brivio",
+            "Andrei M. Ganose"
+          ],
+          "journal": "The Journal of Physical Chemistry Letters",
+          "year": 2015,
+          "doi": "10.1021/acs.jpclett.5b00977",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Defect physics of the hybrid halide perovskite photovoltaic absorber CH3NH3PbI3",
+          "authors": [
+            "Aron Walsh",
+            "Jarvist M. Frost",
+            "Felix Brivio",
+            "Andrei M. Ganose"
+          ],
+          "journal": "Applied Physics Letters",
+          "year": 2015,
+          "doi": "10.1063/1.4926929",
+          "doi_valid": true,
+          "crossref_title": "Temperature-dependent mechanical properties of monolayer black phosphorus by molecular dynamics simulations",
+          "title_match": false
+        },
+        {
+          "title": "Electronic structure and defect physics of the photovoltaic perovskite methylammonium lead iodide",
+          "authors": [
+            "Aron Walsh",
+            "Jarvist M. Frost",
+            "Felix Brivio"
+          ],
+          "journal": "Advanced Energy Materials",
+          "year": 2016,
+          "doi": "10.1002/aenm.201501253",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        }
+      ],
+      "valid_dois": 3,
+      "title_matches": 0,
+      "total": 5,
+      "hallucination_rate": 0.4
+    },
+    {
+      "prompt": "List 5 papers by Rafael Gomez-Bombarelli on molecular generation",
+      "references": [
+        {
+          "title": "Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules",
+          "authors": [
+            "Rafael Gómez-Bombarelli",
+            "Jorge Aguilera-Iparraguirre",
+            "Timothy D. Hirzel",
+            "David Duvenaud",
+            "José M. Hernández-Lobato",
+            "Benjamín Sánchez-Lengeling",
+            "Dennis Sheberla",
+            "Jorge Aguilera-Iparraguirre",
+            "Timothy D. Hirzel",
+            "David Duvenaud",
+            "José M. Hernández-Lobato",
+            "Benjamín Sánchez-Lengeling",
+            "Dennis Sheberla",
+            "Jorge Aguilera-Iparraguirre"
+          ],
+          "journal": "ACS Central Science",
+          "year": 2018,
+          "doi": "10.1021/acscentsci.7b00572",
+          "doi_valid": true,
+          "crossref_title": "Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules",
+          "title_match": true
+        },
+        {
+          "title": "Designing molecules with optimal properties using generative models",
+          "authors": [
+            "Rafael Gómez-Bombarelli",
+            "Benjamin Sanchez-Lengeling",
+            "Jose Miguel Hernandez-Lobato",
+            "Alán Aspuru-Guzik"
+          ],
+          "journal": "Nature Reviews Materials",
+          "year": 2018,
+          "doi": "10.1038/s41578-018-0005-z",
+          "doi_valid": true,
+          "crossref_title": "Accelerating the discovery of materials for clean energy in the era of smart automation",
+          "title_match": false
+        },
+        {
+          "title": "Molecular de novo design through deep reinforcement learning",
+          "authors": [
+            "Rafael Gómez-Bombarelli",
+            "Jorge Aguilera-Iparraguirre",
+            "Timothy D. Hirzel",
+            "David Duvenaud",
+            "José M. Hernández-Lobato",
+            "Benjamín Sánchez-Lengeling",
+            "Dennis Sheberla",
+            "Jorge Aguilera-Iparraguirre",
+            "Timothy D. Hirzel",
+            "David Duvenaud",
+            "José M. Hernández-Lobato",
+            "Benjamín Sánchez-Lengeling",
+            "Dennis Sheberla"
+          ],
+          "journal": "Chemical Science",
+          "year": 2017,
+          "doi": "10.1039/C7SC02664A",
+          "doi_valid": true,
+          "crossref_title": "MoleculeNet: a benchmark for molecular machine learning",
+          "title_match": false
+        },
+        {
+          "title": "Automatic chemical design using a data-driven continuous representation of molecules",
+          "authors": [
+            "Rafael Gómez-Bombarelli",
+            "Jorge Aguilera-Iparraguirre",
+            "Timothy D. Hirzel",
+            "David Duvenaud",
+            "José M. Hernández-Lobato",
+            "Benjamín Sánchez-Lengeling",
+            "Dennis Sheberla",
+            "Jorge Aguilera-Iparraguirre",
+            "Timothy D. Hirzel",
+            "David Duvenaud",
+            "José M. Hernández-Lobato",
+            "Benjamín Sánchez-Lengeling",
+            "Dennis Sheberla"
+          ],
+          "journal": "ACS Central Science",
+          "year": 2018,
+          "doi": "10.1021/acscentsci.7b00572",
+          "doi_valid": true,
+          "crossref_title": "Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules",
+          "title_match": true
+        },
+        {
+          "title": "Machine learning for molecular and materials science",
+          "authors": [
+            "Rafael Gómez-Bombarelli",
+            "Jorge Aguilera-Iparraguirre",
+            "Timothy D. Hirzel",
+            "David Duvenaud",
+            "José M. Hernández-Lobato",
+            "Benjamín Sánchez-Lengeling",
+            "Dennis Sheberla"
+          ],
+          "journal": "Nature",
+          "year": 2018,
+          "doi": "10.1038/s41586-018-0337-2",
+          "doi_valid": true,
+          "crossref_title": "Machine learning for molecular and materials science",
+          "title_match": true
+        }
+      ],
+      "valid_dois": 5,
+      "title_matches": 3,
+      "total": 5,
+      "hallucination_rate": 0.0
+    },
+    {
+      "prompt": "List 5 papers by Ib Chorkendorff on electrocatalysis",
+      "references": [
+        {
+          "title": "Electrocatalysis for fuel cells: a materials perspective",
+          "authors": [
+            "Ib Chorkendorff",
+            "Jens K. Nørskov"
+          ],
+          "journal": "Chemical Society Reviews",
+          "year": 2013,
+          "doi": "10.1039/C3CS60044A",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Designing electrocatalysts for hydrogen evolution reaction",
+          "authors": [
+            "Ib Chorkendorff",
+            "Jakob Kibsgaard",
+            "Thomas F. Jaramillo",
+            "Thomas Pedersen"
+          ],
+          "journal": "Nature Reviews Materials",
+          "year": 2016,
+          "doi": "10.1038/natrevmats.2016.69",
+          "doi_valid": true,
+          "crossref_title": "Cancer nanomedicine: is targeting our target?",
+          "title_match": false
+        },
+        {
+          "title": "Electrocatalytic hydrogen evolution reaction: from fundamentals to applications",
+          "authors": [
+            "Ib Chorkendorff",
+            "Jakob Kibsgaard"
+          ],
+          "journal": "Chemical Reviews",
+          "year": 2017,
+          "doi": "10.1021/acs.chemrev.6b00776",
+          "doi_valid": true,
+          "crossref_title": "Multiscale Studies on Ionic Liquids",
+          "title_match": false
+        },
+        {
+          "title": "Understanding the hydrogen evolution reaction on transition metal catalysts",
+          "authors": [
+            "Ib Chorkendorff",
+            "Jakob Kibsgaard",
+            "Thomas F. Jaramillo"
+          ],
+          "journal": "Energy & Environmental Science",
+          "year": 2014,
+          "doi": "10.1039/C4EE01234A",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Electrocatalysis in alkaline media: from fundamentals to applications",
+          "authors": [
+            "Ib Chorkendorff",
+            "Jakob Kibsgaard"
+          ],
+          "journal": "ACS Catalysis",
+          "year": 2018,
+          "doi": "10.1021/acscatal.8b00289",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        }
+      ],
+      "valid_dois": 2,
+      "title_matches": 0,
+      "total": 5,
+      "hallucination_rate": 0.6
+    },
+    {
+      "prompt": "List 5 papers by Tao Zhang on single atom catalysis",
+      "references": [
+        {
+          "title": "Single-atom catalysis: a new frontier in heterogeneous catalysis",
+          "authors": [
+            "Tao Zhang",
+            "Xiaoming Sun",
+            "Jian Liu"
+          ],
+          "journal": "Chemical Reviews",
+          "year": 2020,
+          "doi": "10.1021/acs.chemrev.9b00515",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Atomically dispersed metal catalysts for energy conversion",
+          "authors": [
+            "Tao Zhang",
+            "Liang Chen",
+            "Wei Huang"
+          ],
+          "journal": "Nature Catalysis",
+          "year": 2019,
+          "doi": "10.1038/s41929-019-0300-0",
+          "doi_valid": true,
+          "crossref_title": "S-adenosylhomocysteine as a methyl transfer catalyst in biocatalytic methylation reactions",
+          "title_match": false
+        },
+        {
+          "title": "Single-atom catalysts for electrochemical energy conversion: synthesis, characterization, and applications",
+          "authors": [
+            "Tao Zhang",
+            "Ying Wang",
+            "Qiang Fu"
+          ],
+          "journal": "Advanced Materials",
+          "year": 2021,
+          "doi": "10.1002/adma.202005678",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Engineering single-atom catalysts for selective hydrogenation reactions",
+          "authors": [
+            "Tao Zhang",
+            "Hui Li",
+            "Jing Zhao"
+          ],
+          "journal": "ACS Catalysis",
+          "year": 2018,
+          "doi": "10.1021/acscatal.8b01234",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        },
+        {
+          "title": "Stabilizing single-atom catalysts on carbon supports for enhanced catalytic performance",
+          "authors": [
+            "Tao Zhang",
+            "Ming Chen",
+            "Xuefeng Li"
+          ],
+          "journal": "Journal of the American Chemical Society",
+          "year": 2022,
+          "doi": "10.1021/jacs.2c00123",
+          "doi_valid": false,
+          "crossref_title": null,
+          "title_match": false
+        }
+      ],
+      "valid_dois": 1,
+      "title_matches": 0,
+      "total": 5,
+      "hallucination_rate": 0.8
+    }
+  ]
+}

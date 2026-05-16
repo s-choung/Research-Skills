@@ -1,0 +1,1014 @@
+{
+  "benchmark": "Crossref HUNT mode - Set B",
+  "date": "2026-05-17",
+  "matching": "strict (exact given name for common surnames)",
+  "summary": {
+    "Ju Li (MIT)": {
+      "hits": 0,
+      "total": 4,
+      "hit_rate": "0/4 (0%)"
+    },
+    "Jun Li (Tsinghua)": {
+      "hits": 0,
+      "total": 4,
+      "hit_rate": "0/4 (0%)"
+    },
+    "Tao Zhang (Dalian)": {
+      "hits": 0,
+      "total": 4,
+      "hit_rate": "0/4 (0%)"
+    },
+    "Ib Chorkendorff (DTU)": {
+      "hits": 4,
+      "total": 4,
+      "hit_rate": "4/4 (100%)"
+    }
+  },
+  "diagnostics": {
+    "total_results_returned": 80,
+    "supplementary_material_DOIs": 42,
+    "results_without_author_metadata": 43,
+    "note": "Many Crossref results are supplementary material DOIs (.s001, .s002) that lack author metadata, making author verification impossible."
+  },
+  "details": {
+    "Ju Li (MIT)": [
+      {
+        "query": "Ju Li reactive force field lithium battery",
+        "results": [
+          {
+            "rank": 1,
+            "title": "(no title)",
+            "DOI": "10.54499/cpca/a0/469866/2021",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Simulation Protocol for Prediction of a Solid-Electrolyte Interphase on the Silicon-based Anodes of a Lithium-Ion Battery: ReaxFF Reactive Force Field",
+            "DOI": "10.1021/acs.jpclett.7b00898.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Atomistic Simulation Protocol for Improved Design of SiOC Hybrid Nanostructures as Li-Ion Battery Anodes: ReaxFF Reactive Force Field",
+            "DOI": "10.1021/acs.jpcc.7b07095.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Charge Distribution and Lithium Oxide Stability Modeled by Reactive Force Field",
+            "DOI": "10.1021/acs.jpca.5c03998.s004",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Charge Distribution and Lithium Oxide Stability Modeled by Reactive Force Field",
+            "DOI": "10.1021/acs.jpca.5c03998.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Ju Li electrochemical strain microscopy",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Electrochemical Strain Measurements with Atomic Force Microscopy: Principles and Applications",
+            "DOI": "10.1021/acselectrochem.5c00411.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Giant Electric-Field-Induced Strain in PVDF-Based Battery Separator Membranes Probed by Electrochemical Strain Microscopy",
+            "DOI": "10.1021/acs.langmuir.6b01018.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Piezoresponse Force Microscopy and Electrochemical Strain Microscopy",
+            "DOI": "10.1201/9781003174042-3",
+            "authors": [
+              "Qibin Zeng",
+              "Kaiyang Zeng"
+            ],
+            "journal": "Atomic Force Microscopy for Energy Research",
+            "year": 2022,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "ELECTROCHEMICAL STRAIN MICROSCOPY OF LI-ION AND LI-AIR BATTERY MATERIALS",
+            "DOI": "10.1142/9789814434713_0015",
+            "authors": [
+              "THOMAS M. ARRUDA",
+              "NINA BALKE",
+              "STEPHEN JESSE",
+              "SERGEI V. KALININ"
+            ],
+            "journal": "World Scientific Series in Nanoscience and Nanotechnology",
+            "year": 2013,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Probing Ionic Transport in a Lithiated Carbon Anode with Electrochemical Strain Microscopy",
+            "DOI": "10.1149/ma2015-01/2/510",
+            "authors": [
+              "Peiqi Wang",
+              "Jiangyu Li"
+            ],
+            "journal": "ECS Meeting Abstracts",
+            "year": 2015,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Ju Li machine learning potential molecular dynamics",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Actinide Molten Salts: A Machine-Learning Potential Molecular Dynamics Study",
+            "DOI": "10.1021/acsami.1c11358.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2",
+            "DOI": "10.1021/acs.jpcc.4c08188.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Accurate and Transferable Machine Learning Potential for Molecular Dynamics Simulation of Sodium Silicate Glasses",
+            "DOI": "10.1021/acs.jctc.3c01115.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Machine Learning, Molecular Docking, and Dynamics-Based Computational Identification of Potential Inhibitors against Lung Cancer",
+            "DOI": "10.1021/acsomega.3c07338.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Confinement Effects on Proton Transfer in TiO2 Nanopores from Machine Learning Potential Molecular Dynamics Simulations",
+            "DOI": "10.1021/acsami.4c02339.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Ju Li solid electrolyte interface lithium",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Understanding the Effect of Interlayers at the Thiophosphate Solid Electrolyte/Lithium Interface for All-Solid-State Li Batteries",
+            "DOI": "10.1021/acs.chemmater.8b02368.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Adhesive Sulfide Solid Electrolyte Interface for Lithium Metal Batteries",
+            "DOI": "10.1021/acsami.0c17828.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Adhesive Sulfide Solid Electrolyte Interface for Lithium Metal Batteries",
+            "DOI": "10.1021/acsami.0c17828.s002",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Adhesive Sulfide Solid Electrolyte Interface for Lithium Metal Batteries",
+            "DOI": "10.1021/acsami.0c17828.s003",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Adhesive Sulfide Solid Electrolyte Interface for Lithium Metal Batteries",
+            "DOI": "10.1021/acsami.0c17828.s004",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      }
+    ],
+    "Jun Li (Tsinghua)": [
+      {
+        "query": "Jun Li actinide chemistry DFT",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Noncollinear Relativistic DFT + U Calculations of Actinide Dioxide Surfaces",
+            "DOI": "10.1021/acs.jpcc.8b07823.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Unraveling actinide–actinide bonding in fullerene cages: a DFT <i>versus ab initio</i> methodological study",
+            "DOI": "10.1039/d3cp03606e",
+            "authors": [
+              "Adam Jaroš",
+              "Michal Straka"
+            ],
+            "journal": "Physical Chemistry Chemical Physics",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Actinide(II) Dioxo Stabilization in the Dipyriamethyrin Ligand Environment: A DFT Study",
+            "DOI": "10.1021/acs.inorgchem.4c05176.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Xray Absorption Near-Edge Structure of the Actinide Dioxide Series (ThO2  BkO2): A DFT + U Study",
+            "DOI": "10.1021/acs.jpcc.5c01663.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Organoactinide Chemistry: Properties of Compounds with Actinide—Carbon, Actinide—Hydrogen, and Actinide—Transition-Metal σ Bonds",
+            "DOI": "10.1007/978-94-009-3155-8_16",
+            "authors": [
+              "Tobin J. Marks"
+            ],
+            "journal": "The Chemistry of the Actinide Elements",
+            "year": 1986,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Jun Li relativistic quantum chemistry",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Relativistic Symmetry",
+            "DOI": "10.1093/oso/9780195140866.003.0011",
+            "authors": [
+              "Kenneth G. Dyall",
+              "Knut Faegri"
+            ],
+            "journal": "Introduction to Relativistic Quantum Chemistry",
+            "year": 2007,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Density Functional Approaches to Relativistic Quantum Mechanics",
+            "DOI": "10.1093/oso/9780195140866.003.0020",
+            "authors": [
+              "Kenneth G. Dyall",
+              "Knut Faegri"
+            ],
+            "journal": "Introduction to Relativistic Quantum Chemistry",
+            "year": 2007,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Spin Separation of Relativistic Hamiltonians",
+            "DOI": "10.1007/978-3-642-41611-8_4-1",
+            "authors": [
+              "Zhendong Li",
+              "Wenjian Liu"
+            ],
+            "journal": "Handbook of Relativistic Quantum Chemistry",
+            "year": 2015,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Relativistic Electromagnetic Interactions",
+            "DOI": "10.1093/oso/9780195140866.003.0007",
+            "authors": [
+              "Kenneth G. Dyall",
+              "Knut Faegri"
+            ],
+            "journal": "Introduction to Relativistic Quantum Chemistry",
+            "year": 2007,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Spin Separation of Relativistic Hamiltonians",
+            "DOI": "10.1007/978-3-642-40766-6_4",
+            "authors": [
+              "Zhendong Li",
+              "Wenjian Liu"
+            ],
+            "journal": "Handbook of Relativistic Quantum Chemistry",
+            "year": 2017,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Jun Li gold cluster structure",
+        "results": [
+          {
+            "rank": 1,
+            "title": "From Monolayer-Protected Gold Cluster to Monolayer-Protected Gold-Sulfide Cluster: Geometrical and Electronic Structure Evolutions of Au60Sn(SR)36 (n = 012)",
+            "DOI": "10.1021/acsomega.0c02091.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Phase Transition to Heptagonal-Cluster-Packed Structure of Gold Nanoribbons",
+            "DOI": "10.1021/jacs.1c12713.s003",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Phase Transition to Heptagonal-Cluster-Packed Structure of Gold Nanoribbons",
+            "DOI": "10.1021/jacs.1c12713.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Phase Transition to Heptagonal-Cluster-Packed Structure of Gold Nanoribbons",
+            "DOI": "10.1021/jacs.1c12713.s002",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Structure and Bonding in the Omnicapped Truncated Tetrahedral Au20 Cluster: Analogies between Gold and Carbon Cluster Chemistry",
+            "DOI": "10.1021/ic049628r.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Jun Li f-element bonding",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Finite element analysis of the transducer vibration in die bonding operations",
+            "DOI": "10.1109/icept.2010.5582401",
+            "authors": [
+              "Robert Kelly",
+              "Jian Gao",
+              "Zhi Jun Yang",
+              "Xin Chen"
+            ],
+            "journal": "2010 11th International Conference on Electronic Packaging Technology &amp; High Density Packaging",
+            "year": 2010,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Features of Thermosonic Flip Chip Bonding",
+            "DOI": "10.1109/icept.2006.359655",
+            "authors": [
+              "Li Jun-hui",
+              "Han Lei",
+              "Zhong Jue"
+            ],
+            "journal": "2006 7th International Conference on Electronic Packaging Technology",
+            "year": 2006,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "INFRARED SPECTROSCOPIC STUDY OF H-BONDING AND OF METAL-ELEMENT BONDING",
+            "DOI": "10.1016/b978-0-08-009140-2.50028-2",
+            "authors": [
+              "D.N. SHIGORIN"
+            ],
+            "journal": "Hydrogen Bonding",
+            "year": 1959,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Discrete Element Modelling Method and Parameter Calibration of Mussel Based on Bonding V2 Model",
+            "DOI": "10.3390/machines14010086",
+            "authors": [
+              "Zhenhua Li",
+              "Xinyang Li",
+              "Chen Li",
+              "Hongbao Ye"
+            ],
+            "journal": "Machines",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Finite element analysis on piezoelectric ring transformer",
+            "DOI": "10.1109/ultsym.2002.1192503",
+            "authors": [
+              "Hing Leung Li",
+              "Jun Hui Hu",
+              "H.L.H. Chan"
+            ],
+            "journal": "2002 IEEE Ultrasonics Symposium, 2002. Proceedings.",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      }
+    ],
+    "Tao Zhang (Dalian)": [
+      {
+        "query": "Tao Zhang single atom catalysis 2011",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Introduction to Single-Atom Catalysis",
+            "DOI": "10.1016/b978-0-12-819088-3.00001-6",
+            "authors": [
+              "Mario Pagliaro"
+            ],
+            "journal": "Single-Atom Catalysis",
+            "year": 2019,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Optimizing single-atom catalysts via adjacent atom manipulation",
+            "DOI": "10.1016/j.checat.2023.100659",
+            "authors": [
+              "Xiong Zhang",
+              "Xuning Li",
+              "Yanqiang Huang"
+            ],
+            "journal": "Chem Catalysis",
+            "year": 2023,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Characterization of Supported Metal Single‐Atom Catalysts",
+            "DOI": "10.1002/9783527830169.ch5",
+            "authors": [
+              "Lei Zhang",
+              "Kieran Doyle‐Davis",
+              "Xueliang Sun"
+            ],
+            "journal": "Supported Metal Single Atom Catalysis",
+            "year": 2022,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Can Single-Atom Catalysis Be an Industrially Viable Technology?",
+            "DOI": "10.1016/b978-0-12-819088-3.00003-x",
+            "authors": [
+              "Mario Pagliaro"
+            ],
+            "journal": "Single-Atom Catalysis",
+            "year": 2019,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "The Role of Single-Atom Catalysis in Potentially Disruptive Technologies",
+            "DOI": "10.1016/b978-0-12-819088-3.00002-8",
+            "authors": [
+              "Mario Pagliaro"
+            ],
+            "journal": "Single-Atom Catalysis",
+            "year": 2019,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Tao Zhang Pt single atom catalyst",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Pt Atom-Substituted MoC Single-Atom Catalyst for Enhancing H2 Production",
+            "DOI": "10.1021/acscatal.4c01821.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Identify the Activity Origin of Pt Single-Atom Catalyst via Atom-by-Atom Counting",
+            "DOI": "10.1021/jacs.1c06381.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Single-Atom Pt Catalyst for Effective CF Bond Activation via Hydrodefluorination",
+            "DOI": "10.1021/acscatal.8b02660.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Pt Single-Atom Catalyst on Co3O4 for the Electrocatalytic Detection of Glucose",
+            "DOI": "10.1021/acsanm.4c02227.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "DFT Study of Pt/TiO2 Single Atom Catalyst with Oxygen Vacancy Rich Surface",
+            "DOI": "10.21203/rs.3.rs-974394/v1",
+            "authors": [
+              "Yongkang Zhang",
+              "Yuhang Wang",
+              "Fengping Wang"
+            ],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Tao Zhang iron single atom nitrogen carbon",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Green Synthesis of a Highly Efficient and Stable Single-Atom Iron Catalyst Anchored on Nitrogen-Doped Carbon Nanorods for the Oxygen Reduction Reaction",
+            "DOI": "10.1021/acssuschemeng.0c05509.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "Diatomite-templated synthesis of single-atom iron on nitrogen-doped carbon for efficient oxidation treatment of wastewater",
+            "DOI": "10.1016/j.ces.2024.121127",
+            "authors": [
+              "Yunjin Yao",
+              "Ziwei Ma",
+              "Zhongming Tao",
+              "Xueyi Song",
+              "Jingyi Wang",
+              "Yating Liu",
+              "Shaobin Wang"
+            ],
+            "journal": "Chemical Engineering Science",
+            "year": 2025,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Single-Atom FeN4 on a Carbon Substrate for Nitrogen Reduction Reaction",
+            "DOI": "10.1021/acsanm.1c02108.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Rare Earth Single-Atom Catalysts for Nitrogen and Carbon Dioxide Reduction",
+            "DOI": "10.1021/acsnano.9b08835.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Electronic Properties of Single-Atom Metal Catalysts Supported on Nitrogen-Doped Carbon",
+            "DOI": "10.1021/acs.jpcc.4c03232.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      },
+      {
+        "query": "Tao Zhang heterogeneous catalysis atomic level",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Atomic-level engineering and in-situ spectroscopy studies of metal-organic frameworks in heterogeneous catalysis",
+            "DOI": "10.2172/1593380",
+            "authors": [
+              "Tian Wei Goh"
+            ],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 2,
+            "title": "STRUCTURE-REACTIVITY RELATIONS THROUGH CHARGE CONTROL AT THE ATOMIC LEVEL IN HETEROGENEOUS CATALYSIS",
+            "DOI": "10.1142/9789813237179_0015",
+            "authors": [
+              "HANS-JOACHIM FREUND"
+            ],
+            "journal": "Catalysis in Chemistry and Biology",
+            "year": 2018,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Model studies on heterogeneous catalysts at the atomic level",
+            "DOI": "10.1016/j.cattod.2004.12.021",
+            "authors": [
+              "Hans-Joachim Freund"
+            ],
+            "journal": "Catalysis Today",
+            "year": 2005,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Model Systems in Heterogeneous Catalysis: Selectivity Studies at the Atomic Level",
+            "DOI": "10.1007/s11244-008-9052-9",
+            "authors": [
+              "H. -J. Freund"
+            ],
+            "journal": "Topics in Catalysis",
+            "year": 2008,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Heterogeneous 3D Integration Based on Atomic-Level Electronics",
+            "DOI": "10.1021/acsami.6c00756.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": false,
+        "target_author_rank": null
+      }
+    ],
+    "Ib Chorkendorff (DTU)": [
+      {
+        "query": "Chorkendorff hydrogen evolution reaction",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Recent Development in Hydrogen Evolution Reaction Catalysts and Their Practical Implementation",
+            "DOI": "10.1021/acs.jpclett.5b00306",
+            "authors": [
+              "Peter C. K. Vesborg",
+              "Brian Seger",
+              "Ib Chorkendorff"
+            ],
+            "journal": "The Journal of Physical Chemistry Letters",
+            "year": 2015,
+            "target_author_match": true
+          },
+          {
+            "rank": 2,
+            "title": "Biomimetic Hydrogen Evolution: MoS<sub>2</sub> Nanoparticles as Catalyst for Hydrogen Evolution",
+            "DOI": "10.1002/chin.200525015",
+            "authors": [
+              "Berit Hinnemann",
+              "Poul Georg Moses",
+              "Jacob Bonde",
+              "Kristina P. Joergensen",
+              "Jane H. Nielsen",
+              "Sebastian Horch",
+              "Ib Chorkendorff",
+              "Jens K. Noerskov"
+            ],
+            "journal": "ChemInform",
+            "year": 2005,
+            "target_author_match": true
+          },
+          {
+            "rank": 3,
+            "title": "Organocatalytic Hydrogen Evolution Reaction by Diazaphospholenes",
+            "DOI": "10.1021/jacs.4c10302.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Surfactant-Mediated Interfacial Hydrogen Evolution Reaction",
+            "DOI": "10.1021/acsami.4c20384.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Constructing NiS2/CoS2/1T-MoS2Sulfur Vacancy Catalyst to Boost Hydrogen Evolution Reaction and Oxygen Evolution Reaction",
+            "DOI": "10.1021/acs.langmuir.5c02048.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": true,
+        "target_author_rank": 1
+      },
+      {
+        "query": "Chorkendorff concepts of modern catalysis",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Concepts of Modern Catalysis and Kinetics",
+            "DOI": "10.1002/3527602658",
+            "authors": [
+              "I. Chorkendorff",
+              "J. W. Niemantsverdriet"
+            ],
+            "journal": "",
+            "year": 2003,
+            "target_author_match": true
+          },
+          {
+            "rank": 2,
+            "title": "Concepts of Modern Catalysis and Kinetics.By I. Chorkendorff and J. W. Niemantsverdriet.",
+            "DOI": "10.1002/cphc.200400267",
+            "authors": [
+              "Christoph Wöll"
+            ],
+            "journal": "ChemPhysChem",
+            "year": 2005,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Concepts of Modern Catalysis and Kinetics. Von I. Chorkendorff und J. W. Niemantsverdriet.",
+            "DOI": "10.1002/ange.200385163",
+            "authors": [
+              "Paul A. Sermon"
+            ],
+            "journal": "Angewandte Chemie",
+            "year": 2005,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Buchbesprechung: Concepts of Modern Catalysis and Kinetics. Von I. Chorkendorff, J. W. Niemantsverdriet.",
+            "DOI": "10.1002/cite.200490425",
+            "authors": [
+              "J. Weitkamp"
+            ],
+            "journal": "Chemie Ingenieur Technik",
+            "year": 2004,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "Concepts of Modern Catalysis and Kinetics. By I. Chorkendorff and J. W. Niemantsverdriet.",
+            "DOI": "10.1002/anie.200385163",
+            "authors": [
+              "Paul A. Sermon"
+            ],
+            "journal": "Angewandte Chemie International Edition",
+            "year": 2005,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": true,
+        "target_author_rank": 1
+      },
+      {
+        "query": "Chorkendorff oxygen evolution mass spectrometry",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Online Electrochemistry–Mass Spectrometry Evaluation of the Acidic Oxygen Evolution Reaction at Supported Catalysts",
+            "DOI": "10.1021/acscatal.1c03430",
+            "authors": [
+              "Junheng Huang",
+              "Soren B. Scott",
+              "Ib Chorkendorff",
+              "Zhenhai Wen"
+            ],
+            "journal": "ACS Catalysis",
+            "year": 2021,
+            "target_author_match": true
+          },
+          {
+            "rank": 2,
+            "title": "Detangling Catalyst Modification Reactions from the Oxygen Evolution Reaction by Online Mass Spectrometry",
+            "DOI": "10.1021/acscatal.6b02800.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Detangling Catalyst Modification Reactions from the Oxygen Evolution Reaction by Online Mass Spectrometry",
+            "DOI": "10.1021/acscatal.6b02800.s002",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Role of Lattice Oxygen in the Oxygen Evolution Reaction on Co3O4: Isotope Exchange Determined Using a Small-Volume Differential Electrochemical Mass Spectrometry Cell Design",
+            "DOI": "10.1021/acs.analchem.9b01749.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "STUDIES OF O2 EVOLUTION USING H2O ANALOGS AND MASS SPECTROMETRY",
+            "DOI": "10.1016/b978-0-12-372360-4.50021-3",
+            "authors": [
+              "Richard Radmer"
+            ],
+            "journal": "The Oxygen Evolving System of Photosynthesis",
+            "year": 1983,
+            "target_author_match": false
+          }
+        ],
+        "target_author_found": true,
+        "target_author_rank": 1
+      },
+      {
+        "query": "Chorkendorff nanoparticle catalyst activity",
+        "results": [
+          {
+            "rank": 1,
+            "title": "Physical properties of the GaPd2 intermetallic catalyst in bulk and nanoparticle morphology",
+            "DOI": "10.1016/j.intermet.2015.07.010",
+            "authors": [
+              "M. Wencka",
+              "J. Schwerin",
+              "M. Klanjšek",
+              "M. Krnel",
+              "S. Vrtnik",
+              "P. Koželj",
+              "A. Jelen",
+              "G. Kapun",
+              "Z. Jagličić",
+              "I. Sharafutdinov",
+              "I. Chorkendorff",
+              "P. Gille",
+              "J. Dolinšek"
+            ],
+            "journal": "Intermetallics",
+            "year": 2015,
+            "target_author_match": true
+          },
+          {
+            "rank": 2,
+            "title": "Ultrafine Nanoparticle Rh/CeO2ZrO2 Catalysts Synthesized via Spatial Confinement: Higher Three-Way Catalytic Activity Compared to Rh Single-Atom Catalyst",
+            "DOI": "10.1021/acsami.4c16794.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 3,
+            "title": "Fe Nanoparticle Size Control of the Fe-MOF-Derived Catalyst Using a Solvothermal Method: Effect on FTS Activity and Olefin Production",
+            "DOI": "10.1021/acsomega.1c05927.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 4,
+            "title": "Sliding Ferroelectric Catalyst for Carbon Nanoparticle Generation",
+            "DOI": "10.1021/acsanm.5c01032.s001",
+            "authors": [],
+            "journal": "",
+            "year": null,
+            "target_author_match": false
+          },
+          {
+            "rank": 5,
+            "title": "A generic model for photocatalytic activity as a function of catalyst thickness",
+            "DOI": "10.1016/j.jcat.2012.01.015",
+            "authors": [
+              "Morten G. Nielsen",
+              "Su-Il In",
+              "Peter C.K. Vesborg",
+              "Thomas Pedersen",
+              "Klaus P. Almtoft",
+              "Inge H. Andersen",
+              "Ole Hansen",
+              "Ib Chorkendorff"
+            ],
+            "journal": "Journal of Catalysis",
+            "year": 2012,
+            "target_author_match": true
+          }
+        ],
+        "target_author_found": true,
+        "target_author_rank": 1
+      }
+    ]
+  }
+}

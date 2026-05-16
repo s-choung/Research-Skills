@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>/blender-atom-render Gallery</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
   --font: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --max-w: 1100px;
   --radius: 6.08px;
   --border: #e5e7eb;
-  --gray: #8f8f8f;
-  --card-bg: #f9f9f9;
+  --gray: #666666;
+  --card-bg: #ffffff;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
   font-family: var(--font);
   font-weight: 400;
   font-size: 16px;
@@ -32,38 +32,35 @@ header {
 }
 header h1 {
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -1.2px;
   line-height: 1.16;
   margin-bottom: 16px;
-  font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  font-family: var(--font);
 }
 header p {
   font-size: 16px;
-  color: #666;
+  color: var(--gray);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.65;
 }
-.lang-wrap {
-  position: fixed;
-  top: 20px;
-  right: 24px;
-  z-index: 100;
-}
 .lang-toggle {
-  font-size: 13px;
-  font-weight: 500;
-  color: #666;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 9999px;
-  padding: 5px 14px;
-  cursor: pointer;
-  font-family: var(--font);
-  transition: all 0.15s;
+  position: fixed; top: 16px; right: 24px; z-index: 100;
+  display: flex; gap: 0;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 9999px; overflow: hidden;
+  background: #ffffff;
 }
-.lang-toggle:hover { background: #f1f1f1; color: #000; }
+.lang-toggle button {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; font-weight: 500;
+  padding: 6px 14px;
+  border: none; cursor: pointer;
+  background: transparent; color: #000000;
+  transition: background 0.15s;
+}
+.lang-toggle button.active { background: #000000; color: #ffffff; }
 .grid {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -93,9 +90,9 @@ header p {
   font-size: 13px;
   font-weight: 500;
   color: var(--gray);
-  background: #fff;
+  background: #ffffff;
   text-align: center;
-  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
 }
 footer {
   text-align: center;
@@ -116,14 +113,46 @@ footer {
 </head>
 <body>
 
-<div class="lang-wrap">
-  <button class="lang-toggle" onclick="toggleLang()" id="langBtn">KOR</button>
+<div class="lang-toggle">
+  <button class="active" onclick="setLang('en')">ENG</button>
+  <button onclick="setLang('ko')">KOR</button>
 </div>
 
 <header>
   <h1>/blender-atom-render</h1>
   <p id="subtitle" data-en="Ray-traced atomic structure renders from POSCAR/CIF files using Blender. CPK colors, metallic materials, white background." data-ko="POSCAR/CIF 파일에서 Blender로 레이트레이싱한 원자 구조 렌더링. CPK 색상, 메탈릭 재질, 흰 배경.">Ray-traced atomic structure renders from POSCAR/CIF files using Blender. CPK colors, metallic materials, white background.</p>
 </header>
+
+<div style="max-width:680px;margin:2rem auto">
+  <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:#8f8f8f;margin-bottom:8px">01</div>
+  <h2 style="font-size:18px;font-weight:600;margin-bottom:6px;border:none;text-transform:none;letter-spacing:0;color:#000">How to Use</h2>
+  <p style="font-size:14px;color:#666;margin-bottom:20px"><span data-en>Type what you want in natural language.</span><span data-ko>자연어로 입력하면 끝.</span></p>
+
+  <div style="display:flex;flex-direction:column;gap:0">
+    <div style="display:flex;gap:16px;align-items:flex-start;padding-bottom:24px">
+      <div style="width:36px;height:36px;border-radius:50%;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      </div>
+      <div style="flex:1;padding-top:6px">
+        <div style="font-size:13px;font-weight:600;color:#000;margin-bottom:4px"><span data-en>Example prompt</span><span data-ko>예시 프롬프트</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;background:#f1f1f1;padding:8px 14px;border-radius:6px;color:#000"><span data-en>"Render Cu2O.xyz in Blender with perspective view"</span><span data-ko>"Cu2O.xyz를 블렌더로 perspective view로 렌더링 해줘"</span></div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <div style="width:36px;height:36px;border-radius:50%;background:#f1f1f1;color:#2d6a2e;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #e5e7eb">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div style="flex:1;padding-top:6px">
+        <div style="font-size:13px;font-weight:600;color:#2d6a2e;margin-bottom:4px">Output</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;background:#e8f5e9;padding:3px 10px;border-radius:4px;color:#2d6a2e">render.png</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;background:#e8f5e9;padding:3px 10px;border-radius:4px;color:#2d6a2e">legend.png</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="grid">
 
@@ -161,6 +190,7 @@ footer {
     </div>
 </div>
 
+
 <footer>
   <span data-en="Rendered with /blender-atom-render skill" data-ko="/blender-atom-render 스킬로 렌더링">Rendered with /blender-atom-render skill</span>
 </footer>
@@ -170,17 +200,11 @@ let lang = new URLSearchParams(window.location.search).get('lang') || 'en';
 
 function setLang(l) {
   lang = l;
-  document.getElementById('langBtn').textContent = lang === 'en' ? 'KOR' : 'ENG';
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+  document.querySelector('.lang-toggle button[onclick*="'+lang+'"]').classList.add('active');
   document.querySelectorAll('[data-en][data-ko]').forEach(el => {
     el.textContent = el.getAttribute('data-' + lang);
   });
-}
-
-function toggleLang() {
-  setLang(lang === 'en' ? 'ko' : 'en');
-  const url = new URL(window.location);
-  url.searchParams.set('lang', lang);
-  history.replaceState(null, '', url);
 }
 
 setLang(lang);

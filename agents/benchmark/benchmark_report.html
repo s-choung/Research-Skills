@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paper Ref-Hunter — Examples</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --color-void: #000000;
+    --color-fog-border: #e5e7eb;
+    --color-chalk: #f1f1f1;
+    --color-graphite: #666666;
+    --color-canvas: #ffffff;
+    --font: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --radius-cards: 6.08px;
+    --color-green: #16a34a;
+    --color-red: #dc2626;
+    --color-amber: #d97706;
+    --color-blue: #2563eb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--color-canvas);
+    color: var(--color-void);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  /* --- Language Toggle --- */
+  .lang-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 100;
+    display: flex;
+    gap: 2px;
+    background: var(--color-chalk);
+    border-radius: 6px;
+    padding: 2px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .lang-toggle button {
+    border: none;
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-graphite);
+    transition: all 0.15s;
+  }
+  .lang-toggle button.active {
+    background: var(--color-canvas);
+    color: var(--color-void);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  /* --- Header --- */
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    color: var(--color-graphite);
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  /* --- Sections --- */
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+  }
+  .section { margin-bottom: 48px; }
+
+  p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  /* --- Stat Card --- */
+  .stat-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--color-void);
+    color: var(--color-canvas);
+    border-radius: var(--radius-cards);
+    padding: 24px 28px;
+    margin: 20px 0 36px;
+  }
+  .stat-card .stat-num {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: var(--mono);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .stat-card .stat-num .arrow { color: var(--color-green); }
+  .stat-card .stat-label {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.5;
+  }
+
+  /* --- Two-column modes --- */
+  .modes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .mode-card {
+    border: 1px solid var(--color-fog-border);
+    border-radius: var(--radius-cards);
+    padding: 20px;
+  }
+  .mode-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-family: var(--mono);
+  }
+  .mode-card .mode-api {
+    font-size: 11px;
+    color: var(--color-graphite);
+    font-family: var(--mono);
+    margin-bottom: 8px;
+  }
+  .mode-card p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 0;
+  }
+
+  /* --- Example Cards --- */
+  .example-card {
+    border: 1px solid var(--color-fog-border);
+    border-radius: var(--radius-cards);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .example-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.1s;
+  }
+  .example-header:hover { background: #fafafa; }
+  .example-header .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  .example-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-graphite);
+    flex-shrink: 0;
+  }
+  .example-title {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 999px;
+    flex-shrink: 0;
+    font-family: var(--mono);
+  }
+  .badge-green { background: #dcfce7; color: var(--color-green); }
+  .badge-red { background: #fee2e2; color: var(--color-red); }
+  .badge-amber { background: #fef3c7; color: var(--color-amber); }
+  .badge-blue { background: #dbeafe; color: var(--color-blue); }
+
+  .chevron {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s;
+    color: #999;
+  }
+  .example-card.open .chevron { transform: rotate(90deg); }
+
+  .example-body {
+    display: none;
+    padding: 0 18px 18px;
+    font-size: 13px;
+  }
+  .example-card.open .example-body { display: block; }
+
+  .query-box {
+    background: var(--color-chalk);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-family: var(--mono);
+    font-size: 13px;
+    margin-bottom: 14px;
+    color: #333;
+  }
+  .query-box .prompt { color: var(--color-graphite); }
+
+  .result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .result-table th {
+    text-align: left;
+    font-weight: 500;
+    color: var(--color-graphite);
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--color-fog-border);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .result-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #f3f3f3;
+    vertical-align: top;
+  }
+  .result-table tr.highlight td {
+    background: #f0fdf4;
+  }
+  .result-table .rank {
+    font-family: var(--mono);
+    font-weight: 500;
+    color: var(--color-graphite);
+    width: 30px;
+  }
+  .result-table .doi {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--color-blue);
+    word-break: break-all;
+  }
+  .result-table .doi a {
+    color: var(--color-blue);
+    text-decoration: none;
+  }
+  .result-table .doi a:hover { text-decoration: underline; }
+  .result-note {
+    font-size: 12px;
+    color: var(--color-graphite);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  /* --- Hallucination table --- */
+  .halluc-grid {
+    display: grid;
+    gap: 6px;
+    margin: 12px 0 8px;
+  }
+  .halluc-row {
+    display: grid;
+    grid-template-columns: 1fr 200px 60px;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #fafafa;
+  }
+  .halluc-row .fake-doi {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--color-red);
+  }
+  .halluc-row .fake-title {
+    color: #555;
+  }
+  .halluc-row .verdict {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  /* --- Tips --- */
+  .tips-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tips-list li {
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f3f3;
+    color: #333;
+    display: flex;
+    gap: 10px;
+  }
+  .tips-list li:last-child { border-bottom: none; }
+  .tip-bullet {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    background: var(--color-void);
+    border-radius: 50%;
+    margin-top: 8px;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-fog-border);
+    font-size: 12px;
+    color: #999;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 40px 16px 60px; }
+    h1 { font-size: 22px; }
+    .modes-grid { grid-template-columns: 1fr; }
+    .stat-card { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .stat-card .stat-num { font-size: 32px; }
+    .halluc-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle">
+  <button id="btn-ko" class="active" onclick="setLang('ko')">KO</button>
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="container">
+
+  <!-- Title -->
+  <h1>Paper Ref-Hunter</h1>
+  <p class="subtitle">
+    <span class="ko">Crossref + OpenAlex API 기반 논문 검색 스킬</span>
+    <span class="en" style="display:none">Academic paper search skill powered by Crossref + OpenAlex APIs</span>
+  </p>
+
+  <!-- Section 1: The Problem -->
+  <div class="section">
+    <h2>
+      <span class="ko">문제</span>
+      <span class="en" style="display:none">The Problem</span>
+    </h2>
+    <p>
+      <span class="ko">LLM에게 참고문헌을 요청하면 DOI가 실존하지 않거나 다른 논문을 가리키는 경우가 대다수다. GPT-4.1-mini 벤치마크에서 8명의 연구자에 대해 40편의 논문을 요청한 결과, <strong>47.5%의 DOI가 가짜</strong>였고 제목이 정확히 일치하는 비율은 17.5%에 불과했다. Paper Ref-Hunter는 Crossref와 OpenAlex API를 직접 호출하여 실제 논문만 반환한다.</span>
+      <span class="en" style="display:none">When you ask an LLM for references, most DOIs either don't exist or point to wrong papers. In our GPT-4.1-mini benchmark across 8 researchers and 40 papers, <strong>47.5% of DOIs were fake</strong> and only 17.5% of titles matched exactly. Paper Ref-Hunter calls Crossref and OpenAlex APIs directly to return only real papers.</span>
+    </p>
+
+    <div class="stat-card">
+      <div>
+        <div class="stat-num">47.5% <span class="arrow">&rarr;</span> 0%</div>
+      </div>
+      <div class="stat-label">
+        <span class="ko">LLM hallucination rate &rarr; Ref-Hunter 사용 시<br>가짜 DOI 비율</span>
+        <span class="en" style="display:none">LLM hallucination rate &rarr; with Ref-Hunter<br>Fake DOI rate</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: How It Works -->
+  <div class="section">
+    <h2>
+      <span class="ko">작동 방식</span>
+      <span class="en" style="display:none">How It Works</span>
+    </h2>
+    <div class="modes-grid">
+      <div class="mode-card">
+        <h3>HUNT</h3>
+        <div class="mode-api">Crossref API</div>
+        <p>
+          <span class="ko">저자 + 키워드로 특정 논문을 찾는다. "그 Chorkendorff 논문 뭐더라?" 같은 질문에 적합.</span>
+          <span class="en" style="display:none">Find a specific paper by author + keywords. Best for "What was that Chorkendorff paper?"</span>
+        </p>
+      </div>
+      <div class="mode-card">
+        <h3>DISCOVERY</h3>
+        <div class="mode-api">OpenAlex API</div>
+        <p>
+          <span class="ko">주제/키워드로 관련 논문 K편을 인용수 순으로 반환한다. 리뷰나 서론 작성 시 유용.</span>
+          <span class="en" style="display:none">Return K papers ranked by citation count for a topic. Useful for writing reviews or introductions.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Real Examples -->
+  <div class="section">
+    <h2>
+      <span class="ko">실제 예시</span>
+      <span class="en" style="display:none">Real Examples</span>
+    </h2>
+
+    <!-- Example 1: Chorkendorff HER -->
+    <div class="example-card open" id="ex1">
+      <div class="example-header" onclick="toggle('ex1')">
+        <div class="left">
+          <span class="example-num">01</span>
+          <span class="example-title">
+            <span class="ko">"그 Chorkendorff HER 논문 뭐더라"</span>
+            <span class="en" style="display:none">"What was that Chorkendorff HER paper?"</span>
+          </span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="badge badge-green">Rank 1</span>
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4l4 4-4 4"/></svg>
+        </div>
+      </div>
+      <div class="example-body">
+        <div class="query-box">
+          <span class="prompt">/paper-ref hunt</span> "Chorkendorff hydrogen evolution reaction"
+        </div>
+        <table class="result-table">
+          <thead><tr><th>#</th><th>
+            <span class="ko">논문</span><span class="en" style="display:none">Paper</span>
+          </th><th>DOI</th><th>
+            <span class="ko">저자 확인</span><span class="en" style="display:none">Author</span>
+          </th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td class="rank">1</td>
+              <td>Recent Development in Hydrogen Evolution Reaction Catalysts and Their Practical Implementation<br><span style="color:#999;font-size:11px">Vesborg, Seger, <strong>Chorkendorff</strong> &mdash; J. Phys. Chem. Lett. (2015)</span></td>
+              <td class="doi"><a href="https://doi.org/10.1021/acs.jpclett.5b00306" target="_blank">10.1021/acs.jpclett.5b00306</a></td>
+              <td style="color:var(--color-green);font-family:var(--mono);font-size:11px">match</td>
+            </tr>
+            <tr class="highlight">
+              <td class="rank">2</td>
+              <td>Biomimetic Hydrogen Evolution: MoS<sub>2</sub> Nanoparticles as Catalyst for Hydrogen Evolution<br><span style="color:#999;font-size:11px">Hinnemann, Moses, Bonde, ... <strong>Chorkendorff</strong>, Noerskov &mdash; ChemInform (2005)</span></td>
+              <td class="doi"><a href="https://doi.org/10.1002/chin.200525015" target="_blank">10.1002/chin.200525015</a></td>
+              <td style="color:var(--color-green);font-family:var(--mono);font-size:11px">match</td>
+            </tr>
+            <tr>
+              <td class="rank">3</td>
+              <td style="color:#999">Organocatalytic Hydrogen Evolution Reaction by Diazaphospholenes</td>
+              <td class="doi" style="color:#999">10.1021/jacs.4c10302.s001</td>
+              <td style="color:#999;font-family:var(--mono);font-size:11px">&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="result-note">
+          <span class="ko">희귀한 성(Chorkendorff) + 구체적 키워드 = 상위 2개 모두 정확한 논문. 4/4 쿼리 전부 Rank 1 적중.</span>
+          <span class="en" style="display:none">Rare surname (Chorkendorff) + specific keywords = top 2 results are exact papers. 4/4 queries all hit at Rank 1.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example 2: Ulissi OC20 -->
+    <div class="example-card" id="ex2">
+      <div class="example-header" onclick="toggle('ex2')">
+        <div class="left">
+          <span class="example-num">02</span>
+          <span class="example-title">
+            <span class="ko">"Ulissi OC20 데이터셋 논문"</span>
+            <span class="en" style="display:none">"Ulissi OC20 dataset paper"</span>
+          </span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="badge badge-green">Rank 1</span>
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4l4 4-4 4"/></svg>
+        </div>
+      </div>
+      <div class="example-body">
+        <div class="query-box">
+          <span class="prompt">/paper-ref hunt</span> "Ulissi graph neural network catalysis OC20"
+        </div>
+        <table class="result-table">
+          <thead><tr><th>#</th><th>
+            <span class="ko">논문</span><span class="en" style="display:none">Paper</span>
+          </th><th>DOI</th><th>
+            <span class="ko">저자 확인</span><span class="en" style="display:none">Author</span>
+          </th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td class="rank">1</td>
+              <td>The Open Catalyst 2020 (OC20) Dataset and Community Challenges<br><span style="color:#999;font-size:11px"><strong>Zachary Ulissi</strong> &mdash; Proc. Int. Conf. Electrocatalysis</span></td>
+              <td class="doi"><a href="https://doi.org/10.29363/nanoge.ecocat.2020.018" target="_blank">10.29363/nanoge.ecocat.2020.018</a></td>
+              <td style="color:var(--color-green);font-family:var(--mono);font-size:11px">match</td>
+            </tr>
+            <tr class="highlight">
+              <td class="rank">2</td>
+              <td>Accelerating Catalyst Discovery Using General Datasets and Graph Neural Networks<br><span style="color:#999;font-size:11px"><strong>Zachary Ulissi</strong> &mdash; nanoGe Spring Meeting (2022)</span></td>
+              <td class="doi"><a href="https://doi.org/10.29363/nanoge.nsm.2022.145" target="_blank">10.29363/nanoge.nsm.2022.145</a></td>
+              <td style="color:var(--color-green);font-family:var(--mono);font-size:11px">match</td>
+            </tr>
+            <tr>
+              <td class="rank">4</td>
+              <td>CatTSunami: Accelerating Transition State Energy Calculations with Pretrained GNNs<br><span style="color:#999;font-size:11px">Wander, Shuaibi, <strong>Kitchin</strong> et al. &mdash; ACS Catal. (2025)</span></td>
+              <td class="doi"><a href="https://doi.org/10.1021/acscatal.4c04272" target="_blank">10.1021/acscatal.4c04272</a></td>
+              <td style="color:#999;font-family:var(--mono);font-size:11px">&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="result-note">
+          <span class="ko">Ulissi 4개 쿼리 중 3개가 Rank 1에서 적중. 희귀한 성(Ulissi) 덕분에 author matching이 매우 정확.</span>
+          <span class="en" style="display:none">3 out of 4 Ulissi queries hit at Rank 1. Rare surname makes author matching highly accurate.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example 3: Kitchin ML catalysis exact DOI match -->
+    <div class="example-card" id="ex3">
+      <div class="example-header" onclick="toggle('ex3')">
+        <div class="left">
+          <span class="example-num">03</span>
+          <span class="example-title">
+            <span class="ko">"Kitchin ML catalysis 2018 논문" &mdash; DOI 정확히 일치</span>
+            <span class="en" style="display:none">"Kitchin ML catalysis 2018" &mdash; Exact DOI match</span>
+          </span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="badge badge-green">Rank 1</span>
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4l4 4-4 4"/></svg>
+        </div>
+      </div>
+      <div class="example-body">
+        <div class="query-box">
+          <span class="prompt">/paper-ref hunt</span> "Kitchin machine learning catalysis 2018"
+        </div>
+        <table class="result-table">
+          <thead><tr><th>#</th><th>
+            <span class="ko">논문</span><span class="en" style="display:none">Paper</span>
+          </th><th>DOI</th><th>
+            <span class="ko">저자 확인</span><span class="en" style="display:none">Author</span>
+          </th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td class="rank">1</td>
+              <td><strong>Machine learning in catalysis</strong><br><span style="color:#999;font-size:11px"><strong>John R. Kitchin</strong> &mdash; Nature Catalysis</span></td>
+              <td class="doi"><a href="https://doi.org/10.1038/s41929-018-0056-y" target="_blank">10.1038/s41929-018-0056-y</a></td>
+              <td style="color:var(--color-green);font-family:var(--mono);font-size:11px">match</td>
+            </tr>
+            <tr class="highlight">
+              <td class="rank">2</td>
+              <td>Practical Application of Machine Learning in Catalysis<br><span style="color:#999;font-size:11px"><strong>Ulissi</strong>, Tran, Yoon, Shuaibi &mdash; Computational Catalysis (2024)</span></td>
+              <td class="doi"><a href="https://doi.org/10.1039/9781839163296-00224" target="_blank">10.1039/9781839163296-00224</a></td>
+              <td style="color:var(--color-green);font-family:var(--mono);font-size:11px">match</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="result-note">
+          <span class="ko">Target DOI <code style="font-size:11px">10.1038/s41929-018-0056-y</code> 정확히 일치. 반면 GPT-4.1-mini는 같은 논문을 요청했을 때 존재하지 않는 DOI <code style="font-size:11px">10.1038/s41929-018-0160-5</code>를 생성했다.</span>
+          <span class="en" style="display:none">Target DOI <code style="font-size:11px">10.1038/s41929-018-0056-y</code> matched exactly. Meanwhile, GPT-4.1-mini generated a non-existent DOI <code style="font-size:11px">10.1038/s41929-018-0160-5</code> for the same paper.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example 4: Discovery mode OER perovskite -->
+    <div class="example-card" id="ex4">
+      <div class="example-header" onclick="toggle('ex4')">
+        <div class="left">
+          <span class="example-num">04</span>
+          <span class="example-title">
+            <span class="ko">DISCOVERY &mdash; "산소발생반응 perovskite 관련 논문"</span>
+            <span class="en" style="display:none">DISCOVERY &mdash; "Oxygen evolution reaction perovskite"</span>
+          </span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="badge badge-blue">10/10</span>
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4l4 4-4 4"/></svg>
+        </div>
+      </div>
+      <div class="example-body">
+        <div class="query-box">
+          <span class="prompt">/paper-ref topic</span> "oxygen evolution reaction perovskite"
+        </div>
+        <table class="result-table">
+          <thead><tr><th>#</th><th>
+            <span class="ko">논문</span><span class="en" style="display:none">Paper</span>
+          </th><th>
+            <span class="ko">인용수</span><span class="en" style="display:none">Citations</span>
+          </th></tr></thead>
+          <tbody>
+            <tr class="highlight">
+              <td class="rank">1</td>
+              <td>Enhancing Electrocatalytic Activity of Perovskite Oxides by Tuning Cation Deficiency for ORR/OER<br><span style="color:#999;font-size:11px">Zhu et al. &mdash; Chem. Mater. (2016)</span></td>
+              <td style="font-family:var(--mono);font-size:12px">813</td>
+            </tr>
+            <tr class="highlight">
+              <td class="rank">2</td>
+              <td>Charge-transfer-energy-dependent OER Mechanisms for Perovskite Oxides<br><span style="color:#999;font-size:11px">Hong et al. &mdash; Energy Environ. Sci. (2017)</span></td>
+              <td style="font-family:var(--mono);font-size:12px">582</td>
+            </tr>
+            <tr class="highlight">
+              <td class="rank">3</td>
+              <td>Advanced High Entropy Perovskite Oxide Electrocatalyst for OER<br><span style="color:#999;font-size:11px">Nguyen et al. &mdash; Adv. Funct. Mater. (2021)</span></td>
+              <td style="font-family:var(--mono);font-size:12px">547</td>
+            </tr>
+            <tr class="highlight">
+              <td class="rank">4</td>
+              <td>Role of Lattice Oxygen Participation in Understanding Trends in the OER on Perovskites<br><span style="color:#999;font-size:11px">Yoo et al. &mdash; ACS Catal. (2018)</span></td>
+              <td style="font-family:var(--mono);font-size:12px">540</td>
+            </tr>
+            <tr class="highlight">
+              <td class="rank">5</td>
+              <td>Ca<sub>2</sub>Mn<sub>2</sub>O<sub>5</sub> as Oxygen-Deficient Perovskite Electrocatalyst for OER<br><span style="color:#999;font-size:11px">Kim et al. &mdash; JACS (2014)</span></td>
+              <td style="font-family:var(--mono);font-size:12px">518</td>
+            </tr>
+            <tr>
+              <td colspan="3" style="color:#999;font-style:italic;font-size:11px;text-align:center;padding:8px">
+                <span class="ko">... + 5편 더 (전체 10/10 주제 적합)</span>
+                <span class="en" style="display:none">... + 5 more (all 10/10 topically relevant)</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="result-note">
+          <span class="ko">OpenAlex DISCOVERY 모드: 인용수 기준 정렬, 10편 모두 주제에 정확히 부합. 서론이나 리뷰 작성 시 바로 사용 가능한 수준.</span>
+          <span class="en" style="display:none">OpenAlex DISCOVERY mode: sorted by citations, all 10 papers directly relevant. Publication-ready reference list for introductions or reviews.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example 5: Tao Zhang failure case -->
+    <div class="example-card" id="ex5">
+      <div class="example-header" onclick="toggle('ex5')">
+        <div class="left">
+          <span class="example-num">05</span>
+          <span class="example-title">
+            <span class="ko">"Tao Zhang single atom catalysis" &mdash; 흔한 성의 한계</span>
+            <span class="en" style="display:none">"Tao Zhang single atom catalysis" &mdash; Common surname limitation</span>
+          </span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="badge badge-red">0/4</span>
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4l4 4-4 4"/></svg>
+        </div>
+      </div>
+      <div class="example-body">
+        <div class="query-box">
+          <span class="prompt">/paper-ref hunt</span> "Tao Zhang single atom catalysis 2011"
+        </div>
+        <table class="result-table">
+          <thead><tr><th>#</th><th>
+            <span class="ko">논문</span><span class="en" style="display:none">Paper</span>
+          </th><th>
+            <span class="ko">저자 일치</span><span class="en" style="display:none">Author</span>
+          </th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td style="color:#999">Introduction to Single-Atom Catalysis<br><span style="font-size:11px">Pagliaro &mdash; Single-Atom Catalysis (2019)</span></td>
+              <td style="color:var(--color-red);font-family:var(--mono);font-size:11px">miss</td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td style="color:#999">Optimizing single-atom catalysts via adjacent atom manipulation<br><span style="font-size:11px">Zhang, Li, Huang &mdash; Chem Catalysis (2023)</span></td>
+              <td style="color:var(--color-red);font-family:var(--mono);font-size:11px">miss</td>
+            </tr>
+            <tr>
+              <td class="rank">3</td>
+              <td style="color:#999">Characterization of Supported Metal Single-Atom Catalysts<br><span style="font-size:11px">Zhang, Doyle-Davis, Sun (2022)</span></td>
+              <td style="color:var(--color-red);font-family:var(--mono);font-size:11px">miss</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="result-note">
+          <span class="ko"><strong>Zhang, Li, Wang</strong> 같은 흔한 성은 Crossref HUNT에서 저자 특정이 어렵다. 4개 쿼리 모두 실패. 추가로 Crossref 결과의 53%가 보충자료(supplementary) DOI여서 저자 메타데이터가 없었다.<br><strong>해결책:</strong> 논문 제목의 고유 키워드를 추가하거나, DISCOVERY 모드로 전환하면 더 나은 결과를 얻을 수 있다.</span>
+          <span class="en" style="display:none"><strong>Zhang, Li, Wang</strong> &mdash; common surnames make Crossref HUNT author matching unreliable. All 4 queries failed. Additionally, 53% of Crossref results were supplementary material DOIs lacking author metadata.<br><strong>Workaround:</strong> Add unique title keywords, or switch to DISCOVERY mode for better results.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Example 6: LLM Hallucination verification -->
+    <div class="example-card" id="ex6">
+      <div class="example-header" onclick="toggle('ex6')">
+        <div class="left">
+          <span class="example-num">06</span>
+          <span class="example-title">
+            <span class="ko">LLM Hallucination 검증</span>
+            <span class="en" style="display:none">LLM Hallucination Verification</span>
+          </span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span class="badge badge-red">47.5%</span>
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4l4 4-4 4"/></svg>
+        </div>
+      </div>
+      <div class="example-body">
+        <p style="margin-bottom:14px">
+          <span class="ko">GPT-4.1-mini에게 8명의 연구자에 대해 각각 5편의 논문을 요청했다. 40편 중 19편(47.5%)의 DOI가 가짜이거나 다른 논문을 가리켰다.</span>
+          <span class="en" style="display:none">We asked GPT-4.1-mini to list 5 papers for each of 8 researchers. Out of 40 papers, 19 (47.5%) had fake or mismatched DOIs.</span>
+        </p>
+
+        <div class="halluc-grid">
+          <div class="halluc-row">
+            <div class="fake-title">"Machine learning in catalysis: data-driven discovery and design"</div>
+            <div class="fake-doi">10.1038/s41929-018-0160-5</div>
+            <div class="verdict" style="color:var(--color-red)">
+              <span class="ko">DOI 없음</span><span class="en" style="display:none">No DOI</span>
+            </div>
+          </div>
+          <div class="halluc-row">
+            <div class="fake-title">"Data-driven strategies for accelerated catalyst design"</div>
+            <div class="fake-doi">10.1021/acs.accounts.0c00123</div>
+            <div class="verdict" style="color:var(--color-red)">
+              <span class="ko">DOI 없음</span><span class="en" style="display:none">No DOI</span>
+            </div>
+          </div>
+          <div class="halluc-row">
+            <div class="fake-title">"Neural network potentials for accelerated discovery of CO2 reduction catalysts"</div>
+            <div class="fake-doi">10.1038/s41467-019-12345-6</div>
+            <div class="verdict" style="color:var(--color-red)">
+              <span class="ko">DOI 없음</span><span class="en" style="display:none">No DOI</span>
+            </div>
+          </div>
+          <div class="halluc-row">
+            <div class="fake-title">"Electrocatalysis for fuel cells: a materials perspective"</div>
+            <div class="fake-doi">10.1039/C3CS60044A</div>
+            <div class="verdict" style="color:var(--color-red)">
+              <span class="ko">DOI 없음</span><span class="en" style="display:none">No DOI</span>
+            </div>
+          </div>
+          <div class="halluc-row">
+            <div class="fake-title">"Single-atom catalysis: a new frontier in heterogeneous catalysis"</div>
+            <div class="fake-doi">10.1021/acs.chemrev.9b00515</div>
+            <div class="verdict" style="color:var(--color-red)">
+              <span class="ko">DOI 없음</span><span class="en" style="display:none">No DOI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-note" style="margin-top:14px">
+          <span class="ko"><strong>패턴:</strong> LLM은 실제 DOI 패턴을 모방하여 그럴듯하지만 존재하지 않는 DOI를 생성한다. 일부는 DOI가 존재하지만 전혀 다른 논문을 가리킨다 (예: "Active learning for computational catalysis"의 DOI <code style="font-size:11px">10.1021/acscatal.7b01246</code>은 실제로는 "Ceria Catalysts at Nanoscale" 논문). Ref-Hunter는 Crossref에 직접 질의하므로 이 문제가 원천적으로 없다.</span>
+          <span class="en" style="display:none"><strong>Pattern:</strong> LLMs mimic real DOI patterns to generate plausible but nonexistent DOIs. Some DOIs exist but point to entirely different papers (e.g., the DOI <code style="font-size:11px">10.1021/acscatal.7b01246</code> for "Active learning for computational catalysis" actually resolves to "Ceria Catalysts at Nanoscale"). Ref-Hunter queries Crossref directly, eliminating this problem entirely.</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Section 4: Tips -->
+  <div class="section">
+    <h2>Tips</h2>
+    <ul class="tips-list">
+      <li>
+        <div class="tip-bullet"></div>
+        <div>
+          <span class="ko"><strong>희귀한 성 + 키워드</strong> = 거의 100% 적중. Chorkendorff 4/4, Kitchin 4/4, Mavrikakis 3/4.</span>
+          <span class="en" style="display:none"><strong>Rare surname + keywords</strong> = near-100% hit rate. Chorkendorff 4/4, Kitchin 4/4, Mavrikakis 3/4.</span>
+        </div>
+      </li>
+      <li>
+        <div class="tip-bullet"></div>
+        <div>
+          <span class="ko"><strong>흔한 성</strong>(Li, Zhang, Wang)은 제목의 고유 키워드를 반드시 포함. 그래도 안 되면 DISCOVERY 모드로 전환.</span>
+          <span class="en" style="display:none"><strong>Common surnames</strong> (Li, Zhang, Wang) require unique title keywords. If still failing, switch to DISCOVERY mode.</span>
+        </div>
+      </li>
+      <li>
+        <div class="tip-bullet"></div>
+        <div>
+          <span class="ko"><strong>주제 탐색</strong>은 DISCOVERY 모드(OpenAlex)가 인용수 기반으로 더 정확. 벤치마크 평균 적합률 76%.</span>
+          <span class="en" style="display:none"><strong>Topic exploration</strong> works better in DISCOVERY mode (OpenAlex) with citation-based ranking. Benchmark avg. relevance: 76%.</span>
+        </div>
+      </li>
+      <li>
+        <div class="tip-bullet"></div>
+        <div>
+          <span class="ko">논문 쓸 때 <code style="font-size:12px">/paper-ref topic "your claim"</code>으로 관련 논문 K편을 바로 받을 수 있다.</span>
+          <span class="en" style="display:none">While writing, use <code style="font-size:12px">/paper-ref topic "your claim"</code> to get K relevant papers instantly.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span class="ko">데이터 출처: Crossref API + OpenAlex API 실제 벤치마크 (2026-05-17). 12 HUNT 쿼리, 5 DISCOVERY 쿼리, 8 LLM hallucination 프롬프트.</span>
+    <span class="en" style="display:none">Data source: Real benchmark against Crossref + OpenAlex APIs (2026-05-17). 12 HUNT queries, 5 DISCOVERY queries, 8 LLM hallucination prompts.</span>
+  </div>
+
+</div>
+
+<script>
+function toggle(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+function setLang(lang) {
+  document.querySelectorAll('.ko').forEach(function(el) { el.style.display = lang === 'ko' ? '' : 'none'; });
+  document.querySelectorAll('.en').forEach(function(el) { el.style.display = lang === 'en' ? '' : 'none'; });
+  document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+</script>
+
+</body>
+</html>

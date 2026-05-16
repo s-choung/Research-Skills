@@ -6,30 +6,26 @@
 <title>/transcript2html</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #ffffff;
-    --bg-soft: #f7f7f8;
-    --fg: #171717;
-    --fg-secondary: #525252;
-    --fg-tertiary: #a3a3a3;
-    --border: #e5e5e5;
-    --border-soft: #f0f0f0;
-    --accent: #0ea5e9;
-    --accent-soft: rgba(14, 165, 233, 0.08);
-    --accent-line: rgba(14, 165, 233, 0.25);
-    --card-bg: #fafafa;
-    --code-bg: #f5f5f5;
-    --green: #22c55e;
-    --green-soft: rgba(34, 197, 94, 0.08);
-    --red: #ef4444;
-    --red-soft: rgba(239, 68, 68, 0.06);
-    --purple: #8b5cf6;
-    --purple-soft: rgba(139, 92, 246, 0.08);
-    --mono: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, 'Cascadia Code', monospace;
-    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --bg-soft: #f9fafb;
+    --fg: #000000;
+    --fg-secondary: #666666;
+    --fg-tertiary: #8f8f8f;
+    --border: #e5e7eb;
+    --border-soft: #e5e7eb;
+    --accent: #000000;
+    --accent-soft: rgba(0, 0, 0, 0.04);
+    --accent-line: rgba(0, 0, 0, 0.12);
+    --green: #2d6a2e;
+    --green-soft: rgba(45, 106, 46, 0.06);
+    --red: #8b2020;
+    --red-soft: rgba(139, 32, 32, 0.05);
+    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+    --sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
     --dark-bg: #0a0a0b;
     --dark-bg-soft: #111113;
     --dark-fg: #fafaf7;
@@ -39,6 +35,7 @@
     --dark-accent: #7c74ff;
     --dark-accent-soft: rgba(124, 116, 255, 0.12);
     --dark-accent-line: rgba(124, 116, 255, 0.3);
+    --radius: 6.08px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -47,9 +44,8 @@
     color: var(--fg);
     font-family: var(--sans);
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
 
   /* -- Nav -- */
@@ -64,40 +60,33 @@
     justify-content: space-between;
     padding: 0 32px;
     height: 56px;
-    background: rgba(255,255,255,0.82);
-    backdrop-filter: blur(12px) saturate(1.6);
-    -webkit-backdrop-filter: blur(12px) saturate(1.6);
-    border-bottom: 1px solid var(--border-soft);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
   }
   .nav-logo {
     font-size: 15px;
-    font-weight: 700;
-    color: var(--fg);
-    letter-spacing: -0.02em;
-  }
-  .nav-logo span { color: var(--fg-tertiary); font-weight: 400; }
-  .lang-toggle {
-    display: flex;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    font-size: 13px;
     font-weight: 600;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+  }
+  .nav-logo span { color: var(--fg-secondary); font-weight: 400; }
+  .lang-toggle {
+    position: fixed; top: 16px; right: 24px; z-index: 100;
+    display: flex; gap: 0;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 9999px; overflow: hidden;
+    background: #ffffff;
   }
   .lang-toggle button {
-    background: none;
-    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 500;
     padding: 6px 14px;
-    cursor: pointer;
-    color: var(--fg-tertiary);
-    font-family: var(--sans);
-    font-weight: 600;
-    font-size: 13px;
-    transition: all 0.15s;
+    border: none; cursor: pointer;
+    background: transparent; color: #000000;
+    transition: background 0.15s;
   }
   .lang-toggle button.active {
-    background: var(--fg);
-    color: var(--bg);
+    background: #000000; color: #ffffff;
   }
 
   /* --Main --*/
@@ -108,76 +97,76 @@
   }
 
   /* --Hero --*/
-  .hero { margin-bottom: 80px; }
+  .hero { margin-bottom: 64px; }
   .hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     font-size: 13px;
     font-weight: 600;
-    color: var(--accent);
-    background: var(--accent-soft);
-    border: 1px solid var(--accent-line);
+    color: var(--fg-secondary);
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
     padding: 5px 14px;
-    border-radius: 999px;
+    border-radius: 9999px;
     margin-bottom: 24px;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
   .hero h1 {
-    font-size: clamp(40px, 6vw, 64px);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 600;
+    letter-spacing: -1.44px;
+    line-height: 1.16;
     color: var(--fg);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .hero h1 code {
     font-family: var(--mono);
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--accent), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 600;
+    color: var(--fg);
+    -webkit-text-fill-color: var(--fg);
+    background: none;
   }
   .hero-sub {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--fg-secondary);
     max-width: 600px;
-    line-height: 1.7;
+    line-height: 1.5;
   }
 
   /* --Section headers --*/
-  .section { margin-top: 72px; }
+  .section { margin-top: 64px; }
   .section-num {
     font-family: var(--mono);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.143px;
     text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 12px;
+    color: var(--fg-secondary);
+    margin-bottom: 10px;
   }
   .section-title {
     font-size: clamp(24px, 3.5vw, 32px);
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: 600;
+    letter-spacing: -0.96px;
     line-height: 1.25;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     color: var(--fg);
   }
   .section-desc {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--fg-secondary);
-    line-height: 1.7;
+    line-height: 1.5;
     margin-bottom: 32px;
     max-width: 640px;
   }
 
   /* --Flow diagram --*/
   .flow {
-    background: var(--bg-soft);
+    background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: var(--radius);
     padding: 36px 40px;
   }
   .flow-step {
@@ -201,7 +190,7 @@
   .flow-icon {
     width: 36px;
     height: 36px;
-    border-radius: 10px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,7 +200,7 @@
     z-index: 1;
   }
   .flow-icon.cmd { background: var(--fg); color: var(--bg); }
-  .flow-icon.out { background: var(--green-soft); color: var(--green); border: 1px solid rgba(34,197,94,0.2); }
+  .flow-icon.out { background: var(--bg-soft); color: var(--fg-secondary); border: 1px solid var(--border); }
   .flow-content { flex: 1; padding-top: 5px; }
   .flow-label {
     font-size: 14px;
@@ -223,15 +212,15 @@
     font-family: var(--mono);
     font-size: 13px;
     color: var(--fg-secondary);
-    background: var(--bg);
+    background: var(--bg-soft);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius);
     padding: 10px 14px;
     display: inline-block;
     line-height: 1.5;
     word-break: break-all;
   }
-  .flow-code .cmd-name { color: var(--accent); font-weight: 600; }
+  .flow-code .cmd-name { color: var(--fg); font-weight: 600; }
   .flow-code .url-part { color: var(--fg-tertiary); }
   .flow-files {
     display: flex;
@@ -243,9 +232,9 @@
     font-family: var(--mono);
     font-size: 12px;
     color: var(--fg-secondary);
-    background: var(--bg);
+    background: var(--bg-soft);
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: var(--radius);
     padding: 5px 10px;
   }
   .flow-arrow {
@@ -269,7 +258,7 @@
     .comparison { grid-template-columns: 1fr; }
   }
   .comp-panel {
-    border-radius: 16px;
+    border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid var(--border);
   }
@@ -280,19 +269,19 @@
     padding: 14px 20px;
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.143px;
     text-transform: uppercase;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--border);
   }
   .comp-header.before {
-    background: var(--red-soft);
+    background: var(--bg-soft);
     color: var(--red);
-    border-color: rgba(239, 68, 68, 0.12);
+    border-color: var(--border);
   }
   .comp-header.after {
-    background: var(--green-soft);
+    background: var(--bg-soft);
     color: var(--green);
-    border-color: rgba(34, 197, 94, 0.12);
+    border-color: var(--border);
   }
   .comp-dot {
     width: 8px;
@@ -304,7 +293,7 @@
 
   /* Before panel */
   .before-body {
-    background: var(--bg-soft);
+    background: var(--bg);
     padding: 24px;
     font-family: var(--mono);
     font-size: 13px;
@@ -318,12 +307,12 @@
   }
   .before-body .chunk + .chunk { margin-top: 0; }
 
-  /* After panel (dark mode) */
+  /* After panel (dark mode -- kept as is for contrast demo) */
   .after-body {
     background: var(--dark-bg);
     padding: 0;
     min-height: 420px;
-    font-family: 'Pretendard', var(--sans);
+    font-family: var(--sans);
   }
 
   /* Mini dark-mode components inside after panel */
@@ -349,7 +338,7 @@
 
   .mini-frame {
     margin: 0 16px;
-    border-radius: 12px;
+    border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid var(--dark-line);
   }
@@ -378,7 +367,7 @@
     padding: 12px 16px;
     border-left: 2px solid var(--dark-accent);
     background: var(--dark-bg-soft);
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 4px 4px 0;
   }
   .mini-caption-label {
     font-family: var(--mono);
@@ -409,7 +398,7 @@
     margin: 12px 16px 20px;
     background: var(--dark-card);
     border: 1px solid var(--dark-line);
-    border-radius: 12px;
+    border-radius: var(--radius);
     padding: 18px 20px;
   }
   .mini-card p {
@@ -459,32 +448,34 @@
     .features { grid-template-columns: 1fr; }
   }
   .feature-card {
-    background: var(--bg-soft);
+    background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: var(--radius);
     padding: 28px 24px;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: box-shadow 0.2s;
   }
   .feature-card:hover {
-    border-color: var(--accent-line);
-    box-shadow: 0 4px 24px -8px rgba(14, 165, 233, 0.08);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 12px;
   }
   .feature-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 16px;
+    background: var(--bg-soft);
+    color: var(--fg);
+    border: 1px solid var(--border);
   }
-  .feature-icon.seg { background: var(--accent-soft); color: var(--accent); }
-  .feature-icon.trans { background: var(--purple-soft); color: var(--purple); }
-  .feature-icon.frame { background: var(--green-soft); color: var(--green); }
+  .feature-icon.seg { background: var(--bg-soft); color: var(--fg); }
+  .feature-icon.trans { background: var(--bg-soft); color: var(--fg); }
+  .feature-icon.frame { background: var(--bg-soft); color: var(--fg); }
   .feature-title {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     color: var(--fg);
     margin-bottom: 8px;
     letter-spacing: -0.01em;
@@ -492,7 +483,7 @@
   .feature-desc {
     font-size: 14px;
     color: var(--fg-secondary);
-    line-height: 1.65;
+    line-height: 1.6;
   }
 
   /* --Bilingual --*/
@@ -518,7 +509,7 @@
     padding-top: 28px;
     margin-top: 96px;
     font-size: 13px;
-    color: var(--fg-tertiary);
+    color: var(--fg-secondary);
     font-family: var(--mono);
   }
 
@@ -529,18 +520,18 @@
     .flow { padding: 24px 20px; }
   }
 
-  ::selection { background: var(--accent); color: var(--bg); }
+  ::selection { background: var(--fg); color: var(--bg); }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-logo">Research-Skills <span>/ transcript2html</span></div>
-  <div class="lang-toggle">
-    <button id="btn-en" class="active" onclick="setLang('en')">ENG</button>
-    <button id="btn-ko" onclick="setLang('ko')">KOR</button>
-  </div>
 </nav>
+<div class="lang-toggle">
+  <button class="active" id="btn-en" onclick="setLang('en')">ENG</button>
+  <button id="btn-ko" onclick="setLang('ko')">KOR</button>
+</div>
 
 <main>
 
@@ -620,85 +611,13 @@
     </div>
   </div>
 
-  <!-- --Section 2: Before / After ---->
+  <!-- --Section 2: Example Output ---->
   <div class="section">
     <p class="section-num">02</p>
-    <h2 class="section-title" data-en>Before / After</h2>
-    <h2 class="section-title" data-ko>Before / After</h2>
-    <p class="section-desc" data-en>Raw auto-generated subtitles on the left. Styled, translated, readable output on the right.</p>
-    <p class="section-desc" data-ko>왼쪽은 자동 생성된 자막 원본. 오른쪽은 번역되고 스타일이 입혀진 최종 결과물.</p>
-
-    <div class="comparison">
-      <!-- Before -->
-      <div class="comp-panel">
-        <div class="comp-header before">
-          <div class="comp-dot"></div>
-          <span data-en>Before &mdash; Raw transcript.md</span>
-          <span data-ko>Before &mdash; transcript.md 원본</span>
-        </div>
-        <div class="before-body">
-<span class="chunk">so the thing about</span>
-<span class="chunk">building products is</span>
-<span class="chunk">you have to</span>
-<span class="chunk">think about the user</span>
-<span class="chunk">experience from the</span>
-<span class="chunk">very beginning and</span>
-<span class="chunk">not just at the</span>
-<span class="chunk">end when you're</span>
-<span class="chunk">shipping the product</span>
-<span class="chunk">you know a lot of</span>
-<span class="chunk">people make the mistake</span>
-<span class="chunk">of treating design as</span>
-<span class="chunk">this afterthought like</span>
-<span class="chunk">oh we'll just put some</span>
-<span class="chunk">paint on it at the end</span>
-<span class="chunk">and ship it but that</span>
-<span class="chunk">never works right it</span>
-<span class="chunk">always feels off and</span>
-<span class="chunk">users can tell they can</span>
-<span class="chunk">absolutely tell when</span>
-<span class="chunk">something was designed</span>
-<span class="chunk">from day one versus</span>
-<span class="chunk">bolted on at the last</span>
-<span class="chunk">minute</span>
-        </div>
-      </div>
-
-      <!-- After -->
-      <div class="comp-panel">
-        <div class="comp-header after">
-          <div class="comp-dot"></div>
-          <span data-en>After &mdash; transcript.html</span>
-          <span data-ko>After &mdash; transcript.html 결과</span>
-        </div>
-        <div class="after-body">
-          <div class="mini-section-header">
-            <div class="mini-kicker">Act 01</div>
-            <div class="mini-title" data-en>Design from Day One</div>
-            <div class="mini-title" data-ko>처음부터 디자인하기</div>
-          </div>
-
-          <div class="mini-frame">
-            <div class="mini-frame-img">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.4"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="22" y2="7"/><line x1="2" y1="17" x2="22" y2="17"/></svg>
-            </div>
-            <div class="mini-frame-cap">02:14</div>
-          </div>
-          <div class="mini-caption-block">
-            <div class="mini-caption-label" data-en>Dialogue at this moment &middot; 02:14</div>
-            <div class="mini-caption-label" data-ko>이 시점 대사 &middot; 02:14</div>
-            <p class="mini-caption-ko" data-en>Users can <strong>always tell</strong> when something was designed from day one versus bolted on at the last minute.</p>
-            <p class="mini-caption-ko" data-ko><strong>사용자는 항상 알아채요.</strong> 처음부터 설계한 건지, 마지막에 급하게 붙인 건지.</p>
-            <span class="mini-caption-raw">users can absolutely tell when something was designed from day one versus bolted on at the last minute</span>
-          </div>
-
-          <div class="mini-card">
-            <p data-en>Products need to consider <u>user experience</u> from the very first day, not as an afterthought. Design isn't just <span class="hl">paint</span> you apply at the end.</p>
-            <p data-ko><span class="key">사용자 경험</span>은 제품을 만드는 첫날부터 고려해야 해요. 나중에 페인트칠하듯 <u>디자인을 덧붙이면</u> 사용자는 바로 알아챈다는 거죠. 처음부터 설계한 것과 <strong>마지막에 급조한 것</strong>의 차이는 생각보다 확연해요.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 class="section-title">Example Output</h2>
+    <p align="center" style="margin:1.5rem 0">
+      <img src="../../../assets/transcript2html_example.png" width="100%" alt="Transcript2HTML Example" style="max-width:900px;border-radius:8px;border:1px solid #e5e7eb"/>
+    </p>
   </div>
 
   <!-- --Section 3: Key Features ---->
@@ -742,6 +661,17 @@
         <p class="feature-desc" data-en>Key moments from the video embedded with timestamps. Each frame includes a Korean-translated caption of what was being said at that moment.</p>
         <p class="feature-desc" data-ko>영상의 핵심 장면을 타임스탬프와 함께 삽입해요. 각 프레임 아래에 그 시점의 대사가 한국어로 번역돼서 붙어요.</p>
       </div>
+    </div>
+  </div>
+
+  <!-- --How to Use (quick summary) ---->
+  <div class="section">
+    <h2 class="section-title">How to Use</h2>
+    <div style="font-size:15px;line-height:1.8;margin-bottom:2rem">
+      <p>1. Run <code>/youtube</code> on a YouTube URL to get transcript + frame captures<br>
+      2. Run <code>/transcript2html</code> on the output folder<br>
+      3. English transcript gets translated to natural Korean with section headers<br>
+      4. Frame screenshots are embedded as cards in a dark-mode Stripe-style HTML</p>
     </div>
   </div>
 

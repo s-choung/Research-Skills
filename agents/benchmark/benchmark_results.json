@@ -1,0 +1,1375 @@
+{
+  "timestamp": "2026-05-17 00:18:30",
+  "hunt_results": [
+    {
+      "researcher": "Jens Norskov",
+      "query": "Norskov oxygen reduction overpotential 2004",
+      "target_title": "Origin of the Overpotential for Oxygen Reduction at a Fuel-Cell Cathode",
+      "target_doi": "10.1021/jp047349j",
+      "found_at": null,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Review for \"Enzymatic oxygen reduction dominates overpotential-driven thermogenesis in mitochondria\"",
+          "doi": "10.1039/d5sc06693j/v1/review3",
+          "authors": "",
+          "year": 2025,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "Review for \"Enzymatic oxygen reduction dominates overpotential-driven thermogenesis in mitochondria\"",
+          "doi": "10.1039/d5sc06693j/v3/review1",
+          "authors": "",
+          "year": 2026,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Review for \"Enzymatic oxygen reduction dominates overpotential-driven thermogenesis in mitochondria\"",
+          "doi": "10.1039/d5sc06693j/v3/review2",
+          "authors": "",
+          "year": 2026,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Review for \"Enzymatic oxygen reduction dominates overpotential-driven thermogenesis in mitochondria\"",
+          "doi": "10.1039/d5sc06693j/v4/review1",
+          "authors": "",
+          "year": 2026,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Review for \"Enzymatic oxygen reduction dominates overpotential-driven thermogenesis in mitochondria\"",
+          "doi": "10.1039/d5sc06693j/v2/review1",
+          "authors": "",
+          "year": 2026,
+          "journal": "",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Jens Norskov",
+      "query": "Norskov computational catalyst design 2009",
+      "target_title": "Towards the computational design of solid catalysts",
+      "target_doi": "10.1038/nchem.121",
+      "found_at": null,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Computational Ligand Descriptors for Catalyst Design",
+          "doi": "10.1021/acs.chemrev.8b00588.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "Computational Ligand Descriptors for Catalyst Design",
+          "doi": "10.1021/acs.chemrev.8b00588.s002",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Computational Design of an Iron Catalyst for Olefin Metathesis",
+          "doi": "10.1021/acs.organomet.8b00583.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Computational Design of an Iron Catalyst for Olefin Metathesis",
+          "doi": "10.1021/acs.organomet.8b00583.s002",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Why the optimal ammonia synthesis catalyst is not the optimal ammonia decomposition catalyst",
+          "doi": "10.1016/j.jcat.2004.12.013",
+          "authors": "BOISEN, A; DAHL, S; NORSKOV, J; CHRISTENSEN, C",
+          "year": 2005,
+          "journal": "Journal of Catalysis",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Jens Norskov",
+      "query": "Norskov universality in heterogeneous catalysis",
+      "target_title": "Universality in Heterogeneous Catalysis",
+      "target_doi": "10.1021/jp049517p",
+      "found_at": 1,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Theory of chemisorption and heterogeneous catalysis",
+          "doi": "10.1016/s0921-4526(84)92371-8",
+          "authors": "NORSKOV, J",
+          "year": 1984,
+          "journal": "Physica B: Condensed Matter",
+          "is_match": true
+        },
+        {
+          "rank": 2,
+          "title": "Toward computational screening in heterogeneous catalysis: Pareto-optimal methanation catalysts",
+          "doi": "10.1016/j.jcat.2006.02.016",
+          "authors": "ANDERSSON, M; BLIGAARD, T; KUSTOV, A; LARSEN, K",
+          "year": 2006,
+          "journal": "Journal of Catalysis",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "",
+          "doi": "10.1016/j.jcat.2005.06.026",
+          "authors": "BOISEN, A; DAHL, S; NORSKOV, J; CHRISTENSEN, C",
+          "year": 2005,
+          "journal": "Journal of Catalysis",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Elementary Steps and Mechanisms: Sections 5.1 – 5.2",
+          "doi": "10.1002/9783527619474.ch5a",
+          "authors": "Freund, H.‐J.; van Santen, R. A.; Neurock, M.; Boudart, M.",
+          "year": 1997,
+          "journal": "Handbook of Heterogeneous Catalysis",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Universality in Heterogeneous Catalysis",
+          "doi": "10.1006/jcat.2002.3615",
+          "authors": "Nørskov, J.K.; Bligaard, T.; Logadottir, A.; Bahn, S.",
+          "year": 2002,
+          "journal": "Journal of Catalysis",
+          "is_match": true
+        }
+      ]
+    },
+    {
+      "researcher": "Jens Norskov",
+      "query": "Norskov scaling relations adsorbates metal surfaces",
+      "target_title": "Scaling Properties of Adsorption Energies for Hydrogen-Containing Molecules on Transition-Metal Surfaces",
+      "target_doi": "10.1103/PhysRevLett.99.016105",
+      "found_at": null,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Predicting Condensed-Phase Energy Scaling Relations for Crotonaldehyde Hydrogenation on Transition Metal Surfaces",
+          "doi": "10.1021/acs.jpcc.4c01782.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "Predicting Condensed-Phase Energy Scaling Relations for Crotonaldehyde Hydrogenation on Transition Metal Surfaces",
+          "doi": "10.1021/acs.jpcc.4c01782.s002",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Electronic Spectroscopy and Relaxation Dynamics of Adsorbates on Metal Surfaces",
+          "doi": "10.1364/msba.1985.wb4",
+          "authors": "Avouris, Phaedon",
+          "year": 1985,
+          "journal": "Topical Meeting on Microphysics of Surfaces, Beams, and Adsorbates",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Scaling relationships and theory for vibrational frequencies of adsorbates on transition metal surfaces",
+          "doi": "10.1038/s41467-017-01983-6",
+          "authors": "Lansford, Joshua L.; Mironenko, Alexander V.; Vlachos, Dionisios G.",
+          "year": null,
+          "journal": "Nature Communications",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Energies of Formation Reactions Measured for Adsorbates on Late Transition Metal Surfaces",
+          "doi": "10.1021/acs.jpcc.6b06154.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "John Kitchin",
+      "query": "Kitchin machine learning catalysis 2018",
+      "target_title": "Machine learning in catalysis",
+      "target_doi": "10.1038/s41929-018-0056-y",
+      "found_at": 1,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Machine learning in catalysis",
+          "doi": "10.1038/s41929-018-0056-y",
+          "authors": "Kitchin, John R.",
+          "year": null,
+          "journal": "Nature Catalysis",
+          "is_match": true
+        },
+        {
+          "rank": 2,
+          "title": "Practical Application of Machine Learning in Catalysis",
+          "doi": "10.1039/9781839163296-00224",
+          "authors": "Ulissi, Zachary W.; Tran, Kevin; Yoon, Junwoong; Shuaibi, Muhammed",
+          "year": 2024,
+          "journal": "Computational Catalysis",
+          "is_match": true
+        },
+        {
+          "rank": 3,
+          "title": "Generative machine learning approaches to optimization",
+          "doi": "10.26434/chemrxiv-2025-hk886",
+          "authors": "Alves, Victor; Kitchin, John",
+          "year": null,
+          "journal": "",
+          "is_match": true
+        },
+        {
+          "rank": 4,
+          "title": "Generative machine learning approaches to optimization",
+          "doi": "10.26434/chemrxiv-2025-hk886/v3",
+          "authors": "Alves, Victor; Kitchin, John",
+          "year": null,
+          "journal": "",
+          "is_match": true
+        },
+        {
+          "rank": 5,
+          "title": "Generative machine learning approaches to optimization",
+          "doi": "10.26434/chemrxiv-2025-hk886-v2",
+          "authors": "Alves, Victor; Kitchin, John",
+          "year": null,
+          "journal": "",
+          "is_match": true
+        }
+      ]
+    },
+    {
+      "researcher": "John Kitchin",
+      "query": "Kitchin strain ligand effects 2004",
+      "target_title": "Role of Strain and Ligand Effects in the Modification of the Electronic and Chemical Properties of Bimetallic Surfaces",
+      "target_doi": "10.1103/PhysRevLett.93.156801",
+      "found_at": 1,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Role of Strain and Ligand Effects in the Modification of the Electronic and Chemical Properties of Bimetallic Surfaces",
+          "doi": "10.1103/physrevlett.93.156801",
+          "authors": "Kitchin, J. R.; Nørskov, J. K.; Barteau, M. A.; Chen, J. G.",
+          "year": null,
+          "journal": "Physical Review Letters",
+          "is_match": true
+        },
+        {
+          "rank": 2,
+          "title": "Strain and Ligand Effects on CO2 Reduction Reactions over CuMetal Heterostructure Catalysts",
+          "doi": "10.1021/acs.jpcc.7b07081.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Kitchin, Thomas (1719–1784), cartographer and engraver",
+          "doi": "10.1093/ref:odnb/37637",
+          "authors": "Worms, Laurence",
+          "year": 2004,
+          "journal": "Oxford Dictionary of National Biography",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Synergy of Strain and Ligand Effects Activating CoreShell Cu@RuCu Catalysts for High-Performance LiO2 Batteries",
+          "doi": "10.1021/acsaem.5c03783.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Ligand Strain and Entropic Effects on the Binding of Macrocyclic and Linear Inhibitors: Molecular Modeling of Penicillopepsin Complexes",
+          "doi": "10.1021/acs.jcim.7b00355.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "John Kitchin",
+      "query": "Kitchin high-throughput composition spread libraries 2004",
+      "target_title": "High-throughput methods using composition and structure spread libraries",
+      "target_doi": null,
+      "found_at": 1,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "High‐throughput methods using composition and structure spread libraries",
+          "doi": "10.1002/aic.15294",
+          "authors": "Kitchin, John R.; Gellman, Andrew J.",
+          "year": 2016,
+          "journal": "AIChE Journal",
+          "is_match": true
+        },
+        {
+          "rank": 2,
+          "title": "High-Throughput Materials Discovery by Inkjet-Printing of Composition Spread Libraries",
+          "doi": "10.1557/opl.2012.203",
+          "authors": "Stoewe, Klaus; Maier, Wilhelm F.; Weidenhof, Boris",
+          "year": 2012,
+          "journal": "MRS Proceedings",
+          "is_match": true
+        },
+        {
+          "rank": 3,
+          "title": "Exploring the First High-Entropy Thin Film Libraries: Composition Spread-Controlled Crystalline Structure",
+          "doi": "10.1021/acscombsci.0c00159.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "The Codeposited Composition Spread Approach to High‐Throughput Discovery/Exploration of Inorganic Materials",
+          "doi": "10.1002/marc.200300213",
+          "authors": "van Dover, Robert Bruce; Schneemeyer, Lynn F.",
+          "year": 2004,
+          "journal": "Macromolecular Rapid Communications",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "High Throughput Parallel LC/MS/ELSD of Combinatorial Libraries Using the Eight-Channel LCT System with MUX Technology",
+          "doi": "10.1016/b978-012431165-7/50008-5",
+          "authors": "Davis, Peter W.; Griffith, Michael C.",
+          "year": 2004,
+          "journal": "High Throughput Analysis for Early Drug Discovery",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "John Kitchin",
+      "query": "Kitchin correlations coverage dependent adsorption energies 2014",
+      "target_title": "Correlations in coverage-dependent atomic adsorption energies on Pd(111)",
+      "target_doi": "10.1103/PhysRevB.89.115114",
+      "found_at": 1,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Correlations in coverage-dependent atomic adsorption energies on Pd(111)",
+          "doi": "10.1103/physrevb.79.205412",
+          "authors": "Kitchin, John R.",
+          "year": null,
+          "journal": "Physical Review B",
+          "is_match": true
+        },
+        {
+          "rank": 2,
+          "title": "Configurational correlations in the coverage dependent adsorption energies of oxygen atoms on late transition metal fcc(111) surfaces",
+          "doi": "10.1063/1.3561287",
+          "authors": "Miller, Spencer D.; İnoğlu, Nilay; Kitchin, John R.",
+          "year": 2011,
+          "journal": "The Journal of Chemical Physics",
+          "is_match": true
+        },
+        {
+          "rank": 3,
+          "title": "Simple model explaining and predicting coverage-dependent atomic adsorption energies on transition metal surfaces",
+          "doi": "10.1103/physrevb.82.045414",
+          "authors": "İnoğlu, Nilay; Kitchin, John R.",
+          "year": null,
+          "journal": "Physical Review B",
+          "is_match": true
+        },
+        {
+          "rank": 4,
+          "title": "The role of vdW interactions in coverage dependent adsorption energies of atomic adsorbates on Pt(111) and Pd(111)",
+          "doi": "10.1016/j.susc.2015.10.001",
+          "authors": "Thirumalai, Hari; Kitchin, John R.",
+          "year": 2016,
+          "journal": "Surface Science",
+          "is_match": true
+        },
+        {
+          "rank": 5,
+          "title": "Coverage dependent adsorption properties of atomic adsorbates on late transition metal surfaces",
+          "doi": "10.1039/9781849734776-00083",
+          "authors": "Miller, Spencer; Dsilva, Carmeline; Kitchin, John R.",
+          "year": 2012,
+          "journal": "Catalysis",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Manos Mavrikakis",
+      "query": "Mavrikakis gold catalysis CO oxidation",
+      "target_title": "Catalytic activity of Au nanoparticles",
+      "target_doi": null,
+      "found_at": 1,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Catalysis by Supported Gold:  Correlation Between Catalytic Activity for CO Oxidation and Oxidation States of Gold",
+          "doi": "10.1021/ja039426e.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": true
+        },
+        {
+          "rank": 2,
+          "title": "Interface Engineering of Gold Nanoclusters for CO Oxidation Catalysis",
+          "doi": "10.1021/acsami.8b07552.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Defect-Mediated Gold Substitution Doping in ZnO Mesocrystals and Catalysis in CO Oxidation",
+          "doi": "10.1021/acscatal.5b02093.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Brønsted–Evans–Polanyi relation for CO oxidation on metal oxides following the Mars–van Krevelen mechanism",
+          "doi": "10.1016/j.jcat.2019.08.002",
+          "authors": "Kropp, Thomas; Mavrikakis, Manos",
+          "year": 2019,
+          "journal": "Journal of Catalysis",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "New Findings in CO Oxidation",
+          "doi": "10.1201/b19911-11",
+          "authors": "",
+          "year": 2016,
+          "journal": "Gold Catalysis",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Manos Mavrikakis",
+      "query": "Mavrikakis strain effect catalysis surface",
+      "target_title": "Effect of Strain on the Reactivity of Metal Surfaces",
+      "target_doi": "10.1103/PhysRevLett.81.2819",
+      "found_at": 1,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Effect of strain on the reactivity of graphene films",
+          "doi": "10.1016/j.jcat.2020.07.030",
+          "authors": "Kropp, Thomas; Mavrikakis, Manos",
+          "year": 2020,
+          "journal": "Journal of Catalysis",
+          "is_match": true
+        },
+        {
+          "rank": 2,
+          "title": "Adsorption and dissociation of O2 on Cu(): thermochemistry, reaction barrier and the effect of strain",
+          "doi": "10.1016/s0039-6028(01)01464-9",
+          "authors": "Xu, Ye; Mavrikakis, Manos",
+          "year": 2001,
+          "journal": "Surface Science",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Erratum to: “Adsorption and dissociation of O2 on Cu(111): thermochemistry, reaction barrier and the effect of strain” [Surface Science 494 (2001) 131–144]",
+          "doi": "10.1016/s0039-6028(02)01295-5",
+          "authors": "Xu, Ye; Mavrikakis, Manos",
+          "year": 2002,
+          "journal": "Surface Science",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Near-surface alloys for hydrogen fuel cell applications",
+          "doi": "10.1016/j.cattod.2005.10.009",
+          "authors": "Greeley, Jeff; Mavrikakis, Manos",
+          "year": 2006,
+          "journal": "Catalysis Today",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "On the composition of bimetallic near-surface alloys in the presence of oxygen and carbon monoxide",
+          "doi": "10.1016/j.catcom.2013.10.021",
+          "authors": "Herron, Jeffrey A.; Mavrikakis, Manos",
+          "year": 2014,
+          "journal": "Catalysis Communications",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Manos Mavrikakis",
+      "query": "Mavrikakis DFT methanol decomposition Pt",
+      "target_title": null,
+      "target_doi": null,
+      "found_at": null,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "HCOOH decomposition on Pt(111): A DFT study",
+          "doi": "10.1016/j.susc.2015.09.023",
+          "authors": "Scaranto, Jessica; Mavrikakis, Manos",
+          "year": 2016,
+          "journal": "Surface Science",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "Methanol Decomposition on Cu(111): A DFT Study",
+          "doi": "10.1006/jcat.2002.3586",
+          "authors": "Greeley, Jeff; Mavrikakis, Manos",
+          "year": 2002,
+          "journal": "Journal of Catalysis",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Competitive Paths for Methanol Decomposition on Pt(111)",
+          "doi": "10.1021/ja037700z",
+          "authors": "Greeley, Jeff; Mavrikakis, Manos",
+          "year": 2004,
+          "journal": "Journal of the American Chemical Society",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "A First-Principles Study of Methanol Decomposition on Pt(111)",
+          "doi": "10.1021/ja017818k",
+          "authors": "Greeley, Jeff; Mavrikakis, Manos",
+          "year": 2002,
+          "journal": "Journal of the American Chemical Society",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Mechanism of Methanol Decomposition on the Pt3Ni(111) Surface: DFT Study",
+          "doi": "10.1021/acs.jpcc.7b01114.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Manos Mavrikakis",
+      "query": "Mavrikakis water gas shift reaction mechanism copper",
+      "target_title": null,
+      "target_doi": null,
+      "found_at": null,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Microkinetic analysis and mechanism of the water gas shift reaction over copper catalysts",
+          "doi": "10.1016/j.jcat.2011.03.008",
+          "authors": "Madon, Rostam J.; Braden, Drew; Kandoi, Shampa; Nagel, Peter",
+          "year": 2011,
+          "journal": "Journal of Catalysis",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "On the Mechanism of Low-Temperature Water Gas Shift Reaction on Copper",
+          "doi": "10.1021/ja0768237",
+          "authors": "Gokhale, Amit A.; Dumesic, James A.; Mavrikakis, Manos",
+          "year": 2008,
+          "journal": "Journal of the American Chemical Society",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Computational Chemistry-Based Identification of Ultra-Low Temperature Water-Gas-Shift Catalysts",
+          "doi": "10.2172/945930",
+          "authors": "Manos Mavrikakis, ?",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Large Impact of Approximate Exchange-Correlation Functionals on Modeling the Water Gas Shift Reaction on Copper",
+          "doi": "10.1021/acs.jpcc.0c06686.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Deactivation Mechanism of a Au/CeZrO4 Catalyst During a Low-Temperature Water Gas Shift Reaction",
+          "doi": "10.1021/jp0743976.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Jeongwoo Han",
+      "query": "Han Jeongwoo single atom catalyst support effect",
+      "target_title": null,
+      "target_doi": null,
+      "found_at": null,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Ethylene Methoxycarbonylation over Heterogeneous Pt1/MoS2 Single-Atom Catalyst: Metal-Support Concerted Catalysis",
+          "doi": "10.1021/jacs.3c10551.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "Chromium Single-Atom Catalyst with Graphyne Support: A Theoretical Study of NO Oxidation and Reduction",
+          "doi": "10.1021/acscatal.0c01175.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Effect of Metal Site Mobility of Single-Atom Catalyst on Photocatalytic Water Oxidation",
+          "doi": "10.1021/acs.jpclett.4c03732.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Effect of Different Heteroatoms Anchoring a Cu Single-Atom Catalyst on Acetylene Hydrochlorination",
+          "doi": "10.1021/acs.jpcc.2c06889.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Regulating Sub-1 nm Ru Clusters via Single-atom Catalyst Support toward Efficient Anion Exchange Membrane Water Electrolysis",
+          "doi": "10.1021/acscatal.6c02084.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Jeongwoo Han",
+      "query": "한정우 metal oxide DFT catalysis",
+      "target_title": null,
+      "target_doi": null,
+      "found_at": null,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Synergistic Application of XPS and DFT to Investigate Metal Oxide Surface Catalysis",
+          "doi": "10.1021/acs.jpcc.8b05499.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "Structure and chemical activity of transition metal and metal oxide catalysts: An insight from theoretical DFT studies",
+          "doi": "10.1134/s002315841006011x",
+          "authors": "Zhanpeisov, N. U.",
+          "year": 2010,
+          "journal": "Kinetics and Catalysis",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "DFT-MD simulations of aluminium oxide/liquid water interfaces for heterogeneous catalysis",
+          "doi": "10.70675/b25032f0z9578z49a6z9e23zdbe79de00c43",
+          "authors": "?, ?; Potier, Louis",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 4,
+          "title": "Binary metal-metal oxide superlattice nanostructures from their metal and metal oxide nanocrystals",
+          "doi": "10.1016/s1872-2067(14)60144-3",
+          "authors": "Yong, Li",
+          "year": 2014,
+          "journal": "Chinese Journal of Catalysis",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "MetalSupport Interactions in Heterogeneous Catalysis: DFT Calculations on the Interaction of Copper Nanoparticles with Magnesium Oxide",
+          "doi": "10.1021/acsomega.3c00502.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Jeongwoo Han",
+      "query": "Jeong Woo Han size effect single atom nanocluster Pt catalyst",
+      "target_title": "Size effects of single atom and nanocluster Pt catalysts",
+      "target_doi": null,
+      "found_at": 3,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Pt Atom-Substituted MoC Single-Atom Catalyst for Enhancing H2 Production",
+          "doi": "10.1021/acscatal.4c01821.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "Identify the Activity Origin of Pt Single-Atom Catalyst via Atom-by-Atom Counting",
+          "doi": "10.1021/jacs.1c06381.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Chemical Kinetics of Metal Single Atom and Nanocluster Formation on Surfaces: An Example of Pt on Hexagonal Boron Nitride",
+          "doi": "10.1021/acs.nanolett.3c01968.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": true
+        },
+        {
+          "rank": 4,
+          "title": "Single-Atom Pt Catalyst for Effective CF Bond Activation via Hydrodefluorination",
+          "doi": "10.1021/acscatal.8b02660.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 5,
+          "title": "Pt Single-Atom Catalyst on Co3O4 for the Electrocatalytic Detection of Glucose",
+          "doi": "10.1021/acsanm.4c02227.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        }
+      ]
+    },
+    {
+      "researcher": "Jeongwoo Han",
+      "query": "Jeong Woo Han electronic tuning metal nanoparticles surface oxide",
+      "target_title": "Electronic Tuning of Metal Nanoparticles by Surface Oxide",
+      "target_doi": null,
+      "found_at": 3,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Tuning Adhesion at Metal/Oxide Interfaces by Surface Hydroxylation",
+          "doi": "10.1021/acs.jpcc.7b02456.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": false
+        },
+        {
+          "rank": 2,
+          "title": "Optimization of oxide materials in oxide-metal-oxide(OMO) electrodes for flexible electrochromic devices",
+          "doi": "10.2139/ssrn.4130249",
+          "authors": "Han, Jisu; Sung, Chihun; Kim, Tae-Youb; Chi-Woo, Shin",
+          "year": null,
+          "journal": "SSRN Electronic Journal",
+          "is_match": false
+        },
+        {
+          "rank": 3,
+          "title": "Surface Design of Eu-Doped Iron Oxide Nanoparticles for Tuning the Magnetic Relaxivity",
+          "doi": "10.1021/acsami.8b06569.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": true
+        },
+        {
+          "rank": 4,
+          "title": "Electronic Tuning of Metal Nanoparticles for Highly Efficient Photocatalytic Hydrogen Peroxide Production",
+          "doi": "10.1021/acscatal.8b03738.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": true
+        },
+        {
+          "rank": 5,
+          "title": "Surface Oxygen Vacancies in Hierarchical Metal Oxide Nanostructures: Optoelectronic Tuning in Photocatalysis",
+          "doi": "10.1021/acs.jpcc.4c05080.s001",
+          "authors": "",
+          "year": null,
+          "journal": "",
+          "is_match": true
+        }
+      ]
+    }
+  ],
+  "discovery_results": [
+    {
+      "query": "single atom catalyst DFT screening",
+      "total": 10,
+      "relevant_count": 6,
+      "relevance_rate": 0.6,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Screening of Silver‐Based Single‐Atom Alloy Catalysts for NO Electroreduction to NH<sub>3</sub> by DFT Calculations and Machine Learning",
+          "doi": "10.1002/anie.202414314",
+          "year": 2024,
+          "cited_by_count": 43,
+          "lead_author": "Jieyu Liu",
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "title": "Screening of single-atom catalysts for CO<sub>2</sub> electroreduction to CH<sub>4</sub> using DFT calculations and machine learning",
+          "doi": "10.1039/d5ta03431k",
+          "year": 2025,
+          "cited_by_count": 12,
+          "lead_author": "Jingzhuo Zhou",
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "title": "Screening of Silver‐Based Single‐Atom Alloy Catalysts for NO Electroreduction to NH<sub>3</sub> by DFT Calculations and Machine Learning",
+          "doi": "10.1002/ange.202414314",
+          "year": 2024,
+          "cited_by_count": 10,
+          "lead_author": "Jieyu Liu",
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "title": "A DFT screening of transition metal single-atom catalyst anchored on Janus WSSe basal plane for highly efficient carbon dioxide reduction reaction",
+          "doi": "10.1016/j.mcat.2023.113775",
+          "year": 2023,
+          "cited_by_count": 10,
+          "lead_author": "Pingji Ge",
+          "relevant": true
+        },
+        {
+          "rank": 5,
+          "title": "DFT screening of single atom catalysts in van der Waals gap of Ti3C2Tx MXenes for enhanced hydrogen evolution reaction",
+          "doi": "10.1016/j.jpcs.2025.112635",
+          "year": 2025,
+          "cited_by_count": 4,
+          "lead_author": "Mohsen Tamtaji",
+          "relevant": true
+        },
+        {
+          "rank": 6,
+          "title": "Combining theory and experiment in electrocatalysis: Insights into materials design",
+          "doi": "10.1126/science.aad4998",
+          "year": 2017,
+          "cited_by_count": 11620,
+          "lead_author": "Zhi Wei Seh",
+          "relevant": false
+        },
+        {
+          "rank": 7,
+          "title": "Pt Skin on AuCu Intermetallic Substrate: A Strategy to Maximize Pt Utilization for Fuel Cells",
+          "doi": "10.1021/ja503315s",
+          "year": 2014,
+          "cited_by_count": 241,
+          "lead_author": "Gongwei Wang",
+          "relevant": false
+        },
+        {
+          "rank": 8,
+          "title": "An electronic structure descriptor for oxygen reactivity at metal and metal-oxide surfaces",
+          "doi": "10.1016/j.susc.2018.11.019",
+          "year": 2018,
+          "cited_by_count": 236,
+          "lead_author": "Colin F. Dickens",
+          "relevant": false
+        },
+        {
+          "rank": 9,
+          "title": "Predicting the Stability of Single-Atom Catalysts in Electrochemical Reactions",
+          "doi": "10.1021/acscatal.3c04801",
+          "year": 2023,
+          "cited_by_count": 132,
+          "lead_author": "Giovanni Di Liberto",
+          "relevant": false
+        },
+        {
+          "rank": 10,
+          "title": "High-throughput DFT screening of transition metal-graphyne single-atom catalysts for oxygen reduction reaction",
+          "doi": "10.1016/j.mtcomm.2025.113255",
+          "year": 2025,
+          "cited_by_count": 2,
+          "lead_author": "Jueyi Ye",
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "query": "machine learning interatomic potential",
+      "total": 10,
+      "relevant_count": 6,
+      "relevance_rate": 0.6,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Performance and Cost Assessment of Machine Learning Interatomic Potentials",
+          "doi": "10.1021/acs.jpca.9b08723",
+          "year": 2020,
+          "cited_by_count": 912,
+          "lead_author": "Yunxing Zuo",
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "title": "Machine Learning Interatomic Potentials as Emerging Tools for Materials Science",
+          "doi": "10.1002/adma.201902765",
+          "year": 2019,
+          "cited_by_count": 955,
+          "lead_author": "Volker L. Deringer",
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "title": "Machine-learning interatomic potentials for materials science",
+          "doi": "10.1016/j.actamat.2021.116980",
+          "year": 2021,
+          "cited_by_count": 343,
+          "lead_author": "Y. Mishin",
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "title": "Accelerating crystal structure prediction by machine-learning interatomic potentials with active learning",
+          "doi": "10.1103/physrevb.99.064114",
+          "year": 2019,
+          "cited_by_count": 388,
+          "lead_author": "Evgeny V. Podryabinkin",
+          "relevant": true
+        },
+        {
+          "rank": 5,
+          "title": "First‐Principles Multiscale Modeling of Mechanical Properties in Graphene/Borophene Heterostructures Empowered by Machine‐Learning Interatomic Potentials",
+          "doi": "10.1002/adma.202102807",
+          "year": 2021,
+          "cited_by_count": 328,
+          "lead_author": "Bohayra Mortazavi",
+          "relevant": false
+        },
+        {
+          "rank": 6,
+          "title": "Machine Learning Interatomic Potentials and Long-Range Physics",
+          "doi": "10.1021/acs.jpca.2c06778",
+          "year": 2023,
+          "cited_by_count": 199,
+          "lead_author": "Dylan M. Anstine",
+          "relevant": true
+        },
+        {
+          "rank": 7,
+          "title": "Achieving DFT accuracy with a machine-learning interatomic potential: Thermomechanics and defects in bcc ferromagnetic iron",
+          "doi": "10.1103/physrevmaterials.2.013808",
+          "year": 2018,
+          "cited_by_count": 290,
+          "lead_author": "Daniele Dragoni",
+          "relevant": false
+        },
+        {
+          "rank": 8,
+          "title": "Machine-learning interatomic potential for radiation damage and defects in tungsten",
+          "doi": "10.1103/physrevb.100.144105",
+          "year": 2019,
+          "cited_by_count": 143,
+          "lead_author": "Jesper Byggmästar",
+          "relevant": true
+        },
+        {
+          "rank": 9,
+          "title": "Exploring phononic properties of two-dimensional materials using machine learning interatomic potentials",
+          "doi": "",
+          "year": 2020,
+          "cited_by_count": 189,
+          "lead_author": "Mortazavi, Bohayra",
+          "relevant": true
+        },
+        {
+          "rank": 10,
+          "title": "Accelerating first-principles estimation of thermal conductivity by machine-learning interatomic potentials: A MTP/ShengBTE solution",
+          "doi": "10.1016/j.cpc.2020.107583",
+          "year": 2020,
+          "cited_by_count": 211,
+          "lead_author": "Bohayra Mortazavi",
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "query": "oxygen evolution reaction perovskite",
+      "total": 10,
+      "relevant_count": 10,
+      "relevance_rate": 1.0,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Enhancing Electrocatalytic Activity of Perovskite Oxides by Tuning Cation Deficiency for Oxygen Reduction and Evolution Reactions",
+          "doi": "10.1021/acs.chemmater.5b04457",
+          "year": 2016,
+          "cited_by_count": 813,
+          "lead_author": "Yinlong Zhu",
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "title": "Role of Lattice Oxygen Participation in Understanding Trends in the Oxygen Evolution Reaction on Perovskites",
+          "doi": "10.1021/acscatal.8b00612",
+          "year": 2018,
+          "cited_by_count": 540,
+          "lead_author": "Jong Suk Yoo",
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "title": "Charge-transfer-energy-dependent oxygen evolution reaction mechanisms for perovskite oxides",
+          "doi": "10.1039/c7ee02052j",
+          "year": 2017,
+          "cited_by_count": 582,
+          "lead_author": "Wesley T. Hong",
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "title": "Advanced High Entropy Perovskite Oxide Electrocatalyst for Oxygen Evolution Reaction",
+          "doi": "10.1002/adfm.202101632",
+          "year": 2021,
+          "cited_by_count": 547,
+          "lead_author": "Thi Xuyen Nguyen",
+          "relevant": true
+        },
+        {
+          "rank": 5,
+          "title": "Ca<sub>2</sub>Mn<sub>2</sub>O<sub>5</sub> as Oxygen-Deficient Perovskite Electrocatalyst for Oxygen Evolution Reaction",
+          "doi": "10.1021/ja506254g",
+          "year": 2014,
+          "cited_by_count": 518,
+          "lead_author": "Jaemin Kim",
+          "relevant": true
+        },
+        {
+          "rank": 6,
+          "title": "Preferential Cation Vacancies in Perovskite Hydroxide for the Oxygen Evolution Reaction",
+          "doi": "10.1002/anie.201805520",
+          "year": 2018,
+          "cited_by_count": 405,
+          "lead_author": "Dawei Chen",
+          "relevant": true
+        },
+        {
+          "rank": 7,
+          "title": "Improving the Activity for Oxygen Evolution Reaction by Tailoring Oxygen Defects in Double Perovskite Oxides",
+          "doi": "10.1002/adfm.201901783",
+          "year": 2019,
+          "cited_by_count": 302,
+          "lead_author": "Yunmin Zhu",
+          "relevant": true
+        },
+        {
+          "rank": 8,
+          "title": "Perovskite Oxide Based Electrodes for the Oxygen Reduction and Evolution Reactions: The Underlying Mechanism",
+          "doi": "10.1021/acscatal.0c04473",
+          "year": 2021,
+          "cited_by_count": 257,
+          "lead_author": "Casey E. Beall",
+          "relevant": true
+        },
+        {
+          "rank": 9,
+          "title": "Perovskite oxides as bifunctional oxygen electrocatalysts for oxygen evolution/reduction reactions – A mini review",
+          "doi": "10.1016/j.apmt.2019.05.004",
+          "year": 2019,
+          "cited_by_count": 187,
+          "lead_author": "Haizhen Wang",
+          "relevant": true
+        },
+        {
+          "rank": 10,
+          "title": "Engineering the Electronic State of a Perovskite Electrocatalyst for Synergistically Enhanced Oxygen Evolution Reaction",
+          "doi": "10.1002/adma.201502024",
+          "year": 2015,
+          "cited_by_count": 295,
+          "lead_author": "Yuqiao Guo",
+          "relevant": true
+        }
+      ]
+    },
+    {
+      "query": "graph neural network materials science",
+      "total": 10,
+      "relevant_count": 6,
+      "relevance_rate": 0.6,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Graph neural networks for materials science and chemistry",
+          "doi": "10.1038/s43246-022-00315-6",
+          "year": 2022,
+          "cited_by_count": 702,
+          "lead_author": "Patrick Reiser",
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "title": "A review on the applications of graph neural networks in materials science at the atomic scale",
+          "doi": "10.1002/mgea.50",
+          "year": 2024,
+          "cited_by_count": 44,
+          "lead_author": "Xingyue Shi",
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "title": "Neural Message Passing for Quantum Chemistry",
+          "doi": "10.48550/arxiv.1704.01212",
+          "year": 2017,
+          "cited_by_count": 2996,
+          "lead_author": "Justin Gilmer",
+          "relevant": false
+        },
+        {
+          "rank": 4,
+          "title": "Graph neural networks for materials science and chemistry",
+          "doi": "10.48550/arxiv.2208.09481",
+          "year": 2022,
+          "cited_by_count": 33,
+          "lead_author": "Patrick Reiser",
+          "relevant": true
+        },
+        {
+          "rank": 5,
+          "title": "Neural Message Passing for Quantum Chemistry",
+          "doi": "",
+          "year": 2017,
+          "cited_by_count": 1153,
+          "lead_author": "Justin Gilmer",
+          "relevant": false
+        },
+        {
+          "rank": 6,
+          "title": "Expanding materials science with universal many-body graph neural networks",
+          "doi": "10.1038/s43588-022-00360-8",
+          "year": 2022,
+          "cited_by_count": 5,
+          "lead_author": "",
+          "relevant": true
+        },
+        {
+          "rank": 7,
+          "title": "Graph convolutional neural networks with global attention for improved materials property prediction",
+          "doi": "10.1039/d0cp01474e",
+          "year": 2020,
+          "cited_by_count": 256,
+          "lead_author": "Steph-Yves Louis",
+          "relevant": true
+        },
+        {
+          "rank": 8,
+          "title": "Graph Neural Networks: Foundation, Frontiers and Applications",
+          "doi": "10.1145/3534678.3542609",
+          "year": 2022,
+          "cited_by_count": 192,
+          "lead_author": "Lingfei Wu",
+          "relevant": true
+        },
+        {
+          "rank": 9,
+          "title": "Generative models for graph-based protein design",
+          "doi": "",
+          "year": 2019,
+          "cited_by_count": 211,
+          "lead_author": "John Ingraham",
+          "relevant": false
+        },
+        {
+          "rank": 10,
+          "title": "Message Passing Neural Networks",
+          "doi": "10.1007/978-3-030-40245-7_10",
+          "year": 2020,
+          "cited_by_count": 130,
+          "lead_author": "Justin Gilmer",
+          "relevant": false
+        }
+      ]
+    },
+    {
+      "query": "methane activation transition metal",
+      "total": 10,
+      "relevant_count": 10,
+      "relevance_rate": 1.0,
+      "hits": [
+        {
+          "rank": 1,
+          "title": "Gas-phase activation of methane by ligated transition-metal cations",
+          "doi": "10.1073/pnas.0801849105",
+          "year": 2008,
+          "cited_by_count": 250,
+          "lead_author": "Detlef Schröder",
+          "relevant": true
+        },
+        {
+          "rank": 2,
+          "title": "Electronic structure considerations for methane activation by third-row transition-metal ions",
+          "doi": "10.1021/j100174a057",
+          "year": 1991,
+          "cited_by_count": 278,
+          "lead_author": "Karl K. Irikura",
+          "relevant": true
+        },
+        {
+          "rank": 3,
+          "title": "Low‐Temperature Activation of Methane: It also Works Without a Transition Metal",
+          "doi": "10.1002/anie.200601273",
+          "year": 2006,
+          "cited_by_count": 155,
+          "lead_author": "Detlef Schröder",
+          "relevant": true
+        },
+        {
+          "rank": 4,
+          "title": "Structures of the Dehydrogenation Products of Methane Activation by 5d Transition Metal Cations",
+          "doi": "10.1021/jp400305k",
+          "year": 2013,
+          "cited_by_count": 102,
+          "lead_author": "Vivike J. F. Lapoutre",
+          "relevant": true
+        },
+        {
+          "rank": 5,
+          "title": "Methane activation by ZSM-5-supported transition metal centers",
+          "doi": "10.1039/d0cs01016b",
+          "year": 2020,
+          "cited_by_count": 120,
+          "lead_author": "Daniyal Kiani",
+          "relevant": true
+        },
+        {
+          "rank": 6,
+          "title": "The C–H activation reaction of methane for all transition metal atoms from the three transition rows",
+          "doi": "10.1063/1.474772",
+          "year": 1997,
+          "cited_by_count": 96,
+          "lead_author": "A. M. Christina Wittborn",
+          "relevant": true
+        },
+        {
+          "rank": 7,
+          "title": "The most reactive third-row transition metal: Guided ion beam and theoretical studies of the activation of methane by Ir+",
+          "doi": "10.1016/j.ijms.2006.02.021",
+          "year": 2006,
+          "cited_by_count": 90,
+          "lead_author": "Feng-Xia Li",
+          "relevant": true
+        },
+        {
+          "rank": 8,
+          "title": "Methane Activation by 5 d Transition Metals: Energetics, Mechanisms, and Periodic Trends",
+          "doi": "10.1002/chem.201602015",
+          "year": 2016,
+          "cited_by_count": 97,
+          "lead_author": "P. B. Armentrout",
+          "relevant": true
+        },
+        {
+          "rank": 9,
+          "title": "Graphene Supported Single Atom Transition Metal Catalysts for Methane Activation",
+          "doi": "10.1002/cctc.201800465",
+          "year": 2018,
+          "cited_by_count": 55,
+          "lead_author": "Sanjubala Sahoo",
+          "relevant": true
+        },
+        {
+          "rank": 10,
+          "title": "Carbon-hydrogen bond activation by electrophilic transition-metal compounds. Palladium(II)-mediated oxidation of arenes and alkanes including methane",
+          "doi": "10.1021/ja00260a040",
+          "year": 1987,
+          "cited_by_count": 141,
+          "lead_author": "Efi Gretz",
+          "relevant": true
+        }
+      ]
+    }
+  ],
+  "hunt_topk": {
+    "@1": 0.5833333333333334,
+    "@3": 0.75,
+    "@5": 0.75,
+    "n": 12,
+    "at1": 7,
+    "at3": 9,
+    "at5": 9
+  },
+  "discovery_topk": {
+    "@10": 0.76,
+    "total_hits": 50,
+    "total_relevant": 38
+  }
+}

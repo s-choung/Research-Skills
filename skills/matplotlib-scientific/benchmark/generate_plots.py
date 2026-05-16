@@ -93,7 +93,7 @@ plt.close()
 # ════════════════════════════════════════
 
 # 1. Scatter - After
-fig, ax = plt.subplots(figsize=(4, 4))
+fig, ax = plt.subplots(figsize=(5, 5))
 ax.set_position([0.2, 0.2, 0.666, 0.666])
 ax.scatter(x_scatter, y_scatter, c=colors[0], s=40, edgecolors='white', linewidth=0.5, zorder=2)
 ax.plot([-6, 3], [-6, 3], '--', color=colors[2], linewidth=1, label='y = x', zorder=1)
@@ -109,7 +109,7 @@ plt.savefig('./output/after_scatter.png', dpi=150, bbox_inches='tight', format='
 plt.close()
 
 # 2. Bar - After
-fig, ax = plt.subplots(figsize=(5, 4))
+fig, ax = plt.subplots(figsize=(6, 5))
 ax.set_position([0.2, 0.2, 0.666, 0.333])
 x_pos = np.arange(len(models))
 ax.bar(x_pos - 0.2, vanilla, 0.35, label='Vanilla', color=colors[0], edgecolor='white', linewidth=0.5)
@@ -127,7 +127,7 @@ plt.savefig('./output/after_bar.png', dpi=150, bbox_inches='tight', format='png'
 plt.close()
 
 # 3. Line - After
-fig, ax = plt.subplots(figsize=(5, 4))
+fig, ax = plt.subplots(figsize=(6, 5))
 ax.set_position([0.2, 0.2, 0.666, 0.333])
 ax.plot(epochs, loss_a, color=colors[0], linewidth=1.5, label='Baseline', zorder=2)
 ax.scatter(epochs[::5], loss_a[::5], color=colors[0], s=30, marker='o', zorder=3, edgecolors='white', linewidth=0.5)

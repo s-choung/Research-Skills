@@ -281,7 +281,7 @@ footer a:hover { text-decoration: underline; }
   <p data-en="Production-tested Claude Code agent skills for research workflows. Writing quality, manuscript prep, scientific visualization, media processing." data-ko="연구 워크플로우를 위한 Claude Code 에이전트 스킬 모음. 글쓰기 품질, 논문 준비, 과학 시각화, 미디어 처리.">Production-tested Claude Code agent skills for research workflows. Writing quality, manuscript prep, scientific visualization, media processing.</p>
   <p class="notice" data-en="Compatible with both Claude Code and Codex." data-ko="Claude Code와 Codex 모두에 적용 가능합니다.">Compatible with both Claude Code and Codex.</p>
   <div class="hero-chips">
-    <span class="chip" onclick="filterCat('all')" data-en="All 17 Skills" data-ko="전체 17개">All 17 Skills</span>
+    <span class="chip" onclick="filterCat('all')" data-en="All 18 Skills" data-ko="전체 18개">All 18 Skills</span>
     <span class="chip" onclick="filterCat('writing')" data-en="Writing" data-ko="글쓰기">Writing</span>
     <span class="chip" onclick="filterCat('research')" data-en="Research" data-ko="연구">Research</span>
     <span class="chip" onclick="filterCat('design')" data-en="Design" data-ko="디자인">Design</span>
@@ -314,7 +314,16 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="writing" data-id="hum_eng" data-order-en="3" data-order-ko="4">
+    <div class="card" data-cat="writing" data-id="paper-ref" data-order-en="3" data-order-ko="3">
+      <div class="card-top"><span class="card-cat">Writing</span><span class="card-pin" data-en="Frequent" data-ko="자주 사용">Frequent</span></div>
+      <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/agents/paper-ref-hunter">/paper-ref-hunter</a></div>
+      <div class="card-desc" data-en="Run /paper-ref with a claim or topic. Hunts matching papers via Crossref + OpenAlex, verifies DOIs, and returns a ranked shortlist. Catches hallucinated references before they enter your manuscript." data-ko="/paper-ref에 주장이나 주제를 입력. Crossref + OpenAlex로 매칭 논문 검색, DOI 검증, 순위별 후보 리스트 반환. 원고에 들어가기 전 환각 참고문헌을 차단.">Run /paper-ref with a claim or topic. Hunts matching papers via Crossref + OpenAlex, verifies DOIs, and returns a ranked shortlist. Catches hallucinated references before they enter your manuscript.</div>
+      <div class="card-footer">
+        <span class="card-badge">Writing</span>
+      </div>
+    </div>
+
+    <div class="card" data-cat="writing" data-id="hum_eng" data-order-en="4" data-order-ko="5">
       <div class="card-top"><span class="card-cat">Writing</span><span class="card-pin" data-en="Frequent" data-ko="자주 사용">Frequent</span></div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/humanizer_eng">/humanizer_eng</a></div>
       <div class="card-desc" data-en="Paste AI-written English text, run /humanize. Strips &quot;delve&quot;, &quot;furthermore&quot;, inflated phrasing, and uniform rhythm. 96% AI-tell reduction across 100 samples." data-ko="AI가 쓴 영어 텍스트 붙여넣고 /humanize 실행. &quot;delve&quot;, &quot;furthermore&quot;, 과장 표현, 균일 리듬 제거. 100개 샘플 96% AI-tell 감소.">Paste AI-written English text, run /humanize. Strips "delve", "furthermore", inflated phrasing, and uniform rhythm. 96% AI-tell reduction across 100 samples.</div>
@@ -324,7 +333,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="writing" data-id="hum_kor" data-order-en="4" data-order-ko="3">
+    <div class="card" data-cat="writing" data-id="hum_kor" data-order-en="5" data-order-ko="4">
       <div class="card-top"><span class="card-cat">Writing</span><span class="card-pin" data-en="Frequent" data-ko="자주 사용">Frequent</span></div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/humanizer_kor">/humanizer_kor</a></div>
       <div class="card-desc" data-en="Paste AI-written Korean text, run /humanize. 5-stage pipeline detects 40+ AI patterns (번역투, AI 어휘, 과잉 접속사) and rewrites only flagged spans. 98% AI-tell reduction." data-ko="AI가 쓴 한국어 붙여넣고 /humanize 실행. 5단계 파이프라인이 40+ AI 패턴(번역투, AI 어휘, 과잉 접속사)을 탐지하고 해당 구간만 윤문. 98% AI-tell 감소.">Paste AI-written Korean text, run /humanize. 5-stage pipeline detects 40+ AI patterns and rewrites only flagged spans. 98% AI-tell reduction.</div>
@@ -334,7 +343,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="design" data-id="design2html" data-order-en="5" data-order-ko="5">
+    <div class="card" data-cat="design" data-id="design2html" data-order-en="6" data-order-ko="6">
       <div class="card-top"><span class="card-cat">Design</span><span class="card-pin" data-en="Frequent" data-ko="자주 사용">Frequent</span></div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/design2html">/design2html</a></div>
       <div class="card-desc" data-en="Type /design2html openai (or any of 7 built-in styles). Generates a single-file HTML page matching the design system's colors, fonts, spacing, and components." data-ko="/design2html openai (또는 7개 내장 스타일 중 택1) 입력. 디자인 시스템의 색상, 폰트, 간격, 컴포넌트를 반영한 단일 HTML 파일 생성.">Type /design2html openai (or any of 7 built-in styles). Generates a single-file HTML page matching the design system's colors, fonts, spacing, and components.</div>
@@ -344,7 +353,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="utility" data-id="smart-compact" data-order-en="6" data-order-ko="6">
+    <div class="card" data-cat="utility" data-id="smart-compact" data-order-en="7" data-order-ko="7">
       <div class="card-top"><span class="card-cat">Utility</span></div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/smart-compact">/smart-compact</a></div>
       <div class="card-desc" data-en="Run /smart-compact before /clear. Saves tasks, decisions, and file state to .claude/session-state.md. Next session picks up where you left off instead of starting cold." data-ko="/clear 전에 /smart-compact 실행. 작업, 결정사항, 파일 상태를 .claude/session-state.md에 저장. 다음 세션에서 처음부터가 아닌 이어서 작업 가능.">Run /smart-compact before /clear. Saves tasks, decisions, and file state to .claude/session-state.md. Next session picks up where you left off instead of starting cold.</div>
@@ -353,7 +362,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="media" data-id="youtube" data-order-en="7" data-order-ko="7">
+    <div class="card" data-cat="media" data-id="youtube" data-order-en="8" data-order-ko="8">
       <div class="card-top"><span class="card-cat">Media</span></div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/youtube">/youtube</a></div>
       <div class="card-desc" data-en="Paste a YouTube URL, run /youtube. Gets full transcript + 10 key frame screenshots (heatmap peaks or even intervals). Output: transcript.md + frames/*.jpg ready for /transcript2html." data-ko="YouTube URL 붙여넣고 /youtube 실행. 전체 자막 + 핵심 장면 10컷 스크린샷(조회수 피크 또는 균등) 추출. transcript.md + frames/*.jpg로 /transcript2html 연계 가능.">Paste a YouTube URL, run /youtube. Gets full transcript + 10 key frame screenshots. Output: transcript.md + frames/*.jpg ready for /transcript2html.</div>
@@ -362,7 +371,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="media" data-id="transcript2html" data-order-en="8" data-order-ko="8">
+    <div class="card" data-cat="media" data-id="transcript2html" data-order-en="9" data-order-ko="9">
       <div class="card-cat">Media</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/transcript2html">/transcript2html</a></div>
       <div class="card-desc" data-en="Run /transcript2html on a /youtube output folder. Translates English transcript to natural Korean, adds section headers, embeds frame cards. Dark-mode Stripe-style HTML." data-ko="/youtube 출력 폴더에 /transcript2html 실행. 영어 자막을 자연스러운 한국어로 번역하고 섹션 헤더 추가, 프레임 카드 삽입. 다크모드 Stripe 스타일 HTML.">Run /transcript2html on a /youtube output folder. Translates English transcript to natural Korean, adds section headers, embeds frame cards. Dark-mode Stripe-style HTML.</div>
@@ -372,7 +381,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="writing" data-id="paper-style" data-order-en="9" data-order-ko="9">
+    <div class="card" data-cat="writing" data-id="paper-style" data-order-en="10" data-order-ko="10">
       <div class="card-cat">Writing</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/paper-style">/paper-style</a></div>
       <div class="card-desc" data-en="Run /paper-style on a manuscript paragraph. Loads your writing voice profile and strips AI-isms (hedge stacks, banned words) while preserving scientific meaning." data-ko="논문 문단에 /paper-style 실행. 저자 문체 프로파일을 로드하고 AI 흔적(과잉 헤지, 금지 어휘)을 제거하되 과학적 의미는 보존.">Run /paper-style on a manuscript paragraph. Loads your writing voice profile and strips AI-isms while preserving scientific meaning.</div>
@@ -381,7 +390,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="writing" data-id="paper-sections" data-order-en="10" data-order-ko="10">
+    <div class="card" data-cat="writing" data-id="paper-sections" data-order-en="11" data-order-ko="11">
       <div class="card-cat">Writing</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/paper-sections">/paper-sections</a></div>
       <div class="card-desc" data-en="Say /paper-draft Introduction (or Methods, Results, Discussion). Drafts a full IMRAD section in your voice with superscript citations from your reference library." data-ko="/paper-draft Introduction (또는 Methods, Results, Discussion) 입력. 저자 문체로 IMRAD 섹션 전체를 초안하고 참고문헌에서 위첨자 인용 삽입.">Say /paper-draft Introduction (or Methods, Results, Discussion). Drafts a full IMRAD section in your voice with superscript citations.</div>
@@ -390,7 +399,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="design" data-id="blender" data-order-en="11" data-order-ko="11">
+    <div class="card" data-cat="design" data-id="blender" data-order-en="12" data-order-ko="12">
       <div class="card-cat">Design</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/blender-atom-render">/blender-atom-render</a></div>
       <div class="card-desc" data-en="Point to a POSCAR/CIF file, run /blender-atom-render. Generates ray-traced atom spheres with correct CPK colors and a matching legend image for figures." data-ko="POSCAR/CIF 파일 지정 후 /blender-atom-render 실행. CPK 색상 기반 레이트레이싱 원자 구 + 매칭 레전드 이미지 생성.">Point to a POSCAR/CIF file, run /blender-atom-render. Generates ray-traced atom spheres with correct CPK colors and a matching legend image.</div>
@@ -400,7 +409,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="writing" data-id="docx" data-order-en="12" data-order-ko="12">
+    <div class="card" data-cat="writing" data-id="docx" data-order-en="13" data-order-ko="13">
       <div class="card-cat">Writing</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/docx-scientific-formatting">/docx-scientific-formatting</a></div>
       <div class="card-desc" data-en="Open a .docx with chemical formulas. The skill auto-fixes H2O to H&#8322;O, CO2 to CO&#8322;, applies italic rules for variables, and formats superscripts for citations." data-ko=".docx 파일 열면 H2O를 H₂O로, CO2를 CO₂로 자동 변환. 변수 이탤릭 규칙 적용, 인용 위첨자 포맷팅.">Open a .docx with chemical formulas. The skill auto-fixes H2O to H&#8322;O, applies italic rules for variables, and formats superscripts for citations.</div>
@@ -409,7 +418,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="design" data-id="html-minimal" data-order-en="13" data-order-ko="13">
+    <div class="card" data-cat="design" data-id="html-minimal" data-order-en="14" data-order-ko="14">
       <div class="card-cat">Design</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/html-minimal">/html-minimal</a></div>
       <div class="card-desc" data-en="Say /html-minimal when you need a clean report or analysis doc. Warm-neutral palette, strict serif/mono typography, no clutter. Single-file HTML you can email or print." data-ko="깔끔한 리포트나 분석 문서 필요할 때 /html-minimal 입력. 따뜻한 뉴트럴 팔레트, 엄격한 세리프/모노 타이포. 이메일이나 인쇄 가능한 단일 HTML 파일.">Say /html-minimal when you need a clean report. Warm-neutral palette, strict serif/mono typography, no clutter. Single-file HTML you can email or print.</div>
@@ -418,7 +427,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="design" data-id="slide-audit" data-order-en="14" data-order-ko="14">
+    <div class="card" data-cat="design" data-id="slide-audit" data-order-en="15" data-order-ko="15">
       <div class="card-cat">Design</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/slide-audit">/slide-audit</a></div>
       <div class="card-desc" data-en="Run /slide-audit on an HTML slide deck. Playwright screenshots every slide, subagents check for text overlap, clipping, and overflow. Catches layout bugs before presenting." data-ko="HTML 슬라이드 덱에 /slide-audit 실행. Playwright가 매 슬라이드 스크린샷, 서브에이전트가 텍스트 겹침/잘림/오버플로우 검사. 발표 전 레이아웃 버그 포착.">Run /slide-audit on an HTML slide deck. Playwright screenshots every slide, subagents check for text overlap, clipping, and overflow.</div>
@@ -427,7 +436,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="media" data-id="youtube2mp4" data-order-en="15" data-order-ko="15">
+    <div class="card" data-cat="media" data-id="youtube2mp4" data-order-en="16" data-order-ko="16">
       <div class="card-cat">Media</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/youtube2mp4">/youtube2mp4</a></div>
       <div class="card-desc" data-en="Paste a YouTube URL, run /youtube2mp4. Options: --720p cap, --start 1:30 --end 5:00 trim, --audio-only for podcasts. Uses yt-dlp under the hood." data-ko="YouTube URL 붙여넣고 /youtube2mp4 실행. --720p 해상도 제한, --start 1:30 --end 5:00 구간 자르기, --audio-only 팟캐스트용. yt-dlp 기반.">Paste a YouTube URL, run /youtube2mp4. Options: --720p cap, --start/--end trim, --audio-only for podcasts. Uses yt-dlp under the hood.</div>
@@ -436,7 +445,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="utility" data-id="pptx" data-order-en="16" data-order-ko="16">
+    <div class="card" data-cat="utility" data-id="pptx" data-order-en="17" data-order-ko="17">
       <div class="card-cat">Utility</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/pptx-too-heavy">/pptx-too-heavy</a></div>
       <div class="card-desc" data-en="Run /pptx-too-heavy on a bloated .pptx. Shows which images are heaviest, flags EMF/TIF for conversion, and generates a visual grid report sorted by file size." data-ko="용량 큰 .pptx에 /pptx-too-heavy 실행. 가장 무거운 이미지 표시, EMF/TIF 변환 대상 플래그, 파일 크기순 비주얼 그리드 리포트 생성.">Run /pptx-too-heavy on a bloated .pptx. Shows which images are heaviest, flags EMF/TIF for conversion, generates a visual grid report.</div>
@@ -445,7 +454,7 @@ footer a:hover { text-decoration: underline; }
       </div>
     </div>
 
-    <div class="card" data-cat="utility" data-id="meetingnote" data-order-en="17" data-order-ko="17">
+    <div class="card" data-cat="utility" data-id="meetingnote" data-order-en="18" data-order-ko="18">
       <div class="card-cat">Utility</div>
       <div class="card-title"><a href="https://github.com/s-choung/Research-Skills/tree/master/skills/meetingnote-paperwork">/meetingnote-paperwork</a></div>
       <div class="card-desc" data-en="Say /meetingnote-paperwork after a meeting. Generates a formatted Korean 회의록 in the standard research project template with agenda, decisions, and action items." data-ko="회의 후 /meetingnote-paperwork 입력. 표준 연구과제 양식으로 안건, 결정사항, 실행항목이 포함된 한국어 회의록 자동 생성.">Say /meetingnote-paperwork after a meeting. Generates a formatted Korean 회의록 in the standard research project template.</div>
@@ -532,7 +541,7 @@ function filterCat(cat) {
     c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
   });
   document.querySelectorAll('.chip').forEach(ch => {
-    const isAll = ch.getAttribute('data-en') === 'All 17 Skills';
+    const isAll = ch.getAttribute('data-en') === 'All 18 Skills';
     const isCat = ch.getAttribute('data-en').toLowerCase() === cat;
     ch.style.background = (cat === 'all' && isAll) || isCat
       ? 'rgba(0,0,0,0.12)' : 'rgba(0,0,0,0.04)';
