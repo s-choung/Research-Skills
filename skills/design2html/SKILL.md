@@ -19,14 +19,21 @@ Design spec MD 파일 하나를 입력받아, 해당 디자인 시스템을 **�
 - 이 규칙은 모든 spec에 공통 적용되며, spec 자체에 border-left가 명시되어 있어도 무시한다
 - 생성 후 self-check 시 `border-left` grep으로 위반 여부를 반드시 확인
 
+## Dependency: Design Spec Files
+
+이 스킬은 디자인 스펙 MD 파일이 필요합니다. 스펙 파일은 아래 사이트에서 다운로드:
+
+- **https://styles.refero.design** — 디자인 시스템 스펙 MD 파일 제공
+- 예: OpenAI 스타일 → https://styles.refero.design/style/dc541737-8bf2-4b31-b729-0352f696e82f
+- 다운로드한 .md 파일을 프로젝트 폴더에 넣고 `/design2html <파일경로>`로 사용
+
 ## CRITICAL RULE: No Invented Styles
 
-**`specs/` 폴더에 있는 built-in 스펙 또는 사용자가 직접 제공한 MD 파일만 사용할 것.**
+**사용자가 직접 제공한 MD 파일 또는 refero.design에서 다운로드한 스펙만 사용할 것.**
 
 - "dark mode", "brutalist", "glassmorphism", "terminal", "swiss" 등 임의 스타일을 발명하여 생성하는 것은 **금지**
-- 사용자가 스타일을 지정하지 않으면 반드시 리스트를 보여주고 선택을 받을 것
-- specs/ 폴더에 없는 스타일명을 사용자가 말하면 "해당 스펙이 없습니다. 아래 중 선택하세요"로 안내
-- 여러 스타일을 동시에 생성할 때도 각각 built-in spec 기반이어야 함
+- 사용자가 스타일을 지정하지 않으면 refero.design에서 원하는 스타일을 다운로드하도록 안내
+- 여러 스타일을 동시에 생성할 때도 각각 다운로드한 spec 기반이어야 함
 
 ## No-Argument Mode (인자 없이 호출 시)
 
