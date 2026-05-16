@@ -53,7 +53,7 @@ https://github.com/s-choung/Research-Skills.git 클론하고 스킬 설치해줘
 |:--|:--|:--|
 | **humanizer_kor** | AI-Tell 54.9 &rarr; **1.0** (-98%) &middot; Naturalness 2.9 &rarr; **9.2** | [**Dashboard**](https://s-choung.github.io/Research-Skills/skills/humanizer_kor/benchmark/benchmark_report.html) |
 | **humanizer_eng** | AI-Tell 89.8 &rarr; **3.6** (-96%) &middot; Naturalness 1.2 &rarr; **9.4** | [**Dashboard**](https://s-choung.github.io/Research-Skills/skills/humanizer_eng/benchmark/benchmark_report.html) |
-| **ase** | 9 LLM &times; 50 tasks 코드 생성 벤치마크 | [**Dashboard**](https://s-choung.github.io/Research-Skills/skills/ase/benchmark/benchmark_report_v6.html) |
+| **ase** | 9 LLM &times; 50 tasks 코드 생성 벤치마크 | [**Dashboard**](https://s-choung.github.io/Research-Skills/skills/ase/benchmark/benchmark_report_v7.html) |
 | **matplotlib-scientific** | Before/After 3종 (scatter, bar, line) | [**Dashboard**](https://s-choung.github.io/Research-Skills/skills/matplotlib-scientific/benchmark/benchmark_report.html) |
 | **design2html** | 동일 콘텐츠 &times; 6 디자인 시스템 비교 | [**Dashboard**](https://s-choung.github.io/Research-Skills/skills/design2html/benchmark/benchmark_report.html) |
 | **blender-atom-render** | POSCAR/CIF Blender 렌더 갤러리 | [**Dashboard**](https://s-choung.github.io/Research-Skills/skills/blender-atom-render/benchmark/benchmark_report.html) |
