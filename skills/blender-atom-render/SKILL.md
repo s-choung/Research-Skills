@@ -14,6 +14,26 @@ Render atomic structures (molecules, slabs, nanoparticles, MOFs) and individual 
 - For single-atom mode: a Blender `.blend` file with camera and lighting setup
 - For full-structure mode: no .blend file needed (auto-frame script creates camera+lights)
 
+## Resource Management (CRITICAL - READ FIRST)
+
+Blender Cycles and OVITO Tachyon are both CPU/GPU-intensive. Parallel rendering WILL crash on laptops (M1/M2 Mac, 16-32GB RAM).
+
+### Rules
+- **NEVER dispatch parallel subagents** for rendering. Each Blender/OVITO process uses 2-8GB RAM + full CPU.
+- Batch renders in a **single sequential Python script** instead. Write one .py file that loops through all inputs, then run it as one `conda run` or Blender call.
+- For Blender: max **1 process at a time**. Even 2 concurrent Blender instances can OOM on 16GB Mac.
+- For OVITO: max **2-3 concurrent** (lighter than Blender, but still heavy for 500+ atom structures).
+- Large structures (1000+ atoms, MOFs): set timeout=300000 and expect 30-60s per render.
+- If rendering 20+ files: write a batch script, run in background, monitor with `tail`.
+
+### Memory estimation
+| Atoms | Blender RAM | OVITO RAM | Render time |
+|-------|------------|-----------|-------------|
+| < 50 | ~500 MB | ~200 MB | 1-3s |
+| 100-300 | ~1 GB | ~500 MB | 5-15s |
+| 500-1000 | ~2 GB | ~800 MB | 15-40s |
+| 1000+ | ~4 GB | ~1.5 GB | 30-120s |
+
 ## Mode 1: Full-Structure Auto-Frame Rendering
 
 Renders complete structures (.xyz, .cif) with automatic camera framing, multi-angle support, and 3-point lighting. No .blend file required.
