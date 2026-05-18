@@ -1,17 +1,124 @@
 ---
 name: blender-atom-render
-description: Render individual atom spheres from structure files using Blender and create per-system legends. Triggers - /blender-atom-render, "atom render", "원자 렌더링", "atom legend", "레전드 만들어", "blender로 렌더", "구 렌더링"
+description: Render atomic structures and individual atom spheres using Blender's io_mesh_atomic addon. Two modes - (1) full-structure auto-frame rendering with multi-angle support, (2) single-atom sphere rendering for legends. Triggers - /blender-atom-render, "atom render", "원자 렌더링", "atom legend", "레전드 만들어", "blender로 렌더", "구 렌더링", "structure render blender"
 ---
 
 # Blender Atom Render
 
-Render individual atom spheres from atomic structure files (traj, xyz, etc.) using Blender's `io_mesh_atomic` addon, then compose per-system legend images.
+Render atomic structures (molecules, slabs, nanoparticles, MOFs) and individual atom spheres using Blender's `io_mesh_atomic` addon.
 
 ## Prerequisites
 
-- Blender installed at `/Applications/Blender.app/Contents/MacOS/Blender` (or find via `which blender`)
+- Blender installed at `/Applications/Blender.app/Contents/MacOS/Blender`
 - Python with ASE (`ase`) and Pillow (`PIL`) in base conda
-- A Blender `.blend` file with camera and lighting setup
+- For single-atom mode: a Blender `.blend` file with camera and lighting setup
+- For full-structure mode: no .blend file needed (auto-frame script creates camera+lights)
+
+## Mode 1: Full-Structure Auto-Frame Rendering
+
+Renders complete structures (.xyz, .cif) with automatic camera framing, multi-angle support, and 3-point lighting. No .blend file required.
+
+### Anti-clipping rules (CRITICAL)
+- `ortho_scale = max_bounding_box_dim * 1.8` prevents edge clipping
+- Never use `* 1.4` or lower; atoms at slab edges will be cut off
+- For very flat slabs (z << x,y), use `max(size.x, size.y) * 1.6` instead of max_dim
+
+### Camera angles
+- **perspective**: 45-degree oblique view `(0.55, -0.55, 0.5)` normalized from center. Best for 3D structures (nanoparticles, MOFs).
+- **top**: near-vertical `(0.15, -0.15, 0.95)`. Best for surface slabs to show top-layer pattern.
+- Always render BOTH angles for each structure.
+
+### Lighting: 3-point setup
+- **Key light** (SUN, energy=3.5, angle=8deg): main illumination from upper-right
+- **Fill light** (SUN, energy=1.2): softer from opposite side, reduces harsh shadows
+- **Rim light** (SUN, energy=1.5): backlight for edge definition and depth
+
+### Auto-frame render script
+```python
+# render_autoframe_v2.py
+# Usage: blender --background --python render_autoframe_v2.py -- input.xyz output.png [perspective|top]
+import bpy, sys, mathutils, math
+
+argv = sys.argv[sys.argv.index("--") + 1:]
+xyz_path = argv[0]
+output_path = argv[1]
+angle = argv[2] if len(argv) > 2 else "perspective"
+
+for obj in list(bpy.data.objects):
+    bpy.data.objects.remove(obj, do_unlink=True)
+bpy.ops.outliner.orphans_purge(do_recursive=True)
+
+bpy.ops.preferences.addon_enable(module="io_mesh_atomic")
+bpy.ops.import_mesh.xyz(
+    filepath=xyz_path, ball="1", mesh_azimuth=128, mesh_zenith=128,
+    scale_ballradius=1.0, scale_distances=1.0,
+)
+
+mesh_objs = [o for o in bpy.context.scene.objects if o.type == 'MESH']
+if not mesh_objs: sys.exit(1)
+
+all_min = mathutils.Vector((1e9, 1e9, 1e9))
+all_max = mathutils.Vector((-1e9, -1e9, -1e9))
+for obj in mesh_objs:
+    for corner in obj.bound_box:
+        world_pt = obj.matrix_world @ mathutils.Vector(corner)
+        all_min.x = min(all_min.x, world_pt.x)
+        all_min.y = min(all_min.y, world_pt.y)
+        all_min.z = min(all_min.z, world_pt.z)
+        all_max.x = max(all_max.x, world_pt.x)
+        all_max.y = max(all_max.y, world_pt.y)
+        all_max.z = max(all_max.z, world_pt.z)
+
+center = (all_min + all_max) / 2
+size = all_max - all_min
+max_dim = max(size.x, size.y, size.z)
+
+cam_data = bpy.data.cameras.new("AutoCam")
+cam_data.type = 'ORTHO'
+cam_data.ortho_scale = max_dim * 1.8  # 1.8x for safe margin
+
+cam_obj = bpy.data.objects.new("AutoCam", cam_data)
+bpy.context.collection.objects.link(cam_obj)
+cam_dist = max_dim * 3
+
+if angle == "top":
+    cam_obj.location = center + mathutils.Vector((cam_dist*0.15, -cam_dist*0.15, cam_dist*0.95))
+else:  # perspective
+    cam_obj.location = center + mathutils.Vector((cam_dist*0.55, -cam_dist*0.55, cam_dist*0.5))
+
+direction = center - cam_obj.location
+cam_obj.rotation_euler = direction.to_track_quat('-Z', 'Y').to_euler()
+bpy.context.scene.camera = cam_obj
+
+# 3-point lighting
+for name, energy, loc, rot in [
+    ("Key", 3.5, (cam_dist, -cam_dist, cam_dist*1.5), (30, 0, -45)),
+    ("Fill", 1.2, (-cam_dist, cam_dist*0.5, cam_dist*0.3), (60, 0, 135)),
+    ("Rim", 1.5, (-cam_dist*0.3, cam_dist*0.8, cam_dist*0.6), (45, 0, 180)),
+]:
+    light = bpy.data.lights.new(name, type='SUN')
+    light.energy = energy
+    obj = bpy.data.objects.new(name, light)
+    bpy.context.collection.objects.link(obj)
+    obj.location = center + mathutils.Vector(loc)
+    obj.rotation_euler = tuple(math.radians(a) for a in rot)
+
+bpy.context.scene.render.resolution_x = 2000
+bpy.context.scene.render.resolution_y = 2000
+bpy.context.scene.render.film_transparent = True
+bpy.context.scene.render.image_settings.file_format = 'PNG'
+bpy.context.scene.render.image_settings.color_mode = 'RGBA'
+bpy.context.scene.render.filepath = output_path
+bpy.ops.render.render(write_still=True)
+```
+
+### Batch rendering workflow
+1. Render each file as a SEPARATE Blender process (no loops within Blender)
+2. Always render both angles: `_perspective.png` and `_top.png`
+3. Large structures (1000+ atoms): timeout 120s per render, ~15s typical
+4. MOFs (500+ atoms): may need 30-60s
+
+## Mode 2: Single-Atom Sphere Rendering (for legends)
 
 ## Workflow
 
