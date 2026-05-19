@@ -43,6 +43,11 @@ Renders complete structures (.xyz, .cif) with automatic camera framing, multi-an
 - Never use `* 1.4` or lower; atoms at slab edges will be cut off
 - For very flat slabs (z << x,y), use `max(size.x, size.y) * 1.6` instead of max_dim
 
+### Ball radius rule (CRITICAL)
+- Always use `scale_ballradius=1.0`. NEVER reduce below 1.0.
+- Reducing ballradius (e.g., 0.35) makes atoms look disconnected, especially in MOFs/COFs where bond visualization depends on atom sphere overlap.
+- If structure looks too crowded, zoom out (increase ortho_scale) instead of shrinking atoms.
+
 ### Camera angles
 - **perspective**: 45-degree oblique view `(0.55, -0.55, 0.5)` normalized from center. Best for 3D structures (nanoparticles, MOFs).
 - **top**: near-vertical `(0.15, -0.15, 0.95)`. Best for surface slabs to show top-layer pattern.
