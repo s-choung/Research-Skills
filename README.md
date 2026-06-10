@@ -32,6 +32,7 @@ https://github.com/s-choung/Research-Skills.git 클론하고 스킬 설치해줘
 | **Visualization** | [matplotlib-scientific](skills/matplotlib-scientific) | 출판용 matplotlib figure 생성 |
 | | [blender-atom-render](skills/blender-atom-render) | 구조 파일을 Blender 원자 렌더링 |
 | | [slide-audit](skills/slide-audit) | HTML 슬라이드 레이아웃 버그 탐지 |
+| | [misodi-slides](skills/misodi-slides) | 미소디 과제 스타일 슬라이드 생성 (HTML+PPTX 동일 출력, fade 애니메이션) |
 | **Document** | [design2html](skills/design2html) | 디자인 스펙을 single-file HTML 쇼케이스로 |
 | | [docx-scientific-formatting](skills/docx-scientific-formatting) | .docx 화학식 아래첨자, 위첨자 자동 교정 |
 | | [html-minimal](skills/html-minimal) | 외부 의존성 없는 self-contained HTML 리포트 |

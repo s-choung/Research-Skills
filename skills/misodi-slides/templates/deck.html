@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>MISODI Deck</title>
+<link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" rel="stylesheet">
+<style>
+/* ===== 미소디 스타일 토큰 (style-spec.md SSOT, 실측값) ===== */
+:root{
+  --navy:#0F0F70; --gold:#C5A86F; --gold-dark:#9B7C3F; --gold-dark2:#B6924A;
+  --gold-light:#D5C097; --parchment:#DCDAB2; --orange:#FA901E; --orange2:#FC9828;
+  --gray:#888888; --silver:#B5B6B6; --periwinkle:#626DAE; --periwinkle2:#475DA3;
+  --periwinkle-light:#8787B8; --ink:#000000; --red:#FF0000;
+  --title-blue:#8AB1E3; --title-peach:#FFC18C;
+  --shadow-navy:rgba(50,74,136,.10); --shadow-gold:rgba(220,218,178,.31);
+  /* fade 스펙: 슬라이드 전환 700ms / 블록 등장 500ms / stagger 300ms */
+  --t-slide:.7s; --t-block:.5s; --t-stagger:.3s;
+  /* 1cm = 37.795px */
+  --header-img:url("__HEADER_BAND__");
+  --wave-bg:url("__WAVE_BG__");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a1a;font-family:'NanumSquare','나눔스퀘어','Malgun Gothic',sans-serif;
+  display:flex;align-items:center;justify-content:center;min-height:100vh;overflow:hidden}
+.deck{position:relative;width:1280px;height:720px}
+/* ===== 슬라이드 전환: fade 700ms ===== */
+.slide{position:absolute;inset:0;width:1280px;height:720px;background:#fff;overflow:hidden;
+  opacity:0;pointer-events:none;transition:opacity var(--t-slide) ease}
+.slide.active{opacity:1;pointer-events:auto}
+/* ===== 블록 등장: fade-in 500ms, stagger 300ms ===== */
+.fade-block{opacity:0;transition:opacity var(--t-block) ease}
+.slide.active .fade-block{opacity:1}
+.slide.active .fade-block:nth-of-type(1){transition-delay:0s}
+/* delay는 JS가 data-order 기준으로 부여 (i*0.3s) */
+
+/* ===== 헤더 밴드 (h=1.93cm=73px) ===== */
+.header{position:absolute;top:0;left:0;width:100%;height:73px;
+  background:var(--header-img) center/cover no-repeat}
+/* 다크 오버레이: 좌측 불투명 #3A3939 -> 우측 black@59% (원본: y -0.70~1.26cm 영역) */
+.header::before{content:"";position:absolute;left:0;top:0;width:100%;height:47.6px;
+  background:linear-gradient(90deg,#3A3939 0%,rgba(0,0,0,.59) 100%)}
+/* 오렌지 라인: 원본은 띠(0.36cm)가 이미지에 덮여 0.17cm(6.4px)만 노출 */
+.header::after{content:"";position:absolute;left:0;top:73px;width:100%;height:6.4px;
+  background:rgba(252,152,40,.88)}
+.header .title{position:absolute;left:30px;top:14px;z-index:2;color:#fff;
+  font-size:37px;font-weight:800;letter-spacing:-.5px;white-space:nowrap}
+.header .title .sub{font-size:29px;font-weight:800}
+.header .pagenum{position:absolute;right:30px;top:22px;z-index:2;color:#fff;
+  font-size:16px;font-weight:700}
+
+/* ===== 패널 시스템 ===== */
+/* 그림자 스트립: 패널 뒤 깔개 (h≈113px). 위 모서리는 패널 곡률 따라 둥글게 (뾰족 금지) */
+.shadow-strip{position:absolute;height:113px;background:var(--shadow-navy);
+  border-radius:35px 35px 0 0}
+.shadow-strip.gold{background:var(--shadow-gold)}
+.shadow-strip.gray{background:rgba(136,136,136,.10)}
+/* 컨테이너: adj=6386 -> border-radius = 6.4% of 짧은변. 통상 패널높이 500px대 -> ~35px */
+.panel{position:absolute;background:#fff;border:3px solid var(--navy);border-radius:35px}
+.panel.gold{border-color:var(--gold)} .panel.gray{border-color:var(--gray)}
+.panel.orange{border-color:var(--orange2)} .panel.nofill{background:transparent}
+/* 탭 칩: adj=39062 -> radius = 39% of 높이(51px) = 20px. 컨테이너 top에 겹침 */
+.tab-chip{position:absolute;height:51px;line-height:51px;padding:0 40px;text-align:center;
+  background:var(--navy);color:#fff;font-size:27px;font-weight:800;border-radius:20px;
+  transform:translateY(-50%);white-space:nowrap}
+.tab-chip.gold{background:var(--gold)} .tab-chip.gray{background:var(--gray)}
+.tab-chip.orange{background:var(--orange2)}
+/* 내부 카드: adj=12808 */
+.card{position:absolute;border:1.3px solid var(--periwinkle);border-radius:13px;background:transparent}
+.card.gold{border-color:var(--gold-light)} .card.thick{border-width:2px;border-color:var(--periwinkle2)}
+/* 그라데이션 카드 */
+.grad-card{position:absolute;border:3px solid var(--orange2);border-radius:24px;
+  background:linear-gradient(180deg,#FDC88F 0%,#FEE4C7 34%,#fff 100%)}
+.grad-card.navy{border-color:var(--navy);
+  background:linear-gradient(180deg,#8787B8 0%,#C3C3DC 34%,#fff 100%)}
+/* 작은 칩 (adj=39062) */
+.chip{position:absolute;height:38px;line-height:38px;padding:0 24px;text-align:center;
+  background:var(--orange2);color:#fff;font-size:21px;font-weight:800;border-radius:15px;white-space:nowrap}
+.chip.navy{background:var(--navy)} .chip.gold{background:var(--gold)} .chip.gray{background:var(--gray)}
+/* 알약 배지 (adj=50000) */
+.pill{position:absolute;height:43px;line-height:43px;padding:0 30px;background:var(--periwinkle2);
+  color:#fff;font-size:24px;font-weight:800;border-radius:22px;text-align:center;white-space:nowrap}
+/* 상태 칩 ON/OFF */
+.state-chip{display:inline-block;width:30px;height:17px;line-height:17px;font-size:11px;
+  font-weight:800;text-align:center;color:#fff;background:rgba(15,15,112,.76)}
+.state-chip.off{background:#E7E6E6;color:#000}
+/* 요약 밴드 (골드, adj=23741) */
+.summary-band{position:absolute;background:#fff;border:3px solid var(--gold);border-radius:22px;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:24px;font-weight:700;color:var(--ink);padding:0 30px}
+/* 네이비 풀폭 푸터 */
+.navy-footer{position:absolute;left:0;bottom:0;width:100%;height:93px;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:#fff;font-size:27px;font-weight:700}
+/* 중앙 세로 구분선 */
+.divider-v{position:absolute;width:3px;
+  background:linear-gradient(180deg,#fff 0%,var(--navy) 50%,#fff 100%)}
+
+/* ===== 텍스트 역할 ===== */
+.h-section{position:absolute;font-size:24px;font-weight:800;color:var(--navy)}
+.h-section.gold{color:var(--gold-dark)} .h-section.orange{color:var(--orange)}
+.body-text{position:absolute;font-size:21px;font-weight:700;color:var(--ink);line-height:1.45}
+.caption{position:absolute;font-size:19px;font-weight:700;color:var(--ink)}
+.small{position:absolute;font-size:16px;font-weight:700;color:var(--ink)}
+/* 강조 런 (시그니처: 본문 안 inline 색 강조) */
+.em-o{color:var(--orange);font-weight:800} .em-n{color:var(--navy);font-weight:800}
+.em-g{color:var(--gold-dark);font-weight:800} .em-r{color:var(--red);font-weight:800}
+
+/* ===== 타이틀/클로징 슬라이드 ===== */
+.slide.dark{background:#0a0a14 var(--wave-bg);background-size:cover;background-position:center}
+.title-kicker{position:absolute;left:82px;top:83px;color:#fff;font-size:21px;font-weight:800}
+.title-main{position:absolute;left:82px;top:175px;color:#fff;font-size:41px;font-weight:800;line-height:1.55}
+.title-main .kw1{color:var(--title-blue)} .title-main .kw2{color:var(--title-peach)}
+.title-date{position:absolute;left:82px;top:490px;color:#fff;font-size:24px;font-weight:800}
+.title-leader{position:absolute;left:82px;top:602px;color:#fff;font-size:27px;font-weight:800}
+.title-leader .divline{display:inline-block;width:2px;height:26px;background:#E0E0E0;
+  margin:0 14px;vertical-align:middle}
+.closing-msg{position:absolute;width:100%;top:310px;text-align:center;color:#fff;
+  font-size:37px;font-weight:800}
+.closing-sub{position:absolute;width:100%;top:640px;text-align:center;color:#fff;
+  font-size:16px;font-weight:700}
+
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- ===== 슬라이드 1: 타이틀 ===== -->
+<section class="slide dark active">
+  <div class="title-kicker fade-block">미래소재디스커버리지원+</div>
+  <div class="title-main fade-block">
+    <span class="kw1">키워드1</span> 기반<br>
+    <span class="kw2">키워드2</span> 핵심소재<br>
+    나머지 제목 줄<br>
+    마지막 제목 줄
+  </div>
+  <div class="title-date fade-block">2026.06.11</div>
+  <div class="title-leader fade-block">연구책임자<span class="divline"></span>홍길동</div>
+</section>
+
+<!-- ===== 슬라이드 2: 콘텐츠 (2단 패널 예시) ===== -->
+<section class="slide">
+  <div class="header">
+    <div class="title">슬라이드 제목<span class="sub">  -  부제목</span></div>
+    <div class="pagenum">2/16</div>
+  </div>
+  <!-- 좌 패널 (gray = 기존), 우 패널 (navy = 제안) -->
+  <div class="fade-block">
+    <div class="shadow-strip" style="left:23px;top:112px;width:586px"></div>
+    <div class="panel gray nofill" style="left:23px;top:112px;width:586px;height:560px"></div>
+    <div class="tab-chip gray" style="left:130px;top:112px">기존 접근 ( 한계 )</div>
+  </div>
+  <div class="fade-block">
+    <div class="shadow-strip" style="left:672px;top:112px;width:586px"></div>
+    <div class="panel" style="left:672px;top:112px;width:586px;height:560px"></div>
+    <div class="tab-chip" style="left:790px;top:112px">제안 접근 ( 핵심 )</div>
+  </div>
+  <div class="fade-block">
+    <div class="card" style="left:60px;top:430px;width:240px;height:160px"></div>
+    <div class="caption" style="left:80px;top:600px">카드 캡션 <span class="em-n">강조</span></div>
+  </div>
+  <div class="fade-block">
+    <div class="h-section" style="left:700px;top:160px">섹션 소제목</div>
+    <div class="body-text" style="left:700px;top:200px;width:520px">
+      본문 텍스트에 <span class="em-o">오렌지 강조</span>와 <span class="em-n">네이비 강조</span>를 섞는다
+    </div>
+  </div>
+</section>
+
+<!-- ===== 슬라이드 3: 요약 밴드/푸터 예시 ===== -->
+<section class="slide">
+  <div class="header">
+    <div class="title">요약 컴포넌트</div>
+    <div class="pagenum">3/16</div>
+  </div>
+  <div class="fade-block">
+    <div class="grad-card" style="left:34px;top:120px;width:277px;height:198px"></div>
+    <div class="chip" style="left:55px;top:101px">그라데이션 카드</div>
+  </div>
+  <div class="fade-block">
+    <div class="pill" style="left:400px;top:150px">알약 배지</div>
+    <span class="state-chip" style="position:absolute;left:400px;top:220px">ON</span>
+    <span class="state-chip off" style="position:absolute;left:440px;top:220px">OFF</span>
+  </div>
+  <div class="summary-band fade-block" style="left:351px;top:494px;width:578px;height:93px">
+    <span><span class="em-n">핵심 결론</span>을 담는 골드 요약 밴드</span>
+  </div>
+  <div class="navy-footer fade-block">
+    <span><span class="em-o">강조 단어</span>가 들어가는 네이비 푸터 밴드</span>
+  </div>
+</section>
+
+<!-- ===== 슬라이드 4: 클로징 ===== -->
+<section class="slide dark">
+  <div class="closing-msg fade-block">경청해 주셔서 감사합니다.</div>
+  <div class="closing-sub fade-block">프로젝트 부제 또는 워드마크</div>
+</section>
+
+</div>
+<script>
+// 내비: 좌우 화살표 / Space / 클릭
+// ===== fade 내비게이션: 슬라이드 전환 0.7s, 블록 0.5s + 0.3s stagger =====
+const slides=[...document.querySelectorAll('.slide')];let cur=0;
+function applyStagger(slide){
+  slide.querySelectorAll('.fade-block').forEach((b,i)=>{b.style.transitionDelay=(i*0.3)+'s';});
+}
+function show(n){
+  n=Math.max(0,Math.min(slides.length-1,n));
+  slides[cur].classList.remove('active');
+  // 떠나는 슬라이드 블록 delay 제거(전환은 통째로 fade)
+  slides[cur].querySelectorAll('.fade-block').forEach(b=>{b.style.transitionDelay='0s';});
+  cur=n;applyStagger(slides[cur]);slides[cur].classList.add('active');
+}
+applyStagger(slides[0]);
+addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown')show(cur+1);
+  if(e.key==='ArrowLeft'||e.key==='PageUp')show(cur-1);
+  if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1);
+});
+addEventListener('click',()=>show(cur+1));
+// 화면 맞춤 스케일
+function fit(){const s=Math.min(innerWidth/1280,innerHeight/720);
+  document.querySelector('.deck').style.transform=`scale(${s})`;}
+document.querySelector('.deck').style.transformOrigin='center center';
+addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>
