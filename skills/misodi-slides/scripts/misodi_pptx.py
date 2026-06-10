@@ -218,8 +218,10 @@ class MisodiDeck:
         # 2) 웨이브 이미지 스트립
         s.shapes.add_picture(HEADER_IMG, 0, 0, SLIDE_W, cm(1.93))
         # 3) 다크 그라데이션 오버레이: 좌측 불투명 다크그레이(#3A3939 = E7E6E6 lumMod 25%)
-        #    -> 우측 black@59%. 원본 실측 (-0.01,-0.70) 33.88x1.96cm, ang=0
-        ov = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, cm(-0.01), cm(-0.70), cm(33.88), cm(1.96))
+        #    -> 우측 black@59%. 원본은 레이아웃에 (-0.01,-0.70) h=1.96으로 있으나
+        #    슬라이드에 직접 그리면 편집뷰에서 위로 삐져나와 보이므로 슬라이드 안으로 클램프
+        #    (가로 그라데이션이라 y=0, h=1.26 클램프해도 시각 결과 동일)
+        ov = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, SLIDE_W, cm(1.26))
         spPr = ov._element.spPr
         ov.fill.solid()
         for el in spPr.findall(qn("a:solidFill")):
