@@ -498,6 +498,13 @@ class MisodiDeck:
         nc = E(nextC, "cond", evt="onNext", delay=0)
         E(nc, "tgtEl").append(etree.SubElement(nc.find(P + "tgtEl"), P + "sldTgt"))
 
+        # bldLst: 정품 PowerPoint가 항상 쓰는 빌드 리스트 (도형별 bldP)
+        bldLst = etree.SubElement(timing, P + "bldLst")
+        for spid in spids:
+            bldP = etree.SubElement(bldLst, P + "bldP")
+            bldP.set("spid", str(spid))
+            bldP.set("grpId", "0")
+
     def _write_transition(self, s):
         """fade 슬라이드 전환 (700ms)."""
         P = "{http://schemas.openxmlformats.org/presentationml/2006/main}"
@@ -510,10 +517,12 @@ class MisodiDeck:
             if old.find(".//" + P + "transition") is not None:
                 sld.remove(old)
         # mc:AlternateContent로 p14:dur(ms 단위) + fallback spd 지정
-        ac = etree.SubElement(sld, MC + "AlternateContent")
-        choice = etree.SubElement(
-            ac, MC + "Choice",
-            nsmap={"p14": "http://schemas.microsoft.com/office/powerpoint/2010/main"})
+        # 주의: 접두사가 반드시 'mc'/'p14'로 직렬화되도록 nsmap 명시 (Office MCE가 ns0 등에 민감)
+        ac = etree.SubElement(
+            sld, MC + "AlternateContent",
+            nsmap={"mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+                   "p14": "http://schemas.microsoft.com/office/powerpoint/2010/main"})
+        choice = etree.SubElement(ac, MC + "Choice")
         choice.set("Requires", "p14")
         tr1 = etree.SubElement(choice, P + "transition")
         tr1.set("spd", "slow")
