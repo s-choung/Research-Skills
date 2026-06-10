@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-"""misodi_pptx 사용 예제: templates/deck.html과 1:1 대응하는 4장 샘플 덱.
+"""ccel_pptx 사용 예제: templates/deck.html과 1:1 대응하는 4장 샘플 덱.
 
 실행: conda run -n base python example_build.py [출력경로.pptx]
 """
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from misodi_pptx import MisodiDeck
+from ccel_pptx import CcelDeck
 
-out = sys.argv[1] if len(sys.argv) > 1 else "misodi_sample.pptx"
-deck = MisodiDeck(out)
+out = sys.argv[1] if len(sys.argv) > 1 else "ccel_sample.pptx"
+deck = CcelDeck(out)
 
 # ---- 슬라이드 1: 타이틀 ----
 s = deck.add_title_slide(

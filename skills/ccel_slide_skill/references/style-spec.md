@@ -1,6 +1,6 @@
-# 미소디(MISODI) 슬라이드 스타일 스펙 — SSOT
+# CCEL 슬라이드 스타일 스펙 (ccel_slide_skill) — SSOT
 
-원본: 미래소재디스커버리(미소디) 과제 발표자료 (`미소디_예시.pptx`, 16:9).
+원본: 연구과제 발표자료 덱 16장 (16:9) 실측.
 이 문서의 수치는 원본 XML에서 추출한 **실측값**이다. 절대 임의 변경 금지.
 
 ## 0. 캔버스
@@ -119,7 +119,7 @@
 | stagger | 블록 간 300ms |
 | 트리거 | 슬라이드 표시 직후 자동 시작 (클릭 불필요) |
 
-- **PPTX**: `<p:transition spd="slow"><p:fade/></p:transition>` + timing tree(mainSeq 1개 그룹, 모든 효과 `presetID=10 presetClass=entr`(Fade), `transition="in" filter="fade"`, dur=500, i번째 delay=i×300, 자동 시작). 생성은 `scripts/misodi_pptx.py`의 `add_fade_animation()`이 담당 — 직접 XML 쓰지 말 것.
+- **PPTX**: `<p:transition spd="slow"><p:fade/></p:transition>` + timing tree(mainSeq 1개 그룹, 모든 효과 `presetID=10 presetClass=entr`(Fade), `transition="in" filter="fade"`, dur=500, i번째 delay=i×300, 자동 시작). 생성은 `scripts/ccel_pptx.py`의 `add_fade_animation()`이 담당 — 직접 XML 쓰지 말 것.
 - **HTML**: 슬라이드 전환 `opacity 0.7s`, 블록 `.fade-block` `opacity 0.5s` + `transition-delay: i*0.3s`. 슬라이드 활성화 시 `.visible` 부여.
 
 ## 8. 레이아웃 불변 규칙

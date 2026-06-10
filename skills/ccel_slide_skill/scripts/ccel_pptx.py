@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-"""misodi_pptx — 미소디(MISODI) 스타일 PPTX 빌더 라이브러리.
+"""ccel_pptx — CCEL 과제 스타일 PPTX 빌더 라이브러리.
 
 style-spec.md(SSOT)의 실측값을 코드 상수로 고정한다.
 사용법: 이 모듈을 import해서 덱 빌드 스크립트를 작성한다 (example_build.py 참고).
 
 핵심 API
 --------
-deck = MisodiDeck("out.pptx")
+deck = CcelDeck("out.pptx")
 s = deck.add_title_slide(kicker=..., title_runs=[...], date=..., leader=...)
 s = deck.add_content_slide("제목", subtitle="부제", page=(2, 16))
 deck.panel(s, x, y, w, h, color="navy", tab="탭 제목", fill_white=True)
@@ -177,7 +177,7 @@ def _runs(paragraph, runs, default_size=16, align="l"):
 
 # ---------- Deck ----------
 
-class MisodiDeck:
+class CcelDeck:
     def __init__(self, out_path):
         self.out_path = out_path
         self.prs = Presentation()
