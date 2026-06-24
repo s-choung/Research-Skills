@@ -361,6 +361,30 @@ For a merged legend with all atoms: collect `sorted(set(...))` of all atoms acro
 - Single atoms need ortho_scale ~3-5 depending on element radius
 - Ortho cameras: distance doesn't matter, only `ortho_scale` controls framing
 
-### Mesh smoothness
-- `mesh_azimuth` and `mesh_zenith` control sphere polygon count
-- 32x32 = visibly faceted, 64x64 = acceptable, 128x128 = smooth sphere
+### Mesh smoothness & render speed (smooth is nearly free)
+- `mesh_azimuth` / `mesh_zenith` set the ball polygon count: 32x32 = visibly
+  faceted (flat-shaded), 64x64 = acceptable, 128x128 = smooth.
+- **Why high subdivision is cheap:** io_mesh_atomic builds ONE `{Element}_ball`
+  mesh per element and instances it at every atom via dupliverts (the
+  `{Element}_mesh` parent, `instance_type='VERTS'`). Raising subdivision only
+  enlarges a handful of ball meshes — it does NOT scale with atom count and
+  barely changes render time. (The `_ball` object's `scale` == the atom radius,
+  so you can match one element's radius to another by copying its `.scale`.)
+- **The real cheap win is smooth shading** (normal interpolation, zero geometry
+  cost). Flip every `_ball` to smooth after import; even 32x32 then looks round.
+  Prefer moderate subdivision (48–64) + smooth shading over brute-forcing 128.
+  ```python
+  for o in bpy.context.scene.objects:
+      if o.type == 'MESH' and o.name.endswith("_ball"):
+          me = o.data
+          for p in me.polygons:
+              p.use_smooth = True      # flat -> smooth normals (free)
+          me.update()
+  ```
+- **What actually costs render time** is resolution and sample count (EEVEE
+  `scene.eevee.taa_render_samples`, Cycles `samples`) — NOT sphere polys. Tune
+  those two for the speed/quality trade-off and keep the balls smooth for free.
+- **Translucent overlay markers** (e.g. "candidate sites"): give them a sentinel
+  element, copy `Oxygen_ball.scale` to match O size, set the Principled BSDF
+  `Alpha < 1`, and `mat.blend_method='BLEND'` (+ `surface_render_method='BLENDED'`
+  on EEVEE Next). Render with `film_transparent=True`.
