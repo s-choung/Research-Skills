@@ -9,7 +9,7 @@ CatAgent turns one plain-language question ("CO adsorption energy on Pt(111) by 
 into a relaxed slab + adsorbate calculation with a machine-learned interatomic
 potential (MLIP) and returns numbers, a plot and a rendered structure.
 Web UI: https://catagent.schoung.com. Source of this skill:
-https://github.com/s-choung/Research-Skills/tree/main/skills/catagent.
+https://github.com/s-choung/Research-Skills/tree/master/skills/catagent.
 
 Use it when the user wants demo-grade (fmax 0.1 eV/A, 60 steps, 36-atom slab)
 adsorption energies in about 1 to 4 minutes, not publication-grade DFT.
