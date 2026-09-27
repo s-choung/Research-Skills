@@ -41,6 +41,7 @@ https://github.com/s-choung/Research-Skills.git 클론하고 스킬 설치해줘
 | | [youtube2mp4](skills/youtube2mp4) | YouTube mp4 다운로드 |
 | | [transcript2html](skills/transcript2html) | transcript를 한국어 다크모드 HTML로 |
 | **Computing** | [ase](skills/ase) | ASE 코드 생성 (9-LLM 벤치마크 포함) |
+| | [catagent](skills/catagent) | 촉매 표면 흡착 에너지 계산 (MLIP, remote API 또는 local harness) &middot; [**Demo**](https://catagent.schoung.com) |
 | **Utility** | [pptx-too-heavy](skills/pptx-too-heavy) | PPTX 무거운 이미지 분석 리포트 |
 | | [smart-compact](skills/smart-compact) | 세션 상태 저장, 다음 세션 자동 복구 |
 
