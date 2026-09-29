@@ -41,6 +41,7 @@ Clone https://github.com/s-choung/Research-Skills.git and install the skills
 | | [transcript2html](skills/transcript2html) | Transcript to Korean dark-mode HTML |
 | **Computing** | [ase](skills/ase) | ASE code generation (9-LLM benchmark included) |
 | | [catagent](skills/catagent) | Catalyst adsorption energies with an MLIP (remote API or local harness) &middot; [**Demo**](https://catagent.schoung.com) |
+| | [soagent](skills/soagent) | Solid-oxide perovskite oxide properties with an MLIP - O vacancy, surface energy, A-site substitution, EOS bulk modulus (remote API) &middot; [**Demo**](https://soagent.schoung.com) |
 | **Utility** | [pptx-too-heavy](skills/pptx-too-heavy) | Analyze heavy images in PPTX files |
 | | [smart-compact](skills/smart-compact) | Save session state for auto-recovery |
 

@@ -42,6 +42,7 @@ https://github.com/s-choung/Research-Skills.git 클론하고 스킬 설치해줘
 | | [transcript2html](skills/transcript2html) | transcript를 한국어 다크모드 HTML로 |
 | **Computing** | [ase](skills/ase) | ASE 코드 생성 (9-LLM 벤치마크 포함) |
 | | [catagent](skills/catagent) | 촉매 표면 흡착 에너지 계산 (MLIP, remote API 또는 local harness) &middot; [**Demo**](https://catagent.schoung.com) |
+| | [soagent](skills/soagent) | 고체산화물 페로브스카이트 물성 계산 (O 공공, 표면 에너지, A-site 치환, EOS 체적탄성률, remote API) &middot; [**Demo**](https://soagent.schoung.com) |
 | **Utility** | [pptx-too-heavy](skills/pptx-too-heavy) | PPTX 무거운 이미지 분석 리포트 |
 | | [smart-compact](skills/smart-compact) | 세션 상태 저장, 다음 세션 자동 복구 |
 
