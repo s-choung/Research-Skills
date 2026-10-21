@@ -1,23 +1,35 @@
----
-name: paper-sections
-description: Draft IMRAD paper sections (Introduction, Methods, Results, Discussion, Outlook) in the author's voice, using STYLE_PROFILE.md templates. Includes numeric-superscript citation format rules. Forked from scientific-writing. Use when writing or revising a specific section of a scientific manuscript, or when inserting citations. Triggers - paper draft, IMRAD, introduction draft, results 작성, discussion 섹션, 섹션 초안, manuscript section, citation format, 인용 포맷, bibliography, reference format, in-text cite, superscript citation.
-allowed-tools: Read, Grep, Glob, Write, Edit
-dependencies: paper-style
----
 
-# paper-sections
+# sections (예전 paper-sections)
 
-Fork of global `scientific-writing` skill, specialized to the author's voice via `paper-style`. Absorbs former `paper-citation-format` skill as section 7 below.
+Fork of global `scientific-writing` skill, specialized to the author's voice via `references/style.md`. Absorbs former `paper-citation-format` skill as section 7 below.
 
 ## Dependencies
-- Load `paper-style` Mode 1 first. Use its output as hard constraint.
+- Load `references/style.md` Mode 1 first. Use its output as hard constraint.
 
 ## Section playbooks
 
+### Abstract / summary paragraph (Nature template, added 2026-10-21)
+Source: Nature, "How to construct a Nature summary paragraph" (`~/Downloads/nature-summary-paragraph.pdf`).
+Sentence budget, in this order:
+1. 1-2 sentences: basic introduction to the field, readable by a scientist in any discipline.
+2. 2-3 sentences: more detailed background, readable by scientists in related disciplines.
+3. 1 sentence: the general problem this study addresses ("However, ... remains unknown").
+4. 1 sentence: the main result, opened with "Here we show" or an equivalent.
+5. 2-3 sentences: what the main result reveals compared with what was thought before, or how it adds to previous knowledge.
+6. 1-2 sentences: the result in a more general context.
+7. Optional 2-3 sentences: broader perspective. Total up to about 200 words, 300 with the optional part.
+For a computational part inside an experimental paper, the computational contribution usually appears only in sentences 4-5.
+
+### Whole-paper structure (Mensh & Kording 2017, PLoS Comput Biol 13:e1005619)
+- One central contribution per paper; title, abstract, every Results subsection and the Discussion point at it (Rule 1).
+- Context, content, conclusion at every scale: Introduction gives context, Results the content, Discussion the conclusion; inside a paragraph, the first sentence sets the question, the middle gives the data, the last sentence gives the answer (Rule 3, 7).
+- Results subsection titles and figure titles are noun phrases that carry the conclusion (e.g., `Superior catalytic activity of exsolved Pt NPs`), not topic-only phrases (Rule 7).
+- Discussion: first paragraph recaps the findings; following paragraphs each take one strength or weakness and link it to the literature; last paragraph says how the field moves forward (Rule 8).
+
 ### Introduction (target: 3-5 paragraphs)
-1. **Topic paragraph** - field-level fact opener. Define acronyms parenthetically. Citation density 0.9-1.3 refs/sentence. See STYLE_PROFILE G1.
-2. **Gap/motivation paragraph** - quantitative gap statement, one subordinate clause. See STYLE_PROFILE G2. Consider bridge B1 (Paradox-Pivot) or B3 (Enumerated-Walls) sparingly.
-3. **Solution/approach paragraph** - solution announcement. See STYLE_PROFILE G3.
+1. **Topic paragraph** - field-level fact opener. Define acronyms parenthetically. Citation density 0.9-1.3 refs/sentence. See STYLE_EXEMPLARS G1.
+2. **Gap/motivation paragraph** - quantitative gap statement, one subordinate clause. See STYLE_EXEMPLARS G2. Consider bridge B1 (Paradox-Pivot) or B3 (Enumerated-Walls) sparingly.
+3. **Solution/approach paragraph** - solution announcement. See STYLE_EXEMPLARS G3.
 4. **Summary of contributions** - `In this work, we ...` with numbered contributions.
 
 ### Methods (passive, purpose-forward)
@@ -77,7 +89,7 @@ If journal known:
 ## Workflow when invoked
 
 1. Receive args: `section_name`, optional `subsection_identifier`, optional `existing_text`, optional `data_pointers`.
-2. Load STYLE_PROFILE via `paper-style` Mode 1.
+2. Load STYLE_PROFILE via `references/style.md` Mode 1.
 3. Gather minimal context: read only the referenced data files. Do not load the whole manuscript.
 4. Draft paragraph(s) following the section playbook above.
 5. When inserting citations, use the format in section 7 above.

@@ -3,7 +3,7 @@ name: paper-ref-hunter
 description: Finds scientific paper references in two modes. HUNT mode resolves a specific paper citation to a verified DOI via Crossref. DISCOVERY mode returns a ranked shortlist of semantically relevant papers on a topic via OpenAlex. Invoked by /paper-ref. Auto-detects mode from input shape.
 tools: Read, Glob, Grep, Bash
 model: sonnet
-skills: paper-sections
+skills: paper
 ---
 
 You are `paper-ref-hunter`, a specialized subagent that operates in **two modes**. Before doing anything else, classify the input to pick the mode.

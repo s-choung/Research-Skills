@@ -1,11 +1,13 @@
 ---
 name: ko-writing
-description: 한국어 출력 품질 단일 스킬. AI체 제거(ko-prose.md)와 완결 문장 교정(fluent-korean.md)을 한 번에 적용한다. 사용자에게 보내는 한국어 보고, 답변, 문서, 리포트, 캡션, HTML 본문을 쓰거나 다듬을 때 사용. 글 전체의 순서, 이름 고정, 비교 수치, 계층 불릿 배치는 humanreadable.md가 맡는다. Triggers - ko-writing, humanreadable, human readable, 읽기 쉽게, 사람이 읽게, 한국어 문체, 한글 교정, AI체 제거, 문체 수정, 한국어 보고 작성, 번역투 제거, 쉽게 써, 알아먹게 써.
+description: 한국어 출력 품질 단일 스킬. AI체 제거(ko-prose.md)와 완결 문장 교정(fluent-korean.md)을 한 번에 적용한다. 사용자에게 보내는 한국어 보고, 답변, 문서, 리포트, 캡션, HTML 본문을 쓰거나 다듬을 때 사용. 글 전체의 순서, 이름 고정, 비교 수치, 분량은 humanreadable.md, 계층 불릿과 HTML 목록 변환은 bullets.md, Codex 독자 검수는 codex-review.md가 맡는다 (예전 bulletization, less-talk, humanize-codex 스킬을 2026-10-21 흡수). Triggers - ko-writing, humanreadable, human readable, 읽기 쉽게, 사람이 읽게, bulletization, 불릿으로, 불릿화, 계층 불릿, 읽기 좋게 쪼개줘, 문단을 목록으로, less talk, 말 줄여, too much talker, 짧게, 인지부하, 요약만, 결론만, humanize codex, 문서 검수 codex, 리포트 가독성 검사, HTML 검수, 읽는 사람 입장에서 봐줘, 약어 검사, 한국어 문체, 한글 교정, AI체 제거, 문체 수정, 한국어 보고 작성, 번역투 제거, 쉽게 써, 알아먹게 써.
 ---
 
 # ko-writing: 한국어 문체 단일 스킬
 
 예전의 ko-prose와 fluent-korean 두 스킬을 이 폴더 하나로 합쳤다 (2026-09-04).
+2026-10-21에 bulletization(-> `bullets.md`), less-talk(-> `humanreadable.md` section 7),
+humanize-codex(-> `codex-review.md`)도 흡수했다. 원본은 `~/.archive/2026-10-21/skills-merge/`.
 규칙 본문은 이 폴더 안의 파일에 있고, 여기서는 읽는 순서와 점검만 정한다.
 
 ## 사용 방법
@@ -19,13 +21,18 @@ description: 한국어 출력 품질 단일 스킬. AI체 제거(ko-prose.md)와
 3. 세 문장을 넘는 답변, 보고, 리포트, 위키 페이지는 `humanreadable.md`도 읽는다
    (2026-10-21 추가). 쓰기 전에 1~4번(첫 줄, 이름 고정, 비교 수치, 남길 문장)으로
    설계하고, 문체 교정이 끝난 뒤 5~6번(계층 불릿, 표)으로 배치한다.
-   `bulletization`과 `computational-section-writing`의 원칙을 일반 글에 맞게 옮긴 파일이다.
-   HTML 변환 세부가 필요할 때만 `bulletization` 스킬을 따로 부른다.
+   section 7은 분량 규칙(예전 less-talk)이다. "말 줄여", "짧게"라는 요청이면 이것부터 적용한다.
+4. 문단을 계층 불릿으로 바꾸거나 HTML `<ul>`로 옮길 때는 `bullets.md`를 읽는다.
+   순서는 문체 교정 먼저, 불릿화 나중이다.
+5. 완성된 HTML 리포트를 독자 입장에서 검수할 때는 `codex-review.md`의 절차로
+   Codex를 부른다 (읽기 전용, 실행 전 사용자 승인).
 
 ## 역할 구분
 
 - humanreadable.md: 설계와 배치 규칙. 결론 먼저, 대상 이름 고정, 두 값 비교,
-  결정이 안 바뀌는 문장 삭제, 한 불릿 한 주장.
+  결정이 안 바뀌는 문장 삭제, 한 불릿 한 주장, 분량.
+- bullets.md: 불릿 변환 예시와 HTML 적용 세부.
+- codex-review.md: Codex CLI로 하는 외부 가독성 검수.
 - ko-prose.md: 삭제 규칙. 자평과 중요도 과장, 영어 직역체, 구어 메타포,
   같은 근거의 반복, 결론을 바꾸지 않는 부연을 지운다.
 - fluent-korean.md: 완성 규칙. 조사와 어미를 갖춘 완결 문장, 명사 나열식

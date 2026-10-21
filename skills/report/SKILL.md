@@ -1,6 +1,6 @@
 ---
 name: report
-description: 연구 결과(csv, json, 로그, 구조 파일, 기존 그림)를 여러 스킬(design2html, matplotlib-scientific, blender-atom-render, ko-writing, bulletization)로 조합해 단일 파일 HTML 리포트 하나로 만드는 오케스트레이션 스킬. 계획 > 툴 리스팅 > 재료 리스팅 > 분석 > 생산 > 합체 > audit > 문체 정제 순서로 가고, 재료 생산과 이미지 검수는 sonnet subagent에 맡긴다. Triggers - /report, html 리포트 만들어, 결과 정리해서 리포트, report html, 벤치 결과 리포트, 실험 결과 html로.
+description: 연구 결과(csv, json, 로그, 구조 파일, 기존 그림)를 여러 스킬(design2html, matplotlib-scientific, blender-atom-render, ko-writing)로 조합해 단일 파일 HTML 리포트 하나로 만드는 오케스트레이션 스킬. 계획 > 툴 리스팅 > 재료 리스팅 > 분석 > 생산 > 합체 > audit > 문체 정제 순서로 가고, 재료 생산과 이미지 검수는 sonnet subagent에 맡긴다. Triggers - /report, html 리포트 만들어, 결과 정리해서 리포트, report html, 벤치 결과 리포트, 실험 결과 html로, 중복 제거, 같은 내용이 두 번 나온다, 이거 지워도 되지 않냐, redundant (redundancy-remove.md, 2026-10-21 흡수).
 user-invocable: true
 argument-hint: "<결과 폴더 또는 질문> [--style openai|apple|...] [--out <path.html>]"
 ---
@@ -31,7 +31,7 @@ sonnet subagent에 나눠 준다. 실전 원형은 `165_SDL_현황/002_feature_b
 ## less-talk 규칙 (2026-09-17 사용자 지시, 모든 리포트에 기본 적용)
 
 독자는 결정하려고 읽는다. 문장, 라벨, 범례 항목 하나하나가 주의력을 쓴다. 지우면 독자의
-다음 행동이 바뀌는 것만 남긴다. `~/.claude/skills/less-talk/SKILL.md`의 Reports와 Figures
+다음 행동이 바뀌는 것만 남긴다. `~/.claude/skills/ko-writing/humanreadable.md` section 7(예전 less-talk)의 Reports와 Figures
 절이 원문이며, 여기서는 build_report.py에 박아 넣을 형태로 적는다.
 
 - **섹션 = 헤드라인 1문장 + 불릿 최대 3개 + 그림 1개.** 헤드라인은 결정(채택, 폐기, 통과)을
@@ -84,7 +84,7 @@ sonnet subagent에 나눠 준다. 실전 원형은 `165_SDL_현황/002_feature_b
 | matplotlib-scientific | svg 그림 | FontProperties 전부, legend 밖, `audit()` 겹침과 프레임 밖 검사, `svg.fonttype='none'` |
 | blender-atom-render | 구조 렌더 | 프로세스당 파일 1개, 순차, 원소 범례 256px, ballradius 1.0 |
 | ko-writing | 한국어 문체 | 입니다체 통일, 가운뎃점과 엠대시 금지, 자평 수식어 금지, "절 n" 대신 "section n" |
-| bulletization | 본문 계층 불릿 | 한 불릿 한 주장, 2단계까지, 최상위만 읽어도 논지 |
+| ko-writing (bullets.md) | 본문 계층 불릿 | 한 불릿 한 주장, 2단계까지, 최상위만 읽어도 논지 |
 | paper (캡션 규칙) | 캡션 | 캡션은 그림 설명만, 수치와 해석은 본문 불릿, 방법은 Methods |
 
 스타일 스펙은 design2html의 built-in 이름 하나로 고른다(기본 openai). 사용자가 스타일을
@@ -219,7 +219,7 @@ audit 통과 항목, 비용(로컬이면 0). 스크린샷은 붙이지 않는다
 - p-value와 통계 검정 언급은 본문에서 뺀다. 수치는 json에만 남긴다.
 - "대상 / 비교 대상 / 계산 종류" 류 설정 요약 박스는 만들지 않는다. 독자의 결정을 바꾸지 않는다.
 - 출고 전에 **안 쓰이는 텍스트 상수**를 grep한다. 섹션을 지우면 상수만 남는다.
-- **기존 리포트에 결과를 추가했으면 `redundancy-remove` 스킬을 이어서 돌린다 (2026-09-24 사용자
+- **기존 리포트에 결과를 추가했으면 같은 폴더의 `redundancy-remove.md` 절차를 이어서 돈다 (2026-09-24 사용자
   지적).** 새 데이터가 들어오면 같은 관측량을 다룬 옛 절이 밀려나는데, 추가만 하고 옛 절을
   두면 독자가 같은 결과를 두 번 읽는다. 실사례: 궤적 1개짜리 MD 절(Figure 2장, 표 1개)이
   seed 30개 절 바로 위에 남아 있었다. 추가와 제거는 한 묶음이다.

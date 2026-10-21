@@ -12,7 +12,7 @@ User invoked: `/paper-humanize $ARGUMENTS`
    - literal text: use as-is
    - `para:N`: locate the referenced paragraph in the current draft
    - `<section>`: locate the section in the current draft
-2. Run `paper-style` skill Mode 2 (light humanize) directly on the target text. No subagent dispatch, no global humanizer, no full STYLE_PROFILE checklist.
+2. Run the `paper` skill references/style.md Mode 3 (light humanize) directly on the target text. No subagent dispatch, no global humanizer, no Mode 2 tighten.
 3. Return the cleaned text and the change log in the Mode 2 output format.
 
 Thin dispatcher only. Do not rewrite or add voice.
