@@ -9,6 +9,16 @@ Triggers - matplotlib, plot, figure, 그래프, 플롯, 시각화, visualization
 
 ## Mandatory Rules
 
+0. **Labels and legends: shortest text that states the meaning exactly** (2026-10-09 user).
+   - Axis labels start with a capital letter: "Reaction energy (eV)", "Energy (eV)", "Count", "Time (ps)".
+   - No reference notes on axes ("E vs. cluster + CH$_4$(g)", "IS reference"); the reference
+     goes in the caption once. Energy axis = "Energy (eV)".
+   - Name the end points by the species, not by jargon: x ticks "CH$_4$(g)" and "CH$_3$* + H*",
+     not "IS" and "FS".
+   - A long label repeated over a row of panels is written once (middle panel or shared label).
+   - Legend entries are short; one entry per line when there are 3 or fewer (ncol=1).
+   - Captions and legends carry no extra explanation; anything not needed to read the plot
+     is dropped.
 1. **One plot per script** - standalone Python file
 2. **ALL text uses FontProperties** - no raw matplotlib text
 3. **No Unicode math** - use `$_{sub}$` / `$^{sup}$` / `$\mathregular{_2}$`
