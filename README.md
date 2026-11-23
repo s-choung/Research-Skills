@@ -32,6 +32,7 @@ https://github.com/s-choung/Research-Skills.git 클론하고 스킬 설치해줘
 | **Visualization** | [matplotlib-scientific](skills/matplotlib-scientific) | 출판용 matplotlib figure 생성 |
 | | [blender-atom-render](skills/blender-atom-render) | 구조 파일을 Blender 원자 렌더링 |
 | | [blender-icon](skills/blender-icon) | Blender 기본 도형으로 3D 아이콘과 모션 sprite 제작 (example prompt 9종 포함) &middot; [**Demo**](https://schoung.com/resource/blender_icon) |
+| | [atomic-video](skills/atomic-video) | 구성한 반응 pathway로 원자 단위 반응 영상을 만드는 guideline (pathway 생성, Blender Cycles 렌더) |
 | | [slide-audit](skills/slide-audit) | HTML 슬라이드 레이아웃 버그 탐지 |
 | | [ccel_slide_skill](skills/ccel_slide_skill) | CCEL 과제 스타일 슬라이드 생성 (HTML+PPTX 동일 출력, fade 애니메이션) &middot; [**Demo**](https://s-choung.github.io/Research-Skills/skills/ccel_slide_skill/) |
 | **Document** | [design2html](skills/design2html) | 디자인 스펙을 single-file HTML 쇼케이스로 |

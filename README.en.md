@@ -32,6 +32,7 @@ Clone https://github.com/s-choung/Research-Skills.git and install the skills
 | **Visualization** | [matplotlib-scientific](skills/matplotlib-scientific) | Publication-quality matplotlib figures |
 | | [blender-atom-render](skills/blender-atom-render) | Structure files to Blender atom renders |
 | | [blender-icon](skills/blender-icon) | 3D icons and motion sprites from Blender primitives (nine example prompts included) &middot; [**Demo**](https://schoung.com/resource/blender_icon) |
+| | [atomic-video](skills/atomic-video) | Guideline for atom-scale reaction videos from a constructed pathway (pathway generation, Blender Cycles render) |
 | | [slide-audit](skills/slide-audit) | Detect layout bugs in HTML slide decks |
 | **Document** | [design2html](skills/design2html) | Design spec to single-file HTML showcase |
 | | [docx-scientific-formatting](skills/docx-scientific-formatting) | Auto-fix subscripts and superscripts in .docx |
