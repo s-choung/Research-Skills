@@ -31,6 +31,7 @@ Clone https://github.com/s-choung/Research-Skills.git and install the skills
 | | [paper](commands/paper.md) | Paper writing umbrella (ref, draft, critic, humanize) |
 | **Visualization** | [matplotlib-scientific](skills/matplotlib-scientific) | Publication-quality matplotlib figures |
 | | [blender-atom-render](skills/blender-atom-render) | Structure files to Blender atom renders |
+| | [blender-icon](skills/blender-icon) | 3D icons and motion sprites from Blender primitives (nine example prompts included) &middot; [**Demo**](https://schoung.com/resource/blender_icon) |
 | | [slide-audit](skills/slide-audit) | Detect layout bugs in HTML slide decks |
 | **Document** | [design2html](skills/design2html) | Design spec to single-file HTML showcase |
 | | [docx-scientific-formatting](skills/docx-scientific-formatting) | Auto-fix subscripts and superscripts in .docx |
@@ -67,7 +68,7 @@ Clone https://github.com/s-choung/Research-Skills.git and install the skills
 |:--|:--|
 | `slide-audit` | `cd skills/slide-audit && npm install && npx playwright install chromium` |
 | `youtube`, `youtube2mp4` | `brew install yt-dlp ffmpeg` |
-| `blender-atom-render` | `brew install --cask blender` |
+| `blender-atom-render`, `blender-icon` | `brew install --cask blender` |
 | `docx-scientific-formatting` | `pip install python-docx lxml` |
 | `design2html` | Built-in specs included. `--full` mode needs [impeccable](https://github.com/pbakaus/impeccable) |
 
