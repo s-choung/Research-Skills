@@ -10,7 +10,7 @@ It describes the method only. Write the scripts for your own system with a codin
 
 > **Disclaimer.** The pathway is constructed or steered (steered MD) for explanation. It may not reflect the actual physical process, and it carries no energetics or kinetics. Say so wherever the video is shown.
 
-Examples made this way: dry reforming of methane on NiMo/MgO, Fischer-Tropsch chain growth on Co/CeO2, Rh-catalysed hydroformylation in toluene, and CO2 electroreduction on Cu(111).
+Examples made this way: dry reforming of methane on NiMo/MgO, propane dehydrogenation on PtSn/TiO2, Rh-catalysed hydroformylation in toluene, and CO2 electroreduction on Cu(111).
 
 ## Part 1. Pathway generation
 
